@@ -150,10 +150,38 @@ def post(payload):
         return False
 
 
+def human_age(ts):
+    """'3h ago' style, for Slack and dry-run output."""
+    if not ts:
+        return "unknown"
+    secs = time.time() - ts
+    if secs < 0:
+        return "just posted"
+    mins = secs / 60
+    if mins < 60:
+        return "just posted" if mins < 5 else f"{int(mins)}m ago"
+    hours = mins / 60
+    if hours < 24:
+        return f"{int(hours)}h ago"
+    days = hours / 24
+    if days < 14:
+        return f"{int(days)}d ago"
+    return f"{int(days / 7)}w ago"
+
+
+def freshness_color(ts):
+    """Green under a day, amber under three, grey beyond."""
+    if not ts:
+        return 0x95A5A6
+    hrs = (time.time() - ts) / 3600
+    return 0x2ECC71 if hrs < 24 else 0xF1C40F if hrs < 72 else 0x95A5A6
+
+
 def fmt_line(job):
     loc = ", ".join((job.get("locations") or ["—"])[:3])
     terms = "/".join(job.get("terms") or [])
-    return job["company_name"], job["title"], loc, terms, job.get("url", "")
+    return (job["company_name"], job["title"], loc, terms,
+            job.get("url", ""), job.get("date_posted") or 0)
 
 
 def notify_discord(jobs):
@@ -162,15 +190,18 @@ def notify_discord(jobs):
         chunk = jobs[i:i + 10]
         embeds = []
         for j in chunk:
-            company, title, loc, terms, url = fmt_line(j)
+            company, title, loc, terms, url, posted = fmt_line(j)
             embeds.append({
                 "title": f"{title[:200]}",
                 "url": url,
-                "color": 0x2ECC71,
+                "color": freshness_color(posted),
                 "fields": [
                     {"name": "Company", "value": company[:100], "inline": True},
                     {"name": "Location", "value": loc[:100], "inline": True},
                     {"name": "Term", "value": terms[:100] or "—", "inline": True},
+                    {"name": "Posted", "value": (
+                        f"<t:{posted}:d> — <t:{posted}:R>" if posted else "unknown"
+                    ), "inline": False},
                 ],
             })
         post({"content": f"**{len(chunk)} new analyst role(s)**", "embeds": embeds})
@@ -182,8 +213,9 @@ def notify_slack(jobs):
         chunk = jobs[i:i + 20]
         lines = []
         for j in chunk:
-            company, title, loc, terms, url = fmt_line(j)
-            lines.append(f"• <{url}|*{title}*> — {company} · {loc} · {terms}")
+            company, title, loc, terms, url, posted = fmt_line(j)
+            lines.append(f"• <{url}|*{title}*> — {company} · {loc} · {terms}"
+                         f" · _posted {human_age(posted)}_")
         post({
             "text": f"{len(chunk)} new analyst role(s)",
             "blocks": [{
@@ -226,8 +258,8 @@ def main():
 
     if fresh and args.dry_run:
         for j in fresh:
-            company, title, loc, terms, url = fmt_line(j)
-            print(f"    {company} | {title} | {loc} | {url}")
+            company, title, loc, terms, url, posted = fmt_line(j)
+            print(f"    [{human_age(posted):>12}] {company} | {title} | {loc}")
     elif fresh:
         (notify_slack if WEBHOOK_KIND == "slack" else notify_discord)(fresh)
         print(f"  posted {len(fresh)}")
