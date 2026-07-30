@@ -236,6 +236,9 @@ def main():
                     help="mark everything currently open as seen, send nothing")
     ap.add_argument("--dry-run", action="store_true",
                     help="print matches instead of posting")
+    ap.add_argument("--test", type=int, metavar="N", nargs="?", const=3,
+                    help="post the N newest matches to check formatting; "
+                         "does not modify seen.json")
     args = ap.parse_args()
 
     print(f"[{datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}] polling...")
@@ -250,6 +253,13 @@ def main():
     fresh = [j for j in hits if job_key(j) not in seen]
     fresh.sort(key=lambda j: j.get("date_posted", 0), reverse=True)
     print(f"  {len(fresh)} are new since last run")
+
+    if args.test:
+        sample = sorted(hits, key=lambda j: j.get("date_posted", 0),
+                        reverse=True)[:args.test]
+        print(f"  TEST: posting {len(sample)} newest match(es), state untouched")
+        (notify_slack if WEBHOOK_KIND == "slack" else notify_discord)(sample)
+        return
 
     if args.seed:
         STATE_FILE.write_text(json.dumps({"seen": sorted(job_key(j) for j in hits)}))
