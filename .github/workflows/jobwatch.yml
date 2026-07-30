@@ -1,0 +1,38 @@
+name: job watch
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 min (GitHub often runs late; see notes)
+  workflow_dispatch:          # lets you trigger a run manually from the UI
+
+permissions:
+  contents: write             # needed to commit seen.json back
+
+concurrency:
+  group: jobwatch
+  cancel-in-progress: false   # never run two at once — it'd double-post
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Poll for new listings
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          WEBHOOK_KIND: discord
+        run: python job_bot.py
+
+      - name: Save state
+        run: |
+          git config user.name  "job-bot"
+          git config user.email "job-bot@users.noreply.github.com"
+          git add seen.json
+          git diff --staged --quiet || git commit -m "state: $(date -u +%FT%TZ)"
+          git pull --rebase --autostash
+          git push
