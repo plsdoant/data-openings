@@ -25,6 +25,7 @@ jobs:
       - name: Poll for new listings
         env:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          WEBHOOK_URL_ATS: ${{ secrets.WEBHOOK_URL_ATS }}
           WEBHOOK_KIND: discord
         run: python job_bot.py
 

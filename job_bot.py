@@ -20,6 +20,8 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+import ats
+
 # ---------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------
@@ -31,6 +33,8 @@ except ImportError:
     SSL_CTX = ssl.create_default_context()
 
 WEBHOOK_URL = os.environ.get("WEBHOOK_URL", "")
+# Optional: separate channel for direct-ATS alerts. Falls back to WEBHOOK_URL.
+WEBHOOK_URL_ATS = os.environ.get("WEBHOOK_URL_ATS", "")
 WEBHOOK_KIND = os.environ.get("WEBHOOK_KIND", "discord")  # "discord" or "slack"
 
 FEEDS = [
@@ -96,6 +100,7 @@ def fetch_all():
             print(f"  fetched {len(data):,} from {url.split('/')[4]}")
         except Exception as e:
             print(f"  WARN: {url} failed: {e}", file=sys.stderr)
+    jobs.extend(ats.fetch_ats(SSL_CTX))
     return jobs
 
 
@@ -104,13 +109,17 @@ def matches(job):
         return False
 
     title = (job.get("title") or "").lower()
+    if str(job.get("source", "")).startswith("ats:") and not any(
+            w in title for w in ("intern", "co-op", "coop")):
+        return False
     if not any(k in title for k in INCLUDE):
         return False
     if any(k in title for k in EXCLUDE):
         return False
 
-    if TERMS and not any(t in job.get("terms", []) for t in TERMS):
-        return False
+    terms = job.get("terms") or []
+    if TERMS and terms and not any(t in terms for t in TERMS):
+        return False   # ATS listings have no term tags; keep them
 
     if LOCATIONS:
         locs = " ".join(job.get("locations") or []).lower()
@@ -133,12 +142,13 @@ def job_key(job):
 # NOTIFY
 # ---------------------------------------------------------------------------
 
-def post(payload):
-    if not WEBHOOK_URL:
+def post(payload, hook=None):
+    hook = hook or WEBHOOK_URL
+    if not hook:
         print("ERROR: WEBHOOK_URL not set", file=sys.stderr)
         return False
     req = urllib.request.Request(
-        WEBHOOK_URL,
+        hook,
         data=json.dumps(payload).encode(),
         headers={"Content-Type": "application/json", **UA},
     )
@@ -184,7 +194,7 @@ def fmt_line(job):
             job.get("url", ""), job.get("date_posted") or 0)
 
 
-def notify_discord(jobs):
+def notify_discord(jobs, hook=None):
     # Discord allows 10 embeds per message.
     for i in range(0, len(jobs), 10):
         chunk = jobs[i:i + 10]
@@ -204,11 +214,11 @@ def notify_discord(jobs):
                     ), "inline": False},
                 ],
             })
-        post({"content": f"**{len(chunk)} new analyst role(s)**", "embeds": embeds})
+        post({"content": f"**{len(chunk)} new analyst role(s)**", "embeds": embeds}, hook)
         time.sleep(1)  # stay under Discord's rate limit
 
 
-def notify_slack(jobs):
+def notify_slack(jobs, hook=None):
     for i in range(0, len(jobs), 20):
         chunk = jobs[i:i + 20]
         lines = []
@@ -222,7 +232,7 @@ def notify_slack(jobs):
                 "type": "section",
                 "text": {"type": "mrkdwn", "text": "\n".join(lines)[:2900]},
             }],
-        })
+        }, hook)
         time.sleep(1)
 
 
@@ -230,16 +240,36 @@ def notify_slack(jobs):
 # MAIN
 # ---------------------------------------------------------------------------
 
+def dispatch(jobs):
+    """Route ATS-sourced jobs to their own channel when one is configured."""
+    notify = notify_slack if WEBHOOK_KIND == "slack" else notify_discord
+    is_ats = lambda j: str(j.get("source", "")).startswith("ats:")
+    if WEBHOOK_URL_ATS:
+        ats_jobs = [j for j in jobs if is_ats(j)]
+        feed_jobs = [j for j in jobs if not is_ats(j)]
+        if ats_jobs:
+            notify(ats_jobs, WEBHOOK_URL_ATS)
+        if feed_jobs:
+            notify(feed_jobs)
+    else:
+        notify(jobs)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", action="store_true",
                     help="mark everything currently open as seen, send nothing")
     ap.add_argument("--dry-run", action="store_true",
                     help="print matches instead of posting")
+    ap.add_argument("--check-ats", action="store_true",
+                    help="verify every configured ATS slug responds, then exit")
     ap.add_argument("--test", type=int, metavar="N", nargs="?", const=3,
                     help="post the N newest matches to check formatting; "
                          "does not modify seen.json")
     args = ap.parse_args()
+
+    if args.check_ats:
+        sys.exit(0 if ats.check_ats(SSL_CTX) else 1)
 
     print(f"[{datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}] polling...")
     all_jobs = fetch_all()
@@ -258,7 +288,7 @@ def main():
         sample = sorted(hits, key=lambda j: j.get("date_posted", 0),
                         reverse=True)[:args.test]
         print(f"  TEST: posting {len(sample)} newest match(es), state untouched")
-        (notify_slack if WEBHOOK_KIND == "slack" else notify_discord)(sample)
+        dispatch(sample)
         return
 
     if args.seed:
@@ -271,7 +301,7 @@ def main():
             company, title, loc, terms, url, posted = fmt_line(j)
             print(f"    [{human_age(posted):>12}] {company} | {title} | {loc}")
     elif fresh:
-        (notify_slack if WEBHOOK_KIND == "slack" else notify_discord)(fresh)
+        dispatch(fresh)
         print(f"  posted {len(fresh)}")
 
     # Persist. Keep seen keys for everything currently matching so a role that
