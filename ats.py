@@ -53,6 +53,7 @@ COMPANIES = [
     ("workday", "fedex.wd1/FDW_External_Career_Site"),  # FedEx Dataworks
     ("workday", "sysco.wd5/syscocareers"),
     ("workday", "swa.wd1/external"),                  # Southwest Airlines
+    ("workday", "tmobile.wd1/External"),              # T-Mobile
     ("workday", "walmart.wd5/WalmartExternal"),       # may 403 bot traffic
 ]
 
@@ -62,6 +63,7 @@ _NAMES = {
     "kla": "KLA", "hp": "HP", "cvshealth": "CVS Health",
     "capitalone": "Capital One", "wf": "Wells Fargo",
     "fedex": "FedEx", "swa": "Southwest Airlines", "citi": "Citi",
+    "tmobile": "T-Mobile",
 }
 
 
