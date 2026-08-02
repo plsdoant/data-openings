@@ -4,12 +4,25 @@ Watches for new data analyst internship postings and pings a Discord channel whe
 
 ## How it works
 
-Polls the [Simplify / Pitt CSC internship feed](https://github.com/SimplifyJobs/Summer2027-Internships) (~14,000 listings, refreshed hourly), filters for analyst roles, and posts anything it hasn't seen before. Seen listings are tracked in `seen.json`, which the workflow commits back to the repo after each run.
+Two sources, every 30 minutes:
+
+1. **Simplify / Pitt CSC feed** (~14,000 listings) — broad coverage, but curated by hand, so postings show up hours to days after going live.
+2. **Direct ATS polling** (`ats.py`) — hits company job-board APIs (Greenhouse, Lever, Ashby, Workday) directly, so new roles are caught within one poll instead of waiting on the feed.
+
+Everything is filtered for analyst roles, deduped against `seen.json`, and posted. The workflow commits `seen.json` back to the repo after each run.
+
+## Channels
+
+Set `WEBHOOK_URL_ATS` and direct-ATS finds go to their own channel; feed results stay in `WEBHOOK_URL`. If it's unset, everything goes to one channel.
+
+Each channel keeps one **heartbeat** message showing what was checked and when ("last run 3 minutes ago"). It edits itself in place on quiet runs, and re-posts below new jobs so it stays at the bottom.
 
 ## Setup
 
 1. Create a Discord webhook: Server Settings → Integrations → Webhooks → New Webhook → copy URL.
-2. Add it as a repo secret named `WEBHOOK_URL` (Settings → Secrets and variables → Actions).
+2. Add repo secrets (Settings → Secrets and variables → Actions):
+   - `WEBHOOK_URL` — main channel
+   - `WEBHOOK_URL_ATS` — optional, direct-ATS channel
 3. Settings → Actions → General → Workflow permissions → **Read and write**.
 4. Seed locally so the first run doesn't dump every open role:
    ```bash
@@ -21,17 +34,18 @@ Polls the [Simplify / Pitt CSC internship feed](https://github.com/SimplifyJobs/
 ## Commands
 
 ```bash
-python3 job_bot.py --dry-run    # print matches, post nothing, touch nothing
-python3 job_bot.py --test 3     # post 3 newest to Discord, don't touch state
-python3 job_bot.py --seed       # mark everything open as seen, post nothing
-python3 job_bot.py              # normal run: post new roles, update state
+python3 job_bot.py --dry-run     # print matches, post nothing, touch nothing
+python3 job_bot.py --check-ats   # verify every ATS board still responds
+python3 job_bot.py --test 3      # post 3 newest to Discord, don't touch state
+python3 job_bot.py --seed        # mark everything open as seen, post nothing
+python3 job_bot.py               # normal run: post new roles, update state
 ```
 
 Set `WEBHOOK_URL` in your shell before running anything that posts.
 
 ## Configuration
 
-All at the top of `job_bot.py`:
+Filters, at the top of `job_bot.py`:
 
 | Setting | Purpose |
 |---|---|
@@ -42,6 +56,19 @@ All at the top of `job_bot.py`:
 | `MAX_AGE_DAYS` | Ignore listings older than this |
 
 `EXCLUDE` is what keeps the channel usable. Add to it aggressively.
+
+Companies, in `ats.py` → `COMPANIES`. Each entry is `("ats_kind", "slug")`, where the slug comes from the careers URL:
+
+| ATS | URL | Slug |
+|---|---|---|
+| Greenhouse | `boards.greenhouse.io/spacex` | `spacex` |
+| Lever | `jobs.lever.co/palantir` | `palantir` |
+| Ashby | `jobs.ashbyhq.com/cohere` | `cohere` |
+| Workday | `nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite` | `nvidia.wd5/NVIDIAExternalCareerSite` |
+
+Add a friendly display name to `_NAMES` if the slug doesn't title-case nicely. Run `--check-ats` after editing.
+
+Workday boards are too large to pull whole, so they're searched server-side for the terms in `WORKDAY_SEARCHES` (`intern`, `co-op`), capped at 200 results per term per board.
 
 ## Alert colors
 
@@ -63,8 +90,10 @@ Thresholds live in `freshness_color()`.
 
 **`CERTIFICATE_VERIFY_FAILED` locally on macOS** — run `pip3 install --upgrade certifi`. Only affects local runs; CI is unaffected.
 
+**One board WARNs every run** — the slug moved, or that company blocks datacenter IPs (Walmart does). Confirm with `--check-ats`; delete the line if it stays broken.
+
 **0 matches** — filters are too narrow, or it's the off-season. Postings ramp up August through October.
 
 ## Notes
 
-Latency floor is roughly 1–2 hours: the upstream feed scrapes career pages hourly, so polling faster wouldn't help
+Feed listings have a latency floor of 1–2 hours since the upstream scraper runs hourly. Direct ATS polling has no such floor — it's limited only by the 30-minute cron, which GitHub often runs late.
