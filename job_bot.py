@@ -262,25 +262,73 @@ def dispatch(jobs):
         notify(jobs)
 
 
-def _heartbeat(msg, new_count, hook):
-    if new_count:
-        msg += f" — {new_count} new"
-    payload = {"text": msg} if WEBHOOK_KIND == "slack" else {"content": msg}
-    post(payload, hook)
+def _discord_heartbeat(msg, hook, state, key, repost=False):
+    """Post the heartbeat once, then edit that same message every later run.
+
+    With repost=True (channel just got new job posts), delete and re-post
+    instead, so the heartbeat stays the newest message in the channel.
+    """
+    if not hook:
+        return
+    ids = state.setdefault("heartbeat", {})
+    body = json.dumps({"content": msg}).encode()
+    headers = {"Content-Type": "application/json", **UA}
+
+    mid = ids.get(key)
+    if mid and repost:  # drop the old message; fresh one lands below the jobs
+        req = urllib.request.Request(f"{hook}/messages/{mid}",
+                                     method="DELETE", headers=dict(UA))
+        try:
+            with urllib.request.urlopen(req, timeout=30, context=SSL_CTX):
+                pass
+        except Exception:
+            pass  # already gone — fine either way
+        mid = None
+
+    if mid:  # try editing the existing message
+        req = urllib.request.Request(f"{hook}/messages/{mid}", data=body,
+                                     method="PATCH", headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=30, context=SSL_CTX):
+                return
+        except Exception:
+            pass  # message deleted or id stale — post a fresh one
+
+    sep = "&" if "?" in hook else "?"
+    req = urllib.request.Request(f"{hook}{sep}wait=true", data=body,
+                                 headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=30, context=SSL_CTX) as r:
+            ids[key] = json.loads(r.read().decode()).get("id")
+    except Exception as e:
+        print(f"ERROR heartbeat: {e}", file=sys.stderr)
 
 
-def post_status(fresh, all_jobs):
-    """Per-run heartbeat to each channel: what was checked, what was found."""
+def post_status(fresh, all_jobs, state):
+    """Self-editing heartbeat per channel: what was checked, and when."""
     is_ats = lambda j: str(j.get("source", "")).startswith("ats:")
     ats_new = sum(1 for j in fresh if is_ats(j))
     feed_new = len(fresh) - ats_new
     feed_total = sum(1 for j in all_jobs if not is_ats(j))
+    stamp = f"<t:{int(time.time())}:R>"
 
-    _heartbeat("Checked for analyst openings from: "
-               + ", ".join(ats.company_names()),
-               ats_new, WEBHOOK_URL_ATS or WEBHOOK_URL)
-    _heartbeat(f"Checked {feed_total:,} Simplify feed listings"
-               " for analyst openings", feed_new, WEBHOOK_URL)
+    ats_msg = (f"Checked for analyst openings from: "
+               f"{', '.join(ats.company_names())} — last run {stamp}")
+    if ats_new:
+        ats_msg += f" — **{ats_new} new this run**"
+    feed_msg = (f"Checked {feed_total:,} Simplify feed listings"
+                f" for analyst openings — last run {stamp}")
+    if feed_new:
+        feed_msg += f" — **{feed_new} new this run**"
+
+    if WEBHOOK_KIND == "slack":  # Slack webhooks can't edit; post plainly
+        post({"text": ats_msg}, WEBHOOK_URL_ATS or WEBHOOK_URL)
+        post({"text": feed_msg}, WEBHOOK_URL)
+        return
+    _discord_heartbeat(ats_msg, WEBHOOK_URL_ATS or WEBHOOK_URL, state, "ats",
+                       repost=ats_new > 0)
+    _discord_heartbeat(feed_msg, WEBHOOK_URL, state, "main",
+                       repost=feed_new > 0)
 
 
 def main():
@@ -304,9 +352,10 @@ def main():
     hits = [j for j in all_jobs if matches(j)]
     print(f"  {len(hits)} listings match your filters")
 
-    seen = set()
+    state = {}
     if STATE_FILE.exists():
-        seen = set(json.loads(STATE_FILE.read_text()).get("seen", []))
+        state = json.loads(STATE_FILE.read_text())
+    seen = set(state.get("seen", []))
 
     fresh = [j for j in hits if job_key(j) not in seen]
     fresh.sort(key=lambda j: j.get("date_posted", 0), reverse=True)
@@ -320,7 +369,8 @@ def main():
         return
 
     if args.seed:
-        STATE_FILE.write_text(json.dumps({"seen": sorted(job_key(j) for j in hits)}))
+        state["seen"] = sorted(job_key(j) for j in hits)
+        STATE_FILE.write_text(json.dumps(state))
         print(f"  seeded {len(hits)} listings. Future runs alert on new ones only.")
         return
 
@@ -332,14 +382,14 @@ def main():
         dispatch(fresh)
         print(f"  posted {len(fresh)}")
 
-    if not args.dry_run:
-        post_status(fresh, all_jobs)
-
     # Persist. Keep seen keys for everything currently matching so a role that
     # briefly disappears from the feed doesn't re-alert when it comes back.
+    # post_status may stash heartbeat message ids in state, so save after.
     if not args.dry_run:
+        post_status(fresh, all_jobs, state)
         seen |= {job_key(j) for j in hits}
-        STATE_FILE.write_text(json.dumps({"seen": sorted(seen)}))
+        state["seen"] = sorted(seen)
+        STATE_FILE.write_text(json.dumps(state))
 
 
 if __name__ == "__main__":
