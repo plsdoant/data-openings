@@ -1,5 +1,5 @@
 """
-Direct ATS polling: Greenhouse, Lever, Ashby.
+Direct ATS polling: Greenhouse, Lever, Ashby, Workday.
 
 Polls each company's public job-board API and normalizes results into the
 same dict shape the Simplify feed uses, so job_bot.py can filter, dedupe,
@@ -9,6 +9,11 @@ Slug = the company identifier in their careers URL:
   boards.greenhouse.io/<slug>   or  job-boards.greenhouse.io/<slug>
   jobs.lever.co/<slug>
   jobs.ashbyhq.com/<slug>
+  workday: "<tenant>.<wdN>/<SiteName>" from <tenant>.<wdN>.myworkdayjobs.com/<SiteName>
+
+Workday boards are huge (thousands of postings), so we ask Workday to
+search for WORKDAY_SEARCH server-side and cap pagination, then let
+job_bot's INCLUDE/EXCLUDE filters do the real work.
 
 Verify a list with:  python3 job_bot.py --check-ats
 """
@@ -25,20 +30,37 @@ import urllib.request
 # as of Jul 2026. Replace freely with your own targets.
 # ---------------------------------------------------------------------------
 COMPANIES = [
-    ("greenhouse", "cloudflare"),
-    ("greenhouse", "janestreet"),
-    ("greenhouse", "point72"),
-    ("greenhouse", "drweng"),          # DRW
-    ("greenhouse", "virtu"),
-    ("greenhouse", "sharkninjaoperatingllc"),
-    ("lever", "palantir"),
-    ("lever", "tri"),                  # Toyota Research Institute
-    ("lever", "magnetforensics"),
-    ("ashby", "cohere"),
-    ("ashby", "applied"),              # Applied Intuition
-    ("ashby", "Perplexity"),
-    ("ashby", "rivianvw"),
+    ("greenhouse", "spacex"),
+    ("greenhouse", "doordashusa"),     # DoorDash
+    # Workday boards, verified Aug 2026:
+    ("workday", "nvidia.wd5/NVIDIAExternalCareerSite"),
+    ("workday", "target.wd5/targetcareers"),
+    ("workday", "kla.wd1/Search"),                    # KLA
+    ("workday", "zoom.wd5/Zoom"),
+    ("workday", "dell.wd1/External"),
+    ("workday", "hp.wd5/ExternalCareerSite"),
+    ("workday", "intel.wd1/External"),
+    ("workday", "pfizer.wd1/PfizerCareers"),
+    ("workday", "mastercard.wd1/CorporateCareers"),
+    ("workday", "citi.wd5/2"),                        # Citi
+    ("workday", "disney.wd5/disneycareer"),
+    ("workday", "cvshealth.wd1/CVS_Health_Careers"),
+    ("workday", "capitalone.wd12/Capital_One"),
+    ("workday", "chewy.wd5/External"),
+    ("workday", "comcast.wd5/Comcast_Careers"),
+    ("workday", "nike.wd1/nke"),
+    ("workday", "wf.wd1/WellsFargoJobs"),             # Wells Fargo
+    ("workday", "fedex.wd1/FDW_External_Career_Site"),  # FedEx Dataworks
+    ("workday", "sysco.wd5/syscocareers"),
+    ("workday", "swa.wd1/external"),                  # Southwest Airlines
+    ("workday", "walmart.wd5/WalmartExternal"),       # may 403 bot traffic
 ]
+
+# Server-side search terms for Workday boards (they're too big to pull whole).
+# Each term is a separate query; results are deduped by id.
+WORKDAY_SEARCHES = ["intern", "co-op"]
+_WD_PAGE = 20      # Workday's max page size
+_WD_CAP = 200      # max results per board per run
 
 _TIMEOUT = 25
 
@@ -122,7 +144,68 @@ def _ashby(slug, ctx):
     return out
 
 
-_FETCHERS = {"greenhouse": _greenhouse, "lever": _lever, "ashby": _ashby}
+def _wd_posted_to_epoch(s):
+    """'Posted Today' / 'Posted Yesterday' / 'Posted 7 Days Ago' -> epoch."""
+    s = (s or "").lower()
+    now = int(time.time())
+    if "today" in s:
+        return now
+    if "yesterday" in s:
+        return now - 86400
+    for tok in s.replace("+", "").split():
+        if tok.isdigit():
+            return now - int(tok) * 86400
+    return 0
+
+
+def _workday(slug, ctx):
+    host, site = slug.split("/", 1)          # "nvidia.wd5", "NVIDIAExternalCareerSite"
+    tenant = host.split(".")[0]
+    base = f"https://{host}.myworkdayjobs.com"
+    api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
+    seen_ids, out = set(), []
+    for term in WORKDAY_SEARCHES:
+        offset, total = 0, _WD_CAP
+        while offset < min(total, _WD_CAP):
+            body = json.dumps({"appliedFacets": {}, "limit": _WD_PAGE,
+                               "offset": offset, "searchText": term}).encode()
+            req = urllib.request.Request(api, data=body, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            })
+            with urllib.request.urlopen(req, timeout=_TIMEOUT, context=ctx) as r:
+                d = json.loads(r.read().decode())
+            total = d.get("total", 0)
+            posts = d.get("jobPostings", [])
+            if not posts:
+                break
+            for j in posts:
+                path = j.get("externalPath", "")
+                bullets = j.get("bulletFields") or []
+                req_id = bullets[0] if bullets else path
+                jid = f"wd-{tenant}-{req_id}"
+                if jid in seen_ids:
+                    continue
+                seen_ids.add(jid)
+                out.append({
+                    "id": jid,
+                    "company_name": tenant,
+                    "title": j.get("title", ""),
+                    "locations": [j.get("locationsText", "")],
+                    "url": f"{base}/en-US/{site}{path}",
+                    "date_posted": _wd_posted_to_epoch(j.get("postedOn")),
+                    "terms": [],
+                    "active": True,
+                    "is_visible": True,
+                    "source": f"ats:{tenant}",
+                })
+            offset += _WD_PAGE
+    return out
+
+
+_FETCHERS = {"greenhouse": _greenhouse, "lever": _lever, "ashby": _ashby,
+             "workday": _workday}
 
 
 # --- public API -------------------------------------------------------------
