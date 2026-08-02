@@ -45,8 +45,15 @@ FEEDS = [
 
 # A title must contain at least one of these (case-insensitive).
 INCLUDE = [
+    "analyst",
+    "analytics",
+    "data",
     "data analyst",
     "data analytics",
+    "data-analytics",
+    "data engineering"
+    "data processing",
+    "processing",
     "business analyst",
     "business intelligence",
     "analytics intern",
@@ -68,7 +75,7 @@ EXCLUDE = [
 ]
 
 # Only alert on these terms. Empty list = any term.
-TERMS = ["Summer 2027", "Fall 2026", "Spring 2027"]
+TERMS = []
 
 # Optional location filter, e.g. ["CA", "Remote", "New York"]. Empty = anywhere.
 LOCATIONS = []
@@ -255,6 +262,27 @@ def dispatch(jobs):
         notify(jobs)
 
 
+def _heartbeat(msg, new_count, hook):
+    if new_count:
+        msg += f" — {new_count} new"
+    payload = {"text": msg} if WEBHOOK_KIND == "slack" else {"content": msg}
+    post(payload, hook)
+
+
+def post_status(fresh, all_jobs):
+    """Per-run heartbeat to each channel: what was checked, what was found."""
+    is_ats = lambda j: str(j.get("source", "")).startswith("ats:")
+    ats_new = sum(1 for j in fresh if is_ats(j))
+    feed_new = len(fresh) - ats_new
+    feed_total = sum(1 for j in all_jobs if not is_ats(j))
+
+    _heartbeat("Checked for analyst openings from: "
+               + ", ".join(ats.company_names()),
+               ats_new, WEBHOOK_URL_ATS or WEBHOOK_URL)
+    _heartbeat(f"Checked {feed_total:,} Simplify feed listings"
+               " for analyst openings", feed_new, WEBHOOK_URL)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed", action="store_true",
@@ -303,6 +331,9 @@ def main():
     elif fresh:
         dispatch(fresh)
         print(f"  posted {len(fresh)}")
+
+    if not args.dry_run:
+        post_status(fresh, all_jobs)
 
     # Persist. Keep seen keys for everything currently matching so a role that
     # briefly disappears from the feed doesn't re-alert when it comes back.

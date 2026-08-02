@@ -56,6 +56,26 @@ COMPANIES = [
     ("workday", "walmart.wd5/WalmartExternal"),       # may 403 bot traffic
 ]
 
+# Display names for the status message (slug -> friendly name).
+_NAMES = {
+    "spacex": "SpaceX", "doordashusa": "DoorDash", "nvidia": "NVIDIA",
+    "kla": "KLA", "hp": "HP", "cvshealth": "CVS Health",
+    "capitalone": "Capital One", "wf": "Wells Fargo",
+    "fedex": "FedEx", "swa": "Southwest Airlines", "citi": "Citi",
+}
+
+
+def company_names(companies=None):
+    """Human-readable names for every configured board, in order."""
+    out = []
+    for _kind, slug in (companies or COMPANIES):
+        key = slug.split("/", 1)[0].split(".")[0].lower()
+        name = _NAMES.get(key, key.title())
+        if name not in out:
+            out.append(name)
+    return out
+
+
 # Server-side search terms for Workday boards (they're too big to pull whole).
 # Each term is a separate query; results are deduped by id.
 WORKDAY_SEARCHES = ["intern", "co-op"]
