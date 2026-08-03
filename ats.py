@@ -42,6 +42,25 @@ COMPANIES = [
     ("greenhouse", "figma"),
     ("greenhouse", "stripe"),
     ("greenhouse", "coinbase"),
+    # Fintech:
+    ("greenhouse", "robinhood"),
+    ("greenhouse", "affirm"),
+    ("greenhouse", "sofi"),
+    ("greenhouse", "betterment"),
+    ("lever", "wealthfront"),
+    # Consumer tech / SaaS:
+    ("greenhouse", "cloudflare"),
+    ("greenhouse", "twilio"),
+    ("greenhouse", "asana"),
+    ("greenhouse", "mongodb"),
+    ("greenhouse", "samsara"),
+    ("greenhouse", "squarespace"),
+    ("greenhouse", "duolingo"),
+    ("greenhouse", "discord"),
+    ("greenhouse", "roblox"),
+    ("greenhouse", "riotgames"),
+    ("lever", "spotify"),
+    ("lever", "tri"),                  # Toyota Research Institute
     ("ashby", "notion"),
     ("ashby", "rivianvw.tech"),        # Rivian & VW Group Technologies
     # Workday boards, verified Aug 2026:
@@ -83,6 +102,8 @@ _NAMES = {
     "tmobile": "T-Mobile", "usaa": "USAA", "genmills": "General Mills",
     "generalmotors": "GM", "priceline": "Booking Holdings",
     "hcmportal": "UPS", "rivianvw": "Rivian & VW Tech",
+    "sofi": "SoFi", "mongodb": "MongoDB", "riotgames": "Riot Games",
+    "tri": "Toyota Research",
 }
 
 
