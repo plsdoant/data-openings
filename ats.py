@@ -32,12 +32,23 @@ import urllib.request
 COMPANIES = [
     ("greenhouse", "spacex"),
     ("greenhouse", "doordashusa"),     # DoorDash
+    ("greenhouse", "airbnb"),
+    ("greenhouse", "lyft"),
+    ("greenhouse", "pinterest"),
+    ("greenhouse", "reddit"),
+    ("greenhouse", "instacart"),
+    ("greenhouse", "databricks"),
+    ("greenhouse", "datadog"),
+    ("greenhouse", "figma"),
+    ("greenhouse", "stripe"),
+    ("greenhouse", "coinbase"),
+    ("ashby", "notion"),
+    ("ashby", "rivianvw.tech"),        # Rivian & VW Group Technologies
     # Workday boards, verified Aug 2026:
     ("workday", "nvidia.wd5/NVIDIAExternalCareerSite"),
     ("workday", "target.wd5/targetcareers"),
     ("workday", "kla.wd1/Search"),                    # KLA
     ("workday", "zoom.wd5/Zoom"),
-    ("workday", "dell.wd1/External"),
     ("workday", "hp.wd5/ExternalCareerSite"),
     ("workday", "intel.wd1/External"),
     ("workday", "pfizer.wd1/PfizerCareers"),
@@ -50,11 +61,17 @@ COMPANIES = [
     ("workday", "comcast.wd5/Comcast_Careers"),
     ("workday", "nike.wd1/nke"),
     ("workday", "wf.wd1/WellsFargoJobs"),             # Wells Fargo
-    ("workday", "fedex.wd1/FDW_External_Career_Site"),  # FedEx Dataworks
     ("workday", "sysco.wd5/syscocareers"),
     ("workday", "swa.wd1/external"),                  # Southwest Airlines
     ("workday", "tmobile.wd1/External"),              # T-Mobile
-    ("workday", "walmart.wd5/WalmartExternal"),       # may 403 bot traffic
+    ("workday", "etsy.wd5/Etsy_Careers"),
+    ("workday", "usaa.wd1/USAAJOBSWD"),
+    ("workday", "nationwide.wd1/Nationwide_Career"),
+    ("workday", "genmills.wd1/GMI_External_Careers"),   # General Mills
+    ("workday", "generalmotors.wd5/Careers_GM"),        # GM
+    ("workday", "expedia.wd108/search"),
+    ("workday", "priceline.wd1/BookingHoldings"),       # Booking Holdings
+    ("workday", "hcmportal.wd5/Search"),                # UPS
 ]
 
 # Display names for the status message (slug -> friendly name).
@@ -62,8 +79,10 @@ _NAMES = {
     "spacex": "SpaceX", "doordashusa": "DoorDash", "nvidia": "NVIDIA",
     "kla": "KLA", "hp": "HP", "cvshealth": "CVS Health",
     "capitalone": "Capital One", "wf": "Wells Fargo",
-    "fedex": "FedEx", "swa": "Southwest Airlines", "citi": "Citi",
-    "tmobile": "T-Mobile",
+    "swa": "Southwest Airlines", "citi": "Citi",
+    "tmobile": "T-Mobile", "usaa": "USAA", "genmills": "General Mills",
+    "generalmotors": "GM", "priceline": "Booking Holdings",
+    "hcmportal": "UPS", "rivianvw": "Rivian & VW Tech",
 }
 
 
