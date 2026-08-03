@@ -13,6 +13,7 @@ Dry run:     python job_bot.py --dry-run  (prints instead of posting)
 import argparse
 import json
 import os
+import re
 import ssl
 import sys
 import time
@@ -80,6 +81,81 @@ TERMS = []
 # Optional location filter, e.g. ["CA", "Remote", "New York"]. Empty = anywhere.
 LOCATIONS = []
 
+# Drop anything that isn't clearly US-based. ATS boards are global, so this is
+# what keeps Singapore/Mumbai/Buenos Aires roles out of the channel.
+US_ONLY = True
+
+# Explicit non-US signals, checked first: "Toronto, ON, Canada" is out even
+# though "ON" would otherwise look like a state code.
+_NON_US = [
+    "canada", "mexico", "brazil", "argentina", "chile", "colombia", "peru",
+    "costa rica", "united kingdom", "england", "scotland", "ireland", "france",
+    "germany", "spain", "portugal", "italy", "netherlands", "belgium",
+    "sweden", "norway", "denmark", "finland", "poland", "romania",
+    "switzerland", "austria", "greece", "turkey", "israel", "india", "china",
+    "japan", "korea", "singapore", "malaysia", "indonesia", "thailand",
+    "vietnam", "philippines", "australia", "new zealand", "south africa",
+    "egypt", "nigeria", "kenya", "uae", "dubai", "qatar", "saudi arabia",
+    "emea", "apac", "latam", "emirates", "uk", "london", "dublin", "paris",
+    "berlin", "munich", "amsterdam", "zurich", "madrid", "barcelona", "milan",
+    "warsaw", "prague", "bucharest", "stockholm", "toronto", "vancouver",
+    "montreal", "ottawa", "bangalore", "bengaluru", "hyderabad", "mumbai",
+    "delhi", "gurgaon", "pune", "chennai", "noida", "tokyo", "osaka", "seoul",
+    "beijing", "shanghai", "shenzhen", "taipei", "hong kong", "sydney",
+    "melbourne", "auckland", "tel aviv", "sao paulo", "guadalajara", "bogota",
+    "buenos aires", "santiago", "lima", "manila", "jakarta", "bangkok",
+    "kuala lumpur", "ho chi minh",
+]
+
+_US_STATES = [
+    "alabama", "alaska", "arizona", "arkansas", "california", "colorado",
+    "connecticut", "delaware", "florida", "georgia", "hawaii", "idaho",
+    "illinois", "indiana", "iowa", "kansas", "kentucky", "louisiana", "maine",
+    "maryland", "massachusetts", "michigan", "minnesota", "mississippi",
+    "missouri", "montana", "nebraska", "nevada", "new hampshire", "new jersey",
+    "new mexico", "new york", "north carolina", "north dakota", "ohio",
+    "oklahoma", "oregon", "pennsylvania", "rhode island", "south carolina",
+    "south dakota", "tennessee", "texas", "utah", "vermont", "virginia",
+    "washington", "west virginia", "wisconsin", "wyoming", "puerto rico",
+    "district of columbia",
+]
+
+# Common US metros that often appear without a state.
+_US_CITIES = [
+    "new york city", "nyc", "san francisco", "sf bay area", "bay area",
+    "seattle", "boston", "chicago", "austin", "atlanta", "denver", "dallas",
+    "houston", "miami", "philadelphia", "phoenix", "san diego", "san jose ca",
+    "los angeles", "portland", "pittsburgh", "detroit", "minneapolis",
+    "charlotte", "nashville", "cincinnati", "columbus", "cleveland",
+    "st. louis", "kansas city", "salt lake city", "las vegas", "orlando",
+    "tampa", "raleigh", "durham", "arlington", "bentonville", "sunnyvale",
+    "mountain view", "palo alto", "santa clara", "cupertino", "redmond",
+    "bellevue", "hoboken", "jersey city", "mclean", "reston", "bethesda",
+]
+
+_NON_US_RE = re.compile(r"\b(" + "|".join(map(re.escape, _NON_US)) + r")\b")
+_US_TEXT_RE = re.compile(
+    r"\b(" + "|".join(map(re.escape, _US_STATES + _US_CITIES)) + r"|"
+    r"united states|usa|u\.s\.a?\.?|us remote|remote in usa|nationwide)\b")
+# Two-letter state codes, matched case-sensitively so "in"/"or"/"me" don't hit.
+_US_ABBR_RE = re.compile(
+    r"\b(A[LKZR]|C[AOT]|DE|DC|FL|GA|HI|I[DLNA]|K[SY]|LA|M[EDAINSOT]|"
+    r"N[EVHJMYCD]|O[HKR]|PA|RI|S[CD]|T[NX]|UT|V[TA]|W[AVIY])\b")
+
+
+def is_us(job):
+    """True if the listing looks US-based. Unknown locations are dropped."""
+    locs = ", ".join(job.get("locations") or []).strip()
+    if not locs:
+        return False
+    low = locs.lower()
+    if _NON_US_RE.search(low):
+        return False
+    if _US_TEXT_RE.search(low) or _US_ABBR_RE.search(locs):
+        return True
+    # Bare "Remote" with no country attached — usually US on these boards.
+    return "remote" in low
+
 # Ignore anything first posted more than this many days ago. Guards against a
 # feed re-flagging an old listing as active and pinging you about a stale role.
 MAX_AGE_DAYS = 14
@@ -127,6 +203,9 @@ def matches(job):
     terms = job.get("terms") or []
     if TERMS and terms and not any(t in terms for t in TERMS):
         return False   # ATS listings have no term tags; keep them
+
+    if US_ONLY and not is_us(job):
+        return False
 
     if LOCATIONS:
         locs = " ".join(job.get("locations") or []).lower()
