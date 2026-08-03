@@ -86,12 +86,17 @@ _NAMES = {
 }
 
 
+def display_name(slug):
+    """'hcmportal.wd5/Search' -> 'UPS'. Used for embeds and cross-source dedupe."""
+    key = slug.split("/", 1)[0].split(".")[0].lower()
+    return _NAMES.get(key, key.title())
+
+
 def company_names(companies=None):
     """Human-readable names for every configured board, in order."""
     out = []
     for _kind, slug in (companies or COMPANIES):
-        key = slug.split("/", 1)[0].split(".")[0].lower()
-        name = _NAMES.get(key, key.title())
+        name = display_name(slug)
         if name not in out:
             out.append(name)
     return out
@@ -130,7 +135,7 @@ def _greenhouse(slug, ctx):
     for j in d.get("jobs", []):
         out.append({
             "id": f"gh-{slug}-{j['id']}",
-            "company_name": slug,
+            "company_name": display_name(slug),
             "title": j.get("title", ""),
             "locations": [j.get("location", {}).get("name", "")],
             "url": j.get("absolute_url", ""),
@@ -151,7 +156,7 @@ def _lever(slug, ctx):
         loc = (j.get("categories") or {}).get("location", "")
         out.append({
             "id": f"lv-{slug}-{j.get('id')}",
-            "company_name": slug,
+            "company_name": display_name(slug),
             "title": j.get("text", ""),
             "locations": [loc],
             "url": j.get("hostedUrl", ""),
@@ -172,7 +177,7 @@ def _ashby(slug, ctx):
             continue
         out.append({
             "id": f"as-{slug}-{j.get('id')}",
-            "company_name": slug,
+            "company_name": display_name(slug),
             "title": j.get("title", ""),
             "locations": [j.get("location", "")],
             "url": j.get("jobUrl") or j.get("applyUrl", ""),
@@ -231,7 +236,7 @@ def _workday(slug, ctx):
                 seen_ids.add(jid)
                 out.append({
                     "id": jid,
-                    "company_name": tenant,
+                    "company_name": display_name(slug),
                     "title": j.get("title", ""),
                     "locations": [j.get("locationsText", "")],
                     "url": f"{base}/en-US/{site}{path}",

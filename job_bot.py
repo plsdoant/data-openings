@@ -224,6 +224,61 @@ def job_key(job):
     return job.get("id") or f"{job.get('company_name')}::{job.get('title')}"
 
 
+_CO_SUFFIXES = re.compile(
+    r"\b(inc|llc|ltd|corp|corporation|co|company|group|holdings|technologies|"
+    r"technology|usa|us|the)\b")
+_SEASON = re.compile(
+    r"\b(summer|fall|autumn|winter|spring)\b|\b20\d\d\b|\bfy\d\d\b")
+_REQ_ID = re.compile(r"\b[a-z]?\d{4,}\b")
+
+
+def _norm(s, extra=None):
+    s = (s or "").lower()
+    s = re.sub(r"[‐-―]", "-", s)      # unicode dashes -> ascii
+    s = s.replace("&", " and ")
+    if extra:
+        s = extra(s)
+    s = re.sub(r"[^a-z0-9]+", " ", s)
+    return " ".join(s.split())
+
+
+def dedupe_key(job):
+    """Source-agnostic identity, so the same role from the Simplify feed and
+    from a company's own ATS board doesn't get posted twice.
+
+    Normalizes away the things that differ between sources: company suffixes,
+    season/year tags, requisition ids, and 'internship' vs 'intern'."""
+    company = _norm(job.get("company_name"), lambda s: _CO_SUFFIXES.sub(" ", s))
+    title = _norm(job.get("title"),
+                  lambda s: _REQ_ID.sub(" ", _SEASON.sub(" ", s)))
+    title = re.sub(r"\binternships?\b", "intern", title)
+    title = re.sub(r"\b(co op|coop)\b", "intern", title)
+    if not company or not title:      # too little to match on — stay unique
+        return f"!{job_key(job)}"
+    return f"{company.replace(' ', '')}::{title}"
+
+
+def seen_keys(job):
+    """Every key that should mark this job as seen."""
+    return {job_key(job), f"dk:{dedupe_key(job)}"}
+
+
+def drop_cross_source_dupes(jobs):
+    """Within one run, keep one copy of each role. Prefer the direct-ATS
+    version — it links to the company's own posting."""
+    best = {}
+    for j in jobs:
+        k = dedupe_key(j)
+        cur = best.get(k)
+        if cur is None:
+            best[k] = j
+            continue
+        is_ats = lambda x: str(x.get("source", "")).startswith("ats:")
+        if is_ats(j) and not is_ats(cur):
+            best[k] = j
+    return list(best.values())
+
+
 # ---------------------------------------------------------------------------
 # NOTIFY
 # ---------------------------------------------------------------------------
@@ -429,14 +484,20 @@ def main():
     print(f"[{datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}] polling...")
     all_jobs = fetch_all()
     hits = [j for j in all_jobs if matches(j)]
-    print(f"  {len(hits)} listings match your filters")
+    deduped = drop_cross_source_dupes(hits)
+    if len(deduped) < len(hits):
+        print(f"  {len(hits)} listings match your filters"
+              f" ({len(hits) - len(deduped)} cross-source duplicates merged)")
+    else:
+        print(f"  {len(hits)} listings match your filters")
+    hits = deduped
 
     state = {}
     if STATE_FILE.exists():
         state = json.loads(STATE_FILE.read_text())
     seen = set(state.get("seen", []))
 
-    fresh = [j for j in hits if job_key(j) not in seen]
+    fresh = [j for j in hits if not (seen_keys(j) & seen)]
     fresh.sort(key=lambda j: j.get("date_posted", 0), reverse=True)
     print(f"  {len(fresh)} are new since last run")
 
@@ -448,7 +509,8 @@ def main():
         return
 
     if args.seed:
-        state["seen"] = sorted(job_key(j) for j in hits)
+        state["seen"] = sorted(set().union(*(seen_keys(j) for j in hits))
+                               if hits else [])
         STATE_FILE.write_text(json.dumps(state))
         print(f"  seeded {len(hits)} listings. Future runs alert on new ones only.")
         return
@@ -466,7 +528,8 @@ def main():
     # post_status may stash heartbeat message ids in state, so save after.
     if not args.dry_run:
         post_status(fresh, all_jobs, state)
-        seen |= {job_key(j) for j in hits}
+        for j in hits:
+            seen |= seen_keys(j)
         state["seen"] = sorted(seen)
         STATE_FILE.write_text(json.dumps(state))
 
