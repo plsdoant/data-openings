@@ -1,5 +1,5 @@
 """
-Direct ATS polling: Greenhouse, Lever, Ashby, Workday.
+Direct ATS polling: Greenhouse, Lever, Ashby, Workday, SmartRecruiters.
 
 Polls each company's public job-board API and normalizes results into the
 same dict shape the Simplify feed uses, so job_bot.py can filter, dedupe,
@@ -10,6 +10,7 @@ Slug = the company identifier in their careers URL:
   jobs.lever.co/<slug>
   jobs.ashbyhq.com/<slug>
   workday: "<tenant>.<wdN>/<SiteName>" from <tenant>.<wdN>.myworkdayjobs.com/<SiteName>
+  careers.smartrecruiters.com/<slug>
 
 Workday boards are huge (thousands of postings), so we ask Workday to
 search for WORKDAY_SEARCH server-side and cap pagination, then let
@@ -59,6 +60,8 @@ COMPANIES = [
     ("greenhouse", "discord"),
     ("greenhouse", "roblox"),
     ("greenhouse", "riotgames"),
+    ("greenhouse", "heartflowinc"),    # Heartflow
+    ("smartrecruiters", "westerndigital"),
     ("lever", "spotify"),
     ("lever", "tri"),                  # Toyota Research Institute
     ("ashby", "notion"),
@@ -103,7 +106,8 @@ _NAMES = {
     "generalmotors": "GM", "priceline": "Booking Holdings",
     "hcmportal": "UPS", "rivianvw": "Rivian & VW Tech",
     "sofi": "SoFi", "mongodb": "MongoDB", "riotgames": "Riot Games",
-    "tri": "Toyota Research",
+    "tri": "Toyota Research", "heartflowinc": "Heartflow",
+    "westerndigital": "Western Digital",
 }
 
 
@@ -211,6 +215,64 @@ def _ashby(slug, ctx):
     return out
 
 
+# SmartRecruiters gives country as an ISO-2 code. Map the common ones to real
+# names so job_bot's US filter can read them — an unmapped foreign location
+# just looks unknown, which that filter already rejects. Never emit a bare
+# 2-letter code: "ca"/"in"/"de" would collide with US state abbreviations.
+_ISO2 = {
+    "us": "United States", "ca": "Canada", "mx": "Mexico", "br": "Brazil",
+    "ar": "Argentina", "cl": "Chile", "co": "Colombia", "cr": "Costa Rica",
+    "gb": "United Kingdom", "uk": "United Kingdom", "ie": "Ireland",
+    "fr": "France", "de": "Germany", "es": "Spain", "pt": "Portugal",
+    "it": "Italy", "nl": "Netherlands", "be": "Belgium", "ch": "Switzerland",
+    "at": "Austria", "se": "Sweden", "no": "Norway", "dk": "Denmark",
+    "fi": "Finland", "pl": "Poland", "ro": "Romania", "tr": "Turkey",
+    "il": "Israel", "ae": "UAE", "sa": "Saudi Arabia", "za": "South Africa",
+    "eg": "Egypt", "ng": "Nigeria", "ke": "Kenya", "in": "India",
+    "cn": "China", "hk": "Hong Kong", "tw": "Taiwan", "jp": "Japan",
+    "kr": "Korea", "sg": "Singapore", "my": "Malaysia", "th": "Thailand",
+    "vn": "Vietnam", "ph": "Philippines", "id": "Indonesia",
+    "au": "Australia", "nz": "New Zealand",
+}
+
+_SR_PAGE = 100     # SmartRecruiters' max page size
+_SR_CAP = 600      # max postings per board per run
+
+
+def _smartrecruiters(slug, ctx):
+    out, offset, total = [], 0, _SR_CAP
+    ident = slug
+    while offset < min(total, _SR_CAP):
+        d = _get("https://api.smartrecruiters.com/v1/companies/"
+                 f"{slug}/postings?limit={_SR_PAGE}&offset={offset}", ctx)
+        total = d.get("totalFound", 0)
+        posts = d.get("content") or []
+        if not posts:
+            break
+        for j in posts:
+            loc = j.get("location") or {}
+            ident = (j.get("company") or {}).get("identifier") or ident
+            parts = [loc.get("city"), loc.get("region"),
+                     _ISO2.get((loc.get("country") or "").lower())]
+            where = ", ".join(p for p in parts if p)
+            if loc.get("remote") and "remote" not in where.lower():
+                where = f"Remote — {where}" if where else "Remote"
+            out.append({
+                "id": f"sr-{slug}-{j.get('id')}",
+                "company_name": display_name(slug),
+                "title": j.get("name", "").strip(),
+                "locations": [where],
+                "url": f"https://jobs.smartrecruiters.com/{ident}/{j.get('id')}",
+                "date_posted": _iso_to_epoch(j.get("releasedDate")),
+                "terms": [],
+                "active": True,
+                "is_visible": True,
+                "source": f"ats:{slug}",
+            })
+        offset += _SR_PAGE
+    return out
+
+
 def _wd_posted_to_epoch(s):
     """'Posted Today' / 'Posted Yesterday' / 'Posted 7 Days Ago' -> epoch."""
     s = (s or "").lower()
@@ -272,7 +334,7 @@ def _workday(slug, ctx):
 
 
 _FETCHERS = {"greenhouse": _greenhouse, "lever": _lever, "ashby": _ashby,
-             "workday": _workday}
+             "workday": _workday, "smartrecruiters": _smartrecruiters}
 
 
 # --- public API -------------------------------------------------------------
