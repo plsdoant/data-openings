@@ -118,13 +118,9 @@ def display_name(slug):
 
 
 def company_names(companies=None):
-    """Human-readable names for every configured board, in order."""
-    out = []
-    for _kind, slug in (companies or COMPANIES):
-        name = display_name(slug)
-        if name not in out:
-            out.append(name)
-    return out
+    """Human-readable names for every configured board, alphabetical."""
+    names = {display_name(slug) for _kind, slug in (companies or COMPANIES)}
+    return sorted(names, key=lambda n: n.lower())
 
 
 # Server-side search terms for Workday boards (they're too big to pull whole).
