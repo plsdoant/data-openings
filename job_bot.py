@@ -22,6 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import ats
+import jobright
 
 # ---------------------------------------------------------------------------
 # CONFIG
@@ -183,6 +184,7 @@ def fetch_all():
             print(f"  fetched {len(data):,} from {url.split('/')[4]}")
         except Exception as e:
             print(f"  WARN: {url} failed: {e}", file=sys.stderr)
+    jobs.extend(jobright.fetch_jobright(SSL_CTX))
     jobs.extend(ats.fetch_ats(SSL_CTX))
     return jobs
 
@@ -450,7 +452,7 @@ def post_status(fresh, all_jobs, state):
                f"{', '.join(ats.company_names())} — last run {stamp}")
     if ats_new:
         ats_msg += f" — **{ats_new} new this run**"
-    feed_msg = (f"Checked {feed_total:,} Simplify feed listings"
+    feed_msg = (f"Checked {feed_total:,} Simplify + Jobright feed listings"
                 f" for analyst openings — last run {stamp}")
     if feed_new:
         feed_msg += f" — **{feed_new} new this run**"
