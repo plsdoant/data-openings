@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+  --bg: #fff;
   --text: #282828;
   --muted: #767676;
   --faint: #a3a3a3;
@@ -10,9 +12,31 @@
   --panel: 400px;
 }
 
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1c1c1c;
+  --text: #e6e3dc;
+  --muted: #9b9891;
+  --faint: #6b6964;
+  --rule: #333230;
+  --wash: #262523;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #1c1c1c;
+    --text: #e6e3dc;
+    --muted: #9b9891;
+    --faint: #6b6964;
+    --rule: #333230;
+    --wash: #262523;
+  }
+}
+
 * { box-sizing: border-box; }
 
-html { background: #fff; }
+html { background: var(--bg); }
 
 body {
   margin: 0;
@@ -43,7 +67,19 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   font-weight: 500;
 }
 
-.top-links a { margin-left: 22px; }
+.top-links a,
+.top-links button { margin-left: 22px; }
+
+.top-links button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.top-links button:hover { text-decoration: underline; text-underline-offset: 2px; }
 
 /* page column --------------------------------------------------------- */
 
@@ -62,9 +98,9 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 /* filters ------------------------------------------------------------- */
 
 .filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 32px;
   font-family: var(--sans);
   font-size: 13px;
   color: var(--muted);
@@ -73,16 +109,14 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 }
 
 .filters label {
-  display: inline-flex;
+  display: flex;
   align-items: baseline;
   gap: 8px;
   white-space: nowrap;
+  min-width: 0;
 }
 
-.filters .grow { flex: 1 1 180px; }
-.filters .grow input { width: 100%; }
-.filters select { max-width: 150px; }
-.filters select[name="company"] { width: 200px; max-width: none; }
+.filters .grow { grid-column: span 2; }
 
 .filters select,
 .filters input {
@@ -93,6 +127,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   border-bottom: 1px solid var(--rule);
   border-radius: 0;
   padding: 2px 0;
+  flex: 1;
   min-width: 0;
   -webkit-appearance: none;
   appearance: none;
@@ -226,7 +261,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   right: 0;
   bottom: 0;
   width: var(--panel);
-  background: #fff;
+  background: var(--bg);
   border-left: 1px solid var(--rule);
   overflow-y: auto;
   padding: 56px 32px 48px;
@@ -268,13 +303,13 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .apply {
   display: inline-block;
   font: 14px var(--sans);
-  color: #fff;
+  color: var(--bg);
   background: var(--text);
   padding: 9px 18px;
   border-radius: 2px;
 }
 
-.apply:hover { background: #000; text-decoration: none; }
+.apply:hover { text-decoration: none; opacity: 0.85; }
 
 .detail .also {
   font-family: var(--sans);
@@ -328,6 +363,49 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   color: var(--muted);
 }
 
+/* corner fire ---------------------------------------------------------- */
+
+#fire {
+  position: fixed;
+  left: 36px;
+  bottom: 28px;
+  width: 80px;
+  height: 96px;
+  cursor: default;
+}
+
+#fire canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+  #fire { display: none; }
+  body.has-detail .to-top { display: none; }
+}
+
+/* back to top ---------------------------------------------------------- */
+
+.to-top {
+  position: fixed;
+  right: 36px;
+  bottom: 28px;
+  font: 13px var(--sans);
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.to-top:hover { color: var(--text); border-color: var(--muted); }
+
+body.has-detail .to-top { right: calc(var(--panel) + 36px); }
+
 /* when the panel would cover the column, give it the right margin ------ */
 
 @media (max-width: 1560px) {
@@ -341,6 +419,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
 @media (max-width: 640px) {
   .top { padding: 14px 16px; }
+  .filters { grid-template-columns: repeat(2, 1fr); gap: 14px 24px; }
   .listings li { grid-template-columns: 1fr auto; }
   .age { grid-column: 1 / -1; order: -1; }
   .detail { width: 100%; padding: 56px 20px 40px; }

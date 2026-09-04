@@ -6,6 +6,9 @@
 <title>Data Openings</title>
 <meta name="description" content="Open data analyst internships in the US, refreshed every 30 minutes.">
 <link rel="stylesheet" href="style.css">
+<script>
+  try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 </head>
 <body>
 
@@ -14,6 +17,7 @@
   <span class="top-links">
     <a href="#about">About</a>
     <a href="https://github.com/plsdoant/data-openings">GitHub</a>
+    <button type="button" id="theme">Dark</button>
   </span>
 </nav>
 
@@ -99,6 +103,10 @@
   <div class="detail-body" id="detail-body"></div>
 </aside>
 
+<div id="fire" aria-hidden="true" title="Click to blow it out"></div>
+<button class="to-top" id="to-top" type="button" hidden>Back to top</button>
+
 <script src="app.js"></script>
+<script src="fire.js"></script>
 </body>
 </html>

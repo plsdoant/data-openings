@@ -307,12 +307,40 @@
       ? ` <span class="stale">The watcher hasn&rsquo;t reported in ${ago(data.generated_at).replace(" ago", "")}, so this may be behind.</span>`
       : "";
     $("#intro").innerHTML =
-      `Data analyst internships in the United States, gathered every half hour ` +
-      `from ${(s.feeds || 0).toLocaleString()} feed listings and ${s.boards || 0} company job boards. ` +
-      `${n} open right now. Last checked ${ago(data.generated_at)}.${stale}`;
+      `Last checked ${ago(data.generated_at)}.${stale}`;
     $("#board-count").textContent = s.boards || "";
     $("#board-list").textContent = (data.companies_polled || []).join(", ") + ".";
   }
+
+  // --- theme -----------------------------------------------------------
+
+  const themeBtn = $("#theme");
+  const systemDark = matchMedia("(prefers-color-scheme: dark)");
+
+  function currentTheme() {
+    return document.documentElement.dataset.theme || (systemDark.matches ? "dark" : "light");
+  }
+
+  function labelTheme() {
+    themeBtn.textContent = currentTheme() === "dark" ? "Light" : "Dark";
+  }
+
+  themeBtn.addEventListener("click", () => {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch (e) { /* private mode */ }
+    labelTheme();
+  });
+  systemDark.addEventListener("change", labelTheme);
+  labelTheme();
+
+  // --- back to top -----------------------------------------------------
+
+  const toTop = $("#to-top");
+  function checkScroll() { toTop.hidden = scrollY < 600; }
+  addEventListener("scroll", checkScroll, { passive: true });
+  toTop.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+  checkScroll();
 
   // --- boot ------------------------------------------------------------
 
