@@ -10,7 +10,7 @@ Three sources, every 30 minutes:
 2. **Jobright.ai repo** (`jobright.py`) — a second curated list, updated hourly. Publishes no JSON, so the markdown table in its README is parsed directly.
 3. **Direct ATS polling** (`ats.py`) — hits company job-board APIs (Greenhouse, Lever, Ashby, Workday, SmartRecruiters) for 60 companies, so new roles are caught within one poll instead of waiting on a feed.
 
-Everything is filtered for analyst roles, deduped, and posted. The workflow commits `seen.json` back to the repo after each run.
+Everything is filtered for analyst roles, deduped, and posted. The workflow commits `seen.json` and `docs/jobs.json` back to the repo after each run; the latter feeds the [site](#site).
 
 Because the same role often appears in more than one source, listings are also deduped **across** sources on a normalized company + title key — season tags, requisition ids, company suffixes, and `internship` vs `intern` are all normalized away. When a role shows up in both a feed and a company's own board, the ATS copy wins so the link points at the original posting.
 
@@ -19,6 +19,26 @@ Because the same role often appears in more than one source, listings are also d
 Set `WEBHOOK_URL_ATS` and direct-ATS finds go to their own channel; both feeds (Simplify and Jobright) stay in `WEBHOOK_URL`. If it's unset, everything goes to one channel.
 
 Each channel keeps one **heartbeat** message showing what was checked and when ("last run 3 minutes ago"). It edits itself in place on quiet runs, and re-posts below new jobs so it stays at the bottom.
+
+## Site
+
+Everything currently matching is also published as a static page from `docs/`
+via GitHub Pages: a list you can filter by role, age, source, company,
+location, and term, with a side panel per listing and an Apply link.
+
+Each run rewrites `docs/jobs.json` (the workflow commits it next to
+`seen.json`), and `docs/index.html` renders it client-side, so the page needs
+no server and updates on the same 30-minute cadence as the Discord channel.
+The file carries a `first_seen` stamp per listing so the page can say when
+the watcher first noticed a role, separate from when it was posted.
+
+To turn it on once: Settings → Pages → Source **Deploy from a branch**,
+branch `main`, folder `/docs`.
+
+```bash
+python3 job_bot.py --export   # rebuild docs/jobs.json only; posts nothing
+python3 -m http.server 8765 --directory docs   # preview at localhost:8765
+```
 
 ## Setup
 
@@ -41,6 +61,7 @@ python3 job_bot.py --dry-run     # print matches, post nothing, touch nothing
 python3 job_bot.py --check-ats   # verify every ATS board still responds
 python3 job_bot.py --test 3      # post 3 newest to Discord, don't touch state
 python3 job_bot.py --seed        # mark everything open as seen, post nothing
+python3 job_bot.py --export      # write docs/jobs.json for the site, nothing else
 python3 job_bot.py               # normal run: post new roles, update state
 ```
 

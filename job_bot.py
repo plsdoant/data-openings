@@ -162,6 +162,8 @@ def is_us(job):
 MAX_AGE_DAYS = 14
 
 STATE_FILE = Path(__file__).parent / "seen.json"
+# Everything currently matching, written for the GitHub Pages site in docs/.
+SITE_FILE = Path(__file__).parent / "docs" / "jobs.json"
 UA = {"User-Agent": "Mozilla/5.0 (job-watcher)"}
 
 
@@ -380,6 +382,75 @@ def notify_slack(jobs, hook=None):
 
 
 # ---------------------------------------------------------------------------
+# SITE EXPORT
+# ---------------------------------------------------------------------------
+
+_BOARD_NAMES = {"gh": "Greenhouse", "lv": "Lever", "as": "Ashby",
+                "sr": "SmartRecruiters", "wd": "Workday"}
+
+
+def _site_source(job):
+    """('simplify' | 'jobright' | 'ats', board name or None)."""
+    src = str(job.get("source", ""))
+    if src.startswith("ats:"):
+        return "ats", _BOARD_NAMES.get(str(job.get("id", ""))[:2])
+    if src == "jobright":
+        return "jobright", None
+    return "simplify", None
+
+
+def export_site(hits, all_jobs):
+    """Write docs/jobs.json: every listing that currently passes the filters,
+    newest first, plus a little metadata for the page header.
+
+    first_seen is carried over from the previous export so the site can say
+    when the watcher first noticed a role, not just when it was posted."""
+    prev = {}
+    if SITE_FILE.exists():
+        try:
+            prev = {j["id"]: j.get("first_seen")
+                    for j in json.loads(SITE_FILE.read_text()).get("jobs", [])}
+        except (ValueError, KeyError, TypeError):
+            pass
+    now = int(time.time())
+    jobs = []
+    for j in sorted(hits, key=lambda x: x.get("date_posted") or 0, reverse=True):
+        source, board = _site_source(j)
+        jobs.append({
+            "id": job_key(j),
+            "title": j.get("title", ""),
+            "company": j.get("company_name", ""),
+            "locations": [l for l in (j.get("locations") or []) if l],
+            "terms": [t for t in (j.get("terms") or [])
+                      if t.strip().lower() not in ("n/a", "na", "")],
+            "url": j.get("url", ""),
+            "posted": j.get("date_posted") or 0,
+            "updated": j.get("date_updated") or 0,
+            "first_seen": prev.get(job_key(j)) or now,
+            "source": source,
+            "board": board,
+            "category": j.get("category"),
+            "sponsorship": j.get("sponsorship"),
+            "degrees": j.get("degrees") or [],
+            "company_url": j.get("company_url"),
+        })
+    is_ats = lambda j: str(j.get("source", "")).startswith("ats:")
+    payload = {
+        "generated_at": now,
+        "scanned": {
+            "feeds": sum(1 for j in all_jobs if not is_ats(j)),
+            "ats": sum(1 for j in all_jobs if is_ats(j)),
+            "boards": len(ats.COMPANIES),
+        },
+        "companies_polled": ats.company_names(),
+        "jobs": jobs,
+    }
+    SITE_FILE.parent.mkdir(exist_ok=True)
+    SITE_FILE.write_text(json.dumps(payload, indent=0, ensure_ascii=False))
+    print(f"  exported {len(jobs)} listings to {SITE_FILE.relative_to(Path(__file__).parent)}")
+
+
+# ---------------------------------------------------------------------------
 # MAIN
 # ---------------------------------------------------------------------------
 
@@ -478,6 +549,9 @@ def main():
     ap.add_argument("--test", type=int, metavar="N", nargs="?", const=3,
                     help="post the N newest matches to check formatting; "
                          "does not modify seen.json")
+    ap.add_argument("--export", action="store_true",
+                    help="write docs/jobs.json for the site and exit; "
+                         "posts nothing, leaves seen.json alone")
     args = ap.parse_args()
 
     if args.check_ats:
@@ -493,6 +567,10 @@ def main():
     else:
         print(f"  {len(hits)} listings match your filters")
     hits = deduped
+
+    if args.export:
+        export_site(hits, all_jobs)
+        return
 
     state = {}
     if STATE_FILE.exists():
@@ -529,6 +607,7 @@ def main():
     # briefly disappears from the feed doesn't re-alert when it comes back.
     # post_status may stash heartbeat message ids in state, so save after.
     if not args.dry_run:
+        export_site(hits, all_jobs)
         post_status(fresh, all_jobs, state)
         for j in hits:
             seen |= seen_keys(j)

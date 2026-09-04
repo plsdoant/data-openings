@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Openings</title>
+<meta name="description" content="Open data analyst internships in the US, refreshed every 30 minutes.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="top">
+  <a class="wordmark" href="./">Data Openings</a>
+  <span class="top-links">
+    <a href="#about">About</a>
+    <a href="https://github.com/plsdoant/data-openings">GitHub</a>
+  </span>
+</nav>
+
+<main class="page">
+
+  <p class="intro" id="intro">Loading listings&hellip;</p>
+
+  <form class="filters" id="filters" autocomplete="off">
+    <label>Role
+      <select name="role">
+        <option value="">Any</option>
+        <option value="analyst">Data analyst</option>
+        <option value="science">Data science</option>
+        <option value="engineering">Data engineering</option>
+        <option value="bi">Business &amp; BI</option>
+        <option value="other">Other</option>
+      </select>
+    </label>
+    <label>Posted
+      <select name="age">
+        <option value="">Any time</option>
+        <option value="1">Past day</option>
+        <option value="3">Past 3 days</option>
+        <option value="7">Past week</option>
+      </select>
+    </label>
+    <label>Source
+      <select name="source">
+        <option value="">Any</option>
+        <option value="simplify">Simplify</option>
+        <option value="jobright">Jobright</option>
+        <option value="ats">Company board</option>
+      </select>
+    </label>
+    <label>Term
+      <select name="term"><option value="">Any</option></select>
+    </label>
+    <label>Location
+      <select name="location"><option value="">Anywhere</option></select>
+    </label>
+    <label>Company
+      <select name="company"><option value="">Any</option></select>
+    </label>
+    <label class="grow">Search
+      <input type="search" name="q" placeholder="title or company">
+    </label>
+    <label>Sort
+      <select name="sort">
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+        <option value="found">Recently found</option>
+        <option value="company">Company</option>
+      </select>
+    </label>
+  </form>
+
+  <p class="count" id="count"></p>
+
+  <ol class="listings" id="listings"></ol>
+
+  <section class="about" id="about">
+    <h2>About</h2>
+    <p>This page is the front end of a small watcher that looks for data analyst
+    internships and posts new ones to a Discord channel. Every half hour it
+    reads the <a href="https://github.com/SimplifyJobs/Summer2027-Internships">Simplify</a>
+    and <a href="https://github.com/jobright-ai/2026-Data-Analysis-Internship">Jobright</a>
+    internship lists and polls the job boards of <span id="board-count">60</span>
+    companies directly, then keeps whatever mentions analytics, data, or business
+    intelligence in the title and is based in the United States.</p>
+    <p>A listing appears here as soon as the watcher notices it and drops off
+    two weeks after it was first posted. When the same role shows up in more
+    than one place, the copy from the company&rsquo;s own board is kept so the
+    link goes to the original posting. The watcher collects only what the
+    boards expose in their listing metadata, so the full description lives on
+    the company&rsquo;s site.</p>
+    <p class="polled">Boards polled directly: <span id="board-list"></span></p>
+  </section>
+
+</main>
+
+<aside class="detail" id="detail" hidden aria-label="Listing details">
+  <button class="close" id="close" type="button" aria-label="Close">&times;</button>
+  <div class="detail-body" id="detail-body"></div>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>
