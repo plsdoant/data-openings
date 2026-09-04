@@ -53,7 +53,7 @@ INCLUDE = [
     "data analyst",
     "data analytics",
     "data-analytics",
-    "data engineering"
+    "data engineering",
     "data processing",
     "processing",
     "business analyst",
