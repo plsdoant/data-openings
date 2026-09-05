@@ -1,8 +1,8 @@
 {
-"generated_at": 1788560274,
+"generated_at": 1788567546,
 "scanned": {
-"feeds": 16230,
-"ats": 11712,
+"feeds": 16275,
+"ats": 11720,
 "boards": 60
 },
 "companies_polled": [
@@ -77,7 +77,7 @@
 ],
 "terms": [],
 "url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Commercial-Data-Science-Intern--Spring-2027_10158063",
-"posted": 1788560256,
+"posted": 1788567530,
 "updated": 0,
 "first_seen": 1788541251,
 "source": "ats",
@@ -96,7 +96,7 @@
 ],
 "terms": [],
 "url": "https://target.wd5.myworkdayjobs.com/en-US/targetcareers/job/1000-Nicollet-Mall-MinneapolisMN-55403-2542/Inventory-Analyst-Intern---Minneapolis--MN--Starting-Summer--2027-_R0000450965",
-"posted": 1788560254,
+"posted": 1788567528,
 "updated": 0,
 "first_seen": 1788551359,
 "source": "ats",
@@ -105,6 +105,126 @@
 "sponsorship": null,
 "degrees": [],
 "company_url": null
+},
+{
+"id": "ce15dae3-7399-4de2-93b2-1047bc6aedc8",
+"title": "Data Science Intern",
+"company": "Schonfeld",
+"locations": [
+"NYC"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://job-boards.greenhouse.io/schonfeld/jobs/8171692",
+"posted": 1788561966,
+"updated": 1788562114,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Schonfeld"
+},
+{
+"id": "2958c86d-fef5-4422-a0a1-7bd489bfebf1",
+"title": "Business Analytics Intern",
+"company": "Schonfeld",
+"locations": [
+"NYC"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://job-boards.greenhouse.io/schonfeld/jobs/8171703",
+"posted": 1788561966,
+"updated": 1788562114,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's"
+],
+"company_url": "https://simplify.jobs/c/Schonfeld"
+},
+{
+"id": "7c45d4ef-21c8-4acd-b82a-f56987b07548",
+"title": "Data Engineering Intern",
+"company": "Kodiak Robotics",
+"locations": [
+"Mountain View, CA"
+],
+"terms": [
+"Winter 2027"
+],
+"url": "https://job-boards.greenhouse.io/kodiak/jobs/4396622009",
+"posted": 1788561866,
+"updated": 1788562057,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's",
+"PhD"
+],
+"company_url": "https://simplify.jobs/c/Kodiak-Robotics"
+},
+{
+"id": "4450e57d-6850-4b61-b0f6-39350674e9d9",
+"title": "Business Analytics Intern - Summer 2027",
+"company": "AArete",
+"locations": [
+"Chicago, IL"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://jobs.jobvite.com/aarete/job/oBXLAfwD?nl=1&nl=1&fr=false",
+"posted": 1788561638,
+"updated": 1788561721,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/AArete"
+},
+{
+"id": "ea04c8fe-d9e3-4893-a3da-1aee53f5553d",
+"title": "Student Intern - Power Delivery Performance & Analytics",
+"company": "Entergy",
+"locations": [
+"The Woodlands, TX"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://jobs.entergy.com/job/The-Woodlands-Student,-Intern,-Power-Delivery-Performance-&-Analytics,-Spring-2027-Texa/1426995300/?ats=successfactors",
+"posted": 1788559545,
+"updated": 1788560583,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's",
+"PhD"
+],
+"company_url": "https://simplify.jobs/c/Entergy"
 },
 {
 "id": "e83278e0-c4fd-42f9-a773-171b6b1e16c1",
@@ -438,6 +558,168 @@
 "company_url": "https://simplify.jobs/c/Clarios"
 },
 {
+"id": "4a01e4d3-60e8-452f-a585-accc003f913d",
+"title": "Operational Analytics Intern",
+"company": "DIRECTV",
+"locations": [
+"Remote in USA"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://directv.wd1.myworkdayjobs.com/careers/job/El-Segundo-CA/DIRECTV-for-Business--Operational-Analytics-Intern_R260282",
+"posted": 1788480000,
+"updated": 1788560821,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's"
+],
+"company_url": "https://simplify.jobs/c/DIRECTV"
+},
+{
+"id": "6cc400a9-db6f-4550-9989-36f65cbe70b1",
+"title": "Feature Engineer Intern - Enterprise Analytics Office",
+"company": "Nationwide",
+"locations": [
+"Columbus, OH"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://nationwide.wd1.myworkdayjobs.com/Nationwide_Career/job/Ohio---Columbus-Metro/Summer-2027-Feature-Engineer-Internship_100233",
+"posted": 1788480000,
+"updated": 1788560771,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Nationwide"
+},
+{
+"id": "a878e206-e09a-4e2d-a2a6-10c94b04cf61",
+"title": "Commercial Data Science Intern",
+"company": "The Walt Disney Company",
+"locations": [
+"Celebration, FL"
+],
+"terms": [
+"Winter 2027"
+],
+"url": "https://disney.wd5.myworkdayjobs.com/disneycareer/job/Celebration-FL-USA/Commercial-Data-Science-Intern--Spring-2027_10158063",
+"posted": 1788480000,
+"updated": 1788560282,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Disney"
+},
+{
+"id": "0a09d266-9cc5-488d-a0f1-a5950423f368",
+"title": "Data Integration Intern",
+"company": "Hy-Vee",
+"locations": [
+"West Des Moines, IA"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Data-Integration-Intern---Summer-2027_R250148",
+"posted": 1788480000,
+"updated": 1788559562,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Hy-Vee"
+},
+{
+"id": "cacd3bd3-7f7c-4a70-853d-7c88363173ff",
+"title": "Data Analytics Intern",
+"company": "Hy-Vee",
+"locations": [
+"West Des Moines, IA"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://hyvee.wd1.myworkdayjobs.com/HyVeeCareers/job/Corporate-Office-Westown-Pkwy-West-Des-Moines-IA/Data-Analytics-Intern---Summer-2027_R250146",
+"posted": 1788480000,
+"updated": 1788559562,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's"
+],
+"company_url": "https://simplify.jobs/c/Hy-Vee"
+},
+{
+"id": "92416bd1-1305-45ff-8558-9427fd6cc2bb",
+"title": "Sales Analytics Intern",
+"company": "Allied Solutions",
+"locations": [
+"Carmel, IN"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://alliedsolutions.wd501.myworkdayjobs.com/Allied_External/job/Carmel-IN/Sales-Analytics-Intern_R-011098",
+"posted": 1788480000,
+"updated": 1788561541,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [],
+"company_url": "https://simplify.jobs/c/Allied-Solutions"
+},
+{
+"id": "302e6ed8-0e34-4d81-bd75-93f9c018883c",
+"title": "Data Analyst Intern",
+"company": "Stryker",
+"locations": [
+"Cary, IL"
+],
+"terms": [
+"Winter 2026"
+],
+"url": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/Cary-Illinois/Customer-One-Intern--Data-Analyst----Cary--IL_R572734",
+"posted": 1788480000,
+"updated": 1788561017,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's"
+],
+"company_url": "https://simplify.jobs/c/Stryker"
+},
+{
 "id": "jr-6a9b2e532cdc5958f53eb3b8",
 "title": "Data Analytics Intern - Summer 2027",
 "company": "Nicolet National Bank",
@@ -446,6 +728,25 @@
 ],
 "terms": [],
 "url": "https://jobright.ai/jobs/info/6a9b2e532cdc5958f53eb3b8",
+"posted": 1788480000,
+"updated": 0,
+"first_seen": 1788560274,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a9b1ccb9c24314c35f97d36",
+"title": "Intern, Data Research",
+"company": "Trimont",
+"locations": [
+"Atlanta, GA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a9b1ccb9c24314c35f97d36",
 "posted": 1788480000,
 "updated": 0,
 "first_seen": 1788560274,
@@ -571,44 +872,6 @@
 "company_url": null
 },
 {
-"id": "jr-6a9b1ccb9c24314c35f97d36",
-"title": "Intern, Data Research",
-"company": "Trimont",
-"locations": [
-"Atlanta, GA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9b1ccb9c24314c35f97d36",
-"posted": 1788480000,
-"updated": 0,
-"first_seen": 1788560274,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a9b1a5f9c24314c35f97c63",
-"title": "Student, Intern, Power Delivery Performance & Analytics, Spring 2027",
-"company": "Entergy",
-"locations": [
-"The Woodlands, TX, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9b1a5f9c24314c35f97c63",
-"posted": 1788480000,
-"updated": 0,
-"first_seen": 1788560274,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
 "id": "jr-6a9b1250fe45b8490f606b89",
 "title": "Data Science Intern - Garg Lab AI Program",
 "company": "Mayo Clinic",
@@ -666,6 +929,25 @@
 "company_url": null
 },
 {
+"id": "jr-6a9b499a9c24314c35f98c0a",
+"title": "Data Science Intern",
+"company": "River Partners",
+"locations": [
+"San Diego, CA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a9b499a9c24314c35f98c0a",
+"posted": 1788480000,
+"updated": 0,
+"first_seen": 1788567546,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "jr-6a9afc659c24314c35f97294",
 "title": "Intern (Fall) - Data, Strategy & Innovation",
 "company": "City of Atlanta",
@@ -704,25 +986,6 @@
 "company_url": null
 },
 {
-"id": "jr-6a9afb4890a313642c657f6d",
-"title": "Intern, Analytics",
-"company": "Zeno Group",
-"locations": [
-"Chicago, IL, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9afb4890a313642c657f6d",
-"posted": 1788480000,
-"updated": 0,
-"first_seen": 1788551359,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
 "id": "jr-6a9afac990a313642c657e6a",
 "title": "Intern (Fall) - Data, Strategy & Innovation",
 "company": "City of Atlanta Department of Watershed Management",
@@ -742,25 +1005,6 @@
 "company_url": null
 },
 {
-"id": "jr-6a9af6ab9c24314c35f96bbc",
-"title": "2027 Data Science Intern",
-"company": "Schonfeld",
-"locations": [
-"New York, NY, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9af6ab9c24314c35f96bbc",
-"posted": 1788480000,
-"updated": 0,
-"first_seen": 1788551359,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
 "id": "jr-6a9aef2190a313642c656c22",
 "title": "Customer One Intern (Data Analyst) - Cary, IL",
 "company": "Stryker",
@@ -769,25 +1013,6 @@
 ],
 "terms": [],
 "url": "https://jobright.ai/jobs/info/6a9aef2190a313642c656c22",
-"posted": 1788480000,
-"updated": 0,
-"first_seen": 1788551359,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a9aed472cdc5958f53e8f7a",
-"title": "Business Analytics Intern (Summer 2027)",
-"company": "AArete",
-"locations": [
-"Chicago, IL, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9aed472cdc5958f53e8f7a",
 "posted": 1788480000,
 "updated": 0,
 "first_seen": 1788551359,
@@ -894,17 +1119,17 @@
 "company_url": null
 },
 {
-"id": "jr-6a99d7261388387060590c92",
+"id": "jr-6a9a0f118a8b765bc55f74da",
 "title": "2027 Summer Intern: Data Science",
 "company": "Spectrum",
 "locations": [
-"Charlotte, NC, United States"
+"Greenwood Village, CO, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a99d7261388387060590c92",
+"url": "https://jobright.ai/jobs/info/6a9a0f118a8b765bc55f74da",
 "posted": 1788480000,
 "updated": 0,
-"first_seen": 1788560274,
+"first_seen": 1788567546,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -1797,14 +2022,14 @@
 "company_url": null
 },
 {
-"id": "jr-6a9b0fa7d5ff1f3f1c39d70f",
-"title": "University, 2027 Summer Games Data Scientist Intern - Atlanta, GA",
+"id": "jr-6a9b0fabd5ff1f3f1c39d713",
+"title": "University - 2027 Summer Games Data Scientist Intern - San Diego, CA",
 "company": "Booz Allen Hamilton",
 "locations": [
-"Atlanta, GA, United States"
+"San Diego, CA, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a9b0fa7d5ff1f3f1c39d70f",
+"url": "https://jobright.ai/jobs/info/6a9b0fabd5ff1f3f1c39d713",
 "posted": 1788393600,
 "updated": 0,
 "first_seen": 1788560274,
@@ -1854,14 +2079,14 @@
 "company_url": null
 },
 {
-"id": "jr-6a9b0fabd5ff1f3f1c39d713",
-"title": "University - 2027 Summer Games Data Scientist Intern - San Diego, CA",
+"id": "jr-6a9b0fa7d5ff1f3f1c39d70f",
+"title": "University, 2027 Summer Games Data Scientist Intern - Atlanta, GA",
 "company": "Booz Allen Hamilton",
 "locations": [
-"San Diego, CA, United States"
+"Atlanta, GA, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a9b0fabd5ff1f3f1c39d713",
+"url": "https://jobright.ai/jobs/info/6a9b0fa7d5ff1f3f1c39d70f",
 "posted": 1788393600,
 "updated": 0,
 "first_seen": 1788560274,
@@ -1884,25 +2109,6 @@
 "posted": 1788393600,
 "updated": 0,
 "first_seen": 1788560274,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a9aeb42d5ff1f3f1c39bb8e",
-"title": "Sales Analytics Intern",
-"company": "Allied Solutions LLC",
-"locations": [
-"Carmel, IN, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9aeb42d5ff1f3f1c39bb8e",
-"posted": 1788393600,
-"updated": 0,
-"first_seen": 1788551359,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -1968,17 +2174,17 @@
 "company_url": null
 },
 {
-"id": "jr-6a99a7c9040e5c3d07597e83",
-"title": "R & D Intern - Computer & Data Science",
+"id": "jr-6a99def5551435518ebf1cad",
+"title": "R&D Intern – Computer & Data Science",
 "company": "Corteva Agriscience",
 "locations": [
 "Indianapolis, IN, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a99a7c9040e5c3d07597e83",
+"url": "https://jobright.ai/jobs/info/6a99def5551435518ebf1cad",
 "posted": 1788393600,
 "updated": 0,
-"first_seen": 1788551359,
+"first_seen": 1788567546,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -2006,17 +2212,17 @@
 "company_url": null
 },
 {
-"id": "jr-6a99c2d4551435518ebf0e27",
+"id": "jr-6a7b86afecf5194164fbeaaa",
 "title": "Supply Chain Data Analyst Internship 2027",
 "company": "Motorola Solutions",
 "locations": [
 "Chicago, IL, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a99c2d4551435518ebf0e27",
+"url": "https://jobright.ai/jobs/info/6a7b86afecf5194164fbeaaa",
 "posted": 1788393600,
 "updated": 0,
-"first_seen": 1788560274,
+"first_seen": 1788567546,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -2109,25 +2315,6 @@
 ],
 "terms": [],
 "url": "https://jobright.ai/jobs/info/6a996c6dad752e2ad54ff71c",
-"posted": 1788393600,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a99a33790a313642c651b6d",
-"title": "Analyst Development Internship Program - Boston, MA/Plano, TX/Seattle, WA (Summer 2027)",
-"company": "Liberty Mutual Insurance",
-"locations": [
-"Boston, MA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a99a33790a313642c651b6d",
 "posted": 1788393600,
 "updated": 0,
 "first_seen": 1788500650,
@@ -2369,6 +2556,44 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/Corning"
+},
+{
+"id": "wd-swa-R-2026-71388",
+"title": "Spring 2027 Technology Analyst Internships",
+"company": "Southwest Airlines",
+"locations": [
+"TX-Dallas"
+],
+"terms": [],
+"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Technology-Analyst-Internships_R-2026-71388",
+"posted": 1788308334,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-swa-R-2026-71387",
+"title": "Spring 2027 Cybersecurity Analyst Internships",
+"company": "Southwest Airlines",
+"locations": [
+"TX-Dallas"
+],
+"terms": [],
+"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Cybersecurity-Analyst-Internships_R-2026-71387",
+"posted": 1788308334,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
 },
 {
 "id": "82439bea-9fea-4025-9a8d-d40ce8cac43b",
@@ -2744,44 +2969,6 @@
 "PhD"
 ],
 "company_url": "https://simplify.jobs/c/TWG-Global"
-},
-{
-"id": "wd-swa-R-2026-71388",
-"title": "Spring 2027 Technology Analyst Internships",
-"company": "Southwest Airlines",
-"locations": [
-"TX-Dallas"
-],
-"terms": [],
-"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Technology-Analyst-Internships_R-2026-71388",
-"posted": 1788301061,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-swa-R-2026-71387",
-"title": "Spring 2027 Cybersecurity Analyst Internships",
-"company": "Southwest Airlines",
-"locations": [
-"TX-Dallas"
-],
-"terms": [],
-"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Cybersecurity-Analyst-Internships_R-2026-71387",
-"posted": 1788301061,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "af103bac-eb95-46b7-94e6-06439a9bd98c",
@@ -3672,6 +3859,25 @@
 "company_url": "https://simplify.jobs/c/Emerson-Electric"
 },
 {
+"id": "wd-disney-10159737",
+"title": "Revenue Planning & Analytics Intern, Spring 2027",
+"company": "Disney",
+"locations": [
+"Anaheim, CA, USA"
+],
+"terms": [],
+"url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Anaheim-CA-USA/Revenue-Planning---Analytics-Intern--Spring-2027_10159737",
+"posted": 1788221933,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "fbc330bb-a6c5-48a8-b0d9-537f8bf68269",
 "title": "Business Insights & Analytics Intern - BI&A LDP",
 "company": "Travelers",
@@ -4304,25 +4510,6 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/United-Parcel-Service"
-},
-{
-"id": "wd-disney-10159737",
-"title": "Revenue Planning & Analytics Intern, Spring 2027",
-"company": "Disney",
-"locations": [
-"Anaheim, CA, USA"
-],
-"terms": [],
-"url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Anaheim-CA-USA/Revenue-Planning---Analytics-Intern--Spring-2027_10159737",
-"posted": 1788214660,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "f4714242-ad4a-4bef-9ee7-8dc639cd7e0f",
@@ -5002,6 +5189,50 @@
 "company_url": "https://simplify.jobs/c/Oshkosh"
 },
 {
+"id": "93f4951e-c280-428f-8f6f-a0611c97b96e",
+"title": "Data Engineering Intern - Data Engineering",
+"company": "Charles Schwab",
+"locations": [
+"Austin, TX",
+"Westlake, TX",
+"Southlake, TX"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://career-schwab.icims.com/jobs/126227/job?mobile=true&needsRedirect=false",
+"posted": 1787963197,
+"updated": 1787963452,
+"first_seen": 1788567546,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Charles-Schwab"
+},
+{
+"id": "wd-wf-R-571698",
+"title": "2027 Quantitative Analytics Summer Internship Applied Computational Intelligence (ACI Masters) – Early Careers",
+"company": "Wells Fargo",
+"locations": [
+"CHARLOTTE, NC"
+],
+"terms": [],
+"url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-571698",
+"posted": 1787876334,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "8e4b4b17-9c3e-4b70-8a49-902c7956a66b",
 "title": "Data and Analytics Intern",
 "company": "Huntington Bancshares",
@@ -5160,25 +5391,6 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/Hoffman-Construction"
-},
-{
-"id": "wd-wf-R-571698",
-"title": "2027 Quantitative Analytics Summer Internship Applied Computational Intelligence (ACI Masters) – Early Careers",
-"company": "Wells Fargo",
-"locations": [
-"CHARLOTTE, NC"
-],
-"terms": [],
-"url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-571698",
-"posted": 1787869060,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "d8493a9c-bd31-4bcf-9858-a4db18c59643",
@@ -6447,30 +6659,6 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/Springs-Window-Fashions"
-},
-{
-"id": "3a9d445d-6bcb-43b3-8183-0437d5b6c332",
-"title": "Data Engineer Intern",
-"company": "Weave",
-"locations": [
-"Lehi, UT"
-],
-"terms": [
-"Fall 2026"
-],
-"url": "https://jobs.ashbyhq.com/weave/1318e017-3ea6-4a1f-aac7-1c11a46cda8d/application?embed=true",
-"posted": 1787353604,
-"updated": 1787353741,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's",
-"Master's"
-],
-"company_url": "https://simplify.jobs/c/Weave"
 }
 ]
 }
