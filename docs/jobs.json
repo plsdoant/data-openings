@@ -1,8 +1,8 @@
 {
-"generated_at": 1788715109,
+"generated_at": 1788722823,
 "scanned": {
-"feeds": 16200,
-"ats": 11699,
+"feeds": 16193,
+"ats": 11693,
 "boards": 60
 },
 "companies_polled": [
@@ -202,17 +202,17 @@
 "company_url": null
 },
 {
-"id": "jr-6a19e0382b206f3955eb14a9",
+"id": "jr-6a61e8e7eaa37f43e758ae2a",
 "title": "Data Processing Intern",
 "company": "Bee Sweet Citrus, Inc.",
 "locations": [
-"Fowler, CA"
+"Fowler, California, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a19e0382b206f3955eb14a9",
+"url": "https://jobright.ai/jobs/info/6a61e8e7eaa37f43e758ae2a",
 "posted": 1788566400,
 "updated": 0,
-"first_seen": 1788703545,
+"first_seen": 1788722823,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -406,7 +406,7 @@
 ],
 "terms": [],
 "url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Commercial-Data-Science-Intern--Spring-2027_10158063",
-"posted": 1788542294,
+"posted": 1788550007,
 "updated": 0,
 "first_seen": 1788541251,
 "source": "ats",
@@ -425,7 +425,7 @@
 ],
 "terms": [],
 "url": "https://target.wd5.myworkdayjobs.com/en-US/targetcareers/job/1000-Nicollet-Mall-MinneapolisMN-55403-2542/Inventory-Analyst-Intern---Minneapolis--MN--Starting-Summer--2027-_R0000450965",
-"posted": 1788542292,
+"posted": 1788550005,
 "updated": 0,
 "first_seen": 1788551359,
 "source": "ats",
@@ -3011,6 +3011,44 @@
 "company_url": "https://simplify.jobs/c/Corning"
 },
 {
+"id": "wd-swa-R-2026-71388",
+"title": "Spring 2027 Technology Analyst Internships",
+"company": "Southwest Airlines",
+"locations": [
+"TX-Dallas"
+],
+"terms": [],
+"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Technology-Analyst-Internships_R-2026-71388",
+"posted": 1788290812,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-swa-R-2026-71387",
+"title": "Spring 2027 Cybersecurity Analyst Internships",
+"company": "Southwest Airlines",
+"locations": [
+"TX-Dallas"
+],
+"terms": [],
+"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Cybersecurity-Analyst-Internships_R-2026-71387",
+"posted": 1788290812,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "1fa0cf6c-b41d-4a3e-bd89-e3efc8a41a1f",
 "title": "Data Analytics Apprentice - February 2027 Start",
 "company": "Google",
@@ -3292,44 +3330,6 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/Pella-Corporation"
-},
-{
-"id": "wd-swa-R-2026-71388",
-"title": "Spring 2027 Technology Analyst Internships",
-"company": "Southwest Airlines",
-"locations": [
-"TX-Dallas"
-],
-"terms": [],
-"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Technology-Analyst-Internships_R-2026-71388",
-"posted": 1788283098,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-swa-R-2026-71387",
-"title": "Spring 2027 Cybersecurity Analyst Internships",
-"company": "Southwest Airlines",
-"locations": [
-"TX-Dallas"
-],
-"terms": [],
-"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Cybersecurity-Analyst-Internships_R-2026-71387",
-"posted": 1788283098,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "98ba4abf-1726-45e5-a03c-c711dfb81c84",
@@ -5274,7 +5274,7 @@
 ],
 "terms": [],
 "url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-571698",
-"posted": 1787851098,
+"posted": 1787858812,
 "updated": 0,
 "first_seen": 1788500650,
 "source": "ats",
