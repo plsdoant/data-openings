@@ -3,31 +3,13 @@
 (function () {
   "use strict";
 
-  const { esc, ago, fullDate, shortDate, sourceText, ROLE_LABEL, SOURCE_LABEL, applied } = window.Site;
+  const { esc, fullDate, shortDate, sourceText, applied } = window.Site;
   const $ = (sel) => document.querySelector(sel);
 
   let live = null;        // id -> job currently in jobs.json, once it loads
-  let liveCount = 0;
 
   const DAY = 86400;
   const WEEK = 7 * DAY;
-
-  function count(items, key) {
-    const m = new Map();
-    for (const it of items) {
-      const k = key(it);
-      m.set(k, (m.get(k) || 0) + 1);
-    }
-    return [...m.entries()].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
-  }
-
-  // Monday 00:00 local time for the week containing ts.
-  function weekStart(ts) {
-    const d = new Date(ts * 1000);
-    d.setHours(0, 0, 0, 0);
-    d.setDate(d.getDate() - ((d.getDay() + 6) % 7));
-    return Math.floor(d.getTime() / 1000);
-  }
 
   function factList(title, rows, opts = {}) {
     if (!rows.length) return "";
@@ -37,22 +19,7 @@
 
   function renderIntro(items) {
     const n = items.length;
-    if (!n) {
-      $("#intro").innerHTML = "Nothing marked yet. On the <a href=\"./\">listings</a> page, tick the box at the right of a row when you apply, and it will show up here.";
-      return;
-    }
-    const first = items[items.length - 1].at;
-    const last = items[0].at;
-    const stillOpen = live ? items.filter((i) => i.id in live).length : null;
-    let s = `You&rsquo;ve applied to ${n} ${n === 1 ? "role" : "roles"}`;
-    s += n === 1 ? `, ${ago(last)}.` : `, the first ${ago(first)} and the latest ${ago(last)}.`;
-    if (live) {
-      s += stillOpen === n
-        ? ` ${n === 1 ? "It is" : "All of them are"} still listed.`
-        : ` ${stillOpen} of them ${stillOpen === 1 ? "is" : "are"} still listed; the rest have dropped off the feed.`;
-      s += ` That&rsquo;s ${n} of the ${liveCount + (n - stillOpen)} roles the watcher has shown you lately.`;
-    }
-    $("#intro").innerHTML = s;
+    $("#intro").textContent = `lock in twin. ${n} applied.`;
   }
 
   function renderFacts(items) {
@@ -68,38 +35,17 @@
       ["Past 30 days", items.filter((i) => now - i.at < 30 * DAY).length],
       ["Per week, on average", (items.length / weeksActive).toFixed(1)],
       ["Companies", new Set(items.map((i) => i.company)).size],
-      live ? ["Still listed", items.filter((i) => i.id in live).length] : null,
-      ["First application", fullDate(first)],
-      ["Most recent", fullDate(items[0].at)],
-    ].filter(Boolean);
+    ];
 
-    const companies = count(items, (i) => i.company).slice(0, 10);
-    const roles = count(items, (i) => ROLE_LABEL[i.role] || "Other");
-    const sources = count(items, (i) => i.source === "ats" ? "Company board" : (SOURCE_LABEL[i.source] || i.source));
-
-    // Last eight weeks, including empty ones, most recent first.
-    const thisWeek = weekStart(now);
-    const byWeek = new Map();
-    for (const i of items) byWeek.set(weekStart(i.at), (byWeek.get(weekStart(i.at)) || 0) + 1);
-    const weeks = [];
-    for (let k = 0; k < 8; k++) {
-      const ws = thisWeek - k * WEEK;
-      if (ws + WEEK < first) break;
-      weeks.push([`${shortDate(ws)} – ${shortDate(ws + 6 * DAY)}`, byWeek.get(ws) || 0]);
-    }
-
-    facts.innerHTML =
-      factList("Totals", totals, { wide: true }) +
-      factList("By company", companies) +
-      factList("By week", weeks) +
-      factList("By role", roles) +
-      factList("By source", sources);
+    facts.innerHTML = factList("Totals", totals, { wide: true });
     facts.hidden = false;
   }
 
   function renderList(items) {
     const list = $("#listings");
-    $("#count").textContent = items.length ? `${items.length} ${items.length === 1 ? "application" : "applications"}, newest first` : "";
+    $("#count").textContent = items.length
+      ? `${items.length} ${items.length === 1 ? "application" : "applications"}, newest first`
+      : "Tick the box at the right of a listing when you apply, and it will show up here.";
     list.innerHTML = items.map((i) => {
       const gone = live && !(i.id in live);
       const loc = (i.locations || []).slice(0, 2).join("; ");
@@ -178,7 +124,6 @@
     .then((d) => {
       live = {};
       for (const j of d.jobs) live[j.id] = j;
-      liveCount = d.jobs.length;
       render();
     })
     .catch(() => { /* stats still work without the feed */ });
