@@ -316,6 +316,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .applied-page .listings li:hover .title { text-decoration: none; }
 .applied-page .listings li.applied .title { color: var(--text); }
 .applied-page .listings .title a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.applied-page .age .posted { display: block; color: var(--faint); font-size: 12px; margin-top: 2px; }
 
 .tools .actions {
   font-family: var(--sans);
@@ -536,6 +537,7 @@ body.has-detail .to-top { right: calc(var(--panel) + 36px); }
   .filters { grid-template-columns: repeat(2, 1fr); gap: 14px 24px; }
   .listings li { grid-template-columns: 1fr auto 16px; }
   .age { grid-column: 1 / -1; order: -1; }
+  .applied-page .age .posted { display: inline; margin-left: 10px; }
   .facts { grid-template-columns: 1fr; }
   .detail { width: 100%; padding: 56px 20px 40px; }
 }

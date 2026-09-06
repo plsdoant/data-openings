@@ -53,7 +53,9 @@
       if (gone) parts.push('<span class="gone">no longer listed</span>');
       const when = `Applied ${fullDate(i.at)}. Click to remove.`;
       return `<li data-id="${esc(i.id)}" class="applied">
-        <span class="age" title="${esc(fullDate(i.at))}">${esc(shortDate(i.at))}</span>
+        <span class="age"><span title="Applied ${esc(fullDate(i.at))}">${esc(shortDate(i.at))}</span>${
+          i.posted ? `<span class="posted" title="Posted ${esc(fullDate(i.posted))}">${esc(shortDate(i.posted))}</span>` : ""
+        }</span>
         <div>
           <h3 class="title"><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a></h3>
           <div class="meta">${parts.join('<span class="sep">·</span>')}</div>
