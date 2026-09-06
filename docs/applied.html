@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Applied · Data Openings</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script>
+  try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</head>
+<body class="applied-page">
+
+<nav class="top">
+  <a class="wordmark" href="./">Data Openings</a>
+  <span class="top-links">
+    <a href="./">Listings</a>
+    <a href="applied.html" id="nav-applied" class="current">Applied</a>
+    <a href="https://github.com/plsdoant/data-openings">GitHub</a>
+    <button type="button" id="theme">Dark</button>
+  </span>
+</nav>
+
+<main class="page">
+
+  <p class="intro" id="intro">Loading&hellip;</p>
+
+  <section class="facts" id="facts" hidden></section>
+
+  <p class="count" id="count"></p>
+
+  <ol class="listings" id="listings"></ol>
+
+  <section class="about tools" id="tools">
+    <h2>This list</h2>
+    <p>Applications are stored in this browser only, so they won&rsquo;t follow
+    you to another device unless you move them. Download a copy to keep or
+    to import elsewhere; importing adds entries without removing any.</p>
+    <p class="actions">
+      <button type="button" id="export">Download as JSON</button>
+      <label class="import">Import a file<input type="file" id="import" accept="application/json,.json"></label>
+      <button type="button" id="clear-all">Clear everything</button>
+    </p>
+  </section>
+
+</main>
+
+<div id="fire" aria-hidden="true" title="Click to blow it out"></div>
+<button class="to-top" id="to-top" type="button" hidden>Back to top</button>
+
+<script src="common.js"></script>
+<script src="applied.js"></script>
+<script src="fire.js"></script>
+</body>
+</html>

@@ -3,6 +3,8 @@
 (function () {
   "use strict";
 
+  const { esc, ago, fullDate, roleOf, sourceText, SOURCE_LABEL, SOURCE_URL, applied } = window.Site;
+
   const $ = (sel) => document.querySelector(sel);
   const form = $("#filters");
   const list = $("#listings");
@@ -12,13 +14,7 @@
   let data = { jobs: [] };
   let selectedId = null;
 
-  // --- helpers ---------------------------------------------------------
-
-  const SOURCE_LABEL = { simplify: "Simplify", jobright: "Jobright", ats: "Company board" };
-  const SOURCE_URL = {
-    simplify: "https://github.com/SimplifyJobs/Summer2027-Internships",
-    jobright: "https://github.com/jobright-ai/2026-Data-Analysis-Internship",
-  };
+  // --- location buckets for the filter ---------------------------------
 
   const STATE_RE = /\b(A[LKZR]|C[AOT]|DE|DC|FL|GA|HI|I[DLNA]|K[SY]|LA|M[EDAINSOT]|N[EVHJMYCD]|O[HKR]|PA|RI|S[CD]|T[NX]|UT|V[TA]|W[AVIY])\b/g;
   const STATE_NAMES = {
@@ -65,47 +61,12 @@
     return [...out];
   }
 
-  function roleOf(job) {
-    const t = job.title.toLowerCase();
-    if (/data scien|scientist/.test(t)) return "science";
-    if (/data engineer|engineering|data platform|\betl\b|pipeline|warehouse/.test(t)) return "engineering";
-    if (/business intelligence|\bbi\b|power bi|business analy|reporting|insights/.test(t)) return "bi";
-    if (/analy/.test(t) || /\bdata\b/.test(t)) return "analyst";
-    return "other";
-  }
-
-  function ago(ts) {
-    if (!ts) return "";
-    const s = Date.now() / 1000 - ts;
-    if (s < 3600) return s < 300 ? "just now" : Math.floor(s / 60) + "m ago";
-    if (s < 86400) return Math.floor(s / 3600) + "h ago";
-    const d = Math.floor(s / 86400);
-    if (d < 14) return d + (d === 1 ? " day ago" : " days ago");
-    return Math.floor(d / 7) + "w ago";
-  }
-
   function shortAgo(ts) {
     if (!ts) return "—";
     const s = Date.now() / 1000 - ts;
     if (s < 3600) return Math.max(1, Math.floor(s / 60)) + "m";
     if (s < 86400) return Math.floor(s / 3600) + "h";
     return Math.floor(s / 86400) + "d";
-  }
-
-  function fullDate(ts) {
-    if (!ts) return "unknown";
-    return new Date(ts * 1000).toLocaleDateString(undefined, {
-      year: "numeric", month: "long", day: "numeric",
-    });
-  }
-
-  function esc(s) {
-    return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  }
-
-  function sourceText(job) {
-    if (job.source === "ats") return job.board ? "Direct · " + job.board : "Direct";
-    return SOURCE_LABEL[job.source] || job.source;
   }
 
   // --- filters ---------------------------------------------------------
@@ -152,6 +113,7 @@
     const f = currentFilters();
     const q = f.q.toLowerCase();
     const cutoff = f.age ? Date.now() / 1000 - Number(f.age) * 86400 : 0;
+    const done = applied.all();
 
     let rows = data.jobs.filter((j) =>
       (!f.role || j.role === f.role) &&
@@ -160,6 +122,7 @@
       (!f.company || j.company === f.company) &&
       (!f.location || j.regions.includes(f.location)) &&
       (!f.term || j.terms.includes(f.term)) &&
+      (!f.status || (f.status === "applied") === (j.id in done)) &&
       (!q || j.title.toLowerCase().includes(q) || j.company.toLowerCase().includes(q))
     );
 
@@ -172,14 +135,15 @@
     rows.sort(by);
 
     const active = Object.entries(f).some(([k, v]) => v && k !== "sort");
-    renderCount(rows.length, active);
-    renderList(rows);
+    renderCount(rows.length, active, rows.filter((j) => j.id in done).length);
+    renderList(rows, done);
     writeHash();
   }
 
-  function renderCount(n, active) {
+  function renderCount(n, active, appliedHere) {
     const total = data.jobs.length;
-    const label = n === total ? `${total} listings` : `${n} of ${total} listings`;
+    let label = n === total ? `${total} listings` : `${n} of ${total} listings`;
+    if (appliedHere) label += ` · ${appliedHere} applied`;
     $("#count").innerHTML = esc(label) + (active ? ' <button type="button" id="clear">Clear filters</button>' : "");
     const clear = $("#clear");
     if (clear) clear.addEventListener("click", () => { form.reset(); apply(); });
@@ -187,7 +151,13 @@
 
   // --- listing rows ----------------------------------------------------
 
-  function renderList(rows) {
+  function tick(job, done) {
+    const on = job.id in done;
+    const title = on ? `Applied ${ago(done[job.id].at)}. Click to undo.` : "Mark as applied";
+    return `<button type="button" class="tick" aria-pressed="${on}" aria-label="${esc(title)}" title="${esc(title)}"></button>`;
+  }
+
+  function renderList(rows, done) {
     if (!rows.length) {
       list.innerHTML = '<li class="empty">Nothing matches these filters.</li>';
       return;
@@ -196,20 +166,48 @@
     list.innerHTML = rows.map((j) => {
       const loc = j.locations.slice(0, 2).join("; ") + (j.locations.length > 2 ? ` +${j.locations.length - 2}` : "");
       const parts = [j.company, loc, j.terms.join(", ")].filter(Boolean).map(esc);
-      return `<li data-id="${esc(j.id)}"${j.id === selectedId ? ' class="selected"' : ""}>
+      const cls = [j.id === selectedId ? "selected" : "", j.id in done ? "applied" : ""].filter(Boolean).join(" ");
+      return `<li data-id="${esc(j.id)}"${cls ? ` class="${cls}"` : ""}>
         <span class="age${j.posted >= day ? " fresh" : ""}" title="${esc(fullDate(j.posted))}">${shortAgo(j.posted)}</span>
         <div>
           <h3 class="title">${esc(j.title)}</h3>
           <div class="meta">${parts.join('<span class="sep">·</span>')}</div>
         </div>
         <span class="source">${esc(sourceText(j))}</span>
+        ${tick(j, done)}
       </li>`;
     }).join("");
   }
 
+  // Flip one job and refresh the places that show its state. The row is
+  // updated in place so the list doesn't jump; a status filter is the one
+  // case where the row may need to leave, so that re-runs the filter.
+  function toggleApplied(id) {
+    const j = data.jobs.find((x) => x.id === id);
+    if (!j) return;
+    applied.toggle(j);
+    if (form.elements.status.value) {
+      apply();
+    } else {
+      const done = applied.all();
+      const li = list.querySelector(`li[data-id="${CSS.escape(id)}"]`);
+      if (li) {
+        li.classList.toggle("applied", id in done);
+        li.querySelector(".tick").outerHTML = tick(j, done);
+      }
+      const shown = [...list.querySelectorAll("li[data-id]")].map((el) => el.dataset.id);
+      const f = currentFilters();
+      renderCount(shown.length, Object.entries(f).some(([k, v]) => v && k !== "sort"),
+                  shown.filter((x) => x in done).length);
+    }
+    if (selectedId === id) open(id);
+  }
+
   list.addEventListener("click", (e) => {
     const li = e.target.closest("li[data-id]");
-    if (li) open(li.dataset.id);
+    if (!li) return;
+    if (e.target.closest(".tick")) toggleApplied(li.dataset.id);
+    else open(li.dataset.id);
   });
 
   // --- detail panel ----------------------------------------------------
@@ -220,6 +218,7 @@
     selectedId = id;
     for (const li of list.children) li.classList.toggle("selected", li.dataset.id === id);
 
+    const done = applied.get(id);
     const others = data.jobs.filter((x) => x.company === j.company && x.id !== j.id);
     const sourceLine = j.source === "ats"
       ? `${j.company}&rsquo;s ${esc(j.board || "job board")}, polled directly`
@@ -232,6 +231,7 @@
       j.updated && j.updated - j.posted > 3600
         ? ["Last updated", `${fullDate(j.updated)} <span class="when">${ago(j.updated)}</span>`] : null,
       ["Noticed by the watcher", `${fullDate(j.first_seen)} <span class="when">${ago(j.first_seen)}</span>`],
+      done ? ["Applied", `${fullDate(done.at)} <span class="when">${ago(done.at)}</span>`] : null,
       ["Source", sourceLine],
       j.category ? ["Category", esc(j.category)] : null,
       j.degrees && j.degrees.length ? ["Degree", esc(j.degrees.join(", "))] : null,
@@ -243,6 +243,7 @@
       <h2>${esc(j.title)}</h2>
       <p class="company">${esc(j.company)}</p>
       <a class="apply" href="${esc(j.url)}" target="_blank" rel="noopener">Apply</a>
+      <button type="button" class="mark" id="mark">${done ? "Applied · undo" : "Mark as applied"}</button>
       ${j.company_url ? `<a class="also" href="${esc(j.company_url)}" target="_blank" rel="noopener">Company on Simplify</a>` : ""}
       <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
       ${others.length ? `<div class="more"><h3>Also at ${esc(j.company)}</h3><ul>${
@@ -250,8 +251,10 @@
       }</ul></div>` : ""}
       <p class="note">The watcher keeps only the listing metadata each board exposes. The full description and requirements are on the posting itself.</p>
     `;
-    detail.hidden = false;
-    detail.scrollTop = 0;
+    if (detail.hidden) {
+      detail.hidden = false;
+      detail.scrollTop = 0;
+    }
     document.body.classList.add("has-detail");
     writeHash();
   }
@@ -266,6 +269,7 @@
 
   $("#close").addEventListener("click", close);
   detailBody.addEventListener("click", (e) => {
+    if (e.target.closest("#mark")) { toggleApplied(selectedId); return; }
     const li = e.target.closest("li[data-id]");
     if (li) {
       open(li.dataset.id);
@@ -276,6 +280,9 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !detail.hidden) close();
   });
+
+  // Another tab (or the applied page) changed the store: redraw.
+  addEventListener("storage", (e) => { if (e.key === "applied" && data.jobs.length) apply(); });
 
   // --- url state: filters and open listing survive a reload / share ----
 
@@ -300,47 +307,15 @@
   // --- header ----------------------------------------------------------
 
   function renderIntro() {
-    const n = data.jobs.length;
     const s = data.scanned || {};
     const age = Date.now() / 1000 - data.generated_at;
     const stale = age > 3 * 3600
       ? ` <span class="stale">The watcher hasn&rsquo;t reported in ${ago(data.generated_at).replace(" ago", "")}, so this may be behind.</span>`
       : "";
-    $("#intro").innerHTML =
-      `Last checked ${ago(data.generated_at)}.${stale}`;
+    $("#intro").innerHTML = `Last checked ${ago(data.generated_at)}.${stale}`;
     $("#board-count").textContent = s.boards || "";
     $("#board-list").textContent = (data.companies_polled || []).join(", ") + ".";
   }
-
-  // --- theme -----------------------------------------------------------
-
-  const themeBtn = $("#theme");
-  const systemDark = matchMedia("(prefers-color-scheme: dark)");
-
-  function currentTheme() {
-    return document.documentElement.dataset.theme || (systemDark.matches ? "dark" : "light");
-  }
-
-  function labelTheme() {
-    themeBtn.textContent = currentTheme() === "dark" ? "Light" : "Dark";
-  }
-
-  themeBtn.addEventListener("click", () => {
-    const next = currentTheme() === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = next;
-    try { localStorage.setItem("theme", next); } catch (e) { /* private mode */ }
-    labelTheme();
-  });
-  systemDark.addEventListener("change", labelTheme);
-  labelTheme();
-
-  // --- back to top -----------------------------------------------------
-
-  const toTop = $("#to-top");
-  function checkScroll() { toTop.hidden = scrollY < 600; }
-  addEventListener("scroll", checkScroll, { passive: true });
-  toTop.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
-  checkScroll();
 
   // --- boot ------------------------------------------------------------
 

@@ -69,6 +69,14 @@ when the watcher first noticed a role separately from when it was posted.
 Listings drop off the page two weeks after they were posted, same as the
 Discord filter.
 
+Each row has a checkbox at the right for marking a role as applied, and the
+detail panel has the same toggle. The **Applied** page lists everything
+you've ticked, newest first, with totals, counts by company, role, source,
+and week, and a note on which roles have since dropped off the feed. Ticks
+are stored in the browser's local storage, so they stay on the device where
+you made them; the page can download them as JSON and import that file
+elsewhere.
+
 There's a dark mode switch in the top bar, and a small pixel fire in the
 bottom-left corner that the cursor can push around. Click it to blow it out.
 
