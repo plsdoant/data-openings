@@ -1,8 +1,8 @@
 {
-"generated_at": 1788703545,
+"generated_at": 1788715109,
 "scanned": {
-"feeds": 16218,
-"ats": 11697,
+"feeds": 16200,
+"ats": 11699,
 "boards": 60
 },
 "companies_polled": [
@@ -68,6 +68,25 @@
 "Zoom"
 ],
 "jobs": [
+{
+"id": "jr-6a2c15cdfc064474905481cb",
+"title": "Data Science Intern",
+"company": "The Campbell's Company",
+"locations": [
+"USA - NJ - Camden, US"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a2c15cdfc064474905481cb",
+"posted": 1788652800,
+"updated": 0,
+"first_seen": 1788715109,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
 {
 "id": "jr-6a9d1cdca7ba386c5d66f74c",
 "title": "IT Analyst Internship - Summer 2027",
@@ -379,6 +398,44 @@
 "company_url": "https://simplify.jobs/c/Entergy"
 },
 {
+"id": "wd-disney-10158063",
+"title": "Commercial Data Science Intern, Spring 2027",
+"company": "Disney",
+"locations": [
+"Celebration, FL, USA"
+],
+"terms": [],
+"url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Commercial-Data-Science-Intern--Spring-2027_10158063",
+"posted": 1788542294,
+"updated": 0,
+"first_seen": 1788541251,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-target-R0000450965",
+"title": "Inventory Analyst Intern - Minneapolis, MN (Starting Summer, 2027)",
+"company": "Target",
+"locations": [
+"1000 Nicollet Mall, Minneapolis,MN 55403-2542"
+],
+"terms": [],
+"url": "https://target.wd5.myworkdayjobs.com/en-US/targetcareers/job/1000-Nicollet-Mall-MinneapolisMN-55403-2542/Inventory-Analyst-Intern---Minneapolis--MN--Starting-Summer--2027-_R0000450965",
+"posted": 1788542292,
+"updated": 0,
+"first_seen": 1788551359,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "e83278e0-c4fd-42f9-a773-171b6b1e16c1",
 "title": "Options Analyst Intern",
 "company": "Perry Homes",
@@ -498,44 +555,6 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/Ernst-And-Young"
-},
-{
-"id": "wd-disney-10158063",
-"title": "Commercial Data Science Intern, Spring 2027",
-"company": "Disney",
-"locations": [
-"Celebration, FL, USA"
-],
-"terms": [],
-"url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Commercial-Data-Science-Intern--Spring-2027_10158063",
-"posted": 1788530730,
-"updated": 0,
-"first_seen": 1788541251,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-target-R0000450965",
-"title": "Inventory Analyst Intern - Minneapolis, MN (Starting Summer, 2027)",
-"company": "Target",
-"locations": [
-"1000 Nicollet Mall, Minneapolis,MN 55403-2542"
-],
-"terms": [],
-"url": "https://target.wd5.myworkdayjobs.com/en-US/targetcareers/job/1000-Nicollet-Mall-MinneapolisMN-55403-2542/Inventory-Analyst-Intern---Minneapolis--MN--Starting-Summer--2027-_R0000450965",
-"posted": 1788530728,
-"updated": 0,
-"first_seen": 1788551359,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "ee2f804d-b718-4730-838f-89fe383039ca",
@@ -1452,17 +1471,17 @@
 "company_url": null
 },
 {
-"id": "jr-6a9a0f878a8b765bc55f74f5",
+"id": "jr-6a9a0f15040e5c3d0759a8f9",
 "title": "2027 Summer Intern: Data Science",
 "company": "Spectrum",
 "locations": [
 "Greenwood Village, CO, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a9a0f878a8b765bc55f74f5",
+"url": "https://jobright.ai/jobs/info/6a9a0f15040e5c3d0759a8f9",
 "posted": 1788480000,
 "updated": 0,
-"first_seen": 1788703545,
+"first_seen": 1788715109,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -2233,44 +2252,6 @@
 "posted": 1788393600,
 "updated": 0,
 "first_seen": 1788512401,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a9b2fb6fe45b8490f607404",
-"title": "Data Science Intern",
-"company": "QBE LLC",
-"locations": [
-"Madison, WI, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9b2fb6fe45b8490f607404",
-"posted": 1788393600,
-"updated": 0,
-"first_seen": 1788560274,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a9b23b41388387060596c12",
-"title": "Intern 2027 - FAR Program - Data Analytics",
-"company": "LPL Financial",
-"locations": [
-"Fort Mill, SC, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9b23b41388387060596c12",
-"posted": 1788393600,
-"updated": 0,
-"first_seen": 1788560274,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -3313,6 +3294,44 @@
 "company_url": "https://simplify.jobs/c/Pella-Corporation"
 },
 {
+"id": "wd-swa-R-2026-71388",
+"title": "Spring 2027 Technology Analyst Internships",
+"company": "Southwest Airlines",
+"locations": [
+"TX-Dallas"
+],
+"terms": [],
+"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Technology-Analyst-Internships_R-2026-71388",
+"posted": 1788283098,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-swa-R-2026-71387",
+"title": "Spring 2027 Cybersecurity Analyst Internships",
+"company": "Southwest Airlines",
+"locations": [
+"TX-Dallas"
+],
+"terms": [],
+"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Cybersecurity-Analyst-Internships_R-2026-71387",
+"posted": 1788283098,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "98ba4abf-1726-45e5-a03c-c711dfb81c84",
 "title": "Software Engineer Intern - Relational Database",
 "company": "ByteDance",
@@ -3405,44 +3424,6 @@
 "PhD"
 ],
 "company_url": "https://simplify.jobs/c/American-Express"
-},
-{
-"id": "wd-swa-R-2026-71388",
-"title": "Spring 2027 Technology Analyst Internships",
-"company": "Southwest Airlines",
-"locations": [
-"TX-Dallas"
-],
-"terms": [],
-"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Technology-Analyst-Internships_R-2026-71388",
-"posted": 1788271535,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-swa-R-2026-71387",
-"title": "Spring 2027 Cybersecurity Analyst Internships",
-"company": "Southwest Airlines",
-"locations": [
-"TX-Dallas"
-],
-"terms": [],
-"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Cybersecurity-Analyst-Internships_R-2026-71387",
-"posted": 1788271535,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "bfd24658-9d27-4663-b02c-2b76b6042f78",
@@ -5285,6 +5266,25 @@
 "company_url": "https://simplify.jobs/c/Clyde-Companies"
 },
 {
+"id": "wd-wf-R-571698",
+"title": "2027 Quantitative Analytics Summer Internship Applied Computational Intelligence (ACI Masters) – Early Careers",
+"company": "Wells Fargo",
+"locations": [
+"CHARLOTTE, NC"
+],
+"terms": [],
+"url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-571698",
+"posted": 1787851098,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "ba997393-daa9-4477-9391-5eb428918ddb",
 "title": "Data Science & Analytics Intern",
 "company": "Phoenix Contact",
@@ -5330,25 +5330,6 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/Vertiv"
-},
-{
-"id": "wd-wf-R-571698",
-"title": "2027 Quantitative Analytics Summer Internship Applied Computational Intelligence (ACI Masters) – Early Careers",
-"company": "Wells Fargo",
-"locations": [
-"CHARLOTTE, NC"
-],
-"terms": [],
-"url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-571698",
-"posted": 1787839535,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "e7293c88-f396-415f-920c-742686dde2e3",
@@ -6144,6 +6125,29 @@
 "posted": 1787529600,
 "updated": 1787580850,
 "first_seen": 1788541251,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Disney"
+},
+{
+"id": "c0d7d74a-1903-435e-b895-11e9f9f46ac8",
+"title": "Labor Systems Data Analytics & Integration Intern - Spring 2027",
+"company": "The Walt Disney Company",
+"locations": [
+"Lake Buena Vista, FL"
+],
+"terms": [
+"Winter 2027"
+],
+"url": "https://disney.wd5.myworkdayjobs.com/disneycareerdc/job/Lake-Buena-Vista-FL-USA/Labor-Systems-Data-Analytics---Integration-Intern--Spring-2027_10157891-2",
+"posted": 1787529600,
+"updated": 1787580750,
+"first_seen": 1788715109,
 "source": "simplify",
 "board": null,
 "category": "AI/ML/Data",
