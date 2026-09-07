@@ -1,8 +1,8 @@
 {
-"generated_at": 1788795809,
+"generated_at": 1788810603,
 "scanned": {
-"feeds": 16202,
-"ats": 11573,
+"feeds": 16209,
+"ats": 11569,
 "boards": 60
 },
 "companies_polled": [
@@ -68,6 +68,41 @@
 "Zoom"
 ],
 "jobs": [
+{
+"id": "a8d0af87-a5ff-4477-8e3b-2f27946cbc23",
+"title": "Data and Intelligence Delivery Intern - Assurance",
+"company": "Ernst & Young",
+"locations": [
+"Salt Lake City, UT",
+"Indianapolis, IN",
+"Houston, TX",
+"Des Moines, IA",
+"Detroit, MI",
+"Tampa, FL",
+"Dallas, TX",
+"Greenville, SC",
+"St. Louis, MO",
+"Alpharetta, GA",
+"Phoenix, AZ",
+"Grandview Heights, OH"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://eyglobal.yello.co/jobs/Ps6DR65DB3hhb_XrmIxQjA?job_board_id=c1riT--B2O-KySgYWsZO1Q",
+"posted": 1788795738,
+"updated": 1788796029,
+"first_seen": 1788810603,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's"
+],
+"company_url": "https://simplify.jobs/c/Ernst-And-Young"
+},
 {
 "id": "6372d8e1-142c-4d6e-871a-b4f1c44e6df8",
 "title": "Gas Data Intern",
@@ -398,17 +433,36 @@
 "company_url": "https://simplify.jobs/c/NXP-Semiconductors"
 },
 {
-"id": "jr-6a8bcbded34f700f87fce794",
-"title": "GTG Intern - Business Intelligence Job Details / Grainger Businesses",
-"company": "Grainger",
+"id": "jr-6a9eeb30a7ba386c5d673dc6",
+"title": "Data Science & Analytics Intern — Energy Tech",
+"company": "Kelvolta",
 "locations": [
-"Chicago, IL, United States"
+"Remote — United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a8bcbded34f700f87fce794",
+"url": "https://jobright.ai/jobs/info/6a9eeb30a7ba386c5d673dc6",
 "posted": 1788739200,
 "updated": 0,
-"first_seen": 1788795809,
+"first_seen": 1788810603,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a9ecadb352f093fc756cbed",
+"title": "Logistics Data Analyst Intern (Remote Friendly)",
+"company": "WebstaurantStore",
+"locations": [
+"Remote — Lititz, PA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a9ecadb352f093fc756cbed",
+"posted": 1788739200,
+"updated": 0,
+"first_seen": 1788810603,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -428,6 +482,44 @@
 "posted": 1788739200,
 "updated": 0,
 "first_seen": 1788795809,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a8bcbded34f700f87fce794",
+"title": "GTG Intern - Business Intelligence Job Details / Grainger Businesses",
+"company": "Grainger",
+"locations": [
+"Chicago, IL, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a8bcbded34f700f87fce794",
+"posted": 1788739200,
+"updated": 0,
+"first_seen": 1788795809,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a9740d2d13b4819f39e02f8",
+"title": "Intern - IT Data Science (Summer 2027)",
+"company": "Plexus Corp.",
+"locations": [
+"Neenah, WI, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a9740d2d13b4819f39e02f8",
+"posted": 1788739200,
+"updated": 0,
+"first_seen": 1788810603,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -607,17 +699,17 @@
 "company_url": null
 },
 {
-"id": "jr-6a5dc1dd686b4755d1e1efca",
+"id": "jr-6a7b2456b933773d16be573d",
 "title": "Data Science Intern",
 "company": "Plymouth Rock Assurance",
 "locations": [
 "Boston, MA, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a5dc1dd686b4755d1e1efca",
+"url": "https://jobright.ai/jobs/info/6a7b2456b933773d16be573d",
 "posted": 1788739200,
 "updated": 0,
-"first_seen": 1788795809,
+"first_seen": 1788810603,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -672,25 +764,6 @@
 ],
 "terms": [],
 "url": "https://jobright.ai/jobs/info/6a95bd45c8763a3a87ffbbbb",
-"posted": 1788652800,
-"updated": 0,
-"first_seen": 1788795809,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a9e08ac68f82b403673870f",
-"title": "Data Science Internship Summer 2027",
-"company": "Naval Nuclear Laboratory (FMP)",
-"locations": [
-"Niskayuna, NY, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9e08ac68f82b403673870f",
 "posted": 1788652800,
 "updated": 0,
 "first_seen": 1788795809,
@@ -835,17 +908,17 @@
 "company_url": null
 },
 {
-"id": "jr-6a9e1d86a7ba386c5d670d93",
+"id": "jr-6a6372c15c7e2d715ebabffa",
 "title": "Quantitative Research Analyst – Intern (US)",
 "company": "Citadel",
 "locations": [
 "New York, NY, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a9e1d86a7ba386c5d670d93",
+"url": "https://jobright.ai/jobs/info/6a6372c15c7e2d715ebabffa",
 "posted": 1788652800,
 "updated": 0,
-"first_seen": 1788773885,
+"first_seen": 1788810603,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -1082,17 +1155,17 @@
 "company_url": null
 },
 {
-"id": "jr-6a19e0382b206f3955eb14a9",
+"id": "jr-6a61e8e7eaa37f43e758ae2a",
 "title": "Data Processing Intern",
 "company": "Bee Sweet Citrus, Inc.",
 "locations": [
-"Fowler, CA"
+"Fowler, California, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a19e0382b206f3955eb14a9",
+"url": "https://jobright.ai/jobs/info/6a61e8e7eaa37f43e758ae2a",
 "posted": 1788566400,
 "updated": 0,
-"first_seen": 1788795809,
+"first_seen": 1788810603,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -1112,6 +1185,25 @@
 "posted": 1788566400,
 "updated": 0,
 "first_seen": 1788623725,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a9bfc25a7ba386c5d66dd39",
+"title": "Data Science Internship Summer 2027",
+"company": "Naval Nuclear Laboratory (FMP)",
+"locations": [
+"Niskayuna, NY, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a9bfc25a7ba386c5d66dd39",
+"posted": 1788566400,
+"updated": 0,
+"first_seen": 1788810603,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -1259,6 +1351,44 @@
 "company_url": "https://simplify.jobs/c/Entergy"
 },
 {
+"id": "wd-disney-10158063",
+"title": "Commercial Data Science Intern, Spring 2027",
+"company": "Disney",
+"locations": [
+"Celebration, FL, USA"
+],
+"terms": [],
+"url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Commercial-Data-Science-Intern--Spring-2027_10158063",
+"posted": 1788551387,
+"updated": 0,
+"first_seen": 1788541251,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-target-R0000450965",
+"title": "Inventory Analyst Intern - Minneapolis, MN (Starting Summer, 2027)",
+"company": "Target",
+"locations": [
+"1000 Nicollet Mall, Minneapolis,MN 55403-2542"
+],
+"terms": [],
+"url": "https://target.wd5.myworkdayjobs.com/en-US/targetcareers/job/1000-Nicollet-Mall-MinneapolisMN-55403-2542/Inventory-Analyst-Intern---Minneapolis--MN--Starting-Summer--2027-_R0000450965",
+"posted": 1788551385,
+"updated": 0,
+"first_seen": 1788551359,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "e83278e0-c4fd-42f9-a773-171b6b1e16c1",
 "title": "Options Analyst Intern",
 "company": "Perry Homes",
@@ -1327,44 +1457,6 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/Ragle-Inc"
-},
-{
-"id": "wd-disney-10158063",
-"title": "Commercial Data Science Intern, Spring 2027",
-"company": "Disney",
-"locations": [
-"Celebration, FL, USA"
-],
-"terms": [],
-"url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Commercial-Data-Science-Intern--Spring-2027_10158063",
-"posted": 1788536593,
-"updated": 0,
-"first_seen": 1788541251,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-target-R0000450965",
-"title": "Inventory Analyst Intern - Minneapolis, MN (Starting Summer, 2027)",
-"company": "Target",
-"locations": [
-"1000 Nicollet Mall, Minneapolis,MN 55403-2542"
-],
-"terms": [],
-"url": "https://target.wd5.myworkdayjobs.com/en-US/targetcareers/job/1000-Nicollet-Mall-MinneapolisMN-55403-2542/Inventory-Analyst-Intern---Minneapolis--MN--Starting-Summer--2027-_R0000450965",
-"posted": 1788536590,
-"updated": 0,
-"first_seen": 1788551359,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "490a007b-6b18-4f66-bf74-6060c4fe706a",
@@ -1944,63 +2036,6 @@
 "posted": 1788480000,
 "updated": 0,
 "first_seen": 1788583962,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a9b2e532cdc5958f53eb3b8",
-"title": "Data Analytics Intern - Summer 2027",
-"company": "Nicolet National Bank",
-"locations": [
-"Green Bay, WI, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9b2e532cdc5958f53eb3b8",
-"posted": 1788480000,
-"updated": 0,
-"first_seen": 1788560274,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a9b1ccb9c24314c35f97d36",
-"title": "Intern, Data Research",
-"company": "Trimont",
-"locations": [
-"Atlanta, GA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9b1ccb9c24314c35f97d36",
-"posted": 1788480000,
-"updated": 0,
-"first_seen": 1788560274,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a9b2b1b90a313642c658dc1",
-"title": "Intern - Data Analytics / UNB",
-"company": "Sunoco LP",
-"locations": [
-"Dallas, TX, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9b2b1b90a313642c658dc1",
-"posted": 1788480000,
-"updated": 0,
-"first_seen": 1788560274,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -3468,6 +3503,44 @@
 "company_url": "https://simplify.jobs/c/John-Deere"
 },
 {
+"id": "wd-swa-R-2026-71388",
+"title": "Spring 2027 Technology Analyst Internships",
+"company": "Southwest Airlines",
+"locations": [
+"TX-Dallas"
+],
+"terms": [],
+"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Technology-Analyst-Internships_R-2026-71388",
+"posted": 1788292191,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-swa-R-2026-71387",
+"title": "Spring 2027 Cybersecurity Analyst Internships",
+"company": "Southwest Airlines",
+"locations": [
+"TX-Dallas"
+],
+"terms": [],
+"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Cybersecurity-Analyst-Internships_R-2026-71387",
+"posted": 1788292191,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "b2910d1a-df08-4c5a-9ad6-88cf9a60ff6f",
 "title": "Air Traffic Strategy Data Analytics Intern - Summer 2027",
 "company": "United Airlines",
@@ -3890,44 +3963,6 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/United-Airlines"
-},
-{
-"id": "wd-swa-R-2026-71388",
-"title": "Spring 2027 Technology Analyst Internships",
-"company": "Southwest Airlines",
-"locations": [
-"TX-Dallas"
-],
-"terms": [],
-"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Technology-Analyst-Internships_R-2026-71388",
-"posted": 1788277397,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-swa-R-2026-71387",
-"title": "Spring 2027 Cybersecurity Analyst Internships",
-"company": "Southwest Airlines",
-"locations": [
-"TX-Dallas"
-],
-"terms": [],
-"url": "https://swa.wd1.myworkdayjobs.com/en-US/external/job/TX-Dallas/Spring-2027-Cybersecurity-Analyst-Internships_R-2026-71387",
-"posted": 1788277397,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "26fc2a52-b260-4601-a804-43fb299bebf2",
@@ -5746,6 +5781,25 @@
 "company_url": "https://simplify.jobs/c/Clyde-Companies"
 },
 {
+"id": "wd-wf-R-571698",
+"title": "2027 Quantitative Analytics Summer Internship Applied Computational Intelligence (ACI Masters) – Early Careers",
+"company": "Wells Fargo",
+"locations": [
+"CHARLOTTE, NC"
+],
+"terms": [],
+"url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-571698",
+"posted": 1787860190,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "ba997393-daa9-4477-9391-5eb428918ddb",
 "title": "Data Science & Analytics Intern",
 "company": "Phoenix Contact",
@@ -5768,25 +5822,6 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/Phoenix-Contact"
-},
-{
-"id": "wd-wf-R-571698",
-"title": "2027 Quantitative Analytics Summer Internship Applied Computational Intelligence (ACI Masters) – Early Careers",
-"company": "Wells Fargo",
-"locations": [
-"CHARLOTTE, NC"
-],
-"terms": [],
-"url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-571698",
-"posted": 1787845397,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "428cbf35-14f8-4bc9-a4bd-b044dbc7ddc2",
