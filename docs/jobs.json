@@ -1,8 +1,8 @@
 {
-"generated_at": 1788848933,
+"generated_at": 1788867717,
 "scanned": {
-"feeds": 16211,
-"ats": 11506,
+"feeds": 16280,
+"ats": 11496,
 "boards": 60
 },
 "companies_polled": [
@@ -68,6 +68,240 @@
 "Zoom"
 ],
 "jobs": [
+{
+"id": "97899cd4-de4e-4a30-88bb-d77f77c316cb",
+"title": "Data Scientist Intern",
+"company": "Cox",
+"locations": [
+"Atlanta, GA"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1/job/Atlanta-GA/Data-Scientist-Intern---Summer-2027--Atlanta--GA-_R202682164",
+"posted": 1788825600,
+"updated": 1788848101,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [],
+"company_url": "https://simplify.jobs/c/Cox"
+},
+{
+"id": "44e2cea6-fb38-4201-b02a-99caa42eee10",
+"title": "CFO Intern - IT - Commercial Data & AICOE",
+"company": "Gilead Sciences",
+"locations": [
+"Raleigh, NC"
+],
+"terms": [
+"Summer 2026"
+],
+"url": "https://gilead.wd1.myworkdayjobs.com/gileadcareers/job/United-States---North-Carolina---Raleigh/Intern---CFO---IT--Commercial-Data---AICOE-_R0054843",
+"posted": 1788825600,
+"updated": 1788848103,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "Software",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's",
+"MBA",
+"PharmD",
+"PhD",
+"JD"
+],
+"company_url": "https://simplify.jobs/c/Gilead-Sciences"
+},
+{
+"id": "5f032af0-0aa0-447c-9b7e-576e955d9c70",
+"title": "Medical Data Scientist Intern",
+"company": "Merck",
+"locations": [
+"North Wales, PA"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Pennsylvania---North-Wales-Upper-Gwynedd/XMLNAME-2027-Future-Talent-Program---Medical-Data-Scientist---Intern_R412403",
+"posted": 1788825600,
+"updated": 1788848094,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Merck"
+},
+{
+"id": "e2818b99-0f21-4936-b942-da56f97129bd",
+"title": "Global Data Management and Standards Intern",
+"company": "Merck",
+"locations": [
+"Rahway, NJ"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---New-Jersey---Rahway/XMLNAME-2027-Future-Talent-Program---Global-Data-Management-and-Standards--GDMS----Intern_R412060",
+"posted": 1788825600,
+"updated": 1788848005,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Merck"
+},
+{
+"id": "81ff5e49-75e0-4fad-9011-3c8dc942fe8a",
+"title": "Retail Analytics Intern - Corporate Internship",
+"company": "Dick's Sporting Goods",
+"locations": [
+"Pittsburgh, PA"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://dickssportinggoods.wd1.myworkdayjobs.com/en-US/DSG/job/Customer-Support-Center/Retail-Analytics---Summer-2027-Corporate-Internship_202608785-1",
+"posted": 1788825600,
+"updated": 1788847964,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Dicks-Sporting-Goods"
+},
+{
+"id": "43b2eef4-f37f-4fe3-919b-08128239760c",
+"title": "Data Scientist Intern - Nonclinical Drug Safety",
+"company": "Merck",
+"locations": [
+"Boston, MA"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Massachusetts---Boston-MA-Parcel-B-Laboratory/XMLNAME-2027-Future-Talent-Program---Nonclinical-Drug-Safety-Data-Scientist---Intern_R412861",
+"posted": 1788825600,
+"updated": 1788847979,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Merck"
+},
+{
+"id": "269c98bf-a12b-4ef0-a2c5-4b7d30d453e2",
+"title": "Business Intelligence Intern - Research Lab",
+"company": "Merck",
+"locations": [
+"North Wales, PA",
+"Rahway, NJ"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Pennsylvania---North-Wales-Upper-Gwynedd/XMLNAME-2027-Future-Talent-Program---Business-Intelligence---Intern_R412411",
+"posted": 1788825600,
+"updated": 1788847966,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Merck"
+},
+{
+"id": "2504c78d-986a-40de-b1e5-49135a5f9043",
+"title": "Optical Imaging Data Science Intern",
+"company": "Merck",
+"locations": [
+"Boston, MA"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Massachusetts---Boston-MA-Parcel-B-Laboratory/XMLNAME-2027-Future-Talent-Program---Optical-Imaging-Data-Science-Intern---Intern_R412885",
+"posted": 1788825600,
+"updated": 1788847971,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Merck"
+},
+{
+"id": "21a1c289-2659-42d8-b129-afd4e443f775",
+"title": "Development Intern - Clinical Data Management - Technology",
+"company": "Gilead Sciences",
+"locations": [
+"Foster City, CA"
+],
+"terms": [
+"Summer 2026"
+],
+"url": "https://gilead.wd1.myworkdayjobs.com/gileadcareers/job/United-States---California---Foster-City/Intern---Development---Clinical-Data-Management--Technology_R0054707",
+"posted": 1788825600,
+"updated": 1788860090,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "Software",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's",
+"MBA",
+"PhD",
+"JD"
+],
+"company_url": "https://simplify.jobs/c/Gilead-Sciences"
+},
+{
+"id": "jr-6a9fbd30f6ea002358298cb5",
+"title": "Intern - Kite Development - Clinical Development (Data Management)",
+"company": "Kite Pharma",
+"locations": [
+"El Segundo, CA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a9fbd30f6ea002358298cb5",
+"posted": 1788825600,
+"updated": 0,
+"first_seen": 1788867717,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
 {
 "id": "a8d0af87-a5ff-4477-8e3b-2f27946cbc23",
 "title": "Data and Intelligence Delivery Intern - Assurance",
@@ -457,33 +691,14 @@
 "company_url": "https://simplify.jobs/c/Walmart"
 },
 {
-"id": "jr-6a9f5b09f6ea002358298031",
-"title": "2027 Future Talent Program - Epidemiology and RWE Capabilities & Analytics - Intern",
-"company": "Merck",
+"id": "jr-6a9f942668f82b403673d5fa",
+"title": "Advanced Analytics Summer Internship, Actuarial – Short Hills, NJ (Hybrid)",
+"company": "Selective Insurance",
 "locations": [
-"West Point, Pennsylvania, United States"
+"Short Hills, NJ, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a9f5b09f6ea002358298031",
-"posted": 1788739200,
-"updated": 0,
-"first_seen": 1788848933,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a9f951f2c964816f65f068b",
-"title": "IT Intern – AI & Data Analytics (Microsoft Fabric)",
-"company": "PMA Companies",
-"locations": [
-"Blue Bell, PA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9f951f2c964816f65f068b",
+"url": "https://jobright.ai/jobs/info/6a9f942668f82b403673d5fa",
 "posted": 1788739200,
 "updated": 0,
 "first_seen": 1788848933,
@@ -514,33 +729,14 @@
 "company_url": null
 },
 {
-"id": "jr-6a9f942668f82b403673d5fa",
-"title": "Advanced Analytics Summer Internship, Actuarial – Short Hills, NJ (Hybrid)",
-"company": "Selective Insurance",
+"id": "jr-6a9f5b09f6ea002358298031",
+"title": "2027 Future Talent Program - Epidemiology and RWE Capabilities & Analytics - Intern",
+"company": "Merck",
 "locations": [
-"Short Hills, NJ, United States"
+"West Point, Pennsylvania, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a9f942668f82b403673d5fa",
-"posted": 1788739200,
-"updated": 0,
-"first_seen": 1788848933,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a96ac13e4e60e4b8da59a45",
-"title": "2027 Summer Internship - Data Analytics/Science/Applied Math- Santa Ana/Westminster/Irvine/Fullerton",
-"company": "Southern California Edison (SCE)",
-"locations": [
-"Westminster, CA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a96ac13e4e60e4b8da59a45",
+"url": "https://jobright.ai/jobs/info/6a9f5b09f6ea002358298031",
 "posted": 1788739200,
 "updated": 0,
 "first_seen": 1788848933,
@@ -560,6 +756,44 @@
 ],
 "terms": [],
 "url": "https://jobright.ai/jobs/info/6a9f5b08352f093fc756e29c",
+"posted": 1788739200,
+"updated": 0,
+"first_seen": 1788848933,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a9f951f2c964816f65f068b",
+"title": "IT Intern – AI & Data Analytics (Microsoft Fabric)",
+"company": "PMA Companies",
+"locations": [
+"Blue Bell, PA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a9f951f2c964816f65f068b",
+"posted": 1788739200,
+"updated": 0,
+"first_seen": 1788848933,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a96ac13e4e60e4b8da59a45",
+"title": "2027 Summer Internship - Data Analytics/Science/Applied Math- Santa Ana/Westminster/Irvine/Fullerton",
+"company": "Southern California Edison (SCE)",
+"locations": [
+"Westminster, CA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a96ac13e4e60e4b8da59a45",
 "posted": 1788739200,
 "updated": 0,
 "first_seen": 1788848933,
@@ -677,6 +911,25 @@
 "posted": 1788739200,
 "updated": 0,
 "first_seen": 1788754710,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a96ac0a246d697dcee00ef5",
+"title": "2027 Summer Internship - Data Analytics/Science/Applied Math - (Pomona/Rosemead) 1",
+"company": "Southern California Edison (SCE)",
+"locations": [
+"Remote — Rosemead, CA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a96ac0a246d697dcee00ef5",
+"posted": 1788739200,
+"updated": 0,
+"first_seen": 1788867717,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -1616,63 +1869,6 @@
 "company_url": null
 },
 {
-"id": "jr-6a2c15cdfc064474905481cb",
-"title": "Data Science Intern",
-"company": "The Campbell's Company",
-"locations": [
-"USA - NJ - Camden, US"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a2c15cdfc064474905481cb",
-"posted": 1788652800,
-"updated": 0,
-"first_seen": 1788715109,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-disney-10158063",
-"title": "Commercial Data Science Intern, Spring 2027",
-"company": "Disney",
-"locations": [
-"Celebration, FL, USA"
-],
-"terms": [],
-"url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Commercial-Data-Science-Intern--Spring-2027_10158063",
-"posted": 1788589716,
-"updated": 0,
-"first_seen": 1788541251,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-target-R0000450965",
-"title": "Inventory Analyst Intern - Minneapolis, MN (Starting Summer, 2027)",
-"company": "Target",
-"locations": [
-"1000 Nicollet Mall, Minneapolis,MN 55403-2542"
-],
-"terms": [],
-"url": "https://target.wd5.myworkdayjobs.com/en-US/targetcareers/job/1000-Nicollet-Mall-MinneapolisMN-55403-2542/Inventory-Analyst-Intern---Minneapolis--MN--Starting-Summer--2027-_R0000450965",
-"posted": 1788589713,
-"updated": 0,
-"first_seen": 1788551359,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
 "id": "ce15dae3-7399-4de2-93b2-1047bc6aedc8",
 "title": "Data Science Intern",
 "company": "Schonfeld",
@@ -1912,6 +2108,44 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/Ernst-And-Young"
+},
+{
+"id": "wd-disney-10158063",
+"title": "Commercial Data Science Intern, Spring 2027",
+"company": "Disney",
+"locations": [
+"Celebration, FL, USA"
+],
+"terms": [],
+"url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Commercial-Data-Science-Intern--Spring-2027_10158063",
+"posted": 1788522098,
+"updated": 0,
+"first_seen": 1788541251,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-target-R0000450965",
+"title": "Inventory Analyst Intern - Minneapolis, MN (Starting Summer, 2027)",
+"company": "Target",
+"locations": [
+"1000 Nicollet Mall, Minneapolis,MN 55403-2542"
+],
+"terms": [],
+"url": "https://target.wd5.myworkdayjobs.com/en-US/targetcareers/job/1000-Nicollet-Mall-MinneapolisMN-55403-2542/Inventory-Analyst-Intern---Minneapolis--MN--Starting-Summer--2027-_R0000450965",
+"posted": 1788522095,
+"updated": 0,
+"first_seen": 1788551359,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
 },
 {
 "id": "ee2f804d-b718-4730-838f-89fe383039ca",
@@ -2332,6 +2566,29 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/CNA-Insurance"
+},
+{
+"id": "2e2b4512-02d3-4134-a01d-b3f6887cd3e5",
+"title": "Personal Lines Sales Business Analyst Intern",
+"company": "Nationwide",
+"locations": [
+"Columbus, OH"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://nationwide.wd1.myworkdayjobs.com/Nationwide_Career/job/Ohio---Columbus-One-Nationwide-Plaza/Summer-2027-Personal-Lines-Sales-Business-Analyst-Intern_100038",
+"posted": 1788480000,
+"updated": 1788860845,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Nationwide"
 },
 {
 "id": "f62e39e9-0447-47d4-82a3-e90f65622f59",
@@ -3087,29 +3344,6 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/Universal-Health-Services"
-},
-{
-"id": "6fe5b9a0-740d-433d-888e-92478b141496",
-"title": "Operations Analyst Co-op - Manufacturing",
-"company": "Eaton",
-"locations": [
-"Glenolden, PA"
-],
-"terms": [
-"Winter 2026"
-],
-"url": "https://eaton.eightfold.ai/careers/job/687238965477",
-"posted": 1788358202,
-"updated": 1788409626,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/Eaton-Corporation"
 },
 {
 "id": "fb0f6a70-7886-4ed4-a59d-12e6a0e79c9d",
@@ -4075,6 +4309,29 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/Johns-Hopkins-Applied-Physics-Laboratory"
+},
+{
+"id": "0b6231bf-1510-4b9c-b81b-7dbc9d578158",
+"title": "Operations Strategy Analytics Intern",
+"company": "United Airlines",
+"locations": [
+"Chicago, IL"
+],
+"terms": [
+"Summer 2026"
+],
+"url": "https://careers.united.com/us/en/job/WHQ00026638",
+"posted": 1788287331,
+"updated": 1788857430,
+"first_seen": 1788867717,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/United-Airlines"
 },
 {
 "id": "d41d1a6f-e6bf-4872-a9db-fcc930ae53a9",
@@ -5875,25 +6132,6 @@
 "company_url": "https://simplify.jobs/c/Oshkosh"
 },
 {
-"id": "wd-wf-R-571698",
-"title": "2027 Quantitative Analytics Summer Internship Applied Computational Intelligence (ACI Masters) – Early Careers",
-"company": "Wells Fargo",
-"locations": [
-"CHARLOTTE, NC"
-],
-"terms": [],
-"url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-571698",
-"posted": 1787898521,
-"updated": 0,
-"first_seen": 1788500650,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
 "id": "8e4b4b17-9c3e-4b70-8a49-902c7956a66b",
 "title": "Data and Analytics Intern",
 "company": "Huntington Bancshares",
@@ -6097,6 +6335,25 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/Vertiv"
+},
+{
+"id": "wd-wf-R-571698",
+"title": "2027 Quantitative Analytics Summer Internship Applied Computational Intelligence (ACI Masters) – Early Careers",
+"company": "Wells Fargo",
+"locations": [
+"CHARLOTTE, NC"
+],
+"terms": [],
+"url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-571698",
+"posted": 1787830903,
+"updated": 0,
+"first_seen": 1788500650,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
 },
 {
 "id": "e7293c88-f396-415f-920c-742686dde2e3",
