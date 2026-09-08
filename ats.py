@@ -16,6 +16,11 @@ Workday boards are huge (thousands of postings), so we ask Workday to
 search for WORKDAY_SEARCH server-side and cap pagination, then let
 job_bot's INCLUDE/EXCLUDE filters do the real work.
 
+To find a Workday slug you don't know: POST to
+<tenant>.<wdN>.myworkdayjobs.com/wday/cxs/<tenant>/anything/jobs — 404 means
+the tenant lives on that wdN, 422 means it doesn't — then read the real site
+names out of https://<tenant>.<wdN>.myworkdayjobs.com/robots.txt.
+
 Verify a list with:  python3 job_bot.py --check-ats
 """
 
@@ -27,8 +32,9 @@ import urllib.request
 
 # ---------------------------------------------------------------------------
 # YOUR TARGET COMPANIES  ("ats_kind", "slug")
-# Starter list pulled from live listings — every slug below was serving jobs
-# as of Jul 2026. Replace freely with your own targets.
+# Tech starter list first, then as much of the Fortune 500 as these five ATS
+# APIs expose. Every slug below was serving jobs when it was added. Replace
+# freely with your own targets.
 # ---------------------------------------------------------------------------
 COMPANIES = [
     ("greenhouse", "spacex"),
@@ -80,7 +86,6 @@ COMPANIES = [
     ("workday", "cvshealth.wd1/CVS_Health_Careers"),
     ("workday", "capitalone.wd12/Capital_One"),
     ("workday", "chewy.wd5/External"),
-    ("workday", "comcast.wd5/Comcast_Careers"),
     ("workday", "nike.wd1/nke"),
     ("workday", "wf.wd1/WellsFargoJobs"),             # Wells Fargo
     ("workday", "sysco.wd5/syscocareers"),
@@ -94,6 +99,174 @@ COMPANIES = [
     ("workday", "expedia.wd108/search"),
     ("workday", "priceline.wd1/BookingHoldings"),       # Booking Holdings
     ("workday", "hcmportal.wd5/Search"),                # UPS
+
+    # -----------------------------------------------------------------------
+    # Fortune 500, verified Sep 2026. Slugs were found by probing each
+    # company's Workday tenant and reading the site names out of its
+    # robots.txt, then confirming the board serves jobs. Companies whose
+    # careers run on an ATS this module doesn't speak (Taleo, iCIMS,
+    # SuccessFactors, Phenom, Eightfold, or a fully in-house site) can't be
+    # polled directly and are covered only by the Simplify/Jobright feeds —
+    # that's most of the top ten, including Walmart, Amazon, Apple, and
+    # UnitedHealth.
+    # -----------------------------------------------------------------------
+    # Health care, pharma, and medical devices:
+    ("workday", "mckesson.wd3/External_Careers"),
+    ("workday", "cardinalhealth.wd1/EXT"),              # Cardinal Health
+    ("workday", "cigna.wd5/cignacareers"),
+    ("workday", "elevancehealth.wd1/ANT"),              # Elevance Health
+    ("workday", "centene.wd5/Centene_External"),
+    ("workday", "humana.wd5/Humana_External_Career_Site"),
+    ("workday", "hcahealthcare.wd3/hcacareers"),        # HCA Healthcare
+    ("workday", "msd.wd5/SearchJobs"),                  # Merck
+    ("workday", "bristolmyerssquibb.wd5/BMS"),
+    ("workday", "abbott.wd5/abbottcareers"),
+    ("workday", "thermofisher.wd5/ThermoFisherCareers"),
+    ("workday", "danaher.wd1/DanaherJobs"),
+    ("workday", "gilead.wd1/gileadcareers"),
+    ("workday", "amgen.wd1/Careers"),
+    ("workday", "regeneron.wd1/Careers"),
+    ("workday", "modernatx.wd1/M_tx"),                  # Moderna
+    ("workday", "viatris.wd5/External"),
+    ("workday", "organon.wd5/SearchJobs"),
+    ("workday", "zoetis.wd5/zoetis"),
+    ("workday", "baxter.wd1/baxter"),
+    ("workday", "medtronic.wd1/MedtronicCareers"),
+    ("workday", "stryker.wd1/StrykerCareers"),
+    ("workday", "edwards.wd5/EdwardsCareers"),          # Edwards Lifesciences
+    ("workday", "labcorp.wd1/External"),
+    ("workday", "iqvia.wd1/IQVIA"),
+    ("workday", "davita.wd1/DKC_External"),             # DaVita
+    ("workday", "henryschein.wd1/External_Careers"),
+    ("workday", "owensminor.wd1/OMCareers"),            # Owens & Minor
+    # Energy, utilities, and chemicals:
+    ("workday", "chevron.wd5/jobs"),
+    ("workday", "mpc.wd1/MPCCareers"),                  # Marathon Petroleum
+    ("workday", "conocophillips.wd1/External"),
+    ("workday", "oxy.wd5/Corporate"),                   # Occidental Petroleum
+    ("workday", "devonenergy.wd5/Careers"),
+    ("workday", "bakerhughes.wd5/BakerHughes"),
+    ("workday", "williams.wd5/External"),               # The Williams Companies
+    ("workday", "oneok.wd1/ONEOK"),
+    ("workday", "dow.wd1/ExternalCareers"),
+    ("workday", "dupont.wd5/Jobs"),
+    ("workday", "ppg.wd5/PPG_CAREERS"),
+    ("workday", "ecolab.wd1/Ecolab_External"),
+    ("workday", "airproducts.wd5/AP0001"),              # Air Products
+    ("workday", "corteva.wd5/Corteva"),
+    ("workday", "mosaic.wd5/mosaic"),
+    ("workday", "alcoa.wd5/Careers"),
+    ("smartrecruiters", "Celanese"),
+    ("workday", "dukeenergy.wd1/Search"),
+    ("workday", "aep.wd1/AEPCareerSite"),               # American Electric Power
+    ("workday", "xcelenergy.wd1/External"),
+    ("workday", "eversource.wd1/ExternalSite"),
+    ("workday", "ameren.wd1/External"),
+    # Banks, insurers, and payments:
+    ("workday", "usbank.wd1/US_Bank_Careers"),          # U.S. Bank
+    ("workday", "pnc.wd5/External"),
+    ("workday", "truist.wd1/Careers"),
+    ("workday", "statestreet.wd1/Global"),              # State Street
+    ("workday", "fifththird.wd5/53careers"),            # Fifth Third
+    ("workday", "regions.wd5/Regions_Careers"),
+    ("workday", "mtb.wd5/MTB"),                         # M&T Bank
+    ("workday", "blackrock.wd1/BlackRock_Professional"),
+    ("workday", "ally.wd1/Ally"),
+    ("workday", "synchronyfinancial.wd5/careers"),      # Synchrony
+    ("workday", "raymondjames.wd1/RaymondJamesCareers"),
+    ("workday", "ameriprise.wd5/Ameriprise"),
+    ("workday", "prudential.wd3/prudential"),
+    ("workday", "massmutual.wd1/MMCareers"),            # MassMutual
+    ("workday", "northwesternmutual.wd5/CORPORATE-CAREERS"),
+    ("workday", "guardianlife.wd5/Guardian-Life-Careers"),
+    ("workday", "pacificlife.wd1/PacificLifeCareers"),
+    ("workday", "aig.wd1/aig"),                         # AIG
+    ("workday", "travelers.wd5/External"),
+    ("workday", "thehartford.wd5/Careers_External"),    # The Hartford
+    ("workday", "assurant.wd1/Assurant_Careers"),
+    ("workday", "unum.wd1/External"),
+    ("workday", "amfam.wd1/Careers"),                   # American Family
+    ("workday", "allstate.wd5/allstate_careers"),
+    ("workday", "tiaa.wd1/Search"),                     # TIAA
+    ("workday", "fanniemae.wd1/FannieMaeCareers"),
+    ("workday", "freddiemac.wd5/External"),
+    ("workday", "visa.wd5/Visa"),
+    ("workday", "fiserv.wd5/EXT"),
+    ("workday", "fis.wd5/SearchJobs"),                  # FIS
+    ("workday", "paypal.wd1/jobs"),
+    ("workday", "spgi.wd5/SPGI_Careers"),               # S&P Global
+    ("workday", "nasdaq.wd1/Global_External_Site"),
+    ("greenhouse", "block"),
+    # Technology and electronics:
+    ("workday", "cisco.wd5/Cisco_Careers"),
+    ("workday", "salesforce.wd12/External_Career_Site"),
+    ("workday", "adobe.wd5/external_experienced"),
+    ("workday", "broadcom.wd1/External_Career"),
+    ("workday", "micron.wd1/External"),
+    ("workday", "analogdevices.wd1/External"),          # Analog Devices
+    ("workday", "amat.wd1/External"),                   # Applied Materials
+    ("workday", "hpe.wd5/Jobsathpe"),                   # HPE
+    ("workday", "kyndryl.wd5/KyndrylProfessionalCareers"),
+    ("workday", "dxctechnology.wd1/DXCJobs"),           # DXC Technology
+    ("workday", "jabil.wd5/Jabil_Careers"),
+    ("workday", "flextronics.wd1/Careers"),             # Flex
+    ("workday", "arrow.wd1/AC"),                        # Arrow Electronics
+    ("workday", "avnet.wd1/External"),
+    ("workday", "cdw.wd5/Careers"),                     # CDW
+    ("workday", "motorolasolutions.wd5/Careers"),
+    ("workday", "synnex.wd5/tdsynnexcareers"),          # TD SYNNEX
+    ("workday", "netflix.wd108/Netflix"),
+    ("workday", "paloaltonetworks.wd5/panwexternalcareers"),
+    # Aerospace, defense, and industrials:
+    ("workday", "boeing.wd1/EXTERNAL_CAREERS"),
+    ("workday", "ngc.wd1/Northrop_Grumman_External_Site"),   # Northrop Grumman
+    ("workday", "gdit.wd5/External_Career_Site"),       # General Dynamics IT
+    ("workday", "leidos.wd5/External"),
+    ("workday", "caci.wd1/External"),                   # CACI
+    ("workday", "bah.wd1/BAH_Jobs"),                    # Booz Allen Hamilton
+    ("workday", "kbr.wd5/KBR_Careers"),                 # KBR
+    ("workday", "geaerospace.wd5/GE_ExternalSite"),     # GE Aerospace
+    ("workday", "gevernova.wd5/Vernova_ExternalSite"),  # GE Vernova
+    ("workday", "cat.wd5/CaterpillarCareers"),          # Caterpillar
+    ("workday", "itw.wd5/External"),                    # Illinois Tool Works
+    ("workday", "rockwellautomation.wd1/External_Rockwell_Automation"),
+    ("workday", "3m.wd1/Search"),                       # 3M
+    ("workday", "carrier.wd5/jobs"),
+    ("workday", "tranetechnologies.wd12/Trane_Technologies_Careers"),
+    ("workday", "jci.wd5/JCI"),                         # Johnson Controls
+    ("workday", "dover.wd103/Dover"),
+    ("workday", "xylem.wd5/xylem-careers"),
+    ("workday", "sbdinc.wd1/Stanley_Black_Decker_Career_Site"),
+    ("workday", "masco.wd1/Masco"),
+    # Retail, food, and consumer:
+    ("workday", "homedepot.wd5/CareerDepot"),           # Home Depot
+    ("workday", "lowes.wd5/LWS_External_CS"),           # Lowe's
+    ("workday", "tjx.wd1/TJX_EXTERNAL"),                # TJX
+    ("workday", "dollartree.wd5/dollartreeus"),         # Dollar Tree
+    ("workday", "gapinc.wd1/GAPINC"),                   # Gap
+    ("workday", "carmax.wd1/External"),                 # CarMax
+    ("workday", "autonation.wd5/Careers"),
+    ("workday", "oreillyauto.wd1/oreilly"),             # O'Reilly Auto Parts
+    ("workday", "dickssportinggoods.wd1/DSG"),          # Dick's Sporting Goods
+    ("greenhouse", "carvana"),
+    ("workday", "pg.wd5/1000"),                         # Procter & Gamble
+    ("workday", "kimberlyclark.wd1/GLOBAL"),            # Kimberly-Clark
+    ("workday", "coke.wd1/coca-cola-careers"),          # Coca-Cola
+    ("workday", "tysonfoods.wd5/TSN"),                  # Tyson Foods
+    ("workday", "smucker.wd5/US_External_Careers"),     # J.M. Smucker
+    ("workday", "chipotle.wd5/ChipotleCareers"),
+    ("workday", "mgmresorts.wd5/MGMCareers"),           # MGM Resorts
+    ("workday", "usfoods.wd1/usfoodscareersExternal"),  # US Foods
+    ("workday", "pfg.wd3/PFGCareers"),                  # Performance Food Group
+    ("workday", "ferguson.wd1/Ferguson_Experienced"),
+    # Telecom, media, transport, and services:
+    ("workday", "verizon.wd12/verizon-careers"),
+    ("workday", "att.wd1/ATTGeneral"),                  # AT&T
+    ("workday", "warnerbros.wd5/global"),               # Warner Bros. Discovery
+    ("workday", "interpublic.wd5/OMC"),                 # Omnicom
+    ("workday", "chrobinson.wd5/CHRobinson"),           # C.H. Robinson
+    ("workday", "ryder.wd5/RyderCareers"),
+    ("workday", "jll.wd1/jllcareers"),                  # JLL
 ]
 
 # Display names for the status message (slug -> friendly name).
@@ -108,6 +281,51 @@ _NAMES = {
     "sofi": "SoFi", "mongodb": "MongoDB", "riotgames": "Riot Games",
     "tri": "Toyota Research", "heartflowinc": "Heartflow",
     "westerndigital": "Western Digital",
+    # Fortune 500 boards:
+    "mckesson": "McKesson", "cardinalhealth": "Cardinal Health",
+    "elevancehealth": "Elevance Health", "hcahealthcare": "HCA Healthcare",
+    "msd": "Merck", "bristolmyerssquibb": "Bristol Myers Squibb",
+    "thermofisher": "Thermo Fisher", "modernatx": "Moderna",
+    "edwards": "Edwards Lifesciences", "iqvia": "IQVIA", "davita": "DaVita",
+    "henryschein": "Henry Schein", "owensminor": "Owens & Minor",
+    "mpc": "Marathon Petroleum", "conocophillips": "ConocoPhillips",
+    "oxy": "Occidental Petroleum", "devonenergy": "Devon Energy",
+    "bakerhughes": "Baker Hughes", "williams": "Williams", "oneok": "ONEOK",
+    "dupont": "DuPont", "ppg": "PPG", "airproducts": "Air Products",
+    "dukeenergy": "Duke Energy", "aep": "American Electric Power",
+    "xcelenergy": "Xcel Energy",
+    "usbank": "U.S. Bank", "pnc": "PNC", "statestreet": "State Street",
+    "fifththird": "Fifth Third", "regions": "Regions Bank", "mtb": "M&T Bank",
+    "blackrock": "BlackRock", "synchronyfinancial": "Synchrony",
+    "raymondjames": "Raymond James", "massmutual": "MassMutual",
+    "northwesternmutual": "Northwestern Mutual",
+    "guardianlife": "Guardian Life", "pacificlife": "Pacific Life",
+    "aig": "AIG", "thehartford": "The Hartford", "amfam": "American Family",
+    "tiaa": "TIAA", "fanniemae": "Fannie Mae", "freddiemac": "Freddie Mac",
+    "fis": "FIS", "paypal": "PayPal", "spgi": "S&P Global",
+    "nasdaq": "Nasdaq",
+    "analogdevices": "Analog Devices", "amat": "Applied Materials",
+    "hpe": "HPE", "dxctechnology": "DXC Technology", "flextronics": "Flex",
+    "arrow": "Arrow Electronics", "cdw": "CDW",
+    "motorolasolutions": "Motorola Solutions", "synnex": "TD SYNNEX",
+    "paloaltonetworks": "Palo Alto Networks",
+    "ngc": "Northrop Grumman", "gdit": "General Dynamics IT", "caci": "CACI",
+    "bah": "Booz Allen Hamilton", "kbr": "KBR", "geaerospace": "GE Aerospace",
+    "gevernova": "GE Vernova", "cat": "Caterpillar",
+    "itw": "Illinois Tool Works",
+    "rockwellautomation": "Rockwell Automation",
+    "tranetechnologies": "Trane Technologies", "jci": "Johnson Controls",
+    "sbdinc": "Stanley Black & Decker",
+    "homedepot": "Home Depot", "lowes": "Lowe's", "tjx": "TJX",
+    "dollartree": "Dollar Tree", "gapinc": "Gap", "carmax": "CarMax",
+    "autonation": "AutoNation", "oreillyauto": "O'Reilly Auto Parts",
+    "dickssportinggoods": "Dick's Sporting Goods",
+    "pg": "Procter & Gamble", "kimberlyclark": "Kimberly-Clark",
+    "coke": "Coca-Cola", "tysonfoods": "Tyson Foods",
+    "smucker": "J.M. Smucker", "mgmresorts": "MGM Resorts",
+    "usfoods": "US Foods", "pfg": "Performance Food Group",
+    "att": "AT&T", "warnerbros": "Warner Bros. Discovery",
+    "interpublic": "Omnicom", "chrobinson": "C.H. Robinson", "jll": "JLL",
 }
 
 

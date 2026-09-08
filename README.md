@@ -14,7 +14,14 @@ Three sources are polled on each run:
 |---|---|---|
 | Simplify | The [Summer 2027 internships](https://github.com/SimplifyJobs/Summer2027-Internships) JSON feed, ~16,000 listings | Hours to days, since it's curated by hand |
 | Jobright | The [data analysis internships](https://github.com/jobright-ai/2026-Data-Analysis-Internship) README table, parsed directly because the repo publishes no JSON | About an hour |
-| Company boards | 60 job boards hit through their public APIs: Greenhouse, Lever, Ashby, Workday, SmartRecruiters | One poll |
+| Company boards | 209 job boards hit through their public APIs: Greenhouse, Lever, Ashby, Workday, SmartRecruiters | One poll |
+
+The company boards are a tech starter list plus most of the Fortune 500 —
+whichever members expose a board through one of those five APIs. A good part
+of the list can't be reached: Walmart, Amazon, Apple, UnitedHealth, JPMorgan
+and many others run their careers pages on Taleo, iCIMS, SuccessFactors,
+Phenom, Eightfold, or something they built themselves, and those are covered
+only by the two feeds.
 
 Every listing is normalized to the same shape, then filtered:
 
@@ -47,8 +54,10 @@ both feeds stay in `WEBHOOK_URL`. Leave it unset and everything goes to one
 channel.
 
 Each channel has one heartbeat message that says what was checked and when.
-On a quiet run it edits itself in place. When roles are posted it's deleted
-and re-posted below them so it stays at the bottom. Its message ids live in
+The company-board one names as many boards as fit under Discord's 2,000
+character limit and counts the rest; the site lists them all. On a quiet run
+the heartbeat edits itself in place. When roles are posted it's deleted and
+re-posted below them so it stays at the bottom. Its message ids live in
 `seen.json`.
 
 Set `WEBHOOK_KIND=slack` for a Slack incoming webhook instead. Slack hooks
@@ -148,6 +157,19 @@ Company boards are the `COMPANIES` list in `ats.py`. Each entry is
 | workday | `nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite` | `nvidia.wd5/NVIDIAExternalCareerSite` |
 | smartrecruiters | `careers.smartrecruiters.com/westerndigital` | `westerndigital` |
 
+To find a Workday slug you don't already have, POST to
+`<tenant>.<wdN>.myworkdayjobs.com/wday/cxs/<tenant>/anything/jobs`: a 404 means
+the tenant lives on that `wdN` and a 422 means it doesn't. Once the host is
+known, `robots.txt` on it lists the real site names — pick the external
+careers one. Tenants are usually the company name with no punctuation, but
+often a ticker or an abbreviation instead: `msd` is Merck, `coke` is
+Coca-Cola, `cat` is Caterpillar, `ngc` is Northrop Grumman.
+
+Check what a board actually returns before keeping it. Several plausible
+slugs belong to someone else entirely — `greenhouse/fox` is a veterinary
+clinic, `harris.wd108` is an HVAC contractor, `aa.wd105` is a New Zealand
+motoring club.
+
 If the slug doesn't title-case into the company's name, add an entry to
 `_NAMES`. That name is used in embeds, on the site, and for cross-source
 dedupe, so spell it the way the feeds do. Run `--check-ats` after editing.
@@ -196,6 +218,10 @@ Feed listings have a latency floor of an hour or two because the upstream
 lists are rebuilt on their own schedule. Direct board polling has no such
 floor and is limited only by the 30-minute cron, which GitHub often runs
 late.
+
+A run takes two to three minutes, nearly all of it the company boards: the
+Workday ones are paged eight at a time, twenty requests each. That's well
+inside the cron interval, but it's the number to watch when adding boards.
 
 `seen.json` stores two keys per listing, the source id and the dedupe key,
 and is never pruned, so it grows slowly over time. `docs/jobs.json` is

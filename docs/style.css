@@ -368,6 +368,14 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   line-height: 1.7;
 }
 
+/* Two hundred company names is a wall of text, so keep it folded away. */
+.polled summary {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.polled p { margin: 10px 0 0; }
+
 /* detail panel -------------------------------------------------------- */
 
 .detail {

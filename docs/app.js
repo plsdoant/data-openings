@@ -314,7 +314,10 @@
       : "";
     $("#intro").innerHTML = `Last checked ${ago(data.generated_at)}.${stale}`;
     $("#board-count").textContent = s.boards || "";
-    $("#board-list").textContent = (data.companies_polled || []).join(", ") + ".";
+    const polled = data.companies_polled || [];
+    $("#board-list").textContent = polled.join(", ") + ".";
+    $("#board-list").closest("details").querySelector("summary").textContent =
+      `Boards polled directly (${polled.length})`;
   }
 
   // --- boot ------------------------------------------------------------

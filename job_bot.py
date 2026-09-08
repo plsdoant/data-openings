@@ -511,6 +511,21 @@ def _discord_heartbeat(msg, hook, state, key, repost=False):
         print(f"ERROR heartbeat: {e}", file=sys.stderr)
 
 
+def company_summary(budget=1200):
+    """Company names for the heartbeat, trimmed to fit. Discord caps a message
+    at 2,000 characters and the full list is now longer than that, so name as
+    many as fit and count the rest. The site lists all of them."""
+    names = ats.company_names()
+    shown, used = [], 0
+    for n in names:
+        if used + len(n) + 2 > budget:
+            break
+        shown.append(n)
+        used += len(n) + 2
+    rest = len(names) - len(shown)
+    return ", ".join(shown) + (f", and {rest} more" if rest else "")
+
+
 def post_status(fresh, all_jobs, state):
     """Self-editing heartbeat per channel: what was checked, and when."""
     is_ats = lambda j: str(j.get("source", "")).startswith("ats:")
@@ -519,8 +534,8 @@ def post_status(fresh, all_jobs, state):
     feed_total = sum(1 for j in all_jobs if not is_ats(j))
     stamp = f"<t:{int(time.time())}:R>"
 
-    ats_msg = (f"Checked for analyst openings from: "
-               f"{', '.join(ats.company_names())} — last run {stamp}")
+    ats_msg = (f"Checked {len(ats.COMPANIES)} company boards for analyst "
+               f"openings — {company_summary()} — last run {stamp}")
     if ats_new:
         ats_msg += f" — **{ats_new} new this run**"
     feed_msg = (f"Checked {feed_total:,} Simplify + Jobright feed listings"
