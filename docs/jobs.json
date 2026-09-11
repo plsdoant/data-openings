@@ -1,8 +1,8 @@
 {
-"generated_at": 1789117601,
+"generated_at": 1789134402,
 "scanned": {
-"feeds": 16668,
-"ats": 29696,
+"feeds": 16669,
+"ats": 29814,
 "boards": 209
 },
 "companies_polled": [
@@ -218,6 +218,25 @@
 ],
 "jobs": [
 {
+"id": "wd-aig-JR2602589",
+"title": "Director Internal Audit- Data and AI",
+"company": "AIG",
+"locations": [
+"NY-New York"
+],
+"terms": [],
+"url": "https://aig.wd1.myworkdayjobs.com/en-US/aig/job/NY-New-York/Director--Internal-Audit--Data-and-AI_JR2602589",
+"posted": 1789134333,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "81596e8a-9d9f-41c9-aac6-a983293dedc1",
 "title": "Data Analytics & Governance Internship",
 "company": "Wellmark",
@@ -283,6 +302,44 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/TD-Bank"
+},
+{
+"id": "jr-6a873fb9cde3717f9e9b1053",
+"title": "Graduate Level Co-op – Data Scientist – Plymouth, MN – January 2027",
+"company": "Philips",
+"locations": [
+"Plymouth, MN, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a873fb9cde3717f9e9b1053",
+"posted": 1789084800,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3def9c1928370a285af70",
+"title": "Data Analyst Intern",
+"company": "Ededge Groups",
+"locations": [
+"Remote — United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3def9c1928370a285af70",
+"posted": 1789084800,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
 },
 {
 "id": "03ddbf84-5e23-46af-b5c3-428a7ef7f009",
@@ -532,7 +589,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/McLean-VA/Enterprise-Cybersecurity-Data-Loss-Prevention-Intern_R0249131-1",
-"posted": 1789031166,
+"posted": 1789047956,
 "updated": 0,
 "first_seen": 1789065657,
 "source": "ats",
@@ -551,7 +608,7 @@
 ],
 "terms": [],
 "url": "https://caci.wd1.myworkdayjobs.com/en-US/External/job/Danbury-CT-US/Configuration-Control-Data-Management-Co-op---Spring---Summer-2027_331440",
-"posted": 1789031164,
+"posted": 1789047955,
 "updated": 0,
 "first_seen": 1789052925,
 "source": "ats",
@@ -570,7 +627,26 @@
 ],
 "terms": [],
 "url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Digital-Strategy-Analyst_R171828",
-"posted": 1789031151,
+"posted": 1789047941,
+"updated": 0,
+"first_seen": 1789076061,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-ally-R2600594",
+"title": "Summer 2027 Internship – Consumer Banking (Financial Crimes Data & Analytics)",
+"company": "Ally",
+"locations": [
+"Charlotte, NC"
+],
+"terms": [],
+"url": "https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Charlotte-NC/Summer-2027-Internship---Consumer-Banking--Financial-Crimes-Data---Analytics-_R2600594",
+"posted": 1789047929,
 "updated": 0,
 "first_seen": 1789076061,
 "source": "ats",
@@ -589,28 +665,9 @@
 ],
 "terms": [],
 "url": "https://ameriprise.wd5.myworkdayjobs.com/en-US/Ameriprise/job/Minneapolis-Minnesota/Data-Analytics---AI-Intern---RiverSource_R26_3595",
-"posted": 1789031138,
+"posted": 1789047929,
 "updated": 0,
 "first_seen": 1789065657,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-ally-R2600594",
-"title": "Summer 2027 Internship – Consumer Banking (Financial Crimes Data & Analytics)",
-"company": "Ally",
-"locations": [
-"Charlotte, NC"
-],
-"terms": [],
-"url": "https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Charlotte-NC/Summer-2027-Internship---Consumer-Banking--Financial-Crimes-Data---Analytics-_R2600594",
-"posted": 1789031137,
-"updated": 0,
-"first_seen": 1789076061,
 "source": "ats",
 "board": "Workday",
 "category": null,
@@ -627,7 +684,7 @@
 ],
 "terms": [],
 "url": "https://labcorp.wd1.myworkdayjobs.com/en-US/External/job/Baltimore-MD/Intern---Data-Science---Oncology_2630590",
-"posted": 1789031119,
+"posted": 1789047908,
 "updated": 0,
 "first_seen": 1789052925,
 "source": "ats",
@@ -1097,6 +1154,500 @@
 "company_url": "https://simplify.jobs/c/Entegris"
 },
 {
+"id": "jr-6aa3cbc3626f9945308b34c7",
+"title": "Data Analytics & Governance Internship",
+"company": "Wellmark Blue Cross and Blue Shield",
+"locations": [
+"Des Moines, IA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3cbc3626f9945308b34c7",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3bde45c11cce36036607b",
+"title": "Intern - Data Science",
+"company": "General Atomics",
+"locations": [
+"San Diego, CA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3bde45c11cce36036607b",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3c8e5626f9945308b3319",
+"title": "Data Analyst Intern",
+"company": "Moody's Corporation",
+"locations": [
+"Charlotte, NC, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3c8e5626f9945308b3319",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3a8a4959a10d7230d30e1",
+"title": "Technology Analyst Intern - Summer 2027",
+"company": "Corning Incorporated",
+"locations": [
+"Corning, NY, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3a8a4959a10d7230d30e1",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa1fce1500b01124c780028",
+"title": "Intern - Associate Business Intelligence Analyst (Grid Resiliency - Richmond, VA)",
+"company": "Dominion Energy",
+"locations": [
+"Richmond, VA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa1fce1500b01124c780028",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789019332,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa39c0a4238ea18d430cea4",
+"title": "Intern - Associate Business Intelligence Analyst (Design COE)",
+"company": "Dominion Energy",
+"locations": [
+"Richmond, VA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa39c0a4238ea18d430cea4",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa39abcc5a856ac7e33a62a",
+"title": "Data Science and Advanced Analytics Internship - Summer 2027",
+"company": "Securian Financial",
+"locations": [
+"Saint Paul, MN, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa39abcc5a856ac7e33a62a",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3a72b4238ea18d430d336",
+"title": "IDB. AI for Financial Intelligence, Knowledge Graphs and Data Integration Intern",
+"company": "Inter-American Development Bank",
+"locations": [
+"Washington, DC, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3a72b4238ea18d430d336",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3951fc5a856ac7e33a3fa",
+"title": "IDB. Data for Integrity: Regional Analysis and Innovation Internship",
+"company": "Inter-American Development Bank",
+"locations": [
+"Washington, DC, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3951fc5a856ac7e33a3fa",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa39ac44233a2201a2b25e9",
+"title": "Data Analytics Intern Summer 2027",
+"company": "Cytiva",
+"locations": [
+"Logan, UT, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa39ac44233a2201a2b25e9",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3dc45f3aa936e2cdae453",
+"title": "Data Migration and Analytics Intern",
+"company": "Colgate-Palmolive",
+"locations": [
+"Overland Park, KS, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3dc45f3aa936e2cdae453",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa390214233a2201a2b21b3",
+"title": "Intern - Data Analyst",
+"company": "Epiroc",
+"locations": [
+"Broomfield, CO, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa390214233a2201a2b21b3",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3c81e5c11cce360366690",
+"title": "Business Intelligence Intern, Mission Critical at Ryan Companies",
+"company": "Berkeley Industrial Engineering & Operations Research",
+"locations": [
+"Indiana, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3c81e5c11cce360366690",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a5215119fbdab22fe139f0c",
+"title": "Data Science Intern",
+"company": "QuantCo",
+"locations": [
+"Remote — United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a5215119fbdab22fe139f0c",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa37cb3b47caa3aec72c61f",
+"title": "Intern - Kite Development - Clinical Development (Data Management)",
+"company": "Gilead Sciences",
+"locations": [
+"El Segundo, CA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa37cb3b47caa3aec72c61f",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3c050c5a856ac7e33b713",
+"title": "Analytics Intern - Remote based in the US",
+"company": "Conifer Health Solutions",
+"locations": [
+"Remote — Frisco, TX, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3c050c5a856ac7e33b713",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa38000626f9945308b10d8",
+"title": "Federal Data Scientist Intern 2027",
+"company": "IBM",
+"locations": [
+"Herndon, VA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa38000626f9945308b10d8",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3b9a94238ea18d430dbbf",
+"title": "Data Science Intern",
+"company": "Zoo New England",
+"locations": [
+"Boston, MA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3b9a94238ea18d430dbbf",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa386f6959a10d7230d2262",
+"title": "Ketjen Summer 2027 Data Science Internship",
+"company": "Ketjen Corporation",
+"locations": [
+"Houston, TX, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa386f6959a10d7230d2262",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa38657959a10d7230d2212",
+"title": "Data Analytics & AI Intern - RiverSource",
+"company": "RiverSource",
+"locations": [
+"Minneapolis, MN, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa38657959a10d7230d2212",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa387c9959a10d7230d22d7",
+"title": "Data and Analytics Intern",
+"company": "American Modern Insurance Group",
+"locations": [
+"Cincinnati metropolitan area, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa387c9959a10d7230d22d7",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa383fc626f9945308b12d9",
+"title": "Supply Chain Analytics Intern, Summer 2027 (REQ#43451)",
+"company": "Amway",
+"locations": [
+"Ada, MI, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa383fc626f9945308b12d9",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a9068517c32860d14cf92a7",
+"title": "Publications Data Management Intern",
+"company": "Doctors Without Borders/Médecins Sans Frontières - USA",
+"locations": [
+"New York, NY, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a9068517c32860d14cf92a7",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa37ac9b47caa3aec72c42e",
+"title": "Data Analytics Intern (Spring 2027)",
+"company": "Zipline",
+"locations": [
+"South San Francisco, CA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa37ac9b47caa3aec72c42e",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3b2125c11cce360365b52",
+"title": "Data Analysis Specialist Intern",
+"company": "Canadian Solar Inc.",
+"locations": [
+"Mesquite, TX, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3b2125c11cce360365b52",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a9e324327c94c3d5a1cb738",
+"title": "Scientific Analyst Intern",
+"company": "Morrison Foerster",
+"locations": [
+"San Francisco, CA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a9e324327c94c3d5a1cb738",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789019332,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "jr-6a86304f74e02153f145b08f",
 "title": "Data Science Intern (Winter 2027)",
 "company": "Notion",
@@ -1146,6 +1697,25 @@
 "posted": 1788998400,
 "updated": 0,
 "first_seen": 1789100944,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a8601844afae74a08342b84",
+"title": "Collaborative Services Internship for the Office of Institutional Research and Data Analytics",
+"company": "The State University of New York",
+"locations": [
+"Albany, NY, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a8601844afae74a08342b84",
+"posted": 1788998400,
+"updated": 0,
+"first_seen": 1789134402,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -1766,7 +2336,7 @@
 ],
 "terms": [],
 "url": "https://ngc.wd1.myworkdayjobs.com/en-US/Northrop_Grumman_External_Site/job/United-States-Utah-Roy/XMLNAME-2027-Data-Analytics-Intern---Clearfield-UT_R10250086",
-"posted": 1788944765,
+"posted": 1788961557,
 "updated": 0,
 "first_seen": 1788982932,
 "source": "ats",
@@ -1785,7 +2355,7 @@
 ],
 "terms": [],
 "url": "https://bakerhughes.wd5.myworkdayjobs.com/en-US/BakerHughes/job/DE-CELLE-BAKER-HUGHES-STRASSE-1/Werkstudent-fr-System--und-Datenanalyse-2026--Celle-_R158064",
-"posted": 1788944724,
+"posted": 1788961514,
 "updated": 0,
 "first_seen": 1788956318,
 "source": "ats",
@@ -1804,7 +2374,7 @@
 ],
 "terms": [],
 "url": "https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Massachusetts---Boston-MA-Parcel-B-Laboratory/XMLNAME-2027-Future-Talent-Program---Optical-Imaging-Data-Science-Intern---Intern_R412885",
-"posted": 1788944708,
+"posted": 1788961496,
 "updated": 0,
 "first_seen": 1788972797,
 "source": "ats",
@@ -1823,7 +2393,7 @@
 ],
 "terms": [],
 "url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-574030",
-"posted": 1788944693,
+"posted": 1788961482,
 "updated": 0,
 "first_seen": 1788935761,
 "source": "ats",
@@ -2142,17 +2712,55 @@
 "company_url": "https://simplify.jobs/c/Amentum"
 },
 {
-"id": "jr-6a9afb921388387060595fee",
-"title": "IT and Data Analytics internships",
-"company": "Tetra Pak",
+"id": "jr-6aa3d5d11d92e2d05d111a60",
+"title": "Data Science Intern (Summer 2027)",
+"company": "Bechtel Plant Machinery, Inc. (BPMI)",
 "locations": [
-"Denton, TX, United States"
+"Monroeville, PA, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6a9afb921388387060595fee",
+"url": "https://jobright.ai/jobs/info/6aa3d5d11d92e2d05d111a60",
 "posted": 1788912000,
 "updated": 0,
-"first_seen": 1789052925,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3e629c1928370a285b279",
+"title": "Future Leaders Program - Data Intern",
+"company": "USAA",
+"locations": [
+"San Antonio, TX, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3e629c1928370a285b279",
+"posted": 1788912000,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa38962c5a856ac7e339e56",
+"title": "Intern - Associate Business Intelligence Analyst (Design COE) (RICHMOND, VA, US, 23219)",
+"company": "Dominion Energy",
+"locations": [
+"Richmond, VA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa38962c5a856ac7e339e56",
+"posted": 1788912000,
+"updated": 0,
+"first_seen": 1789134402,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -2180,55 +2788,17 @@
 "company_url": null
 },
 {
-"id": "jr-6a9e324327c94c3d5a1cb738",
-"title": "Scientific Analyst Intern",
-"company": "Morrison Foerster",
-"locations": [
-"San Francisco, CA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9e324327c94c3d5a1cb738",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1fce1500b01124c780028",
-"title": "Intern - Associate Business Intelligence Analyst (Grid Resiliency - Richmond, VA)",
-"company": "Dominion Energy",
-"locations": [
-"Richmond, VA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1fce1500b01124c780028",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1c0e92f936e4a53dadd5a",
+"id": "jr-6aa16828dbc0e60e37e111a7",
 "title": "Summer Associate Internship (Data Scientist)",
 "company": "Navy Federal Credit Union",
 "locations": [
 "Vienna, VA, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1c0e92f936e4a53dadd5a",
+"url": "https://jobright.ai/jobs/info/6aa16828dbc0e60e37e111a7",
 "posted": 1788912000,
 "updated": 0,
-"first_seen": 1789100944,
+"first_seen": 1789134402,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -2275,6 +2845,101 @@
 "company_url": null
 },
 {
+"id": "jr-6aa3bc9c4233a2201a2b33c2",
+"title": "Summer 2027 Intern:: Data Science III",
+"company": "Walmart",
+"locations": [
+"Bentonville, AR, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3bc9c4233a2201a2b33c2",
+"posted": 1788912000,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa390dd959a10d7230d26e9",
+"title": "Summer 2027 Intern: Intern: Sr Data Science",
+"company": "Walmart",
+"locations": [
+"Bentonville, AR, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa390dd959a10d7230d26e9",
+"posted": 1788912000,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3a184626f9945308b2049",
+"title": "Co-op: Engineering, Data Analyst (Spring 2027)",
+"company": "Volvo Group",
+"locations": [
+"Greensboro, NC, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3a184626f9945308b2049",
+"posted": 1788912000,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3a77d5c11cce3603656c2",
+"title": "Data and Analytics Intern",
+"company": "Munich Re",
+"locations": [
+"Amelia, OH, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3a77d5c11cce3603656c2",
+"posted": 1788912000,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3879b5c11cce360364940",
+"title": "Data Governance and Management Intern - Summer 2027",
+"company": "Manheim Dallas-Fort Worth",
+"locations": [
+"Atlanta, GA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3879b5c11cce360364940",
+"posted": 1788912000,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "jr-6aa2b009ac6d4cbc6172b027",
 "title": "2027 Summer BI/Data Analytics IT Intern",
 "company": "MKS Inc.",
@@ -2294,6 +2959,63 @@
 "company_url": null
 },
 {
+"id": "jr-6aa38beb4233a2201a2b1fe2",
+"title": "Graduate Analytics Internship – Summer 2027",
+"company": "Humana",
+"locations": [
+"Louisville, KY, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa38beb4233a2201a2b1fe2",
+"posted": 1788912000,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3c541626f9945308b310c",
+"title": "Data Analytics Intern Summer 2027",
+"company": "Beckman Coulter Life Sciences",
+"locations": [
+"Logan, UT, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3c541626f9945308b310c",
+"posted": 1788912000,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa3a2fcc5a856ac7e33a9b4",
+"title": "Data Analytics & AI Intern - RiverSource",
+"company": "Ameriprise Financial Services, LLC",
+"locations": [
+"Minneapolis, MN, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa3a2fcc5a856ac7e33a9b4",
+"posted": 1788912000,
+"updated": 0,
+"first_seen": 1789134402,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "jr-6aa1d842ef23570cae24680d",
 "title": "Business Analytics Intern",
 "company": "Smartly",
@@ -2305,595 +3027,6 @@
 "posted": 1788912000,
 "updated": 0,
 "first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1df113272060a8e3f291e",
-"title": "Risk & Analytics Intern",
-"company": "NinjaHoldings",
-"locations": [
-"Chicago, IL, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1df113272060a8e3f291e",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1dea1dbc0e60e37e140f4",
-"title": "Data Science Intern",
-"company": "CIM Group",
-"locations": [
-"Los Angeles, CA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1dea1dbc0e60e37e140f4",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789084777,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1c73e3272060a8e3f21a5",
-"title": "Activision 2027 Summer Internships - User Research Data Analytics",
-"company": "Activision Blizzard",
-"locations": [
-"Sherman Oaks, CA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1c73e3272060a8e3f21a5",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1879f0ffb3d4fea6b52b6",
-"title": "Data Operations Internship IRES - SSFB",
-"company": "Amentum",
-"locations": [
-"Colorado Springs, CO, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1879f0ffb3d4fea6b52b6",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa07470ea127c37946973f3",
-"title": "Intern - ET Operations Analytics",
-"company": "Dominion Energy",
-"locations": [
-"Glen Allen, VA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa07470ea127c37946973f3",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1788935761,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa17f47ef23570cae244141",
-"title": "Summer Associate Internship (Business Intelligence Analyst)",
-"company": "Navy Federal Credit Union",
-"locations": [
-"Pensacola, FL, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa17f47ef23570cae244141",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789100944,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa16828500b01124c77c787",
-"title": "Summer Associate Internship (Associate Business Intelligence Analyst)",
-"company": "Navy Federal Credit Union",
-"locations": [
-"Vienna, VA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa16828500b01124c77c787",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789100944,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a99d7e51388387060590cfa",
-"title": "2027 Summer Intern: Associate Data Analyst​ (Customer Operations)",
-"company": "Spectrum",
-"locations": [
-"Stamford, CT, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a99d7e51388387060590cfa",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1632fef23570cae2439e3",
-"title": "Summer Associate Internship (Consumer Lending Business Intelligence Analyst)",
-"company": "Navy Federal Credit Union",
-"locations": [
-"Vienna, VA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1632fef23570cae2439e3",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789100944,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1957c500b01124c77d9e8",
-"title": "University Intern, Forensic Data & Analytics",
-"company": "Ankura",
-"locations": [
-"New York, NY, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1957c500b01124c77d9e8",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789100944,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa16844ef23570cae243abe",
-"title": "Summer Associate Internship (Business Systems Analyst)",
-"company": "Navy Federal Credit Union",
-"locations": [
-"Vienna, VA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa16844ef23570cae243abe",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789084777,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1a8833272060a8e3f15ee",
-"title": "Technology Analyst – Data Science and Analytics",
-"company": "Northern Trust",
-"locations": [
-"Chicago, IL, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1a8833272060a8e3f15ee",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1cb7c3272060a8e3f2379",
-"title": "Data Analytics Intern - Engineering & SAP Operations",
-"company": "Bosch",
-"locations": [
-"Lincolnshire, IL 60069, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1cb7c3272060a8e3f2379",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa31da9dc6eda1eafd32630",
-"title": "Quantitative Data Analytics Summer Analyst Program - 2027",
-"company": "Bank of America",
-"locations": [
-"Atlanta, GA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa31da9dc6eda1eafd32630",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789084777,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a8f0f7f309e5f224870a180",
-"title": "EAM Analyst, Emerging Talent Intern (Spring)",
-"company": "Metropolitan Transportation Authority",
-"locations": [
-"New York, NY, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a8f0f7f309e5f224870a180",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a8473a558ded76ad8fe738d",
-"title": "Campus Undergraduate Summer Internship Program - 2027 Data Analytics, Global Servicing- New York, NY",
-"company": "American Express",
-"locations": [
-"New York, NY, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a8473a558ded76ad8fe738d",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1799c0ffb3d4fea6b4e55",
-"title": "Clinical Data Intern - Spring 2026",
-"company": "Medpace",
-"locations": [
-"Cincinnati, OH, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1799c0ffb3d4fea6b4e55",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789000337,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a8533cdc1a3fd7120f749b8",
-"title": "Data Analyst Intern (Summer 2027)",
-"company": "Continental Resources",
-"locations": [
-"Oklahoma City, OK, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a8533cdc1a3fd7120f749b8",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa18655ef23570cae2443dd",
-"title": "Intern- Quantitative Modeling Analyst",
-"company": "Zions Bancorporation",
-"locations": [
-"Salt Lake City, UT, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa18655ef23570cae2443dd",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a8efd3fd7c91d0cf446ce9c",
-"title": "Data Science Intern - Summer 2027",
-"company": "WhiteWater",
-"locations": [
-"Austin, TX, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a8efd3fd7c91d0cf446ce9c",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789000337,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa16d3a0ffb3d4fea6b4a39",
-"title": "IT Data Intern",
-"company": "SpawGlass",
-"locations": [
-"Houston, TX, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa16d3a0ffb3d4fea6b4a39",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789000337,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1a7003272060a8e3f148c",
-"title": "Associate Commercial Data Science Intern",
-"company": "EOSYS",
-"locations": [
-"New York, NY, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1a7003272060a8e3f148c",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a51238ebf63b66c7997948f",
-"title": "Quantitative Research Analyst Internship",
-"company": "Stevens Capital Management LP",
-"locations": [
-"Radnor, PA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a51238ebf63b66c7997948f",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa14737dbc0e60e37e109c9",
-"title": "Applied Data Science Intern",
-"company": "Evolver",
-"locations": [
-"Palo Alto, CA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa14737dbc0e60e37e109c9",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789000337,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1810c0ffb3d4fea6b4fe1",
-"title": "Data Analytics Intern",
-"company": "Choice Solutions",
-"locations": [
-"Overland Park, KS, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1810c0ffb3d4fea6b4fe1",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a97362fe4e60e4b8da5cb9d",
-"title": "Data Analytics Apprenticeship, February 2027 Start",
-"company": "Google",
-"locations": [
-"New York, NY, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a97362fe4e60e4b8da5cb9d",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789000337,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa12f3eef23570cae242f5b",
-"title": "MTS - Research Analyst Intern, AI Infrastructure & Economics",
-"company": "SemiAnalysis",
-"locations": [
-"San Francisco, CA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa12f3eef23570cae242f5b",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789000337,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a8f1769a10ee661e24d6776",
-"title": "Immigration Data Analyst Project Intern (HROPs) - 2026 Start",
-"company": "ByteDance",
-"locations": [
-"Seattle, WA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a8f1769a10ee661e24d6776",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789000337,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a71a40d02d93145bf890236",
-"title": "Data Science Intern (TikTok LIVE) - 2027 Summer",
-"company": "TikTok",
-"locations": [
-"San Jose, CA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a71a40d02d93145bf890236",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789000337,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a848d31e459fa3baa85f212",
-"title": "IT Data Analytics Intern",
-"company": "Union Home Mortgage Corp.",
-"locations": [
-"Strongsville, OH, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a848d31e459fa3baa85f212",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789000337,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a848d2858ded76ad8fe7f1b",
-"title": "Strategic Data Analyst Intern",
-"company": "Union Home Mortgage Corp.",
-"locations": [
-"Strongsville, OH, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a848d2858ded76ad8fe7f1b",
-"posted": 1788912000,
-"updated": 0,
-"first_seen": 1789000337,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -3251,7 +3384,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/McLean-VA/International-Data-Solutions-Analyst_R0248669",
-"posted": 1788858366,
+"posted": 1788875156,
 "updated": 0,
 "first_seen": 1788897071,
 "source": "ats",
@@ -3270,7 +3403,7 @@
 ],
 "terms": [],
 "url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Solutions-Consulting-Analyst_R171696",
-"posted": 1788858351,
+"posted": 1788875141,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -3289,7 +3422,7 @@
 ],
 "terms": [],
 "url": "https://fis.wd5.myworkdayjobs.com/en-US/SearchJobs/job/US-FL-JAX-347/Intern--Financial-Analyst--Summer-FIS-University-Program-2027_JR0309330",
-"posted": 1788858346,
+"posted": 1788875139,
 "updated": 0,
 "first_seen": 1788906826,
 "source": "ats",
@@ -3308,7 +3441,7 @@
 ],
 "terms": [],
 "url": "https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Hartford-CT/Intern--Product-Analytics-Leadership-Development-Program_R2626424-1",
-"posted": 1788858342,
+"posted": 1788875134,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -3327,7 +3460,7 @@
 ],
 "terms": [],
 "url": "https://northwesternmutual.wd5.myworkdayjobs.com/en-US/CORPORATE-CAREERS/job/Milwaukee-WI-Corporate/Investment-Analyst-Intern---Private-Debt---Equity--Summer-2027_JR-45705",
-"posted": 1788858339,
+"posted": 1788875131,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -3346,7 +3479,7 @@
 ],
 "terms": [],
 "url": "https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Detroit-MI/Summer-2027-Internship---Insurance-Data---Analytics_R2600192",
-"posted": 1788858337,
+"posted": 1788875129,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -3365,7 +3498,7 @@
 ],
 "terms": [],
 "url": "https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/Atlanta-GA/XMLNAME-2027-Corporate-Banking---Summer-Analyst-Program--Internship----Atlanta--GA_R0110874",
-"posted": 1788858333,
+"posted": 1788875124,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -3384,7 +3517,7 @@
 ],
 "terms": [],
 "url": "https://usbank.wd1.myworkdayjobs.com/en-US/US_Bank_Careers/job/Minneapolis-MN/XMLNAME-2027-Business-Analytics-Summer-Intern_2026-0025907",
-"posted": 1788858332,
+"posted": 1788875122,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -3403,7 +3536,7 @@
 ],
 "terms": [],
 "url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Amarillo-TX-79101/Data-Analyst-Intern--TX_JR115565-1",
-"posted": 1788858331,
+"posted": 1788875121,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -3422,7 +3555,7 @@
 ],
 "terms": [],
 "url": "https://gilead.wd1.myworkdayjobs.com/en-US/gileadcareers/job/United-States---California---Foster-City/Intern---Research---Data-Sciences_R0054572",
-"posted": 1788858310,
+"posted": 1788875099,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -3441,7 +3574,7 @@
 ],
 "terms": [],
 "url": "https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/CT-Bloomfield-900-Cottage-Grove-Rd-Wilde-Bldg/Analytics-Leadership-Development-Program--ALDP--Summer-Internship_26010711",
-"posted": 1788858303,
+"posted": 1788875091,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -3927,101 +4060,6 @@
 "company_url": "https://simplify.jobs/c/Equifax"
 },
 {
-"id": "jr-6a9fe5115bf5fa48b83b79bb",
-"title": "Intern - Kite Development - Clinical Development (Data Management)",
-"company": "Kite Pharma",
-"locations": [
-"El Segundo, CA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a9fe5115bf5fa48b83b79bb",
-"posted": 1788825600,
-"updated": 0,
-"first_seen": 1789038494,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1d91d500b01124c77f543",
-"title": "Agentic Analytics Intern",
-"company": "AGRILAND FS",
-"locations": [
-"Winterset, IA 50273, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1d91d500b01124c77f543",
-"posted": 1788825600,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa184e4500b01124c77d022",
-"title": "Intern 2027 - FAR Program - Data Analytics",
-"company": "LPL Financial",
-"locations": [
-"Fort Mill, SC, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa184e4500b01124c77d022",
-"posted": 1788825600,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1e72a3272060a8e3f2b39",
-"title": "Intern - Associate Business Intelligence Analyst (Grid Resiliency - Richmond, VA) (RICHMOND, VA, US, 23219)",
-"company": "Dominion Energy",
-"locations": [
-"Richmond, VA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1e72a3272060a8e3f2b39",
-"posted": 1788825600,
-"updated": 0,
-"first_seen": 1789019332,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa0ab48ea127c3794698865",
-"title": "Surveillance Analyst Intern",
-"company": "Cboe Global Markets",
-"locations": [
-"Chicago, IL, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa0ab48ea127c3794698865",
-"posted": 1788825600,
-"updated": 0,
-"first_seen": 1788956318,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
 "id": "a8d0af87-a5ff-4477-8e3b-2f27946cbc23",
 "title": "Data and Intelligence Delivery Intern - Assurance",
 "company": "Ernst & Young",
@@ -4057,25 +4095,6 @@
 "company_url": "https://simplify.jobs/c/Ernst-And-Young"
 },
 {
-"id": "wd-xcelenergy-JR115413",
-"title": "Wildfire Analyst Intern- CO",
-"company": "Xcel Energy",
-"locations": [
-"Denver, CO, 80205"
-],
-"terms": [],
-"url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Denver-CO-80205/Wildfire-Analyst-Intern--CO_JR115413-1",
-"posted": 1788771931,
-"updated": 0,
-"first_seen": 1788889757,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
 "id": "wd-xcelenergy-JR115742",
 "title": "Grid Data Intern - MN",
 "company": "Xcel Energy",
@@ -4084,7 +4103,7 @@
 ],
 "terms": [],
 "url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Minneapolis-MN-55418/Grid-Data-Intern---MN_JR115742-1",
-"posted": 1788771930,
+"posted": 1788788721,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -4103,7 +4122,26 @@
 ],
 "terms": [],
 "url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Denver-CO-80223/Gas-Data-Intern--CO_JR116314-1",
-"posted": 1788771930,
+"posted": 1788788721,
+"updated": 0,
+"first_seen": 1788889757,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-xcelenergy-JR115413",
+"title": "Wildfire Analyst Intern- CO",
+"company": "Xcel Energy",
+"locations": [
+"Denver, CO, 80205"
+],
+"terms": [],
+"url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Denver-CO-80205/Wildfire-Analyst-Intern--CO_JR115413-1",
+"posted": 1788788721,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -4716,7 +4754,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Colorado-Springs-CO/University--2027-Summer-Games-Data-Scientist-Intern_R0248132",
-"posted": 1788512769,
+"posted": 1788529560,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -4735,7 +4773,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/McLean-VA/University---2027-Summer-Games-Data-Scientist-Intern---McLean--VA_R0248037",
-"posted": 1788512766,
+"posted": 1788529557,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -4754,7 +4792,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Rome-NY/University--2027-Summer-Games-Data-Scientist-Intern_R0248143",
-"posted": 1788512766,
+"posted": 1788529557,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -4773,7 +4811,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Atlanta-GA/University--2027-Summer-Games-Data-Scientist-Intern_R0248140",
-"posted": 1788512766,
+"posted": 1788529557,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -4792,7 +4830,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Charleston-SC/University---2027-Summer-Games-Data-Scientist-Intern_R0248137",
-"posted": 1788512766,
+"posted": 1788529557,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -4811,7 +4849,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Honolulu-HI/University---2027-Summer-Games--Data-Scientist-Intern---Honolulu--HI_R0248406",
-"posted": 1788512766,
+"posted": 1788529557,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -4830,7 +4868,7 @@
 ],
 "terms": [],
 "url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Commercial-Data-Science-Intern--Spring-2027_10158063",
-"posted": 1788512689,
+"posted": 1788529477,
 "updated": 0,
 "first_seen": 1788541251,
 "source": "ats",
@@ -5336,7 +5374,7 @@
 ],
 "terms": [],
 "url": "https://corteva.wd5.myworkdayjobs.com/en-US/Corteva/job/Indianapolis-Indiana-United-States/Business-Analyst-Intern_248151W",
-"posted": 1788426327,
+"posted": 1788443118,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -5355,7 +5393,7 @@
 ],
 "terms": [],
 "url": "https://corteva.wd5.myworkdayjobs.com/en-US/Corteva/job/Indianapolis-Indiana-United-States/R-D-Internship---Computer---Data-Science-_248130W",
-"posted": 1788426327,
+"posted": 1788443118,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -5984,6 +6022,139 @@
 "company_url": "https://simplify.jobs/c/Universal-Health-Services"
 },
 {
+"id": "wd-caci-331551",
+"title": "Business/Systems Analyst Intern - Summer 2027",
+"company": "CACI",
+"locations": [
+"Remote (Any State)"
+],
+"terms": [],
+"url": "https://caci.wd1.myworkdayjobs.com/en-US/External/job/Remote-Any-State/Business-Systems-Analyst-Intern---Summer-2027_331551",
+"posted": 1788356757,
+"updated": 0,
+"first_seen": 1788889757,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-fanniemae-JR2814",
+"title": "Campus – Finance Analytics Intern (Analytics & Modeling Program)",
+"company": "Fannie Mae",
+"locations": [
+"Washington, DC"
+],
+"terms": [],
+"url": "https://fanniemae.wd1.myworkdayjobs.com/en-US/FannieMaeCareers/job/Washington-DC/Campus---Finance-Analytics-Intern--Analytics---Modeling-Program-_JR2814",
+"posted": 1788356737,
+"updated": 0,
+"first_seen": 1788889757,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-ameriprise-R26_3538",
+"title": "Asset Management Technology Intern – Data Enablement",
+"company": "Ameriprise",
+"locations": [
+"Boston, Massachusetts"
+],
+"terms": [],
+"url": "https://ameriprise.wd5.myworkdayjobs.com/en-US/Ameriprise/job/Boston-Massachusetts/Asset-Management-Technology-Intern---Data-Enablement_R26_3538",
+"posted": 1788356730,
+"updated": 0,
+"first_seen": 1789117601,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-truist-R0110096",
+"title": "2027 Truist Securities - Investment Banking - Summer Analyst Program (Internship) - Atlanta",
+"company": "Truist",
+"locations": [
+"Atlanta, GA"
+],
+"terms": [],
+"url": "https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/Atlanta-GA/XMLNAME-2027-Truist-Securities---Investment-Banking---Summer-Analyst-Program--Internship----Atlanta_R0110096",
+"posted": 1788356724,
+"updated": 0,
+"first_seen": 1788889757,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-truist-R0110097",
+"title": "2027 Truist Securities - Investment Banking - Summer Analyst Program (Internship) - Chicago",
+"company": "Truist",
+"locations": [
+"Chicago, IL"
+],
+"terms": [],
+"url": "https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/Chicago-IL/XMLNAME-2027-Truist-Securities---Investment-Banking---Summer-Analyst-Program--Internship----Chicago_R0110097",
+"posted": 1788356724,
+"updated": 0,
+"first_seen": 1788889757,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-truist-R0109960",
+"title": "2027 Truist Securities - Investment Banking - Summer Analyst Program (Internship) - New York City - Multiple Groups",
+"company": "Truist",
+"locations": [
+"New York, NY"
+],
+"terms": [],
+"url": "https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/New-York-NY/XMLNAME-2027-Truist-Securities---Investment-Banking---Summer-Analyst-Program--Internship----New-York-City---Multiple-Groups_R0109960",
+"posted": 1788356724,
+"updated": 0,
+"first_seen": 1788889757,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-mckesson-JR0150844",
+"title": "Data Analyst Intern - Summer 2027",
+"company": "McKesson",
+"locations": [
+"USA, OH, Columbus"
+],
+"terms": [],
+"url": "https://mckesson.wd3.myworkdayjobs.com/en-US/External_Careers/job/USA-OH-Columbus/Data-Analyst-Intern---Summer-2027_JR0150844",
+"posted": 1788356690,
+"updated": 0,
+"first_seen": 1788889757,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "fb0f6a70-7886-4ed4-a59d-12e6a0e79c9d",
 "title": "DataOps Developer Intern - Months",
 "company": "Geotab",
@@ -6006,139 +6177,6 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/Geotab"
-},
-{
-"id": "wd-caci-331551",
-"title": "Business/Systems Analyst Intern - Summer 2027",
-"company": "CACI",
-"locations": [
-"Remote (Any State)"
-],
-"terms": [],
-"url": "https://caci.wd1.myworkdayjobs.com/en-US/External/job/Remote-Any-State/Business-Systems-Analyst-Intern---Summer-2027_331551",
-"posted": 1788339966,
-"updated": 0,
-"first_seen": 1788889757,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-fanniemae-JR2814",
-"title": "Campus – Finance Analytics Intern (Analytics & Modeling Program)",
-"company": "Fannie Mae",
-"locations": [
-"Washington, DC"
-],
-"terms": [],
-"url": "https://fanniemae.wd1.myworkdayjobs.com/en-US/FannieMaeCareers/job/Washington-DC/Campus---Finance-Analytics-Intern--Analytics---Modeling-Program-_JR2814",
-"posted": 1788339945,
-"updated": 0,
-"first_seen": 1788889757,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-ameriprise-R26_3538",
-"title": "Asset Management Technology Intern – Data Enablement",
-"company": "Ameriprise",
-"locations": [
-"Boston, Massachusetts"
-],
-"terms": [],
-"url": "https://ameriprise.wd5.myworkdayjobs.com/en-US/Ameriprise/job/Boston-Massachusetts/Asset-Management-Technology-Intern---Data-Enablement_R26_3538",
-"posted": 1788339938,
-"updated": 0,
-"first_seen": 1789117601,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-truist-R0110096",
-"title": "2027 Truist Securities - Investment Banking - Summer Analyst Program (Internship) - Atlanta",
-"company": "Truist",
-"locations": [
-"Atlanta, GA"
-],
-"terms": [],
-"url": "https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/Atlanta-GA/XMLNAME-2027-Truist-Securities---Investment-Banking---Summer-Analyst-Program--Internship----Atlanta_R0110096",
-"posted": 1788339933,
-"updated": 0,
-"first_seen": 1788889757,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-truist-R0110097",
-"title": "2027 Truist Securities - Investment Banking - Summer Analyst Program (Internship) - Chicago",
-"company": "Truist",
-"locations": [
-"Chicago, IL"
-],
-"terms": [],
-"url": "https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/Chicago-IL/XMLNAME-2027-Truist-Securities---Investment-Banking---Summer-Analyst-Program--Internship----Chicago_R0110097",
-"posted": 1788339933,
-"updated": 0,
-"first_seen": 1788889757,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-truist-R0109960",
-"title": "2027 Truist Securities - Investment Banking - Summer Analyst Program (Internship) - New York City - Multiple Groups",
-"company": "Truist",
-"locations": [
-"New York, NY"
-],
-"terms": [],
-"url": "https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/New-York-NY/XMLNAME-2027-Truist-Securities---Investment-Banking---Summer-Analyst-Program--Internship----New-York-City---Multiple-Groups_R0109960",
-"posted": 1788339933,
-"updated": 0,
-"first_seen": 1788889757,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-mckesson-JR0150844",
-"title": "Data Analyst Intern - Summer 2027",
-"company": "McKesson",
-"locations": [
-"USA, OH, Columbus"
-],
-"terms": [],
-"url": "https://mckesson.wd3.myworkdayjobs.com/en-US/External_Careers/job/USA-OH-Columbus/Data-Analyst-Intern---Summer-2027_JR0150844",
-"posted": 1788339902,
-"updated": 0,
-"first_seen": 1788889757,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "3f7978bc-c83d-4088-abff-540cb9036839",
@@ -8399,7 +8437,7 @@
 ],
 "terms": [],
 "url": "https://homedepot.wd5.myworkdayjobs.com/en-US/CareerDepot/job/STORE-SUPPORT-CENTER-ATLANTA---9090/XMLNAME-2027-Summer-Internship---Data-Science---Analytics_Req191968",
-"posted": 1788167177,
+"posted": 1788183971,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -8418,7 +8456,7 @@
 ],
 "terms": [],
 "url": "https://fifththird.wd5.myworkdayjobs.com/en-US/53careers/job/Cincinnati-OH/Enterprise-Data-Office-Co-op---Spring-2027_R72257",
-"posted": 1788167136,
+"posted": 1788183926,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
@@ -8437,7 +8475,7 @@
 ],
 "terms": [],
 "url": "https://fifththird.wd5.myworkdayjobs.com/en-US/53careers/job/Cincinnati-OH/Enterprise-Data-Office-College-Co-op---Summer-2027---Cincinnati_R72261",
-"posted": 1788167136,
+"posted": 1788183926,
 "updated": 0,
 "first_seen": 1788889757,
 "source": "ats",
