@@ -1,8 +1,8 @@
 {
-"generated_at": 1789494373,
+"generated_at": 1789506745,
 "scanned": {
 "feeds": 16924,
-"ats": 29768,
+"ats": 29799,
 "boards": 209
 },
 "companies_polled": [
@@ -218,6 +218,25 @@
 ],
 "jobs": [
 {
+"id": "wd-lowes-JR-02650526",
+"title": "Merchandising Analyst - Undergrad Internship - Summer 2027",
+"company": "Lowe's",
+"locations": [
+"Mooresville, NC (SSC) 1999"
+],
+"terms": [],
+"url": "https://lowes.wd5.myworkdayjobs.com/en-US/LWS_External_CS/job/Mooresville-NC-SSC-1999/Merchandising-Analyst---Undergrad-Internship---Summer-2027_JR-02650526",
+"posted": 1789506723,
+"updated": 0,
+"first_seen": 1789506745,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "wd-bah-R0249131",
 "title": "Enterprise Cybersecurity Data Loss Prevention Intern",
 "company": "Booz Allen Hamilton",
@@ -226,7 +245,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/McLean-VA/Enterprise-Cybersecurity-Data-Loss-Prevention-Intern_R0249131-1",
-"posted": 1789494337,
+"posted": 1789506712,
 "updated": 0,
 "first_seen": 1789494373,
 "source": "ats",
@@ -245,7 +264,7 @@
 ],
 "terms": [],
 "url": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/Longmont-MAX--Office-CO/Intern---Data-Center-SSD-Firmware_JR111461",
-"posted": 1789494324,
+"posted": 1789506700,
 "updated": 0,
 "first_seen": 1789494373,
 "source": "ats",
@@ -264,7 +283,7 @@
 ],
 "terms": [],
 "url": "https://blackrock.wd1.myworkdayjobs.com/en-US/BlackRock_Professional/job/New-York-NY/XMLNAME-2027-Quantitative-Masters-Internship-Program---Technology---Analytics---Modeling---New-York_R266477",
-"posted": 1789494305,
+"posted": 1789506686,
 "updated": 0,
 "first_seen": 1789457817,
 "source": "ats",
@@ -283,9 +302,28 @@
 ],
 "terms": [],
 "url": "https://blackrock.wd1.myworkdayjobs.com/en-US/BlackRock_Professional/job/San-Francisco-CA/XMLNAME-2027-Quantitative-Masters-Internship-Program---Technology---Analytics---Modeling---San-Francisco_R266476",
-"posted": 1789494305,
+"posted": 1789506686,
 "updated": 0,
 "first_seen": 1789457817,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-baxter-JR - 207560",
+"title": "Associate Data Scientist Co-op",
+"company": "Baxter",
+"locations": [
+"Skaneateles, NY"
+],
+"terms": [],
+"url": "https://baxter.wd1.myworkdayjobs.com/en-US/baxter/job/Skaneateles-NY/Associate-Software-Engineer-Co-op_JR-207560-1",
+"posted": 1789506667,
+"updated": 0,
+"first_seen": 1789506745,
 "source": "ats",
 "board": "Workday",
 "category": null,
@@ -572,6 +610,139 @@
 "company_url": "https://simplify.jobs/c/Oshkosh"
 },
 {
+"id": "jr-6aa98fcf10b1cd4f416064c9",
+"title": "Data and Analytics Internship - Undergraduate and Graduate (Summer 2027)",
+"company": "Principal México",
+"locations": [
+"Remote — Raleigh, NC, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa98fcf10b1cd4f416064c9",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa93f0a3387a3d9b67d40fe",
+"title": "Data Science Intern (Summer 2027)",
+"company": "HDR",
+"locations": [
+"Omaha, NE, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa93f0a3387a3d9b67d40fe",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa98b02eff87f571fc99fdf",
+"title": "Data and Analytics Internship - Undergraduate and Graduate (Summer 2027)",
+"company": "AFP Cuprum",
+"locations": [
+"Remote — Raleigh, NC, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa98b02eff87f571fc99fdf",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa982783387a3d9b67d550c",
+"title": "Data and Analytics Internship - Undergraduate and Graduate (Summer 2027)",
+"company": "Principal Chile",
+"locations": [
+"Remote — Raleigh, NC, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa982783387a3d9b67d550c",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa9877b6d0edc2d91b09e86",
+"title": "2027 Summer/ Winter Data Analyst",
+"company": "Altman Solon",
+"locations": [
+"Boston, MA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa9877b6d0edc2d91b09e86",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a8c7516cde3717f9e9bd31a",
+"title": "Analyst Intern - Kansas City, MO (Summer 2027)",
+"company": "Myers & Stauffer",
+"locations": [
+"Kansas City, MO, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a8c7516cde3717f9e9bd31a",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa5f191a77a53f5a1572d1a",
+"title": "Customer Analytics Intern",
+"company": "Haworth",
+"locations": [
+"Holland, MI, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa5f191a77a53f5a1572d1a",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "jr-6aa7ff38930bff471a2a48e6",
 "title": "Data Scientist, Product Intern, MS, Summer 2027",
 "company": "Google",
@@ -591,14 +762,52 @@
 "company_url": null
 },
 {
-"id": "jr-6aa9516310b1cd4f41605531",
-"title": "Data and Analytics Internship - Undergraduate and Graduate (Summer 2027)",
-"company": "Principal México",
+"id": "jr-6aa9676f3387a3d9b67d4ed2",
+"title": "Intern / Data Science",
+"company": "Great West Casualty Company",
 "locations": [
-"Remote — Raleigh, NC, United States"
+"South Sioux City, NE, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6aa9516310b1cd4f41605531",
+"url": "https://jobright.ai/jobs/info/6aa9676f3387a3d9b67d4ed2",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa9660509ae03adcacdd2f0",
+"title": "Data Science Intern (Summer 2027)",
+"company": "apexanalytix",
+"locations": [
+"Greensboro, NC, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa9660509ae03adcacdd2f0",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa9559a6d0edc2d91b09183",
+"title": "Data, Analytics & AI Internships, Summer 2027",
+"company": "Inmar Intelligence",
+"locations": [
+"Winston-Salem, NC, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa9559a6d0edc2d91b09183",
 "posted": 1789430400,
 "updated": 0,
 "first_seen": 1789494373,
@@ -610,17 +819,17 @@
 "company_url": null
 },
 {
-"id": "jr-6aa9502ceff87f571fc99006",
-"title": "Data and Analytics Internship - Undergraduate and Graduate (Summer 2027)",
-"company": "AFP Cuprum",
+"id": "jr-6a8c4c0b2f736c304f2a4d19",
+"title": "Technology & Analytics Intern- 2027",
+"company": "World Wide Technology",
 "locations": [
-"Remote — Raleigh, NC, United States"
+"Maryland Heights, MO, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6aa9502ceff87f571fc99006",
+"url": "https://jobright.ai/jobs/info/6a8c4c0b2f736c304f2a4d19",
 "posted": 1789430400,
 "updated": 0,
-"first_seen": 1789494373,
+"first_seen": 1789506745,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -629,17 +838,36 @@
 "company_url": null
 },
 {
-"id": "jr-6aa9502a3387a3d9b67d4598",
-"title": "Data and Analytics Internship - Undergraduate and Graduate (Summer 2027)",
-"company": "Principal Chile",
+"id": "jr-6aa95da028e24cb38513a037",
+"title": "Data Analyst Intern (Summer 2027)",
+"company": "apexanalytix",
 "locations": [
-"Remote — Raleigh, NC, United States"
+"Greensboro, NC, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6aa9502a3387a3d9b67d4598",
+"url": "https://jobright.ai/jobs/info/6aa95da028e24cb38513a037",
 "posted": 1789430400,
 "updated": 0,
-"first_seen": 1789494373,
+"first_seen": 1789506745,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6a8d4747d34f700f87fd3dd2",
+"title": "IDB. Intern to Support Data Management and Hydroclimatic Risk Analytics in the Amazon Region",
+"company": "Inter-American Development Bank",
+"locations": [
+"Washington, DC, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6a8d4747d34f700f87fd3dd2",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -656,25 +884,6 @@
 ],
 "terms": [],
 "url": "https://jobright.ai/jobs/info/6aa94b4deff87f571fc98eee",
-"posted": 1789430400,
-"updated": 0,
-"first_seen": 1789494373,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa946a409ae03adcacdc877",
-"title": "Data Science Intern (Summer 2027)",
-"company": "HDR",
-"locations": [
-"Omaha, NE, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa946a409ae03adcacdc877",
 "posted": 1789430400,
 "updated": 0,
 "first_seen": 1789494373,
@@ -735,6 +944,25 @@
 "posted": 1789430400,
 "updated": 0,
 "first_seen": 1789478805,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa961276d0edc2d91b095da",
+"title": "Spring 2027 Data Analytics Intern",
+"company": "U.S. Hunger",
+"locations": [
+"Longwood, FL, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa961276d0edc2d91b095da",
+"posted": 1789430400,
+"updated": 0,
+"first_seen": 1789506745,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -855,6 +1083,234 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/Dell-Technologies"
+},
+{
+"id": "wd-3m-R01171049",
+"title": "Internship - 2027 Undergraduate Business Analytics Intern – Consumer Business Group (CBG)",
+"company": "3M",
+"locations": [
+"US, Minnesota, Maplewood"
+],
+"terms": [],
+"url": "https://3m.wd1.myworkdayjobs.com/en-US/Search/job/US-Minnesota-Maplewood/Internship---2027-Undergraduate-Business-Analytics-Intern---Consumer-Business-Group--CBG-_R01171049",
+"posted": 1789420317,
+"updated": 0,
+"first_seen": 1789457817,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-adobe-R171869",
+"title": "2027 Intern - Sales Velocity Analyst",
+"company": "Adobe",
+"locations": [
+"New York"
+],
+"terms": [],
+"url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Sales-Velocity-Analyst_R171869",
+"posted": 1789420299,
+"updated": 0,
+"first_seen": 1789415426,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-ally-R2600655",
+"title": "Summer 2027 Internship – Consumer Banking (Forecasting Data Science)",
+"company": "Ally",
+"locations": [
+"Charlotte, NC"
+],
+"terms": [],
+"url": "https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Charlotte-NC/Summer-2027-Internship---Consumer-Banking--Forecasting-Data-Science-_R2600655",
+"posted": 1789420288,
+"updated": 0,
+"first_seen": 1789415426,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-ally-R2600656",
+"title": "Summer 2027 Internship – Consumer Banking (Deposit Pricing Analytics)",
+"company": "Ally",
+"locations": [
+"Charlotte, NC"
+],
+"terms": [],
+"url": "https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Charlotte-NC/Summer-2027-Internship---Consumer-Banking--Deposit-Pricing-Analytics-_R2600656",
+"posted": 1789420288,
+"updated": 0,
+"first_seen": 1789415426,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-amgen-R-255722",
+"title": "Grad Intern – Data Scientist – Technology, AI & Data (Summer 2027)",
+"company": "Amgen",
+"locations": [
+"United States - Remote"
+],
+"terms": [],
+"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Grad-Intern---Data-Scientist---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255722",
+"posted": 1789420264,
+"updated": 0,
+"first_seen": 1789211535,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-amgen-R-255745",
+"title": "Grad Intern – Software Engineer – Technology, AI & Data (Summer 2027)",
+"company": "Amgen",
+"locations": [
+"United States - Remote"
+],
+"terms": [],
+"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Grad-Intern---Software-Engineer---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255745",
+"posted": 1789420264,
+"updated": 0,
+"first_seen": 1789415426,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-amgen-R-255704",
+"title": "Undergrad Intern – Data Scientist – Technology, AI & Data (Summer 2027)",
+"company": "Amgen",
+"locations": [
+"United States - Remote"
+],
+"terms": [],
+"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Undergrad-Intern---Data-Scientist---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255704",
+"posted": 1789420263,
+"updated": 0,
+"first_seen": 1789211535,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-amgen-R-255708",
+"title": "Undergrad Intern – Data Engineer – Technology, AI & Data (Summer 2027)",
+"company": "Amgen",
+"locations": [
+"United States - Remote"
+],
+"terms": [],
+"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Undergrad-Intern---Data-Engineer---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255708",
+"posted": 1789420263,
+"updated": 0,
+"first_seen": 1789211535,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-amgen-R-255711",
+"title": "Undergrad Intern – Digital Product – Technology, AI & Data (Summer 2027)",
+"company": "Amgen",
+"locations": [
+"United States - Remote"
+],
+"terms": [],
+"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Undergrad-Intern---Digital-Product---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255711",
+"posted": 1789420263,
+"updated": 0,
+"first_seen": 1789415426,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-amgen-R-255742",
+"title": "Grad Intern – Data Engineer – Technology, AI & Data (Summer 2027)",
+"company": "Amgen",
+"locations": [
+"United States - Remote"
+],
+"terms": [],
+"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Grad-Intern---Data-Engineer---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255742",
+"posted": 1789420263,
+"updated": 0,
+"first_seen": 1789427101,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-amgen-R-255744",
+"title": "Grad Intern – Digital Product – Technology, AI & Data (Summer 2027)",
+"company": "Amgen",
+"locations": [
+"United States - Remote"
+],
+"terms": [],
+"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Grad-Intern---Digital-Product---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255744",
+"posted": 1789420263,
+"updated": 0,
+"first_seen": 1789415426,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-amgen-R-255719",
+"title": "Undergrad Intern – Software Engineer – Technology, AI & Data (Summer 2027)",
+"company": "Amgen",
+"locations": [
+"United States - Remote"
+],
+"terms": [],
+"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Undergrad-Intern---Software-Engineer---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255719",
+"posted": 1789420263,
+"updated": 0,
+"first_seen": 1789415426,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
 },
 {
 "id": "6dd83af2-b361-466c-b194-a7b86e904899",
@@ -1029,234 +1485,6 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/Constellation-Energy"
-},
-{
-"id": "wd-3m-R01171049",
-"title": "Internship - 2027 Undergraduate Business Analytics Intern – Consumer Business Group (CBG)",
-"company": "3M",
-"locations": [
-"US, Minnesota, Maplewood"
-],
-"terms": [],
-"url": "https://3m.wd1.myworkdayjobs.com/en-US/Search/job/US-Minnesota-Maplewood/Internship---2027-Undergraduate-Business-Analytics-Intern---Consumer-Business-Group--CBG-_R01171049",
-"posted": 1789407943,
-"updated": 0,
-"first_seen": 1789457817,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-adobe-R171869",
-"title": "2027 Intern - Sales Velocity Analyst",
-"company": "Adobe",
-"locations": [
-"New York"
-],
-"terms": [],
-"url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Sales-Velocity-Analyst_R171869",
-"posted": 1789407923,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-ally-R2600655",
-"title": "Summer 2027 Internship – Consumer Banking (Forecasting Data Science)",
-"company": "Ally",
-"locations": [
-"Charlotte, NC"
-],
-"terms": [],
-"url": "https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Charlotte-NC/Summer-2027-Internship---Consumer-Banking--Forecasting-Data-Science-_R2600655",
-"posted": 1789407907,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-ally-R2600656",
-"title": "Summer 2027 Internship – Consumer Banking (Deposit Pricing Analytics)",
-"company": "Ally",
-"locations": [
-"Charlotte, NC"
-],
-"terms": [],
-"url": "https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Charlotte-NC/Summer-2027-Internship---Consumer-Banking--Deposit-Pricing-Analytics-_R2600656",
-"posted": 1789407907,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-amgen-R-255722",
-"title": "Grad Intern – Data Scientist – Technology, AI & Data (Summer 2027)",
-"company": "Amgen",
-"locations": [
-"United States - Remote"
-],
-"terms": [],
-"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Grad-Intern---Data-Scientist---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255722",
-"posted": 1789407884,
-"updated": 0,
-"first_seen": 1789211535,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-amgen-R-255745",
-"title": "Grad Intern – Software Engineer – Technology, AI & Data (Summer 2027)",
-"company": "Amgen",
-"locations": [
-"United States - Remote"
-],
-"terms": [],
-"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Grad-Intern---Software-Engineer---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255745",
-"posted": 1789407884,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-amgen-R-255704",
-"title": "Undergrad Intern – Data Scientist – Technology, AI & Data (Summer 2027)",
-"company": "Amgen",
-"locations": [
-"United States - Remote"
-],
-"terms": [],
-"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Undergrad-Intern---Data-Scientist---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255704",
-"posted": 1789407882,
-"updated": 0,
-"first_seen": 1789211535,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-amgen-R-255708",
-"title": "Undergrad Intern – Data Engineer – Technology, AI & Data (Summer 2027)",
-"company": "Amgen",
-"locations": [
-"United States - Remote"
-],
-"terms": [],
-"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Undergrad-Intern---Data-Engineer---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255708",
-"posted": 1789407882,
-"updated": 0,
-"first_seen": 1789211535,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-amgen-R-255711",
-"title": "Undergrad Intern – Digital Product – Technology, AI & Data (Summer 2027)",
-"company": "Amgen",
-"locations": [
-"United States - Remote"
-],
-"terms": [],
-"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Undergrad-Intern---Digital-Product---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255711",
-"posted": 1789407882,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-amgen-R-255742",
-"title": "Grad Intern – Data Engineer – Technology, AI & Data (Summer 2027)",
-"company": "Amgen",
-"locations": [
-"United States - Remote"
-],
-"terms": [],
-"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Grad-Intern---Data-Engineer---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255742",
-"posted": 1789407882,
-"updated": 0,
-"first_seen": 1789427101,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-amgen-R-255744",
-"title": "Grad Intern – Digital Product – Technology, AI & Data (Summer 2027)",
-"company": "Amgen",
-"locations": [
-"United States - Remote"
-],
-"terms": [],
-"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Grad-Intern---Digital-Product---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255744",
-"posted": 1789407882,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-amgen-R-255719",
-"title": "Undergrad Intern – Software Engineer – Technology, AI & Data (Summer 2027)",
-"company": "Amgen",
-"locations": [
-"United States - Remote"
-],
-"terms": [],
-"url": "https://amgen.wd1.myworkdayjobs.com/en-US/Careers/job/United-States---Remote/Undergrad-Intern---Software-Engineer---Amgen-s-Technology---Medical-Organizations--Summer-2027-_R-255719",
-"posted": 1789407882,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "ae4d1646-e040-43a9-939a-18ab81955f9a",
@@ -2381,17 +2609,17 @@
 "company_url": null
 },
 {
-"id": "jr-6aa9559a6d0edc2d91b09183",
-"title": "Data, Analytics & AI Internships, Summer 2027",
-"company": "Inmar Intelligence",
+"id": "jr-6aa9684909ae03adcacdd3b2",
+"title": "Summer 2027 Internship: Tableau Analytics and Business Intelligence",
+"company": "QTS Data Centers",
 "locations": [
-"Winston-Salem, NC, United States"
+"Overland Park, KS, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6aa9559a6d0edc2d91b09183",
+"url": "https://jobright.ai/jobs/info/6aa9684909ae03adcacdd3b2",
 "posted": 1789344000,
 "updated": 0,
-"first_seen": 1789494373,
+"first_seen": 1789506745,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -2408,25 +2636,6 @@
 ],
 "terms": [],
 "url": "https://jobright.ai/jobs/info/6aa870aa930bff471a2a752a",
-"posted": 1789344000,
-"updated": 0,
-"first_seen": 1789437032,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa86a07654b2a9424cfcac4",
-"title": "Summer 2027 Advanced Analytics Intern",
-"company": "Pierce Manufacturing",
-"locations": [
-"Frederick, MD, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa86a07654b2a9424cfcac4",
 "posted": 1789344000,
 "updated": 0,
 "first_seen": 1789437032,
@@ -2818,158 +3027,6 @@
 "company_url": null
 },
 {
-"id": "jr-6a8c644acde3717f9e9bcc02",
-"title": "Analyst Intern - Kansas City, MO (Spring 2027)",
-"company": "Myers & Stauffer",
-"locations": [
-"Kansas City, MO, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a8c644acde3717f9e9bcc02",
-"posted": 1789344000,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa82b7da77a53f5a1577bf2",
-"title": "2027 Summer PMO/Data Analyst Intern (Chicago, IL)",
-"company": "Constellation PowerLabs",
-"locations": [
-"Chicago, IL, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa82b7da77a53f5a1577bf2",
-"posted": 1789344000,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa435daf7baf881567cdcb4",
-"title": "Enterprise Analytics Intern - The Toro Company",
-"company": "The Toro Company",
-"locations": [
-"Bloomington, MN, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa435daf7baf881567cdcb4",
-"posted": 1789344000,
-"updated": 0,
-"first_seen": 1789427101,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa4362cc1928370a285d0b6",
-"title": "Spatial Data R&D Intern - The Toro Company",
-"company": "The Toro Company",
-"locations": [
-"Bloomington, MN, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa4362cc1928370a285d0b6",
-"posted": 1789344000,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa82579930bff471a2a57c3",
-"title": "Data Analytics Intern: Summer 2027",
-"company": "MP+F",
-"locations": [
-"Nashville, TN, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa82579930bff471a2a57c3",
-"posted": 1789344000,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa81d15654b2a9424cfaa38",
-"title": "Data Science Intern",
-"company": "Genworth",
-"locations": [
-"Raleigh, NC, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa81d15654b2a9424cfaa38",
-"posted": 1789344000,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa81d11654b2a9424cfaa37",
-"title": "Commercial Analytics and Optimization Team Intern",
-"company": "Genworth",
-"locations": [
-"Raleigh, NC, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa81d11654b2a9424cfaa37",
-"posted": 1789344000,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6a959662cabc9f6703e189bd",
-"title": "Intern Data Analytics",
-"company": "Compeer Financial",
-"locations": [
-"Lakeville, MN, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6a959662cabc9f6703e189bd",
-"posted": 1789344000,
-"updated": 0,
-"first_seen": 1789415426,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
 "id": "716fd175-ba44-46d7-a0b6-0d77bf93b7c4",
 "title": "IT Data Engineering Intern",
 "company": "Constellation Energy",
@@ -3298,6 +3355,101 @@
 "company_url": "https://simplify.jobs/c/Garmin"
 },
 {
+"id": "wd-mgmresorts-279377",
+"title": "Data Analytics Internal Audit Work Experience Program – Internship",
+"company": "MGM Resorts",
+"locations": [
+"Office - US, Las Vegas, NV 880 Grier Dr"
+],
+"terms": [],
+"url": "https://mgmresorts.wd5.myworkdayjobs.com/en-US/MGMCareers/job/Office---US-Las-Vegas-NV-880-Grier-Dr/Data-Analytics-Internal-Audit-Work-Experience-Program---Internship_279377",
+"posted": 1789161134,
+"updated": 0,
+"first_seen": 1789397953,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-adobe-R171856",
+"title": "2027 Intern - Enterprise Architecture Analyst",
+"company": "Adobe",
+"locations": [
+"New York"
+],
+"terms": [],
+"url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Enterprise-Architecture-Analyst_R171856",
+"posted": 1789161099,
+"updated": 0,
+"first_seen": 1789211535,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-adobe-R171828",
+"title": "2027 Intern - Digital Strategy Analyst, Strategic Advisory",
+"company": "Adobe",
+"locations": [
+"New York"
+],
+"terms": [],
+"url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Digital-Strategy-Analyst_R171828",
+"posted": 1789161099,
+"updated": 0,
+"first_seen": 1789211535,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-corteva-248208W",
+"title": "Data Science Summer Intern",
+"company": "Corteva",
+"locations": [
+"Indianapolis, Indiana, United States"
+],
+"terms": [],
+"url": "https://corteva.wd5.myworkdayjobs.com/en-US/Corteva/job/Indianapolis-Indiana-United-States/Data-Science-Summer-Intern_248208W",
+"posted": 1789161080,
+"updated": 0,
+"first_seen": 1789211535,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-msd-R413657",
+"title": "2027 Future Talent Program - Data Analytics and Insights - Intern",
+"company": "Merck",
+"locations": [
+"USA - New Jersey - Rahway"
+],
+"terms": [],
+"url": "https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---New-Jersey---Rahway/XMLNAME-2027-Future-Talent-Program---Data-Analytics-and-Insights---Intern_R413657",
+"posted": 1789161063,
+"updated": 0,
+"first_seen": 1789211535,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "gh-lyft-8802198002",
 "title": "Data Analyst Intern (Summer 2027)",
 "company": "Lyft",
@@ -3317,112 +3469,17 @@
 "company_url": null
 },
 {
-"id": "wd-mgmresorts-279377",
-"title": "Data Analytics Internal Audit Work Experience Program – Internship",
-"company": "MGM Resorts",
-"locations": [
-"Office - US, Las Vegas, NV 880 Grier Dr"
-],
-"terms": [],
-"url": "https://mgmresorts.wd5.myworkdayjobs.com/en-US/MGMCareers/job/Office---US-Las-Vegas-NV-880-Grier-Dr/Data-Analytics-Internal-Audit-Work-Experience-Program---Internship_279377",
-"posted": 1789148759,
-"updated": 0,
-"first_seen": 1789397953,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-adobe-R171856",
-"title": "2027 Intern - Enterprise Architecture Analyst",
-"company": "Adobe",
-"locations": [
-"New York"
-],
-"terms": [],
-"url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Enterprise-Architecture-Analyst_R171856",
-"posted": 1789148723,
-"updated": 0,
-"first_seen": 1789211535,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-adobe-R171828",
-"title": "2027 Intern - Digital Strategy Analyst, Strategic Advisory",
-"company": "Adobe",
-"locations": [
-"New York"
-],
-"terms": [],
-"url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Digital-Strategy-Analyst_R171828",
-"posted": 1789148723,
-"updated": 0,
-"first_seen": 1789211535,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-corteva-248208W",
-"title": "Data Science Summer Intern",
-"company": "Corteva",
-"locations": [
-"Indianapolis, Indiana, United States"
-],
-"terms": [],
-"url": "https://corteva.wd5.myworkdayjobs.com/en-US/Corteva/job/Indianapolis-Indiana-United-States/Data-Science-Summer-Intern_248208W",
-"posted": 1789148699,
-"updated": 0,
-"first_seen": 1789211535,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-msd-R413657",
-"title": "2027 Future Talent Program - Data Analytics and Insights - Intern",
-"company": "Merck",
-"locations": [
-"USA - New Jersey - Rahway"
-],
-"terms": [],
-"url": "https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---New-Jersey---Rahway/XMLNAME-2027-Future-Talent-Program---Data-Analytics-and-Insights---Intern_R413657",
-"posted": 1789148683,
-"updated": 0,
-"first_seen": 1789211535,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "gh-lyft-8796124002",
+"id": "gh-lyft-8767723002",
 "title": "Data Science Intern, Algorithms (Summer 2027)",
 "company": "Lyft",
 "locations": [
-"New York, NY"
+"San Francisco, CA"
 ],
 "terms": [],
-"url": "https://app.careerpuck.com/job-board/lyft/job/8796124002?gh_jid=8796124002",
-"posted": 1789145227,
+"url": "https://app.careerpuck.com/job-board/lyft/job/8767723002?gh_jid=8767723002",
+"posted": 1789145225,
 "updated": 0,
-"first_seen": 1789427101,
+"first_seen": 1789506745,
 "source": "ats",
 "board": "Greenhouse",
 "category": null,
@@ -4507,28 +4564,9 @@
 ],
 "terms": [],
 "url": "https://caci.wd1.myworkdayjobs.com/en-US/External/job/Danbury-CT-US/Configuration-Control-Data-Management-Co-op---Spring---Summer-2027_331440",
-"posted": 1789062336,
+"posted": 1789074712,
 "updated": 0,
 "first_seen": 1789311287,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-ameriprise-R26_3595",
-"title": "Data Analytics & AI Intern - RiverSource",
-"company": "Ameriprise",
-"locations": [
-"Minneapolis, Minnesota"
-],
-"terms": [],
-"url": "https://ameriprise.wd5.myworkdayjobs.com/en-US/Ameriprise/job/Minneapolis-Minnesota/Data-Analytics---AI-Intern---RiverSource_R26_3595",
-"posted": 1789062309,
-"updated": 0,
-"first_seen": 1789211535,
 "source": "ats",
 "board": "Workday",
 "category": null,
@@ -5259,7 +5297,7 @@
 ],
 "terms": [],
 "url": "https://bakerhughes.wd5.myworkdayjobs.com/en-US/BakerHughes/job/DE-CELLE-BAKER-HUGHES-STRASSE-1/Werkstudent-fr-System--und-Datenanalyse-2026--Celle-_R158064",
-"posted": 1788975897,
+"posted": 1788988277,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -5278,7 +5316,7 @@
 ],
 "terms": [],
 "url": "https://wf.wd1.myworkdayjobs.com/en-US/WellsFargoJobs/job/CHARLOTTE-NC/XMLNAME-2027-Quantitative-Analytics-Summer-Internship-Applied-Computational-Intelligence--ACI-Masters----Early-Careers_R-574030",
-"posted": 1788975868,
+"posted": 1788988248,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6181,25 +6219,6 @@
 "company_url": null
 },
 {
-"id": "as-rivianvw.tech-32f6b882-414f-4bac-959c-83691d120322",
-"title": "Data Engineering Intern - AI & Analytics (January - August 2027)",
-"company": "Rivian & VW Tech",
-"locations": [
-"Palo Alto, California"
-],
-"terms": [],
-"url": "https://jobs.ashbyhq.com/rivianvw.tech/32f6b882-414f-4bac-959c-83691d120322",
-"posted": 1788892304,
-"updated": 0,
-"first_seen": 1788897071,
-"source": "ats",
-"board": "Ashby",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
 "id": "wd-bah-R0248669",
 "title": "International Data Solutions Analyst",
 "company": "Booz Allen Hamilton",
@@ -6208,7 +6227,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/McLean-VA/International-Data-Solutions-Analyst_R0248669",
-"posted": 1788889537,
+"posted": 1788901912,
 "updated": 0,
 "first_seen": 1789311287,
 "source": "ats",
@@ -6227,7 +6246,7 @@
 ],
 "terms": [],
 "url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/New-York/XMLNAME-2027-Intern---Solutions-Consulting-Analyst_R171696",
-"posted": 1788889523,
+"posted": 1788901899,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6246,7 +6265,7 @@
 ],
 "terms": [],
 "url": "https://fis.wd5.myworkdayjobs.com/en-US/SearchJobs/job/US-FL-JAX-347/Intern--Financial-Analyst--Summer-FIS-University-Program-2027_JR0309330",
-"posted": 1788889519,
+"posted": 1788901897,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6265,7 +6284,7 @@
 ],
 "terms": [],
 "url": "https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Hartford-CT/Intern--Product-Analytics-Leadership-Development-Program_R2626424-1",
-"posted": 1788889513,
+"posted": 1788901892,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6284,7 +6303,7 @@
 ],
 "terms": [],
 "url": "https://northwesternmutual.wd5.myworkdayjobs.com/en-US/CORPORATE-CAREERS/job/Milwaukee-WI-Corporate/Investment-Analyst-Intern---Private-Debt---Equity--Summer-2027_JR-45705",
-"posted": 1788889510,
+"posted": 1788901890,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6303,7 +6322,7 @@
 ],
 "terms": [],
 "url": "https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Detroit-MI/Summer-2027-Internship---Insurance-Data---Analytics_R2600192",
-"posted": 1788889507,
+"posted": 1788901888,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6322,7 +6341,7 @@
 ],
 "terms": [],
 "url": "https://usbank.wd1.myworkdayjobs.com/en-US/US_Bank_Careers/job/Minneapolis-MN/XMLNAME-2027-Business-Analytics-Summer-Intern_2026-0025907",
-"posted": 1788889503,
+"posted": 1788901884,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6341,7 +6360,7 @@
 ],
 "terms": [],
 "url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Amarillo-TX-79101/Data-Analyst-Intern--TX_JR115565-1",
-"posted": 1788889503,
+"posted": 1788901882,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6360,7 +6379,7 @@
 ],
 "terms": [],
 "url": "https://gilead.wd1.myworkdayjobs.com/en-US/gileadcareers/job/United-States---California---Foster-City/Intern---Research---Data-Sciences_R0054572",
-"posted": 1788889482,
+"posted": 1788901862,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6379,11 +6398,30 @@
 ],
 "terms": [],
 "url": "https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/CT-Bloomfield-900-Cottage-Grove-Rd-Wilde-Bldg/Analytics-Leadership-Development-Program--ALDP--Summer-Internship_26010711",
-"posted": 1788889477,
+"posted": 1788901856,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
 "board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "as-rivianvw.tech-32f6b882-414f-4bac-959c-83691d120322",
+"title": "Data Engineering Intern - AI & Analytics (January - August 2027)",
+"company": "Rivian & VW Tech",
+"locations": [
+"Palo Alto, California"
+],
+"terms": [],
+"url": "https://jobs.ashbyhq.com/rivianvw.tech/32f6b882-414f-4bac-959c-83691d120322",
+"posted": 1788892304,
+"updated": 0,
+"first_seen": 1788897071,
+"source": "ats",
+"board": "Ashby",
 "category": null,
 "sponsorship": null,
 "degrees": [],
@@ -6896,7 +6934,7 @@
 ],
 "terms": [],
 "url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Minneapolis-MN-55418/Grid-Data-Intern---MN_JR115742-1",
-"posted": 1788803102,
+"posted": 1788815482,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6915,7 +6953,7 @@
 ],
 "terms": [],
 "url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Denver-CO-80223/Gas-Data-Intern--CO_JR116314-1",
-"posted": 1788803102,
+"posted": 1788815482,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -6934,7 +6972,7 @@
 ],
 "terms": [],
 "url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Denver-CO-80205/Wildfire-Analyst-Intern--CO_JR115413-1",
-"posted": 1788803102,
+"posted": 1788815482,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -7461,7 +7499,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/McLean-VA/University---2027-Summer-Games-Data-Scientist-Intern---McLean--VA_R0248037",
-"posted": 1788543938,
+"posted": 1788556312,
 "updated": 0,
 "first_seen": 1789311287,
 "source": "ats",
@@ -7480,7 +7518,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Rome-NY/University--2027-Summer-Games-Data-Scientist-Intern_R0248143",
-"posted": 1788543938,
+"posted": 1788556312,
 "updated": 0,
 "first_seen": 1789311287,
 "source": "ats",
@@ -7499,7 +7537,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Atlanta-GA/University--2027-Summer-Games-Data-Scientist-Intern_R0248140",
-"posted": 1788543938,
+"posted": 1788556312,
 "updated": 0,
 "first_seen": 1789311287,
 "source": "ats",
@@ -7518,7 +7556,7 @@
 ],
 "terms": [],
 "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Charleston-SC/University---2027-Summer-Games-Data-Scientist-Intern_R0248137",
-"posted": 1788543938,
+"posted": 1788556312,
 "updated": 0,
 "first_seen": 1789311287,
 "source": "ats",
@@ -8125,7 +8163,7 @@
 ],
 "terms": [],
 "url": "https://corteva.wd5.myworkdayjobs.com/en-US/Corteva/job/Indianapolis-Indiana-United-States/Business-Analyst-Intern_248151W",
-"posted": 1788457499,
+"posted": 1788469880,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -8144,7 +8182,7 @@
 ],
 "terms": [],
 "url": "https://corteva.wd5.myworkdayjobs.com/en-US/Corteva/job/Indianapolis-Indiana-United-States/R-D-Internship---Computer---Data-Science-_248130W",
-"posted": 1788457499,
+"posted": 1788469880,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -8753,7 +8791,7 @@
 ],
 "terms": [],
 "url": "https://caci.wd1.myworkdayjobs.com/en-US/External/job/Remote-Any-State/Business-Systems-Analyst-Intern---Summer-2027_331551",
-"posted": 1788371137,
+"posted": 1788383514,
 "updated": 0,
 "first_seen": 1789311287,
 "source": "ats",
@@ -8772,7 +8810,7 @@
 ],
 "terms": [],
 "url": "https://fanniemae.wd1.myworkdayjobs.com/en-US/FannieMaeCareers/job/Washington-DC/Campus---Finance-Analytics-Intern--Analytics---Modeling-Program-_JR2814",
-"posted": 1788371116,
+"posted": 1788383495,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -8791,7 +8829,7 @@
 ],
 "terms": [],
 "url": "https://mckesson.wd3.myworkdayjobs.com/en-US/External_Careers/job/USA-OH-Columbus/Data-Analyst-Intern---Summer-2027_JR0150844",
-"posted": 1788371075,
+"posted": 1788383455,
 "updated": 0,
 "first_seen": 1789211535,
 "source": "ats",
@@ -9409,404 +9447,6 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/Southern-Star-Central-Gas-Pipeline"
-},
-{
-"id": "7123e8fe-c2d7-4fff-b9c9-5e8f94b9c12b",
-"title": "Data & Analytics Intern",
-"company": "John Deere",
-"locations": [
-"Moline, IL"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://johndeere.eightfold.ai/careers/job/137482673640",
-"posted": 1788293313,
-"updated": 1788293378,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's",
-"Master's",
-"PhD"
-],
-"company_url": "https://simplify.jobs/c/John-Deere"
-},
-{
-"id": "5e16fdb9-dd97-429a-9b2a-9c7ebfd49735",
-"title": "Operations Strategy & Analytics Intern",
-"company": "United Airlines",
-"locations": [
-"Chicago, IL"
-],
-"terms": [
-"Fall 2026"
-],
-"url": "https://careers.united.com/us/en/job/WHQ00026618",
-"posted": 1788291829,
-"updated": 1788521716,
-"first_seen": 1789494373,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [],
-"company_url": "https://simplify.jobs/c/United-Airlines"
-},
-{
-"id": "b2910d1a-df08-4c5a-9ad6-88cf9a60ff6f",
-"title": "Air Traffic Strategy Data Analytics Intern - Summer 2027",
-"company": "United Airlines",
-"locations": [
-"Arlington Heights, IL"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://careers.united.com/us/en/job/WHQ00026613",
-"posted": 1788291574,
-"updated": 1788291772,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/United-Airlines"
-},
-{
-"id": "c7f3e77f-a1eb-4ac3-b212-87e4289565f9",
-"title": "Digital and Information Technology Intern - Analyst",
-"company": "Corning",
-"locations": [
-"Concord, NC"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://corningjobs.corning.com/job/Concord-Digital-&-IT-Intern,-Analyst,-Concord-Manufacturing-Summer-2027-NC-28026/1425549000/?ats=successfactors",
-"posted": 1788291378,
-"updated": 1788520682,
-"first_seen": 1788528412,
-"source": "simplify",
-"board": null,
-"category": "Software",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's",
-"Master's"
-],
-"company_url": "https://simplify.jobs/c/Corning"
-},
-{
-"id": "75f571ad-b072-4485-b82e-3a4872f7f219",
-"title": "Digital & IT Intern - Analyst - Manufacturing",
-"company": "Corning",
-"locations": [
-"Glendale, AZ"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://corningjobs.corning.com/job/Glendale-Digital-&-IT-Intern,-Analyst,-Phoenix-Manufacturing-Summer-2027-AZ-85301/1425543900/?ats=successfactors",
-"posted": 1788291367,
-"updated": 1788516361,
-"first_seen": 1788528412,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's",
-"Master's"
-],
-"company_url": "https://simplify.jobs/c/Corning"
-},
-{
-"id": "1fa0cf6c-b41d-4a3e-bd89-e3efc8a41a1f",
-"title": "Data Analytics Apprentice - February 2027 Start",
-"company": "Google",
-"locations": [
-"LA",
-"Chicago, IL",
-"NYC",
-"Atlanta, GA"
-],
-"terms": [
-"Winter 2027"
-],
-"url": "https://www.google.com/about/careers/applications/jobs/results/132315893450318534",
-"posted": 1788290149,
-"updated": 1788290336,
-"first_seen": 1789295645,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [],
-"company_url": "https://simplify.jobs/c/Google"
-},
-{
-"id": "6de536a3-1aec-4953-91d2-43e21e6062ef",
-"title": "Data Science Intern - Summer 2027",
-"company": "Post Holdings",
-"locations": [
-"Lakeville, MN"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://jobs.postholdings.com/jobs/31961?icims=1",
-"posted": 1788289629,
-"updated": 1788289742,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's",
-"Master's"
-],
-"company_url": "https://simplify.jobs/c/Post-Holdings"
-},
-{
-"id": "aecf9a61-0e55-4e17-873b-d56a92f353a8",
-"title": "Data Engineer Intern",
-"company": "Post Holdings",
-"locations": [
-"Lakeville, MN"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://jobs.postholdings.com/jobs/31960?icims=1",
-"posted": 1788289628,
-"updated": 1788289939,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's",
-"Master's"
-],
-"company_url": "https://simplify.jobs/c/Post-Holdings"
-},
-{
-"id": "b366c04d-a45d-4b79-a577-682f0b05ade0",
-"title": "Business Intelligence Intern - Summer 2027",
-"company": "Post Holdings",
-"locations": [
-"Lakeville, MN"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://jobs.postholdings.com/jobs/31924?icims=1",
-"posted": 1788289626,
-"updated": 1788289742,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/Post-Holdings"
-},
-{
-"id": "2d992297-70f1-4f62-852b-75acf2b9ef3b",
-"title": "Analytics Intern",
-"company": "Perpay",
-"locations": [
-"Philadelphia, PA"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://job-boards.greenhouse.io/perpay/jobs/4076934007",
-"posted": 1788289611,
-"updated": 1788289764,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's",
-"Master's"
-],
-"company_url": "https://simplify.jobs/c/Perpay"
-},
-{
-"id": "7afc8909-8e75-4217-afd4-e39a4c061462",
-"title": "Tech Ops Analytics & Business Intelligence Intern - Summer 2027",
-"company": "United Airlines",
-"locations": [
-"Chicago, IL"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://careers.united.com/us/en/job/WHQ00026447",
-"posted": 1788288709,
-"updated": 1788401529,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [],
-"company_url": "https://simplify.jobs/c/United-Airlines"
-},
-{
-"id": "e7948754-b13b-4505-93ff-72bf517be9f3",
-"title": "Engineer/Analyst/Scientist Intern - C2 Resilience Sciences",
-"company": "Johns Hopkins Applied Physics Laboratory",
-"locations": [
-"Laurel, MD"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://careers.jhuapl.edu/jobs/59832?icims=1",
-"posted": 1788288487,
-"updated": 1788288757,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "Software",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's",
-"Master's",
-"PhD"
-],
-"company_url": "https://simplify.jobs/c/Johns-Hopkins-Applied-Physics-Laboratory"
-},
-{
-"id": "d35f3d80-1382-4ac7-96f7-d7e26e2368c5",
-"title": "Engineer/SW Developer/Analyst Intern - Maritime Force Engagement Control",
-"company": "Johns Hopkins Applied Physics Laboratory",
-"locations": [
-"Laurel, MD"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://careers.jhuapl.edu/jobs/59598?icims=1",
-"posted": 1788288483,
-"updated": 1788288743,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/Johns-Hopkins-Applied-Physics-Laboratory"
-},
-{
-"id": "0b6231bf-1510-4b9c-b81b-7dbc9d578158",
-"title": "Operations Strategy Analytics Intern",
-"company": "United Airlines",
-"locations": [
-"Chicago, IL"
-],
-"terms": [
-"Summer 2026"
-],
-"url": "https://careers.united.com/us/en/job/WHQ00026638",
-"posted": 1788287331,
-"updated": 1788857430,
-"first_seen": 1788889757,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/United-Airlines"
-},
-{
-"id": "d41d1a6f-e6bf-4872-a9db-fcc930ae53a9",
-"title": "Digital Analytics Intern - Spring or Summer 2027",
-"company": "Western & Southern Financial Group",
-"locations": [
-"Cincinnati, OH"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://careers-westernsouthern.icims.com/jobs/25195/job?mobile=true&needsRedirect=false",
-"posted": 1788287286,
-"updated": 1788287420,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/Western-Southern-Financial-Group"
-},
-{
-"id": "ae8f1ba1-981a-4a92-8400-ce447d413343",
-"title": "Data Engineering and Analytics Intern - Summer 2027",
-"company": "Western & Southern Financial Group",
-"locations": [
-"Cincinnati, OH"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://careers-westernsouthern.icims.com/jobs/25207/job?mobile=true&needsRedirect=false",
-"posted": 1788287283,
-"updated": 1788287420,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/Western-Southern-Financial-Group"
-},
-{
-"id": "f5d4fc37-b9d9-4b0b-95b0-38f06170c861",
-"title": "Data Engineer Intern - Summer 2027",
-"company": "Pella",
-"locations": [
-"Pella, IA",
-"Urbandale, IA"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://ebgj.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/253304",
-"posted": 1788286136,
-"updated": 1788286141,
-"first_seen": 1788500650,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/Pella-Corporation"
 }
 ]
 }
