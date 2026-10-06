@@ -30,6 +30,26 @@
 
   <section class="facts" id="facts" hidden></section>
 
+  <details class="add" id="add">
+    <summary>Add one from LinkedIn, Handshake, or anywhere else</summary>
+    <form class="add-form" id="add-form" autocomplete="off">
+      <label class="wide">Link <input name="url" inputmode="url" placeholder="linkedin.com/jobs/view/&hellip;"></label>
+      <label>Title <input name="title" required></label>
+      <label>Company <input name="company" required></label>
+      <label>Location <input name="location" placeholder="optional"></label>
+      <label>Found on
+        <select name="source">
+          <option value="linkedin">LinkedIn</option>
+          <option value="handshake">Handshake</option>
+          <option value="company">Company site</option>
+          <option value="other">Elsewhere</option>
+        </select>
+      </label>
+      <label>Applied <input name="date" type="date" required></label>
+      <p class="submit"><button type="submit">Add</button><span id="add-status" role="status"></span></p>
+    </form>
+  </details>
+
   <p class="count" id="count"></p>
 
   <ol class="listings" id="listings"></ol>
@@ -38,7 +58,8 @@
     <h2>This list</h2>
     <p>Applications are stored in this browser only, so they won&rsquo;t follow
     you to another device unless you move them. Download a copy to keep or
-    to import elsewhere; importing adds entries without removing any.</p>
+    to import elsewhere; importing adds entries without removing any. Roles
+    added by hand are included.</p>
     <p class="actions">
       <button type="button" id="export">Download as JSON</button>
       <label class="import">Import a file<input type="file" id="import" accept="application/json,.json"></label>

@@ -9,7 +9,12 @@
 
   // --- labels and formatting -------------------------------------------
 
-  Site.SOURCE_LABEL = { simplify: "Simplify", jobright: "Jobright", ats: "Company board" };
+  // The first three are the watcher's feeds; the rest are only for roles
+  // added by hand on the applied page.
+  Site.SOURCE_LABEL = {
+    simplify: "Simplify", jobright: "Jobright", ats: "Company board",
+    linkedin: "LinkedIn", handshake: "Handshake", company: "Company site", other: "Elsewhere",
+  };
   Site.SOURCE_URL = {
     simplify: "https://github.com/SimplifyJobs/Summer2027-Internships",
     jobright: "https://github.com/jobright-ai/2026-Data-Analysis-Internship",
@@ -77,8 +82,8 @@
     dispatchEvent(new CustomEvent("applied-change"));
   }
 
-  function snapshot(j) {
-    return {
+  function snapshot(j, at) {
+    const s = {
       id: j.id,
       title: j.title,
       company: j.company,
@@ -89,8 +94,10 @@
       board: j.board || null,
       posted: j.posted || 0,
       role: j.role || Site.roleOf(j),
-      at: Math.floor(Date.now() / 1000),
+      at: at || Math.floor(Date.now() / 1000),
     };
+    if (j.manual) s.manual = true;     // added by hand, never in the feed
+    return s;
   }
 
   Site.applied = {
@@ -98,7 +105,7 @@
     get: (id) => load()[id] || null,
     has: (id) => Object.prototype.hasOwnProperty.call(load(), id),
     count: () => Object.keys(load()).length,
-    add(job) { const m = load(); m[job.id] = snapshot(job); save(m); },
+    add(job, at) { const m = load(); m[job.id] = snapshot(job, at); save(m); },
     remove(id) { const m = load(); delete m[id]; save(m); },
     toggle(job) {
       if (Site.applied.has(job.id)) { Site.applied.remove(job.id); return false; }

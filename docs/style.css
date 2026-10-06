@@ -108,7 +108,8 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   border-bottom: 1px solid var(--rule);
 }
 
-.filters label {
+.filters label,
+.add-form label {
   display: flex;
   align-items: baseline;
   gap: 8px;
@@ -118,7 +119,9 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
 
 .filters select,
-.filters input {
+.filters input,
+.add-form select,
+.add-form input {
   font: inherit;
   color: var(--text);
   background: transparent;
@@ -133,18 +136,23 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   cursor: pointer;
 }
 
-.filters select {
+.filters select,
+.add-form select {
   padding-right: 14px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath d='M0 0h8L4 5z' fill='%23767676'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 2px center;
 }
 
-.filters input { cursor: text; }
-.filters input::placeholder { color: var(--faint); }
+.filters input,
+.add-form input { cursor: text; }
+.filters input::placeholder,
+.add-form input::placeholder { color: var(--faint); }
 
 .filters select:focus,
-.filters input:focus {
+.filters input:focus,
+.add-form select:focus,
+.add-form input:focus {
   outline: none;
   border-bottom-color: var(--text);
 }
@@ -317,6 +325,49 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .applied-page .listings li.applied .title { color: var(--text); }
 .applied-page .listings .title a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .applied-page .age .posted { display: block; color: var(--faint); font-size: 12px; margin-top: 2px; }
+
+/* Roles from elsewhere, typed in by hand. Folded away by default so the
+   page still opens on the totals. */
+.add {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 32px;
+}
+
+.add summary { cursor: pointer; width: fit-content; }
+.add summary:hover { color: var(--text); }
+
+.add-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 32px;
+  margin-top: 18px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.add-form .wide,
+.add-form .submit { grid-column: 1 / -1; }
+
+.add-form .submit {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin: 6px 0 0;
+}
+
+.add-form button {
+  font: inherit;
+  color: var(--bg);
+  background: var(--text);
+  border: 0;
+  border-radius: 2px;
+  padding: 7px 18px;
+  cursor: pointer;
+}
+
+.add-form button:hover { opacity: 0.85; }
 
 .tools .actions {
   font-family: var(--sans);
@@ -547,5 +598,6 @@ body.has-detail .to-top { right: calc(var(--panel) + 36px); }
   .age { grid-column: 1 / -1; order: -1; }
   .applied-page .age .posted { display: inline; margin-left: 10px; }
   .facts { grid-template-columns: 1fr; }
+  .add-form { grid-template-columns: 1fr; }
   .detail { width: 100%; padding: 56px 20px 40px; }
 }

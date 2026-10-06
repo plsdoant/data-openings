@@ -81,9 +81,13 @@ Discord filter.
 Each row has a checkbox at the right for marking a role as applied, and the
 detail panel has the same toggle. The **Applied** page lists everything
 you've ticked, newest first, with a few totals and a note on which roles
-have since dropped off the feed. Ticks are stored in the browser's local
-storage, so they stay on the device where you made them; the page can
-download them as JSON and import that file elsewhere.
+have since dropped off the feed. Roles applied to somewhere the watcher
+doesn't look, like LinkedIn or Handshake, can be added there by hand. A
+LinkedIn or Handshake link is recognized and its job id becomes the entry's
+id, so pasting the same posting twice is caught. If the role is also open on
+the listings, the listing itself is ticked instead. Ticks are stored in the
+browser's local storage, so they stay on the device where you made them; the
+page can download them as JSON and import that file elsewhere.
 
 There's a dark mode switch in the top bar, and a small pixel fire in the
 bottom-left corner that the cursor can push around. Click it to blow it out.
