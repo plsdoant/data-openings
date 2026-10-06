@@ -18,7 +18,9 @@ import ssl
 import sys
 import time
 import urllib.request
+from collections import defaultdict
 from datetime import datetime, timezone
+from itertools import combinations
 from pathlib import Path
 
 import ats
@@ -228,12 +230,52 @@ def job_key(job):
     return job.get("id") or f"{job.get('company_name')}::{job.get('title')}"
 
 
+# Simplify rewrites titles ("Reliability Data Analyst Intern- CO" becomes
+# "Data Analyst Intern") but links straight to the company's own posting, so
+# the posting id in the URL is the surest cross-source match there is.
+_POSTING_IDS = [
+    # Workday, on {tenant}.wdN.myworkdayjobs.com or wdN.myworkdaysite.com/
+    # recruiting/{tenant}: tenant plus the last path segment, which always
+    # ends in _{req id}. Requiring the underscore keeps "/apply" out.
+    (re.compile(r"//(?:([a-z0-9-]+)\.)?wd\d+\.myworkday(?:jobs|site)\.com/"
+                r"(?:[a-z]{2}-[a-z]{2}/)?(?:recruiting/([^/]+)/)?"
+                r"[^/]+/job/[^/]+/([^/?#]*_[^/?#]+)", re.I),
+     lambda m: f"wd:{m[1] or m[2]}:{m[3]}"),
+    (re.compile(r"greenhouse\.io/.*?jobs/(\d+)|[?&]gh_jid=(\d+)", re.I),
+     lambda m: f"gh:{m[1] or m[2]}"),
+    (re.compile(r"(?:lever\.co|ashbyhq\.com)/[^/]+/([0-9a-f-]{36})", re.I),
+     lambda m: f"uuid:{m[1]}"),
+    (re.compile(r"smartrecruiters\.com/[^/]+/(\d{6,})", re.I),
+     lambda m: f"sr:{m[1]}"),
+]
+
 _CO_SUFFIXES = re.compile(
     r"\b(inc|llc|ltd|corp|corporation|co|company|group|holdings|technologies|"
     r"technology|usa|us|the)\b")
 _SEASON = re.compile(
     r"\b(summer|fall|autumn|winter|spring)\b|\b20\d\d\b|\bfy\d\d\b")
 _REQ_ID = re.compile(r"\b[a-z]?\d{4,}\b")
+_FILLER = {"a", "an", "and", "at", "for", "in", "of", "the", "to", "with",
+           "u", "s", "usa"}
+# "Data Analyst Intern - TX", "Data Science Intern CO, MN". Case-sensitive
+# like _US_ABBR_RE, so "Intern - IT" keeps its IT.
+_TRAILING_STATES = re.compile(
+    r"(?:[^A-Za-z0-9]+" + _US_ABBR_RE.pattern + r")+[^A-Za-z0-9]*$")
+_STATE_CODES = dict(zip(_US_STATES, (
+    "AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS "
+    "MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV "
+    "WI WY PR DC").split()))
+_STATE_NAME_RE = re.compile(r"\b(" + "|".join(_US_STATES) + r")\b")
+
+
+def posting_id(url):
+    """'https://x.wd5.myworkdayjobs.com/en-US/Site/job/City/Title_R123' ->
+    'wd:x:title_r123'. None for URLs not on a board we recognize."""
+    for rx, fmt in _POSTING_IDS:
+        m = rx.search(url or "")
+        if m:
+            return fmt(m).lower()
+    return None
 
 
 def _norm(s, extra=None):
@@ -246,41 +288,127 @@ def _norm(s, extra=None):
     return " ".join(s.split())
 
 
+def _title_words(title):
+    t = _norm(title, lambda s: _REQ_ID.sub(" ", _SEASON.sub(" ", s)))
+    t = re.sub(r"\binternships?\b", "intern", t)
+    return re.sub(r"\b(co op|coop)\b", "intern", t)
+
+
 def dedupe_key(job):
     """Source-agnostic identity, so the same role from the Simplify feed and
     from a company's own ATS board doesn't get posted twice.
 
     Normalizes away the things that differ between sources: company suffixes,
-    season/year tags, requisition ids, and 'internship' vs 'intern'."""
+    season/year tags, requisition ids, and 'internship' vs 'intern'. These
+    keys live in seen.json, so changing what this returns re-alerts roles."""
     company = _norm(job.get("company_name"), lambda s: _CO_SUFFIXES.sub(" ", s))
-    title = _norm(job.get("title"),
-                  lambda s: _REQ_ID.sub(" ", _SEASON.sub(" ", s)))
-    title = re.sub(r"\binternships?\b", "intern", title)
-    title = re.sub(r"\b(co op|coop)\b", "intern", title)
+    title = _title_words(job.get("title"))
     if not company or not title:      # too little to match on — stay unique
         return f"!{job_key(job)}"
     return f"{company.replace(' ', '')}::{title}"
 
 
+def _company(job):
+    """'The Hartford' -> ('hartford',). Unlike dedupe_key, suffixes stay:
+    _same_role matches on prefixes, and with 'Group' stripped, Capital Group
+    would be a prefix of Capital One."""
+    words = _norm(job.get("company_name")).split()
+    return tuple(words[1:] if words[:1] == ["the"] else words)
+
+
+def _loose_title(job):
+    """dedupe_key's title, loosened for _same_role: trailing state codes and
+    filler words dropped and the rest sorted, so 'Summer 2027 Intern - Data
+    Analyst' and 'Data Analyst Intern - WI' both become 'analyst data intern'."""
+    t = _title_words(_TRAILING_STATES.sub("", job.get("title") or ""))
+    return " ".join(sorted(set(t.split()) - _FILLER))
+
+
+def _states(job):
+    """US state codes named in the listing's locations."""
+    found = set()
+    for loc in job.get("locations") or []:
+        found.update(_US_ABBR_RE.findall(loc))
+        found.update(_STATE_CODES[n] for n in _STATE_NAME_RE.findall(loc.lower()))
+    return found
+
+
+def _own_keys(job):
+    keys = {job_key(job), f"dk:{dedupe_key(job)}"}
+    if pid := posting_id(job.get("url")):
+        keys.add(f"pid:{pid}")
+    return keys
+
+
 def seen_keys(job):
-    """Every key that should mark this job as seen."""
-    return {job_key(job), f"dk:{dedupe_key(job)}"}
+    """Every key that should mark this job as seen. A listing that absorbed
+    duplicates carries their keys too: if any copy was seen, it was."""
+    return job.get("_keys") or _own_keys(job)
+
+
+def _same_role(a, b):
+    """The looser match, for two listings with the same _loose_title. The
+    company names must agree as far as the shorter one goes ('Corning' /
+    'Corning Incorporated'), and the locations must share a state, so 'Data
+    Analyst Intern - TX' can't swallow a Denver role that Simplify retitled
+    'Data Analyst Intern'."""
+    ca, cb = _company(a), _company(b)
+    n = min(len(ca), len(cb))
+    if not n or ca[:n] != cb[:n]:
+        return False
+    sa, sb = _states(a), _states(b)
+    return not sa or not sb or bool(sa & sb)
 
 
 def drop_cross_source_dupes(jobs):
     """Within one run, keep one copy of each role. Prefer the direct-ATS
-    version — it links to the company's own posting."""
-    best = {}
-    for j in jobs:
-        k = dedupe_key(j)
-        cur = best.get(k)
-        if cur is None:
-            best[k] = j
-            continue
-        is_ats = lambda x: str(x.get("source", "")).startswith("ats:")
-        if is_ats(j) and not is_ats(cur):
-            best[k] = j
-    return list(best.values())
+    version — it links to the company's own posting.
+
+    Listings are the same role if they share any key (id, dedupe key, posting
+    id) or pass _same_role. Matches chain, so a Simplify copy can tie a board
+    copy to a Jobright copy, but _same_role never joins two groups that each
+    point at a different posting. The kept copy carries every copy's seen
+    keys."""
+    parent = list(range(len(jobs)))
+    pids = [{p} if (p := posting_id(j.get("url"))) else set() for j in jobs]
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def join(a, b):
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+            pids[rb] |= pids[ra]
+
+    owner, by_title = {}, defaultdict(list)
+    for i, j in enumerate(jobs):
+        for k in _own_keys(j):
+            join(i, owner.setdefault(k, i))
+        if t := _loose_title(j):
+            by_title[t].append(i)
+    for idxs in by_title.values():
+        for a, b in combinations(idxs, 2):
+            pa, pb = pids[find(a)], pids[find(b)]
+            if pa and pb and not pa & pb:
+                continue    # two postings, however alike the titles
+            if _same_role(jobs[a], jobs[b]):
+                join(a, b)
+
+    groups = defaultdict(list)
+    for i, j in enumerate(jobs):
+        groups[find(i)].append(j)
+    is_ats = lambda x: str(x.get("source", "")).startswith("ats:")
+    out = []
+    for copies in groups.values():
+        keep = next((c for c in copies if is_ats(c)), copies[0])
+        if len(copies) > 1:
+            keep = {**keep, "_keys": set().union(*map(_own_keys, copies))}
+        out.append(keep)
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -404,7 +532,9 @@ def export_site(hits, all_jobs):
     newest first, plus a little metadata for the page header.
 
     first_seen is carried over from the previous export so the site can say
-    when the watcher first noticed a role, not just when it was posted."""
+    when the watcher first noticed a role, not just when it was posted. It
+    comes from whichever copy of the role was noticed first, so it holds when
+    dedupe swaps the kept copy."""
     prev = {}
     if SITE_FILE.exists():
         try:
@@ -426,7 +556,8 @@ def export_site(hits, all_jobs):
             "url": j.get("url", ""),
             "posted": j.get("date_posted") or 0,
             "updated": j.get("date_updated") or 0,
-            "first_seen": prev.get(job_key(j)) or now,
+            "first_seen": min((prev[k] for k in seen_keys(j) if prev.get(k)),
+                              default=now),
             "source": source,
             "board": board,
             "category": j.get("category"),

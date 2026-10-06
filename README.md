@@ -34,10 +34,18 @@ Every listing is normalized to the same shape, then filtered:
 4. Listings first posted more than `MAX_AGE_DAYS` ago are ignored.
 
 The same role often appears in more than one source, so listings are deduped
-across sources on a normalized company and title. Season tags, requisition
-ids, company suffixes, and "internship" versus "intern" are all stripped
-before comparing. When a role is in both a feed and the company's own board,
-the board copy wins so the link goes to the original posting.
+across sources. Simplify usually rewrites titles but links straight to the
+company's posting, so two listings whose links point at the same Workday,
+Greenhouse, Lever, Ashby, or SmartRecruiters posting are one role whatever
+they're called. Otherwise listings are compared on a normalized company and
+title, with season tags, requisition ids, company suffixes, and "internship"
+versus "intern" stripped. A looser pass also ignores word order and trailing
+state codes ("Data Analyst Intern - TX"), and lets one company name extend
+the other ("Corning", "Corning Incorporated"), but only when the locations
+share a state and never across two different postings. When a role is in
+both a feed and the company's own board, the board copy wins so the link
+goes to the original posting. Once any copy of a role has been posted, the
+others aren't.
 
 What survives is compared with `seen.json`. New roles go to Discord, then
 the file is updated and committed back to the repo along with
@@ -227,8 +235,9 @@ A run takes two to three minutes, nearly all of it the company boards: the
 Workday ones are paged eight at a time, twenty requests each. That's well
 inside the cron interval, but it's the number to watch when adding boards.
 
-`seen.json` stores two keys per listing, the source id and the dedupe key,
-and is never pruned, so it grows slowly over time. `docs/jobs.json` is
+`seen.json` stores up to three keys per listing (the source id, the dedupe
+key, and the posting id from its link), plus those of any duplicates merged
+into it. It's never pruned, so it grows slowly over time. `docs/jobs.json` is
 rewritten in full each run and stays small.
 
 The fire on the site is generated at load with a small fire-propagation
