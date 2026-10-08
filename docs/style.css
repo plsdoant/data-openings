@@ -537,27 +537,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   color: var(--muted);
 }
 
-/* corner fire ---------------------------------------------------------- */
-
-#fire {
-  position: fixed;
-  left: 36px;
-  bottom: 28px;
-  width: 80px;
-  height: 96px;
-  cursor: default;
-}
-
-#fire canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-  image-rendering: pixelated;
-  pointer-events: none;
-}
-
 @media (max-width: 1000px) {
-  #fire { display: none; }
   body.has-detail .to-top { display: none; }
 }
 
