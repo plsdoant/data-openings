@@ -1,8 +1,8 @@
 {
-"generated_at": 1792785370,
+"generated_at": 1792796609,
 "scanned": {
-"feeds": 17512,
-"ats": 30278,
+"feeds": 17569,
+"ats": 30310,
 "boards": 209
 },
 "companies_polled": [
@@ -226,26 +226,7 @@
 ],
 "terms": [],
 "url": "https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Massachusetts---Cambridge-320-Bent-Street/XMLNAME-2027-Future-Talent-Program---Data--AI--and-Genome-Sciences--Foundation-Models---Intern_R423438",
-"posted": 1792785269,
-"updated": 0,
-"first_seen": 1792785370,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-msd-R423333",
-"title": "2027 Future Talent Program - Data, AI, and Genome Sciences - Intern",
-"company": "Merck",
-"locations": [
-"USA - Massachusetts - Cambridge (320 Bent Street)"
-],
-"terms": [],
-"url": "https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Massachusetts---Cambridge-320-Bent-Street/XMLNAME-2027-Future-Talent-Program---Data--AI--and-Genome-Sciences---Intern_R423333",
-"posted": 1792785269,
+"posted": 1792796515,
 "updated": 0,
 "first_seen": 1792785370,
 "source": "ats",
@@ -264,9 +245,28 @@
 ],
 "terms": [],
 "url": "https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Pennsylvania---West-Point/XMLNAME-2027-Future-Talent-Program---Pharmacokinetic--Dynamics--Metabolism-and-Bioanalytics-Intern_R413056",
-"posted": 1792785269,
+"posted": 1792796515,
 "updated": 0,
 "first_seen": 1792770826,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-msd-R423333",
+"title": "2027 Future Talent Program - Data, AI, and Genome Sciences - Intern",
+"company": "Merck",
+"locations": [
+"USA - Massachusetts - Cambridge (320 Bent Street)"
+],
+"terms": [],
+"url": "https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Massachusetts---Cambridge-320-Bent-Street/XMLNAME-2027-Future-Talent-Program---Data--AI--and-Genome-Sciences---Intern_R423333",
+"posted": 1792796514,
+"updated": 0,
+"first_seen": 1792785370,
 "source": "ats",
 "board": "Workday",
 "category": null,
@@ -283,7 +283,7 @@
 ],
 "terms": [],
 "url": "https://centene.wd5.myworkdayjobs.com/en-US/Centene_External/job/Remote-MO/Social-Media-Analyst-Intern--Undergraduate-Summer-2027-_1667851-1",
-"posted": 1792785268,
+"posted": 1792796513,
 "updated": 0,
 "first_seen": 1792770826,
 "source": "ats",
@@ -302,7 +302,7 @@
 ],
 "terms": [],
 "url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship---Data-Science---Summer-2027--Undergraduate-_R1081067",
-"posted": 1792785254,
+"posted": 1792796498,
 "updated": 0,
 "first_seen": 1792706049,
 "source": "ats",
@@ -321,7 +321,7 @@
 ],
 "terms": [],
 "url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship--Software-Engineering--Data---Intelligence-Summer-2027-Undergrad_R1081114",
-"posted": 1792785254,
+"posted": 1792796498,
 "updated": 0,
 "first_seen": 1792715600,
 "source": "ats",
@@ -330,6 +330,76 @@
 "sponsorship": null,
 "degrees": [],
 "company_url": null
+},
+{
+"id": "c5d18f1d-65ab-49c8-86ae-b293e6a1c377",
+"title": "Data Analytics Intern",
+"company": "Navy Federal",
+"locations": [
+"Pensacola, FL",
+"Vienna, VA"
+],
+"terms": [],
+"url": "https://fa-etbx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/nfcu/job/33208",
+"posted": 1792793758,
+"updated": 1792793935,
+"first_seen": 1792796609,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's"
+],
+"company_url": "https://simplify.jobs/c/Navy-Federal"
+},
+{
+"id": "78f2f6fd-9234-4b7c-a26c-189023b24ca7",
+"title": "Data Analytics & Data Science Intern",
+"company": "Simbe Robotics",
+"locations": [
+"Burlingame, CA"
+],
+"terms": [
+"Spring 2027",
+"Summer 2027"
+],
+"url": "https://jobs.lever.co/SimbeRobotics/96ee45fb-f094-4751-a43d-3e376f32667f/apply",
+"posted": 1792793474,
+"updated": 1792793525,
+"first_seen": 1792785370,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's",
+"PhD"
+],
+"company_url": "https://simplify.jobs/c/SimbeRobotics"
+},
+{
+"id": "c00bb880-656d-43f8-b8f3-621153687123",
+"title": "Data Science Intern",
+"company": "Bertelsmann",
+"locations": [
+"NYC"
+],
+"terms": [],
+"url": "https://jobs.smartrecruiters.com/Bertelsmann-Jobs/744000157546634",
+"posted": 1792780786,
+"updated": 1792793168,
+"first_seen": 1792796609,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Master's",
+"PhD"
+],
+"company_url": "https://simplify.jobs/c/Bertelsmann"
 },
 {
 "id": "803b306d-364e-4c89-90ae-c3f32c7cd40a",
@@ -449,6 +519,150 @@
 "company_url": "https://simplify.jobs/c/Paccar"
 },
 {
+"id": "69f01b48-7d56-4df4-946d-c163ffc2eacc",
+"title": "Business Intelligence Developer Intern",
+"company": "Auto-Owners Insurance",
+"locations": [
+"Lansing, MI"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://aoins.wd5.myworkdayjobs.com/AutoOwners/job/Lansing-MI/Business-Intelligence-Developer-Internship---Summer-2027_R_14772",
+"posted": 1792713600,
+"updated": 1792793944,
+"first_seen": 1792785370,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [
+"Bachelor's",
+"Master's"
+],
+"company_url": "https://simplify.jobs/c/Auto-Owners-Insurance"
+},
+{
+"id": "fb5e4fde-4410-46d0-b5e9-cb2173cef2e3",
+"title": "Data Science Intern",
+"company": "Sun Life",
+"locations": [
+"Milwaukee, WI",
+"Kansas City, MO",
+"Hartford, CT",
+"Portland, ME",
+"Wellesley, MA"
+],
+"terms": [
+"Summer 2027"
+],
+"url": "https://sunlife.wd3.myworkdayjobs.com/en-US/Campus/job/Wellesley-Hills-Massachusetts/Data-Science-Intern---Summer-2027-Intern_JR00127666-1",
+"posted": 1792713600,
+"updated": 1792793597,
+"first_seen": 1792796609,
+"source": "simplify",
+"board": null,
+"category": "AI/ML/Data",
+"sponsorship": "Other",
+"degrees": [],
+"company_url": "https://simplify.jobs/c/Sun-Life"
+},
+{
+"id": "jr-6adbbe7dc5c64fa3d9cb0f3a",
+"title": "Data Intern",
+"company": "Hook",
+"locations": [
+"New York, NY, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6adbbe7dc5c64fa3d9cb0f3a",
+"posted": 1792713600,
+"updated": 0,
+"first_seen": 1792796609,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6adbbaae46a8cabdc1ff46be",
+"title": "Data Science Intern",
+"company": "Penguin Random House UK",
+"locations": [
+"New York, NY, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6adbbaae46a8cabdc1ff46be",
+"posted": 1792713600,
+"updated": 0,
+"first_seen": 1792796609,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6abe96d04ac55253f5d617b4",
+"title": "Summer Associate Internship (Business Intelligence Analyst)",
+"company": "Navy Federal Credit Union",
+"locations": [
+"Winchester, VA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6abe96d04ac55253f5d617b4",
+"posted": 1792713600,
+"updated": 0,
+"first_seen": 1792785370,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6adbb3300a4cc7090f9744a4",
+"title": "Summer Intern 2027 - Analytics Engineer Intern",
+"company": "ID.me",
+"locations": [
+"Mountain View, CA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6adbb3300a4cc7090f9744a4",
+"posted": 1792713600,
+"updated": 0,
+"first_seen": 1792796609,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa16307ef23570cae2439c2",
+"title": "Summer Associate Internship (Data Scientist)",
+"company": "Navy Federal Credit Union",
+"locations": [
+"Vienna, VA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa16307ef23570cae2439c2",
+"posted": 1792713600,
+"updated": 0,
+"first_seen": 1792706049,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "jr-6abe923c8ff3fb9b3bc748ab",
 "title": "Master's Data Science Internship 2027 (USA)",
 "company": "Pinterest",
@@ -460,6 +674,63 @@
 "posted": 1792713600,
 "updated": 0,
 "first_seen": 1792785370,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6abe77908ff3fb9b3bc73d43",
+"title": "Data Analyst, Intern",
+"company": "Stripe",
+"locations": [
+"New York, NY, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6abe77908ff3fb9b3bc73d43",
+"posted": 1792713600,
+"updated": 0,
+"first_seen": 1792624279,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6aa46ddd1d92e2d05d114bbf",
+"title": "Data Science Intern, Algorithms (Summer 2027 - SF/NYC)",
+"company": "Lyft",
+"locations": [
+"New York, NY, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6aa46ddd1d92e2d05d114bbf",
+"posted": 1792713600,
+"updated": 0,
+"first_seen": 1792796609,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6adae1d191f93f4b0571508b",
+"title": "Intern - Data Science, Distributed Intelligence",
+"company": "Itron, Inc.",
+"locations": [
+"Liberty Lake, WA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6adae1d191f93f4b0571508b",
+"posted": 1792713600,
+"updated": 0,
+"first_seen": 1792796609,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -582,44 +853,6 @@
 "company_url": null
 },
 {
-"id": "jr-6abe77908ff3fb9b3bc73d43",
-"title": "Data Analyst, Intern",
-"company": "Stripe",
-"locations": [
-"New York, NY, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6abe77908ff3fb9b3bc73d43",
-"posted": 1792713600,
-"updated": 0,
-"first_seen": 1792624279,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6abea4e74ac55253f5d61b91",
-"title": "Summer Associate Internship (Business Intelligence Analyst)",
-"company": "Navy Federal Credit Union",
-"locations": [
-"Pensacola, FL, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6abea4e74ac55253f5d61b91",
-"posted": 1792713600,
-"updated": 0,
-"first_seen": 1792785370,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
 "id": "jr-6aac1bf62e757fcb5c8b3c3c",
 "title": "Data Analyst I (Intern) - United States",
 "company": "Cisco",
@@ -658,52 +891,14 @@
 "company_url": null
 },
 {
-"id": "jr-6abb2e4cd2914e9273eefdb3",
-"title": "Summer Associate Internship (Data Scientist)",
-"company": "Navy Federal Credit Union",
-"locations": [
-"Vienna, VA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6abb2e4cd2914e9273eefdb3",
-"posted": 1792713600,
-"updated": 0,
-"first_seen": 1792706049,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6adb76285dc7953215a32bd5",
-"title": "Data Analytics & Data Science Intern — Spring & Summer 2027",
-"company": "Simbe",
-"locations": [
-"Burlingame, CA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6adb76285dc7953215a32bd5",
-"posted": 1792713600,
-"updated": 0,
-"first_seen": 1792785370,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa3c48a4233a2201a2b37c3",
+"id": "jr-6aa380354233a2201a2b19fa",
 "title": "Data Analytics Intern (Summer 2027)",
 "company": "Zipline",
 "locations": [
 "South San Francisco, CA, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6aa3c48a4233a2201a2b37c3",
+"url": "https://jobright.ai/jobs/info/6aa380354233a2201a2b19fa",
 "posted": 1792713600,
 "updated": 0,
 "first_seen": 1792706049,
@@ -745,6 +940,25 @@
 "posted": 1792713600,
 "updated": 0,
 "first_seen": 1792785370,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "jr-6ab822aad7fde2c08ec8c5d9",
+"title": "Data Science & AI Innovation Postdoctoral Fellow",
+"company": "Novartis",
+"locations": [
+"Cambridge, MA, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6ab822aad7fde2c08ec8c5d9",
+"posted": 1792713600,
+"updated": 0,
+"first_seen": 1792796609,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -1000,6 +1214,139 @@
 "company_url": null
 },
 {
+"id": "wd-aep-R20499",
+"title": "Data Scientist Intern",
+"company": "American Electric Power",
+"locations": [
+"Columbus, OH"
+],
+"terms": [],
+"url": "https://aep.wd1.myworkdayjobs.com/en-US/AEPCareerSite/job/Columbus-OH/Data-Scientist-Intern---Columbus--OH_R20499",
+"posted": 1792710140,
+"updated": 0,
+"first_seen": 1792529438,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-cvshealth-R1081128",
+"title": "Innovation & Technology Internship - Software Engineering: Data & Intelligence Summer 2027 Graduate",
+"company": "CVS Health",
+"locations": [
+"NY - New York"
+],
+"terms": [],
+"url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship--Software-Engineering--Data---Intelligence-Summer-2027-Graduate_R1081128",
+"posted": 1792710099,
+"updated": 0,
+"first_seen": 1792706049,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-cvshealth-R1052342",
+"title": "Medicaid Data Analytics Corporate Internship - Summer 2027 (Undergraduate)",
+"company": "CVS Health",
+"locations": [
+"CT - Hartford"
+],
+"terms": [],
+"url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CT---Hartford/Medicaid-Data-Analytics-Corporate-Internship---Summer-2027--Undergraduate-_R1052342",
+"posted": 1792710099,
+"updated": 0,
+"first_seen": 1792715600,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-cvshealth-R1081038",
+"title": "Innovation & Technology Internship - Data Science - Summer 2027 (Graduate)",
+"company": "CVS Health",
+"locations": [
+"NY - New York"
+],
+"terms": [],
+"url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship---Data-Science---Summer-2027--Graduate-_R1081038",
+"posted": 1792710099,
+"updated": 0,
+"first_seen": 1792706049,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-cvshealth-R1081090",
+"title": "Innovation & Technology Internship – Data Engineering – Summer 2027 (Undergraduate)",
+"company": "CVS Health",
+"locations": [
+"NY - New York"
+],
+"terms": [],
+"url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship---Data-Engineering---Summer-2027--Undergraduate-_R1081090",
+"posted": 1792710099,
+"updated": 0,
+"first_seen": 1792715600,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-cvshealth-R1081101",
+"title": "Innovation & Technology Internship – Data Engineering – Summer 2027 (Graduate)",
+"company": "CVS Health",
+"locations": [
+"NY - New York"
+],
+"terms": [],
+"url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship---Data-Engineering---Summer-2027--Graduate-_R1081101",
+"posted": 1792710099,
+"updated": 0,
+"first_seen": 1792715600,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-disney-10163753",
+"title": "Tax Data Management & Innovation Graduate Intern, Spring 2027",
+"company": "Disney",
+"locations": [
+"Celebration, FL, USA"
+],
+"terms": [],
+"url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Tax-Data-Management---Innovation-Graduate-Intern--Spring-2027_10163753",
+"posted": 1792710097,
+"updated": 0,
+"first_seen": 1792706049,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "3a1df196-4b77-41ff-b9f7-833dfec00ba6",
 "title": "Asset Management Data Scientist – Summer Associate Intern",
 "company": "JP Morgan Chase",
@@ -1171,139 +1518,6 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/STR"
-},
-{
-"id": "wd-aep-R20499",
-"title": "Data Scientist Intern",
-"company": "American Electric Power",
-"locations": [
-"Columbus, OH"
-],
-"terms": [],
-"url": "https://aep.wd1.myworkdayjobs.com/en-US/AEPCareerSite/job/Columbus-OH/Data-Scientist-Intern---Columbus--OH_R20499",
-"posted": 1792698895,
-"updated": 0,
-"first_seen": 1792529438,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-cvshealth-R1081128",
-"title": "Innovation & Technology Internship - Software Engineering: Data & Intelligence Summer 2027 Graduate",
-"company": "CVS Health",
-"locations": [
-"NY - New York"
-],
-"terms": [],
-"url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship--Software-Engineering--Data---Intelligence-Summer-2027-Graduate_R1081128",
-"posted": 1792698855,
-"updated": 0,
-"first_seen": 1792706049,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-cvshealth-R1052342",
-"title": "Medicaid Data Analytics Corporate Internship - Summer 2027 (Undergraduate)",
-"company": "CVS Health",
-"locations": [
-"CT - Hartford"
-],
-"terms": [],
-"url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CT---Hartford/Medicaid-Data-Analytics-Corporate-Internship---Summer-2027--Undergraduate-_R1052342",
-"posted": 1792698855,
-"updated": 0,
-"first_seen": 1792715600,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-cvshealth-R1081038",
-"title": "Innovation & Technology Internship - Data Science - Summer 2027 (Graduate)",
-"company": "CVS Health",
-"locations": [
-"NY - New York"
-],
-"terms": [],
-"url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship---Data-Science---Summer-2027--Graduate-_R1081038",
-"posted": 1792698855,
-"updated": 0,
-"first_seen": 1792706049,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-cvshealth-R1081090",
-"title": "Innovation & Technology Internship – Data Engineering – Summer 2027 (Undergraduate)",
-"company": "CVS Health",
-"locations": [
-"NY - New York"
-],
-"terms": [],
-"url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship---Data-Engineering---Summer-2027--Undergraduate-_R1081090",
-"posted": 1792698855,
-"updated": 0,
-"first_seen": 1792715600,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-cvshealth-R1081101",
-"title": "Innovation & Technology Internship – Data Engineering – Summer 2027 (Graduate)",
-"company": "CVS Health",
-"locations": [
-"NY - New York"
-],
-"terms": [],
-"url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Innovation---Technology-Internship---Data-Engineering---Summer-2027--Graduate-_R1081101",
-"posted": 1792698855,
-"updated": 0,
-"first_seen": 1792715600,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-disney-10163753",
-"title": "Tax Data Management & Innovation Graduate Intern, Spring 2027",
-"company": "Disney",
-"locations": [
-"Celebration, FL, USA"
-],
-"terms": [],
-"url": "https://disney.wd5.myworkdayjobs.com/en-US/disneycareer/job/Celebration-FL-USA/Tax-Data-Management---Innovation-Graduate-Intern--Spring-2027_10163753",
-"posted": 1792698853,
-"updated": 0,
-"first_seen": 1792706049,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "95d0fbdb-14f6-4eaf-a46b-3f06591a562b",
@@ -1775,17 +1989,17 @@
 "company_url": null
 },
 {
-"id": "jr-6ada754ae4b94611ab85cb16",
+"id": "jr-6ada7744950ef68d51857ed9",
 "title": "Data Scientist Intern (Summer 2027)",
 "company": "HDR",
 "locations": [
 "Omaha, NE, United States"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6ada754ae4b94611ab85cb16",
+"url": "https://jobright.ai/jobs/info/6ada7744950ef68d51857ed9",
 "posted": 1792627200,
 "updated": 0,
-"first_seen": 1792785370,
+"first_seen": 1792796609,
 "source": "jobright",
 "board": null,
 "category": null,
@@ -1813,6 +2027,25 @@
 "company_url": null
 },
 {
+"id": "jr-6adbabe146a8cabdc1ff427d",
+"title": "Innovation & Technology Internship - Tech Strategy Ops & Business Analytics Summer 2027 (Undergrad)",
+"company": "CVS Health",
+"locations": [
+"Hartford, CT, United States"
+],
+"terms": [],
+"url": "https://jobright.ai/jobs/info/6adbabe146a8cabdc1ff427d",
+"posted": 1792627200,
+"updated": 0,
+"first_seen": 1792796609,
+"source": "jobright",
+"board": null,
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "jr-6adb93e39e3e874dbfba0ac9",
 "title": "AI/Data Science Intern",
 "company": "Boston Scientific",
@@ -1832,285 +2065,76 @@
 "company_url": null
 },
 {
-"id": "jr-6adb8e78c5c64fa3d9cb0029",
-"title": "Business Intelligence Developer Internship - Summer 2027",
-"company": "Auto-Owners Insurance",
+"id": "wd-amat-R2626381",
+"title": "2027 Data Analytics & Business Operations Spring Co-Op or Summer Intern- Bachelor's/Master's (Austin, TX)",
+"company": "Applied Materials",
 "locations": [
-"Lansing, MI, United States"
+"Austin,TX"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6adb8e78c5c64fa3d9cb0029",
-"posted": 1792627200,
+"url": "https://amat.wd1.myworkdayjobs.com/en-US/External/job/AustinTX/XMLNAME-2027-Data-Analytics---Business-Operations-Spring-Co-Op-or-Summer-Intern--Bachelor-s-Master-s--Austin--TX-_R2626381",
+"posted": 1792623764,
 "updated": 0,
-"first_seen": 1792785370,
-"source": "jobright",
-"board": null,
+"first_seen": 1791637169,
+"source": "ats",
+"board": "Workday",
 "category": null,
 "sponsorship": null,
 "degrees": [],
 "company_url": null
 },
 {
-"id": "jr-6aa3f437c1928370a285b95e",
-"title": "Pricing & Data Analyst Internship",
-"company": "Toyota Material Handling",
+"id": "wd-nasdaq-R0027136",
+"title": "Business Analyst Intern - 2027 Summer Internship",
+"company": "Nasdaq",
 "locations": [
-"Greene, NY, United States"
+"USA - New York City - New York"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6aa3f437c1928370a285b95e",
-"posted": 1792627200,
+"url": "https://nasdaq.wd1.myworkdayjobs.com/en-US/Global_External_Site/job/USA---New-York-City---New-York/Business-Analyst-Intern---2027-Summer-Internship_R0027136",
+"posted": 1792623757,
 "updated": 0,
-"first_seen": 1792734952,
-"source": "jobright",
-"board": null,
+"first_seen": 1792611189,
+"source": "ats",
+"board": "Workday",
 "category": null,
 "sponsorship": null,
 "degrees": [],
 "company_url": null
 },
 {
-"id": "jr-6ada8b224c3adc437cece284",
-"title": "Quantitative Research Analyst – Intern (US)",
-"company": "Citadel",
+"id": "wd-amfam-R39426",
+"title": "Summer 2027 Intern - Data Engineering",
+"company": "American Family",
 "locations": [
-"New York, NY, United States"
+"WI Madison"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6ada8b224c3adc437cece284",
-"posted": 1792627200,
+"url": "https://amfam.wd1.myworkdayjobs.com/en-US/Careers/job/WI-Madison/Intern---Data-Engineering_R39426",
+"posted": 1792623753,
 "updated": 0,
-"first_seen": 1792734952,
-"source": "jobright",
-"board": null,
+"first_seen": 1792754869,
+"source": "ats",
+"board": "Workday",
 "category": null,
 "sponsorship": null,
 "degrees": [],
 "company_url": null
 },
 {
-"id": "jr-6ada8bac4c3adc437cece307",
-"title": "Sector Data Scientist – 2027 Intern (US)",
-"company": "Citadel",
+"id": "wd-northwesternmutual-JR-45807",
+"title": "Public Investments Quantitative Analyst Intern, Summer 2027",
+"company": "Northwestern Mutual",
 "locations": [
-"New York, NY, United States"
+"Milwaukee, WI Corporate"
 ],
 "terms": [],
-"url": "https://jobright.ai/jobs/info/6ada8bac4c3adc437cece307",
-"posted": 1792627200,
+"url": "https://northwesternmutual.wd5.myworkdayjobs.com/en-US/CORPORATE-CAREERS/job/Milwaukee-WI-Corporate/Public-Investments-Quantitative-Analyst-Intern--Summer-2027_JR-45807",
+"posted": 1792623749,
 "updated": 0,
-"first_seen": 1792734952,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6ada7fb9950ef68d51858572",
-"title": "Applied Data Scientist Internship (DoW SkillBridge) with Security Clearance",
-"company": "IntelliGenesis LLC®",
-"locations": [
-"Columbia, MD, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6ada7fb9950ef68d51858572",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792715600,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6ada5a66e4b94611ab85b8ef",
-"title": "2027 Summer Intern – Quantitative Analyst (Raleigh, NC)",
-"company": "First Citizens Bank",
-"locations": [
-"Raleigh, NC, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6ada5a66e4b94611ab85b8ef",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792706049,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa9479c6d0edc2d91b08d58",
-"title": "Dell Technologies Services Undergraduate Analytics Intern",
-"company": "Dell Technologies",
-"locations": [
-"Round Rock, TX, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa9479c6d0edc2d91b08d58",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792715600,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6ada798154bbabbab0716c09",
-"title": "Data & Analytics - Intern Job Details / Farm Credit Services of America",
-"company": "Farm Credit Services of America",
-"locations": [
-"Omaha, NE, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6ada798154bbabbab0716c09",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792715600,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6ada28b14c3adc437cec9f3b",
-"title": "Development Data and Research Intern (  Spring2027)",
-"company": "International Rescue Committee",
-"locations": [
-"Silver Spring, MD, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6ada28b14c3adc437cec9f3b",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792692616,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6abed083d9621c5b28391bca",
-"title": "Summer Associate Internship (Consumer Lending Business Intelligence Analyst)",
-"company": "Navy Federal Credit Union",
-"locations": [
-"Vienna, VA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6abed083d9621c5b28391bca",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792715600,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa1c7a2dbc0e60e37e139df",
-"title": "2027 Spring Data & Analytics Intern (R20783)",
-"company": "MKS Inc.",
-"locations": [
-"Andover, MA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa1c7a2dbc0e60e37e139df",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792734952,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6ada5d9d03d2da7528914653",
-"title": "Business Intelligence Intern",
-"company": "HSB - Hartford Steam Boiler",
-"locations": [
-"Hartford, CT, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6ada5d9d03d2da7528914653",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792706049,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6ada5ccd4c3adc437cecc127",
-"title": "2027 Summer Intern – Quantitative Analyst (Raleigh, NC)",
-"company": "First Citizens Wealth",
-"locations": [
-"Raleigh, NC, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6ada5ccd4c3adc437cecc127",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792706049,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa0ac933b5aa83237b0a987",
-"title": "Global Supply Chain Data Science Intern",
-"company": "Ingredion Incorporated",
-"locations": [
-"Westchester, IL, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa0ac933b5aa83237b0a987",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792706049,
-"source": "jobright",
-"board": null,
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "jr-6aa16844ef23570cae243abe",
-"title": "Summer Associate Internship (Business Systems Analyst)",
-"company": "Navy Federal Credit Union",
-"locations": [
-"Vienna, VA, United States"
-],
-"terms": [],
-"url": "https://jobright.ai/jobs/info/6aa16844ef23570cae243abe",
-"posted": 1792627200,
-"updated": 0,
-"first_seen": 1792785370,
-"source": "jobright",
-"board": null,
+"first_seen": 1792611189,
+"source": "ats",
+"board": "Workday",
 "category": null,
 "sponsorship": null,
 "degrees": [],
@@ -2176,82 +2200,6 @@
 "sponsorship": "Other",
 "degrees": [],
 "company_url": "https://simplify.jobs/c/Analytic-Partners"
-},
-{
-"id": "wd-amat-R2626381",
-"title": "2027 Data Analytics & Business Operations Spring Co-Op or Summer Intern- Bachelor's/Master's (Austin, TX)",
-"company": "Applied Materials",
-"locations": [
-"Austin,TX"
-],
-"terms": [],
-"url": "https://amat.wd1.myworkdayjobs.com/en-US/External/job/AustinTX/XMLNAME-2027-Data-Analytics---Business-Operations-Spring-Co-Op-or-Summer-Intern--Bachelor-s-Master-s--Austin--TX-_R2626381",
-"posted": 1792612521,
-"updated": 0,
-"first_seen": 1791637169,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-nasdaq-R0027136",
-"title": "Business Analyst Intern - 2027 Summer Internship",
-"company": "Nasdaq",
-"locations": [
-"USA - New York City - New York"
-],
-"terms": [],
-"url": "https://nasdaq.wd1.myworkdayjobs.com/en-US/Global_External_Site/job/USA---New-York-City---New-York/Business-Analyst-Intern---2027-Summer-Internship_R0027136",
-"posted": 1792612514,
-"updated": 0,
-"first_seen": 1792611189,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-amfam-R39426",
-"title": "Summer 2027 Intern - Data Engineering",
-"company": "American Family",
-"locations": [
-"WI Madison"
-],
-"terms": [],
-"url": "https://amfam.wd1.myworkdayjobs.com/en-US/Careers/job/WI-Madison/Intern---Data-Engineering_R39426",
-"posted": 1792612511,
-"updated": 0,
-"first_seen": 1792754869,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-northwesternmutual-JR-45807",
-"title": "Public Investments Quantitative Analyst Intern, Summer 2027",
-"company": "Northwestern Mutual",
-"locations": [
-"Milwaukee, WI Corporate"
-],
-"terms": [],
-"url": "https://northwesternmutual.wd5.myworkdayjobs.com/en-US/CORPORATE-CAREERS/job/Milwaukee-WI-Corporate/Public-Investments-Quantitative-Analyst-Intern--Summer-2027_JR-45807",
-"posted": 1792612504,
-"updated": 0,
-"first_seen": 1792611189,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "f724ecc9-e5c4-47e4-9e6d-3584b691bd12",
@@ -2454,6 +2402,82 @@
 "company_url": "https://simplify.jobs/c/Athene"
 },
 {
+"id": "wd-verizon-R-1102417",
+"title": "Basking Ridge, NJ: VTeamer for a Day: Verizon Consumer Group: Data Science Summer 2027 Internship",
+"company": "Verizon",
+"locations": [
+"Basking Ridge, New Jersey"
+],
+"terms": [],
+"url": "https://verizon.wd12.myworkdayjobs.com/en-US/verizon-careers/job/Basking-Ridge-New-Jersey/Basking-Ridge--NJ--VTeamer-for-a-Day--Verizon-Consumer-Group--Data-Science-Summer-2027-Internship_R-1102417",
+"posted": 1792537402,
+"updated": 0,
+"first_seen": 1792477846,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-xcelenergy-JR115742",
+"title": "GIS, Grid Data Intern - MN",
+"company": "Xcel Energy",
+"locations": [
+"Minneapolis, MN, 55418"
+],
+"terms": [],
+"url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Minneapolis-MN-55418/Grid-Data-Intern---MN_JR115742-1",
+"posted": 1792537340,
+"updated": 0,
+"first_seen": 1792517375,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-xcelenergy-JR115817",
+"title": "Energy Product Analytics Intern- CO",
+"company": "Xcel Energy",
+"locations": [
+"Denver, CO, 80205"
+],
+"terms": [],
+"url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Denver-CO-80205/Residential-Energy-Product-Strategy-Intern--CO_JR115817-1",
+"posted": 1792537340,
+"updated": 0,
+"first_seen": 1792517375,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-cigna-26012472",
+"title": "Business Analytics Intern",
+"company": "Cigna",
+"locations": [
+"Bloomfield, CT"
+],
+"terms": [],
+"url": "https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/Bloomfield-CT/Business-Analytics-Intern_26012472",
+"posted": 1792537311,
+"updated": 0,
+"first_seen": 1792517375,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "9fe85b14-ce91-4fe3-8f6b-a7ece6195cd0",
 "title": "Policy Data Analyst Intern",
 "company": "Stand Together",
@@ -2496,82 +2520,6 @@
 "Bachelor's"
 ],
 "company_url": "https://simplify.jobs/c/Paccar"
-},
-{
-"id": "wd-verizon-R-1102417",
-"title": "Basking Ridge, NJ: VTeamer for a Day: Verizon Consumer Group: Data Science Summer 2027 Internship",
-"company": "Verizon",
-"locations": [
-"Basking Ridge, New Jersey"
-],
-"terms": [],
-"url": "https://verizon.wd12.myworkdayjobs.com/en-US/verizon-careers/job/Basking-Ridge-New-Jersey/Basking-Ridge--NJ--VTeamer-for-a-Day--Verizon-Consumer-Group--Data-Science-Summer-2027-Internship_R-1102417",
-"posted": 1792526161,
-"updated": 0,
-"first_seen": 1792477846,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-xcelenergy-JR115742",
-"title": "GIS, Grid Data Intern - MN",
-"company": "Xcel Energy",
-"locations": [
-"Minneapolis, MN, 55418"
-],
-"terms": [],
-"url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Minneapolis-MN-55418/Grid-Data-Intern---MN_JR115742-1",
-"posted": 1792526095,
-"updated": 0,
-"first_seen": 1792517375,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-xcelenergy-JR115817",
-"title": "Energy Product Analytics Intern- CO",
-"company": "Xcel Energy",
-"locations": [
-"Denver, CO, 80205"
-],
-"terms": [],
-"url": "https://xcelenergy.wd1.myworkdayjobs.com/en-US/External/job/Denver-CO-80205/Residential-Energy-Product-Strategy-Intern--CO_JR115817-1",
-"posted": 1792526095,
-"updated": 0,
-"first_seen": 1792517375,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-cigna-26012472",
-"title": "Business Analytics Intern",
-"company": "Cigna",
-"locations": [
-"Bloomfield, CT"
-],
-"terms": [],
-"url": "https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/Bloomfield-CT/Business-Analytics-Intern_26012472",
-"posted": 1792526066,
-"updated": 0,
-"first_seen": 1792517375,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "3555c695-037a-494d-b111-9652b4b91a08",
@@ -2690,6 +2638,44 @@
 "PhD"
 ],
 "company_url": "https://simplify.jobs/c/Toyota"
+},
+{
+"id": "wd-carrier-30220000",
+"title": "Data Analytics Intern - Summer",
+"company": "Carrier",
+"locations": [
+"CAI23: Carrier-Indianapolis, 7310 West Morris Street, Indianapolis, IN, 46231 USA"
+],
+"terms": [],
+"url": "https://carrier.wd5.myworkdayjobs.com/en-US/jobs/job/CAI23-Carrier-Indianapolis-7310-West-Morris-Street-Indianapolis-IN-46231-USA/Data-Analytics-Intern---Summer_30220000",
+"posted": 1792450981,
+"updated": 0,
+"first_seen": 1792458813,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-kla-2642280",
+"title": "Tax & Data Analytics Intern",
+"company": "KLA",
+"locations": [
+"Ann Arbor, MI"
+],
+"terms": [],
+"url": "https://kla.wd1.myworkdayjobs.com/en-US/Search/job/Ann-Arbor-MI/Tax---Data-Analytics-Intern_2642280-2",
+"posted": 1792450892,
+"updated": 0,
+"first_seen": 1792386717,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
 },
 {
 "id": "15cc84d9-ea22-43e2-b66e-e2b0e103f7aa",
@@ -2818,44 +2804,6 @@
 "sponsorship": "Other",
 "degrees": [],
 "company_url": "https://simplify.jobs/c/Amplify"
-},
-{
-"id": "wd-carrier-30220000",
-"title": "Data Analytics Intern - Summer",
-"company": "Carrier",
-"locations": [
-"CAI23: Carrier-Indianapolis, 7310 West Morris Street, Indianapolis, IN, 46231 USA"
-],
-"terms": [],
-"url": "https://carrier.wd5.myworkdayjobs.com/en-US/jobs/job/CAI23-Carrier-Indianapolis-7310-West-Morris-Street-Indianapolis-IN-46231-USA/Data-Analytics-Intern---Summer_30220000",
-"posted": 1792439738,
-"updated": 0,
-"first_seen": 1792458813,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-kla-2642280",
-"title": "Tax & Data Analytics Intern",
-"company": "KLA",
-"locations": [
-"Ann Arbor, MI"
-],
-"terms": [],
-"url": "https://kla.wd1.myworkdayjobs.com/en-US/Search/job/Ann-Arbor-MI/Tax---Data-Analytics-Intern_2642280-2",
-"posted": 1792439650,
-"updated": 0,
-"first_seen": 1792386717,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "b9d84998-3a7f-4698-a344-64d97d9d9381",
@@ -3109,6 +3057,25 @@
 "company_url": "https://simplify.jobs/c/HCSC"
 },
 {
+"id": "wd-carmax-JR-188143",
+"title": "Business Analyst Intern - Atlanta, GA",
+"company": "CarMax",
+"locations": [
+"Corporate - Atlanta"
+],
+"terms": [],
+"url": "https://carmax.wd1.myworkdayjobs.com/en-US/External/job/Corporate---Atlanta/Business-Analyst-Intern---Atlanta--GA_JR-188143",
+"posted": 1792191788,
+"updated": 0,
+"first_seen": 1792168344,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "f51bdd40-5f4d-429e-a22b-1e826726e2ad",
 "title": "Data Internship - Analytics & Decision Science",
 "company": "CenturyLink",
@@ -3174,25 +3141,6 @@
 "PhD"
 ],
 "company_url": "https://simplify.jobs/c/John-Deere"
-},
-{
-"id": "wd-carmax-JR-188143",
-"title": "Business Analyst Intern - Atlanta, GA",
-"company": "CarMax",
-"locations": [
-"Corporate - Atlanta"
-],
-"terms": [],
-"url": "https://carmax.wd1.myworkdayjobs.com/en-US/External/job/Corporate---Atlanta/Business-Analyst-Intern---Atlanta--GA_JR-188143",
-"posted": 1792180546,
-"updated": 0,
-"first_seen": 1792168344,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "c4962657-fd94-4f66-91cf-5669446b920d",
@@ -3333,6 +3281,82 @@
 "company_url": "https://simplify.jobs/c/Invesco"
 },
 {
+"id": "wd-bah-R0251716",
+"title": "University, Digital Transformation Analyst Intern",
+"company": "Booz Allen Hamilton",
+"locations": [
+"Arlington, VA"
+],
+"terms": [],
+"url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Arlington-VA/University--Digital-Transformation-Analyst-Intern_R0251716",
+"posted": 1792105373,
+"updated": 0,
+"first_seen": 1792092161,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-amfam-R39510",
+"title": "Enterprise Data Intern",
+"company": "American Family",
+"locations": [
+"WI Madison"
+],
+"terms": [],
+"url": "https://amfam.wd1.myworkdayjobs.com/en-US/Careers/job/WI-Madison/Enterprise-Data-Intern_R39510",
+"posted": 1792105353,
+"updated": 0,
+"first_seen": 1792092161,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-cigna-26009483",
+"title": "Healthcare Analytics Summer Intern - Morris Plains, NJ - Start Date: May 24, 2027",
+"company": "Cigna",
+"locations": [
+"Morris Plains, NJ"
+],
+"terms": [],
+"url": "https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/Morris-Plains-NJ/Healthcare-Analytics-Summer-Intern---Morris-Plains--NJ---Start-Date--May-24--2027_26009483",
+"posted": 1792105311,
+"updated": 0,
+"first_seen": 1792092161,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-citi-26951372",
+"title": "Functions - Internal Audit, Summer Analyst, Dallas - USA, 2027",
+"company": "Citi",
+"locations": [
+"Irving Texas United States"
+],
+"terms": [],
+"url": "https://citi.wd5.myworkdayjobs.com/en-US/2/job/Irving-Texas-United-States/Functions---Internal-Audit--Summer-Analyst--Dallas---USA--2027_26951372",
+"posted": 1792105299,
+"updated": 0,
+"first_seen": 1792077591,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "656d6b64-799c-410f-896c-1f08a6c5d7ad",
 "title": "Summer Intern - Product Definition Analytics",
 "company": "Paccar",
@@ -3367,82 +3391,6 @@
 "first_seen": 1792103985,
 "source": "ats",
 "board": "Greenhouse",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-bah-R0251716",
-"title": "University, Digital Transformation Analyst Intern",
-"company": "Booz Allen Hamilton",
-"locations": [
-"Arlington, VA"
-],
-"terms": [],
-"url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Arlington-VA/University--Digital-Transformation-Analyst-Intern_R0251716",
-"posted": 1792094131,
-"updated": 0,
-"first_seen": 1792092161,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-amfam-R39510",
-"title": "Enterprise Data Intern",
-"company": "American Family",
-"locations": [
-"WI Madison"
-],
-"terms": [],
-"url": "https://amfam.wd1.myworkdayjobs.com/en-US/Careers/job/WI-Madison/Enterprise-Data-Intern_R39510",
-"posted": 1792094111,
-"updated": 0,
-"first_seen": 1792092161,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-cigna-26009483",
-"title": "Healthcare Analytics Summer Intern - Morris Plains, NJ - Start Date: May 24, 2027",
-"company": "Cigna",
-"locations": [
-"Morris Plains, NJ"
-],
-"terms": [],
-"url": "https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/Morris-Plains-NJ/Healthcare-Analytics-Summer-Intern---Morris-Plains--NJ---Start-Date--May-24--2027_26009483",
-"posted": 1792094066,
-"updated": 0,
-"first_seen": 1792092161,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-citi-26951372",
-"title": "Functions - Internal Audit, Summer Analyst, Dallas - USA, 2027",
-"company": "Citi",
-"locations": [
-"Irving Texas United States"
-],
-"terms": [],
-"url": "https://citi.wd5.myworkdayjobs.com/en-US/2/job/Irving-Texas-United-States/Functions---Internal-Audit--Summer-Analyst--Dallas---USA--2027_26951372",
-"posted": 1792094056,
-"updated": 0,
-"first_seen": 1792077591,
-"source": "ats",
-"board": "Workday",
 "category": null,
 "sponsorship": null,
 "degrees": [],
@@ -3651,6 +3599,44 @@
 "company_url": "https://simplify.jobs/c/Live-Nation-Entertainment"
 },
 {
+"id": "wd-assurant-R-115717",
+"title": "Summer 2027 Intern: Data Support Analyst",
+"company": "Assurant",
+"locations": [
+"Illinois Virtual"
+],
+"terms": [],
+"url": "https://assurant.wd1.myworkdayjobs.com/en-US/Assurant_Careers/job/Illinois-Virtual/Summer-2027-Intern--Data-Support-Analyst_R-115717",
+"posted": 1792018953,
+"updated": 0,
+"first_seen": 1792611189,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
+"id": "wd-assurant-R-115659",
+"title": "Summer 2027 Intern: Product Analyst Intern - Housing",
+"company": "Assurant",
+"locations": [
+"United States Virtual"
+],
+"terms": [],
+"url": "https://assurant.wd1.myworkdayjobs.com/en-US/Assurant_Careers/job/United-States-Virtual/Summer-2027-Intern--Product-Analyst-Intern---Housing_R-115659",
+"posted": 1792018953,
+"updated": 0,
+"first_seen": 1792624279,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "7667ab73-65ee-42b0-96d1-cbf12853d654",
 "title": "AI & Data Science Intern",
 "company": "AGCO",
@@ -3768,44 +3754,6 @@
 "PhD"
 ],
 "company_url": "https://simplify.jobs/c/Businessolver"
-},
-{
-"id": "wd-assurant-R-115717",
-"title": "Summer 2027 Intern: Data Support Analyst",
-"company": "Assurant",
-"locations": [
-"Illinois Virtual"
-],
-"terms": [],
-"url": "https://assurant.wd1.myworkdayjobs.com/en-US/Assurant_Careers/job/Illinois-Virtual/Summer-2027-Intern--Data-Support-Analyst_R-115717",
-"posted": 1792007708,
-"updated": 0,
-"first_seen": 1792611189,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-assurant-R-115659",
-"title": "Summer 2027 Intern: Product Analyst Intern - Housing",
-"company": "Assurant",
-"locations": [
-"United States Virtual"
-],
-"terms": [],
-"url": "https://assurant.wd1.myworkdayjobs.com/en-US/Assurant_Careers/job/United-States-Virtual/Summer-2027-Intern--Product-Analyst-Intern---Housing_R-115659",
-"posted": 1792007708,
-"updated": 0,
-"first_seen": 1792624279,
-"source": "ats",
-"board": "Workday",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
 },
 {
 "id": "07d9a5af-4f9d-4e8b-bd5b-609ba7e2a32e",
@@ -3962,29 +3910,6 @@
 "Master's"
 ],
 "company_url": "https://simplify.jobs/c/Nissan-Global"
-},
-{
-"id": "0f342529-4449-45db-8d27-40075631b3a6",
-"title": "Analytics Modelling Intern",
-"company": "Brookfield",
-"locations": [
-"NYC"
-],
-"terms": [
-"Summer 2027"
-],
-"url": "https://brookfield.wd5.myworkdayjobs.com/brookfield/job/New-York-New-York/Intern--Analytics-Modelling---Brookfield-Wealth-Solutions_R2053354",
-"posted": 1791936000,
-"updated": 1792017481,
-"first_seen": 1792785370,
-"source": "simplify",
-"board": null,
-"category": "Quant",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/Brookfield"
 },
 {
 "id": "d08dd87d-40ca-4a83-836d-c5003f3f8cc8",
@@ -4256,6 +4181,25 @@
 "company_url": "https://simplify.jobs/c/Drivetime"
 },
 {
+"id": "wd-expedia-R-110305",
+"title": "Finance Analyst Intern - 2027 - Seattle",
+"company": "Expedia",
+"locations": [
+"Washington - Seattle Campus"
+],
+"terms": [],
+"url": "https://expedia.wd108.myworkdayjobs.com/en-US/search/job/Washington---Seattle-Campus/Finance-Analyst-Intern---2027---Seattle_R-110305-1",
+"posted": 1791846109,
+"updated": 0,
+"first_seen": 1792235257,
+"source": "ats",
+"board": "Workday",
+"category": null,
+"sponsorship": null,
+"degrees": [],
+"company_url": null
+},
+{
 "id": "3270ba05-496f-4b60-b1fe-7fb7cfb915bd",
 "title": "Digital Technology & Data Intern",
 "company": "Koch Industries",
@@ -4357,25 +4301,6 @@
 "first_seen": 1791856726,
 "source": "ats",
 "board": "SmartRecruiters",
-"category": null,
-"sponsorship": null,
-"degrees": [],
-"company_url": null
-},
-{
-"id": "wd-expedia-R-110305",
-"title": "Finance Analyst Intern - 2027 - Seattle",
-"company": "Expedia",
-"locations": [
-"Washington - Seattle Campus"
-],
-"terms": [],
-"url": "https://expedia.wd108.myworkdayjobs.com/en-US/search/job/Washington---Seattle-Campus/Finance-Analyst-Intern---2027---Seattle_R-110305-1",
-"posted": 1791834864,
-"updated": 0,
-"first_seen": 1792235257,
-"source": "ats",
-"board": "Workday",
 "category": null,
 "sponsorship": null,
 "degrees": [],
@@ -4632,95 +4557,6 @@
 "PhD"
 ],
 "company_url": "https://simplify.jobs/c/Tencent"
-},
-{
-"id": "377048f7-30b7-4b39-9f96-8465dcf9369b",
-"title": "Data Scientist Intern",
-"company": "SageSure",
-"locations": [
-"Jersey City, NJ",
-"Cheshire, CT"
-],
-"terms": [],
-"url": "https://www.sagesure.com/careers/current-job-openings/?gh_jid=4719514006",
-"posted": 1791584005,
-"updated": 1791584109,
-"first_seen": 1792785370,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/SageSure-Insurance-Managers"
-},
-{
-"id": "20f49355-06d2-4416-b7ab-ae0fe4f40e55",
-"title": "Data Operations Engineer Intern",
-"company": "SageSure",
-"locations": [
-"Jersey City, NJ",
-"Cheshire, CT"
-],
-"terms": [],
-"url": "https://www.sagesure.com/careers/current-job-openings/?gh_jid=4719517006",
-"posted": 1791584001,
-"updated": 1791584563,
-"first_seen": 1792785370,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's",
-"Master's"
-],
-"company_url": "https://simplify.jobs/c/SageSure-Insurance-Managers"
-},
-{
-"id": "88b628fa-9041-4dbf-8ac0-1d6f9c9d6f13",
-"title": "Data Science Intern",
-"company": "SageSure",
-"locations": [
-"Jersey City, NJ"
-],
-"terms": [],
-"url": "https://www.sagesure.com/careers/current-job-openings/?gh_jid=4719539006",
-"posted": 1791584001,
-"updated": 1791585195,
-"first_seen": 1792785370,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/SageSure-Insurance-Managers"
-},
-{
-"id": "be51da92-a8a9-4585-8a3b-45dbd20c462d",
-"title": "Data & Analytics Co-op",
-"company": "Later",
-"locations": [
-"Boston, MA"
-],
-"terms": [
-"Winter 2027"
-],
-"url": "https://job-boards.greenhouse.io/later/jobs/8880737002",
-"posted": 1791583975,
-"updated": 1791584109,
-"first_seen": 1792785370,
-"source": "simplify",
-"board": null,
-"category": "AI/ML/Data",
-"sponsorship": "Other",
-"degrees": [
-"Bachelor's"
-],
-"company_url": "https://simplify.jobs/c/Later"
 }
 ]
 }
