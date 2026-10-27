@@ -14,20 +14,22 @@ Three sources are polled on each run:
 |---|---|---|
 | Simplify | The [Summer 2027 internships](https://github.com/SimplifyJobs/Summer2027-Internships) JSON feed, ~16,000 listings | Hours to days, since it's curated by hand |
 | Jobright | The [data analysis internships](https://github.com/jobright-ai/2026-Data-Analysis-Internship) README table, parsed directly because the repo publishes no JSON | About an hour |
-| Company boards | 209 job boards hit through their public APIs: Greenhouse, Lever, Ashby, Workday, SmartRecruiters | One poll |
+| Company boards | 289 job boards at 278 companies, hit through their public APIs: Greenhouse, Lever, Ashby, Workday, SmartRecruiters | One poll |
 
-The company boards are a tech starter list plus most of the Fortune 500 —
-whichever members expose a board through one of those five APIs. A good part
-of the list can't be reached: Walmart, Amazon, Apple, UnitedHealth, JPMorgan
-and many others run their careers pages on Taleo, iCIMS, SuccessFactors,
-Phenom, Eightfold, or something they built themselves, and those are covered
-only by the two feeds.
+The company boards are a tech starter list, most of the Fortune 500 —
+whichever members expose a board through one of those five APIs — and the
+companies that have posted analyst internships to the Simplify feed. A good
+part of the Fortune 500 can't be reached: Amazon, Apple, UnitedHealth,
+JPMorgan, American Express and many others run their careers pages on Taleo,
+iCIMS, SuccessFactors, Oracle, Phenom, Eightfold, or something they built
+themselves, and those are covered only by the two feeds.
 
 Every listing is normalized to the same shape, then filtered:
 
 1. The title must contain an `INCLUDE` word and none of the `EXCLUDE` words.
-2. Company-board listings must also say intern or co-op, since those boards
-   carry every open role.
+2. Company-board listings must also say intern, internship, or co-op as a
+   whole word, since those boards carry every open role. "International" and
+   "Internal" don't count.
 3. The location must look US-based. Known foreign countries and cities are
    rejected first, then US states, state codes, major metros, and bare
    "Remote" are accepted. Anything unrecognized is dropped.
@@ -176,6 +178,12 @@ known, `robots.txt` on it lists the real site names — pick the external
 careers one. Tenants are usually the company name with no punctuation, but
 often a ticker or an abbreviation instead: `msd` is Merck, `coke` is
 Coca-Cola, `cat` is Caterpillar, `ngc` is Northrop Grumman.
+
+Many companies post internships on a separate campus site that the main
+board doesn't show, and `robots.txt` names it too: `University`, `Campus`,
+`early_careers`, and so on. Add it as a second entry under the same tenant.
+Simplify links straight to each company's posting, so the URLs in its feed
+are the quickest way to find boards worth adding.
 
 Check what a board actually returns before keeping it. Several plausible
 slugs belong to someone else entirely — `greenhouse/fox` is a veterinary

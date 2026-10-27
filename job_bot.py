@@ -193,13 +193,16 @@ def fetch_all():
     return jobs
 
 
+# Whole words only, so "International" and "Internal" don't count as intern.
+_INTERN_RE = re.compile(r"\b(intern(ship)?s?|co-?ops?)\b")
+
+
 def matches(job):
     if not (job.get("active") and job.get("is_visible", True)):
         return False
 
     title = (job.get("title") or "").lower()
-    if str(job.get("source", "")).startswith("ats:") and not any(
-            w in title for w in ("intern", "co-op", "coop")):
+    if str(job.get("source", "")).startswith("ats:") and not _INTERN_RE.search(title):
         return False
     if not any(k in title for k in INCLUDE):
         return False

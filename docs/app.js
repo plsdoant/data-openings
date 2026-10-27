@@ -313,8 +313,9 @@
       ? ` <span class="stale">The watcher hasn&rsquo;t reported in ${ago(data.generated_at).replace(" ago", "")}, so this may be behind.</span>`
       : "";
     $("#intro").innerHTML = `Last checked ${ago(data.generated_at)}.${stale}`;
-    $("#board-count").textContent = s.boards || "";
     const polled = data.companies_polled || [];
+    // Some companies have a second campus board, so count names, not boards.
+    $("#board-count").textContent = polled.length || s.boards || "";
     $("#board-list").textContent = polled.join(", ") + ".";
     $("#board-list").closest("details").querySelector("summary").textContent =
       `Boards polled directly (${polled.length})`;
