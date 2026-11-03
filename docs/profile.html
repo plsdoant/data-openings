@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profile · Data Openings</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script>
+  try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</head>
+<body class="profile-page">
+
+<nav class="top">
+  <a class="wordmark" href="./">Data Openings</a>
+  <span class="top-links">
+    <a href="./">Listings</a>
+    <a href="applied.html" id="nav-applied">Applied</a>
+    <a href="profile.html" class="current">Profile</a>
+    <a href="https://github.com/plsdoant/data-openings">GitHub</a>
+    <button type="button" id="theme">Dark</button>
+  </span>
+</nav>
+
+<main class="page">
+
+  <p class="intro" id="intro">Loading&hellip;</p>
+
+  <section class="block" id="suggest" hidden></section>
+
+  <section class="block">
+    <h2>Rules</h2>
+    <div id="rules"></div>
+    <details class="add" id="add-rule">
+      <summary>Add a rule for a company or location</summary>
+      <form class="add-form" id="rule-form" autocomplete="off">
+        <label>For
+          <select name="group">
+            <option value="company">Company</option>
+            <option value="where">Location</option>
+          </select>
+        </label>
+        <label>Then
+          <select name="state">
+            <option value="hide">Hide it</option>
+            <option value="prefer">Prefer it</option>
+          </select>
+        </label>
+        <label class="wide">Name <input name="value" list="rule-options" required placeholder="Capital One"></label>
+        <p class="submit"><button type="submit">Add rule</button><span id="rule-status" role="status"></span></p>
+      </form>
+      <datalist id="rule-options"></datalist>
+    </details>
+  </section>
+
+  <section class="block" id="traits"></section>
+
+  <details class="add passed" id="passed" hidden>
+    <summary id="passed-summary">Roles passed on</summary>
+    <ol class="listings" id="passed-list"></ol>
+  </details>
+
+  <section class="about tools">
+    <h2>How this works</h2>
+    <p>Every listing is described by a handful of traits read from its title,
+    location, and term, and from the degrees Simplify lists. When you apply
+    to a role or mark one Not for me, the profile counts it toward that
+    role&rsquo;s traits. A trait you keep passing on and never apply to
+    weighs against similar listings. Once you&rsquo;ve passed on ten roles,
+    listings that add up low enough move from For you to Set aside, each
+    with the reason.</p>
+    <p>Rules you set here move listings to Set aside too, and All listings
+    ignores the profile entirely. A pass without a reason counts half
+    against each of the job&rsquo;s traits, since most of them probably
+    weren&rsquo;t the problem; a reason makes the traits it names count
+    double. Older feedback fades, counting half as much after a month.</p>
+    <p>All of this is stored in this browser only. The download includes your
+    applications as well.</p>
+    <p class="actions">
+      <button type="button" id="export">Download as JSON</button>
+      <label class="import">Import a file<input type="file" id="import" accept="application/json,.json"></label>
+      <button type="button" id="forget">Forget roles passed on</button>
+      <button type="button" id="clear-rules">Clear rules</button>
+    </p>
+  </section>
+
+</main>
+
+<button class="to-top" id="to-top" type="button" hidden>Back to top</button>
+
+<script src="common.js"></script>
+<script src="traits.js"></script>
+<script src="model.js"></script>
+<script src="profile.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 (function () {
   "use strict";
 
-  const { esc, fullDate, shortDate, sourceText, applied } = window.Site;
+  const { esc, fullDate, shortDate, sourceText, applied, backup } = window.Site;
   const $ = (sel) => document.querySelector(sel);
 
   let live = null;        // id -> job currently in jobs.json, once it loads
@@ -210,28 +210,15 @@
     f.url.focus();
   });
 
-  $("#export").addEventListener("click", () => {
-    const items = Object.values(applied.all()).sort((a, b) => b.at - a.at);
-    const blob = new Blob([JSON.stringify({ exported_at: Math.floor(Date.now() / 1000), applied: items }, null, 2)],
-                          { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = `applied-${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-  });
+  $("#export").addEventListener("click", () => backup.download());
 
   $("#import").addEventListener("change", (e) => {
     const file = e.target.files[0];
     if (!file) return;
     file.text().then((text) => {
-      let parsed;
-      try { parsed = JSON.parse(text); } catch (err) { alert("That file isn't JSON."); return; }
-      const entries = Array.isArray(parsed) ? parsed
-        : Array.isArray(parsed.applied) ? parsed.applied
-        : parsed && typeof parsed === "object" ? Object.values(parsed) : [];
-      const added = applied.merge(entries);
-      alert(added ? `Added ${added} ${added === 1 ? "application" : "applications"}.` : "Nothing new in that file.");
+      let got;
+      try { got = backup.import(text); } catch (err) { alert("That file isn't a backup from this site."); return; }
+      alert(backup.summary(got));
       e.target.value = "";
     });
   });

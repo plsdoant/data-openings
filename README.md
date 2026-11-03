@@ -99,6 +99,30 @@ the listings, the listing itself is ticked instead. Ticks are stored in the
 browser's local storage, so they stay on the device where you made them; the
 page can download them as JSON and import that file elsewhere.
 
+The listings open on **For you**, a view shaped by a profile built in the
+browser. Each listing is described by named traits read from its title,
+location, term, and Simplify's degree list: its role (data science, BI,
+AI/ML, ...), area, seniority, degree level, type, term, state, and company.
+Next to the applied box, × marks a role Not for me and opens a short
+menu of reasons beside it; picking one is optional. From applications and those passes the profile learns a smoothed
+log-odds weight per trait: how much more often the trait turns up among
+the roles passed on than among those applied to, each side taken as a share
+of its own total so a long applied list doesn't drown out a few passes. A
+pass counts half against each of the job's traits, a reason makes the traits
+it names count double, a trait needs three appearances before it counts, and
+feedback fades by half each month. Degree, location, and term are compared
+only across feedback that has them, since older applications and roles added
+by hand often don't. Once ten roles have been
+passed on, listings whose weights add up low enough move to **Set aside**,
+a tab beside For you, each with the reason. So does anything a rule hides.
+Learned weights never go further than that: the **Profile** page lists
+every trait, folded by group, with what was learned about it, takes Prefer or Hide on any of
+them (or on a company or state typed in), and suggests a Hide once a trait
+has been passed on four times and never applied to. **All listings** shows
+everything regardless. The profile is in local storage too and goes along
+with the applied list in the JSON download. Trait patterns are in
+`docs/traits.js`, the model in `docs/model.js`.
+
 There's a dark mode switch in the top bar, and a small pixel fire in the
 bottom-left corner that the cursor can push around. Click it to blow it out.
 

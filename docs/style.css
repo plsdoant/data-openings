@@ -187,7 +187,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
 .listings li {
   display: grid;
-  grid-template-columns: 84px 1fr auto 16px;
+  grid-template-columns: 84px 1fr auto 16px 16px;
   gap: 0 20px;
   align-items: baseline;
   padding: 16px 0;
@@ -271,6 +271,108 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .listings li.applied .title { color: var(--muted); }
 .listings li.applied .age.fresh { color: var(--muted); }
 
+/* not for me ---------------------------------------------------------- */
+
+.pass {
+  width: 16px;
+  height: 16px;
+  align-self: start;
+  margin-top: 3px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: 17px/16px var(--sans);
+  color: var(--faint);
+  cursor: pointer;
+}
+
+.pass:hover,
+.pass[aria-pressed="true"] { color: var(--text); }
+
+.listings li.passed .title { color: var(--muted); }
+.listings li.passed .age.fresh { color: var(--muted); }
+
+.why {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.why .sep { margin: 0 6px; color: var(--faint); }
+
+.why button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--faint);
+  text-underline-offset: 2px;
+}
+
+.why button:hover { color: var(--text); text-decoration-color: currentColor; }
+
+/* Why not: opens beside the × that was just clicked. */
+.reasons-pop {
+  position: absolute;
+  z-index: 10;
+  min-width: 132px;
+  padding: 6px 0;
+  font: 13px var(--sans);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+
+.reasons-pop p {
+  margin: 0;
+  padding: 2px 14px 6px;
+  font-size: 12px;
+  color: var(--faint);
+}
+
+.reasons-pop button {
+  display: block;
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  color: var(--text);
+  background: none;
+  border: 0;
+  padding: 4px 14px;
+  cursor: pointer;
+}
+
+.reasons-pop button:hover,
+.reasons-pop button:focus-visible { background: var(--wash); outline: none; }
+
+/* For you / All listings */
+.views {
+  font-family: var(--sans);
+  font-size: 13px;
+  margin: -16px 0 22px;
+}
+
+.views button {
+  font: inherit;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0 0 2px;
+  margin-right: 22px;
+  cursor: pointer;
+}
+
+.views button:hover { color: var(--text); }
+.views button[aria-pressed="true"] { color: var(--text); border-bottom-color: var(--text); }
+
+.detail .traits { font-family: var(--sans); font-size: 13px; color: var(--muted); }
+.detail .traits .sep { margin: 0 5px; color: var(--faint); }
+
 .detail .mark {
   font: 13px var(--sans);
   color: var(--muted);
@@ -320,7 +422,8 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .fact span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .listings .gone { color: var(--faint); font-style: italic; }
-.applied-page .listings li { cursor: default; }
+.applied-page .listings li,
+.profile-page .listings li { grid-template-columns: 84px 1fr auto 16px; cursor: default; }
 .applied-page .listings li:hover .title { text-decoration: none; }
 .applied-page .listings li.applied .title { color: var(--text); }
 .applied-page .listings .title a:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -392,6 +495,118 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .tools .actions button:hover,
 .tools .import:hover { color: var(--text); }
 .tools .import input { display: none; }
+
+/* profile page -------------------------------------------------------- */
+
+.block { margin-bottom: 48px; }
+
+.block h2 {
+  font-family: var(--sans);
+  font-weight: normal;
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.block .plain {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.block li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.block li b { font-weight: normal; }
+.block .note { font-family: var(--sans); font-size: 12px; color: var(--muted); margin-left: 10px; }
+.empty-note { color: var(--muted); margin: 0 0 18px; }
+
+.acts { font-family: var(--sans); font-size: 13px; white-space: nowrap; }
+
+.acts button,
+.seg button {
+  font: inherit;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.acts button { margin-left: 16px; text-decoration: underline; text-underline-offset: 2px; }
+.acts button:hover,
+.seg button:hover { color: var(--text); }
+
+.trait-group { border-bottom: 1px solid var(--rule); }
+.trait-group:first-of-type { border-top: 1px solid var(--rule); }
+
+.trait-group summary {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.trait-group summary::-webkit-details-marker { display: none; }
+
+.trait-group summary::before {
+  content: "+";
+  width: 10px;
+  font: 14px var(--sans);
+  color: var(--faint);
+}
+
+.trait-group[open] summary::before { content: "\2212"; }
+.trait-group summary:hover { color: var(--muted); }
+.trait-group summary .note { font-family: var(--sans); font-size: 12px; color: var(--faint); }
+.trait-group[open] { padding-bottom: 14px; }
+.trait-group .trait:last-child { border-bottom: 0; }
+
+.trait {
+  display: grid;
+  grid-template-columns: 1fr auto 64px auto;
+  gap: 2px 20px;
+  align-items: baseline;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.trait .name { font-size: 16px; }
+.trait .counts { font-family: var(--sans); font-size: 12px; color: var(--faint); white-space: nowrap; }
+
+/* Which way the model leans on a trait: a hairline with a bar either side
+   of the middle. */
+.lean {
+  position: relative;
+  height: 9px;
+  align-self: center;
+  background: linear-gradient(var(--rule), var(--rule)) center / 1px 100% no-repeat;
+}
+
+.lean span {
+  position: absolute;
+  top: 3px;
+  height: 3px;
+  background: var(--muted);
+}
+
+.seg { font-family: var(--sans); font-size: 12px; white-space: nowrap; }
+.seg button { margin-left: 12px; }
+.seg button[aria-pressed="true"] { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+.trait:has(.seg [data-set="hide"][aria-pressed="true"]) .name { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--faint); }
+
+.passed { margin-bottom: 0; }
+.passed .listings { margin-top: 12px; border-top: 1px solid var(--rule); }
+.profile-page .add-form { grid-template-columns: 1fr 1fr; }
 
 /* about --------------------------------------------------------------- */
 
@@ -574,7 +789,14 @@ body.has-detail .to-top { right: calc(var(--panel) + 36px); }
 @media (max-width: 640px) {
   .top { padding: 14px 16px; }
   .filters { grid-template-columns: repeat(2, 1fr); gap: 14px 24px; }
-  .listings li { grid-template-columns: 1fr auto 16px; }
+  .listings li { grid-template-columns: 1fr auto 16px 16px; }
+  .applied-page .listings li,
+  .profile-page .listings li { grid-template-columns: 1fr auto 16px; }
+  .trait { grid-template-columns: 1fr auto; }
+  .trait .counts { grid-column: 1; grid-row: 2; }
+  .trait .lean { display: none; }
+  .trait .seg { grid-row: 1 / span 2; grid-column: 2; }
+  .block li { flex-direction: column; gap: 4px; }
   .age { grid-column: 1 / -1; order: -1; }
   .applied-page .age .posted { display: inline; margin-left: 10px; }
   .facts { grid-template-columns: 1fr; }

@@ -19,6 +19,7 @@
   <span class="top-links">
     <a href="#about">About</a>
     <a href="applied.html" id="nav-applied">Applied</a>
+    <a href="profile.html">Profile</a>
     <a href="https://github.com/plsdoant/data-openings">GitHub</a>
     <button type="button" id="theme">Dark</button>
   </span>
@@ -27,6 +28,12 @@
 <main class="page">
 
   <p class="intro" id="intro">Loading listings&hellip;</p>
+
+  <p class="views" id="views">
+    <button type="button" data-view="foryou" aria-pressed="true">For you</button>
+    <button type="button" data-view="aside" aria-pressed="false">Set aside<span id="aside-count"></span></button>
+    <button type="button" data-view="all" aria-pressed="false">All listings</button>
+  </p>
 
   <form class="filters" id="filters" autocomplete="off">
     <label>Role
@@ -69,6 +76,7 @@
         <option value="">Any</option>
         <option value="open">Not applied</option>
         <option value="applied">Applied</option>
+        <option value="passed">Not for me</option>
       </select>
     </label>
     <label>Search
@@ -80,6 +88,7 @@
         <option value="oldest">Oldest</option>
         <option value="found">Recently found</option>
         <option value="company">Company</option>
+        <option value="match">Best match</option>
       </select>
     </label>
   </form>
@@ -116,9 +125,13 @@
   <div class="detail-body" id="detail-body"></div>
 </aside>
 
+<div class="reasons-pop" id="reasons" role="menu" aria-label="Why not" hidden></div>
+
 <button class="to-top" id="to-top" type="button" hidden>Back to top</button>
 
 <script src="common.js"></script>
+<script src="traits.js"></script>
+<script src="model.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

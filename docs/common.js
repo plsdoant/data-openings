@@ -33,6 +33,55 @@
     return "other";
   };
 
+  // --- location buckets: the listings filter and the profile's location traits
+
+  const STATE_RE = /\b(A[LKZR]|C[AOT]|DE|DC|FL|GA|HI|I[DLNA]|K[SY]|LA|M[EDAINSOT]|N[EVHJMYCD]|O[HKR]|PA|RI|S[CD]|T[NX]|UT|V[TA]|W[AVIY])\b/g;
+  const STATE_NAMES = {
+    AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
+    CO: "Colorado", CT: "Connecticut", DE: "Delaware", DC: "Washington, DC",
+    FL: "Florida", GA: "Georgia", HI: "Hawaii", ID: "Idaho", IL: "Illinois",
+    IN: "Indiana", IA: "Iowa", KS: "Kansas", KY: "Kentucky", LA: "Louisiana",
+    ME: "Maine", MD: "Maryland", MA: "Massachusetts", MI: "Michigan",
+    MN: "Minnesota", MS: "Mississippi", MO: "Missouri", MT: "Montana",
+    NE: "Nebraska", NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey",
+    NM: "New Mexico", NY: "New York", NC: "North Carolina", ND: "North Dakota",
+    OH: "Ohio", OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania",
+    RI: "Rhode Island", SC: "South Carolina", SD: "South Dakota",
+    TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont", VA: "Virginia",
+    WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming",
+  };
+  const METRO_STATE = [
+    [/\bnyc\b|new york city|manhattan|brooklyn/i, "NY"],
+    [/san francisco|bay area|palo alto|mountain view|sunnyvale|santa clara|cupertino|san jose|los angeles|san diego/i, "CA"],
+    [/\bseattle\b|redmond|bellevue/i, "WA"],
+    [/\bboston\b|cambridge/i, "MA"],
+    [/\bchicago\b/i, "IL"],
+    [/\baustin\b|\bdallas\b|\bhouston\b/i, "TX"],
+    [/\batlanta\b/i, "GA"],
+    [/\bdenver\b/i, "CO"],
+    [/\bmiami\b|\borlando\b|\btampa\b/i, "FL"],
+    [/philadelphia|pittsburgh/i, "PA"],
+    [/\bphoenix\b/i, "AZ"],
+    [/mclean|reston|arlington/i, "VA"],
+    [/bethesda/i, "MD"],
+  ];
+
+  Site.STATE_NAMES = STATE_NAMES;
+
+  Site.regionsOf = function (job) {
+    const out = new Set();
+    for (const loc of job.locations || []) {
+      if (/remote/i.test(loc)) out.add("Remote");
+      const codes = loc.match(STATE_RE);
+      if (codes) codes.forEach((c) => out.add(STATE_NAMES[c]));
+      else {
+        for (const [re, st] of METRO_STATE) if (re.test(loc)) { out.add(STATE_NAMES[st]); break; }
+      }
+    }
+    if (!out.size) out.add("United States");
+    return [...out];
+  };
+
   Site.sourceText = function (job) {
     if (job.source === "ats") return job.board ? "Direct · " + job.board : "Direct";
     return Site.SOURCE_LABEL[job.source] || job.source;
@@ -82,6 +131,8 @@
     dispatchEvent(new CustomEvent("applied-change"));
   }
 
+  // Also used for roles passed on, so the profile can still learn from a
+  // listing after it has dropped off the feed.
   function snapshot(j, at) {
     const s = {
       id: j.id,
@@ -90,6 +141,8 @@
       url: j.url,
       locations: j.locations || [],
       terms: j.terms || [],
+      degrees: j.degrees || [],
+      category: j.category || null,
       source: j.source,
       board: j.board || null,
       posted: j.posted || 0,
@@ -99,6 +152,7 @@
     if (j.manual) s.manual = true;     // added by hand, never in the feed
     return s;
   }
+  Site.snapshot = snapshot;
 
   Site.applied = {
     all: load,
