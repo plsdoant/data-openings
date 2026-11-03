@@ -24,7 +24,7 @@ names out of https://<tenant>.<wdN>.myworkdayjobs.com/robots.txt.
 Verify a list with:  python3 job_bot.py --check-ats
 
 Boards found automatically from the links in the Simplify feed are kept in
-boards.json, not here. See job_bot.py --suggest-boards.
+boards/, one file per company, not here. See job_bot.py --suggest-boards.
 """
 
 import concurrent.futures as cf
@@ -461,7 +461,7 @@ def _name_key(slug):
 def display_name(slug):
     """'hcmportal.wd5/Search' -> 'UPS'. Used for embeds and cross-source dedupe."""
     key = _name_key(slug)
-    return _NAMES.get(key, key.title())
+    return _NAMES.get(key) or _BOARD_NAMES.get(slug.lower()) or key.title()
 
 
 def company_names(companies=None):
@@ -472,44 +472,91 @@ def company_names(companies=None):
 
 # ---------------------------------------------------------------------------
 # FOUND BOARDS
-# boards.json is written by `job_bot.py --suggest-boards`: boards read off the
-# feed's links ("boards"), boards that didn't respond when checked ("failed"),
-# and companies whose links point somewhere this module can't poll
-# ("unsupported"). Only "boards" is polled. Each carries the company name the
-# feed uses, so its listings dedupe against the feed's copies. A board that's
-# also in COMPANIES above is skipped here, and so is one marked "skip": true,
-# which is how to stop polling a found board without it being found again.
+# Boards read off the feed's links by `job_bot.py --suggest-boards`, one file
+# per company in boards/, so a pull request adding one company never
+# conflicts with another. Each file carries the company name the feed uses,
+# so its listings dedupe against the feed's copies. A board that's also in
+# COMPANIES above is skipped. Deleting a file stops polling that company.
+#
+# board_notes.json holds what isn't polled: boards proposed in a pull request
+# ("proposed", kept after merging or closing so a declined board isn't
+# offered again), boards that didn't respond ("failed"), and companies whose
+# links point somewhere this module can't poll ("unsupported").
 # ---------------------------------------------------------------------------
-FOUND_FILE = Path(__file__).parent / "boards.json"
+FOUND_DIR = Path(__file__).parent / "boards"
+NOTES_FILE = Path(__file__).parent / "board_notes.json"
+
+# Found boards' names, by whole slug rather than _NAMES's tenant: one Workday
+# tenant can host several companies' sites (relx is Elsevier and LexisNexis).
+_BOARD_NAMES = {}
+
+
+def _read_json(path):
+    try:
+        return json.loads(path.read_text())
+    except (OSError, ValueError):
+        return None
 
 
 def load_found():
-    """boards.json as a dict, empty sections if it's missing or unreadable."""
-    try:
-        data = json.loads(FOUND_FILE.read_text())
-    except (OSError, ValueError):
-        data = {}
-    for section, empty in (("boards", []), ("failed", {}), ("unsupported", {})):
-        if not isinstance(data.get(section), type(empty)):
-            data[section] = empty
+    """{file stem: {"company": ..., "boards": [{"kind", "slug", "added"}]}}."""
+    found = {}
+    for path in sorted(FOUND_DIR.glob("*.json")):
+        data = _read_json(path)
+        if isinstance(data, dict) and isinstance(data.get("boards"), list):
+            found[path.stem] = data
+    return found
+
+
+def save_found(stem, data):
+    FOUND_DIR.mkdir(exist_ok=True)
+    path = FOUND_DIR / f"{stem}.json"
+    path.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
+    return path
+
+
+def load_notes():
+    """board_notes.json, with empty sections if it's missing or unreadable."""
+    data = _read_json(NOTES_FILE)
+    data = data if isinstance(data, dict) else {}
+    for section in ("proposed", "failed", "unsupported"):
+        if not isinstance(data.get(section), dict):
+            data[section] = {}
     return data
+
+
+def save_notes(data):
+    NOTES_FILE.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
+
+
+def board_url(kind, slug):
+    """Where a person would open the board."""
+    if kind == "workday":
+        host, site = slug.split("/", 1)
+        return f"https://{host}.myworkdayjobs.com/{site}"
+    return {"greenhouse": "https://job-boards.greenhouse.io/{}",
+            "lever": "https://jobs.lever.co/{}",
+            "ashby": "https://jobs.ashbyhq.com/{}",
+            "smartrecruiters": "https://jobs.smartrecruiters.com/{}"}[kind].format(slug)
 
 
 def _add_found(found):
     have = {(kind, slug.lower()) for kind, slug in COMPANIES}
-    for b in found["boards"]:
-        if b.get("kind") not in _FETCHERS or not b.get("slug") or b.get("skip"):
-            continue
-        if (b["kind"], b["slug"].lower()) in have:
-            continue
-        have.add((b["kind"], b["slug"].lower()))
-        COMPANIES.append((b["kind"], b["slug"]))
-        if b.get("company"):
-            _NAMES.setdefault(_name_key(b["slug"]), b["company"])
+    for data in found.values():
+        for b in data["boards"]:
+            if not isinstance(b, dict) or b.get("kind") not in _FETCHERS \
+                    or not b.get("slug"):
+                continue
+            if (b["kind"], b["slug"].lower()) in have:
+                continue
+            have.add((b["kind"], b["slug"].lower()))
+            COMPANIES.append((b["kind"], b["slug"]))
+            if data.get("company"):
+                _BOARD_NAMES[b["slug"].lower()] = data["company"]
 
 
 # Hosts a feed link can point at that this module can't poll, with the name
-# boards.json gives them. EU Greenhouse and Lever boards answer on separate
+# board_notes.json gives them. EU Greenhouse and Lever boards answer on separate
 # APIs, so they're listed before the plain hosts below would match them.
 _OTHER_BOARDS = [
     ("eu.greenhouse.io", "Greenhouse EU"), ("eu.lever.co", "Lever EU"),
@@ -809,12 +856,12 @@ def fetch_ats(ssl_ctx, companies=None):
 
 
 def probe_boards(ssl_ctx, boards):
-    """[(kind, slug)] -> [(open roles, None) or (None, error)], in order, for
+    """[(kind, slug)] -> [(listings, None) or (None, error)], in order, for
     deciding whether a board is worth adding."""
     def one(item):
         kind, slug = item
         try:
-            return len(_FETCHERS[kind](slug, ssl_ctx)), None
+            return _FETCHERS[kind](slug, ssl_ctx), None
         except Exception as e:
             return None, f"{type(e).__name__}: {e}"
 

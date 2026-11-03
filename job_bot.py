@@ -8,7 +8,8 @@ directly), filters for roles you care about, and posts new ones to Discord/Slack
 First run:   python job_bot.py --seed     (marks everything as seen, no spam)
 Every run:   python job_bot.py
 Dry run:     python job_bot.py --dry-run  (prints instead of posting)
-New boards:  python job_bot.py --suggest-boards  (adds feed companies' boards)
+New boards:  python job_bot.py --suggest-boards  (adds feed companies' boards;
+             --open-prs proposes them as pull requests instead)
 """
 
 import argparse
@@ -16,6 +17,7 @@ import json
 import os
 import re
 import ssl
+import subprocess
 import sys
 import time
 import urllib.request
@@ -608,26 +610,42 @@ def _company_key(name):
     return _norm(name, lambda s: _CO_SUFFIXES.sub(" ", s)).replace(" ", "")
 
 
-def suggest_boards(dry_run=False):
-    """Add the job boards of feed companies that aren't polled directly yet.
+def _file_stem(name):
+    """'Bank of Montreal' -> 'bank-of-montreal', the company's file in boards/."""
+    return _norm(name).replace(" ", "-")
+
+
+def _tag_board(tag):
+    """'workday/geico.wd1/External' -> ('workday', 'geico.wd1/external')."""
+    kind, _, slug = tag.partition("/")
+    return kind, slug.lower()
+
+
+def suggest_boards(mode="write"):
+    """Find the job boards of feed companies that aren't polled directly yet.
 
     Every visible feed listing that passes the title and location filters
     counts, open or closed: a company that posted an analyst internship this
     season is worth watching for its next one. Simplify links straight to the
     company's posting, so the link names the board. Each new board is fetched
-    once before it goes in boards.json. One that fails goes under "failed" and
-    is tried again after RETRY_FAILED_DAYS. A company whose links all point
+    once first. One that fails is noted under "failed" in board_notes.json and
+    tried again after RETRY_FAILED_DAYS. A company whose links all point
     somewhere ats.py can't poll (iCIMS, Taleo, its own careers site, or
     Jobright, which never links out) is noted under "unsupported" and left to
-    the feeds, which keep fetching its listings either way."""
-    found = ats.load_found()
+    the feeds, which keep fetching its listings either way.
+
+    mode "write" adds the new boards to boards/ directly, "dry-run" only
+    prints them, and "prs" opens a pull request per company (the Friday
+    workflow). A board already proposed in a pull request isn't proposed
+    again, whether that pull request was merged or closed."""
+    notes = ats.load_notes()
     today = date.today()
     polled = {(kind, slug.lower()) for kind, slug in ats.COMPANIES}
-    polled |= {(b.get("kind"), (b.get("slug") or "").lower())   # skipped ones too
-               for b in found["boards"]}
+    proposed = {_tag_board(tag) for tag in notes["proposed"]}
     polled_names = {_company_key(n) for n in ats.company_names()}
 
     boards, elsewhere, names = defaultdict(set), defaultdict(set), {}
+    links = defaultdict(list)          # board -> a few feed listings naming it
     for j in fetch_feeds():
         if not (j.get("is_visible", True) and relevant(j)):
             continue
@@ -636,13 +654,15 @@ def suggest_boards(dry_run=False):
             continue
         names.setdefault(key, j["company_name"].strip())
         kind, where = ats.board_for_link(j.get("url"))
-        if kind:
-            boards[key].add((kind, where))
-        else:
+        if not kind:
             elsewhere[key].add(where)
+            continue
+        boards[key].add((kind, where))
+        if len(refs := links[(kind, where.lower())]) < 5:
+            refs.append(j)
 
     def due(kind, slug):
-        failed = found["failed"].get(f"{kind}/{slug}")
+        failed = notes["failed"].get(f"{kind}/{slug}")
         return not failed or (today - date.fromisoformat(failed["checked"])).days \
             >= RETRY_FAILED_DAYS
 
@@ -652,7 +672,8 @@ def suggest_boards(dry_run=False):
     for key in sorted(boards):
         for kind, slug in sorted(boards[key]):
             board = (kind, slug.lower())
-            if board in polled or board in queued or not due(kind, slug):
+            if board in polled or board in proposed or board in queued \
+                    or not due(kind, slug):
                 continue
             queued.add(board)
             todo.append((key, kind, slug))
@@ -660,25 +681,25 @@ def suggest_boards(dry_run=False):
           f"{len(todo)} new board(s) to check")
     results = ats.probe_boards(SSL_CTX, [(kind, slug) for _, kind, slug in todo])
 
-    added = failed = 0
-    for (key, kind, slug), (roles, err) in zip(todo, results):
+    new = defaultdict(list)            # company key -> [(kind, slug, listings)]
+    failed = 0
+    for (key, kind, slug), (jobs, err) in zip(todo, results):
         tag = f"{kind}/{slug}"
         if err:
             failed += 1
-            found["failed"][tag] = {"company": names[key], "error": err[:200],
+            notes["failed"][tag] = {"company": names[key], "error": err[:200],
                                     "checked": today.isoformat()}
             print(f"    failed  {names[key]}: {tag} ({err[:120]})")
             continue
-        added += 1
-        found["failed"].pop(tag, None)
-        found["boards"].append({"kind": kind, "slug": slug,
-                                "company": names[key], "added": today.isoformat()})
-        print(f"    added   {names[key]}: {tag} ({roles} open roles)")
+        notes["failed"].pop(tag, None)
+        new[key].append((kind, slug, jobs))
+        print(f"    found   {names[key]}: {tag} ({len(jobs)} open roles, "
+              f"{sum(map(matches, jobs))} pass the filters)")
 
     # Unsupported: no board link at all, and not already polled under its name.
     # A company that gets a board later comes off the list.
     has_board = set(boards) | polled_names
-    unsupported = {name: v for name, v in found["unsupported"].items()
+    unsupported = {name: v for name, v in notes["unsupported"].items()
                    if _company_key(name) not in has_board}
     listed = {_company_key(name): name for name in unsupported}
     noted = 0
@@ -689,22 +710,123 @@ def suggest_boards(dry_run=False):
             noted += 1
             entry = unsupported[name] = {"via": [], "noted": today.isoformat()}
         entry["via"] = sorted(set(entry.get("via") or []) | elsewhere[key])
-    found["unsupported"] = dict(sorted(unsupported.items(), key=lambda kv: kv[0].lower()))
-    found["failed"] = {tag: v for tag, v in sorted(found["failed"].items())
-                       if (tag.split("/", 1)[0], tag.split("/", 1)[1].lower())
-                       not in polled}
-    unique = {}
-    for b in found["boards"]:
-        unique.setdefault((b.get("kind"), str(b.get("slug", "")).lower()), b)
-    found["boards"] = sorted(unique.values(), key=lambda b: (
-        str(b.get("company", "")).lower(), str(b.get("kind")), str(b.get("slug"))))
+    notes["unsupported"] = dict(sorted(unsupported.items(), key=lambda kv: kv[0].lower()))
+    notes["failed"] = {tag: v for tag, v in sorted(notes["failed"].items())
+                       if _tag_board(tag) not in polled | proposed}
 
-    print(f"  {added} board(s) added, {failed} failed; {len(unsupported)} companies"
-          f" can't be polled directly ({noted} new), left to the feeds")
-    if dry_run:
-        print("  dry run: boards.json not written")
+    print(f"  {sum(map(len, new.values()))} new board(s) at {len(new)} companies,"
+          f" {failed} failed; {len(unsupported)} companies can't be polled"
+          f" directly ({noted} new), left to the feeds")
+    if mode == "dry-run":
+        print("  dry run: boards/ and board_notes.json not written")
         return
-    ats.FOUND_FILE.write_text(json.dumps(found, indent=1, ensure_ascii=False) + "\n")
+
+    # Each company's file in boards/ after its new boards are added. A company
+    # that already has one (a second board turned up) keeps its file name.
+    found = ats.load_found()
+    stems = {_company_key(d.get("company")): stem for stem, d in found.items()}
+    files = {}
+    for key, found_boards in new.items():
+        stem = stems.get(key) or _file_stem(names[key])
+        data = found.get(stem) or {"company": names[key], "boards": []}
+        data["boards"] = sorted(
+            data["boards"] + [{"kind": kind, "slug": slug, "added": today.isoformat()}
+                              for kind, slug, _ in found_boards],
+            key=lambda b: (b["kind"], b["slug"].lower()))
+        files[key] = (stem, data)
+
+    missed = 0
+    if mode == "prs":
+        missed = _open_board_prs(new, files, names, links, notes, today)
+    else:
+        for stem, data in files.values():
+            ats.save_found(stem, data)
+    ats.save_notes(notes)
+    return missed
+
+
+def _run(*cmd, stdin=None):
+    """Run git or gh and return its output. Raises RuntimeError on failure."""
+    r = subprocess.run(cmd, input=stdin, capture_output=True, text=True)
+    if r.returncode:
+        raise RuntimeError(f"{' '.join(cmd[:3])}: {(r.stderr or r.stdout).strip()[:300]}")
+    return r.stdout.strip()
+
+
+def _md(text):
+    """Feed text that's safe inside a markdown link label."""
+    return str(text or "").replace("[", "(").replace("]", ")").strip()
+
+
+def _pr_body(company, found_boards, links):
+    lines = [f"Simplify links {company}'s analyst internships to "
+             f"{'a board' if len(found_boards) == 1 else 'boards'} the watcher"
+             f" doesn't poll yet.", "",
+             "| Board | Open roles | Pass your filters now |", "|---|---|---|"]
+    hits = []
+    for kind, slug, jobs in found_boards:
+        ok = [j for j in jobs if matches(j)]
+        hits += ok
+        lines.append(f"| [{kind} `{slug}`]({ats.board_url(kind, slug)}) "
+                     f"| {len(jobs)} | {len(ok)} |")
+    if hits:
+        lines += ["", "Roles on it that pass your filters:"]
+        for j in hits[:10]:
+            where = ", ".join(l for l in j.get("locations") or [] if l)
+            lines.append(f"- [{_md(j.get('title'))}]({j.get('url')})"
+                         + (f" ({where})" if where else ""))
+        if len(hits) > 10:
+            lines.append(f"- and {len(hits) - 10} more")
+    lines += ["", "Feed listings that link here:"]
+    for kind, slug, _ in found_boards:
+        for j in links[(kind, slug.lower())]:
+            lines.append(f"- [{_md(j.get('title'))}]({j.get('url')})")
+    lines += ["", "Merge to start polling on the next run. Closing declines it:"
+              " board_notes.json records this pull request, so the board isn't"
+              " proposed again."]
+    return "\n".join(lines)
+
+
+def _open_board_prs(new, files, names, links, notes, today):
+    """One branch and pull request per company, each adding or updating that
+    company's file in boards/. Expects a clean checkout of the base branch,
+    git push access, and an authenticated gh; leaves the base checked out. A
+    company whose pull request couldn't be opened isn't recorded, so the next
+    run tries again. Returns how many companies didn't get one."""
+    base = _run("git", "rev-parse", "--abbrev-ref", "HEAD")
+    opened = 0
+    for key in sorted(new):
+        stem, data = files[key]
+        company = names[key]
+        noun = "job board" if len(new[key]) == 1 else "job boards"
+        branch = f"boards/{stem}-{today:%Y%m%d}"
+        pushed, url = False, None
+        try:
+            _run("git", "switch", "-c", branch)
+            _run("git", "add", str(ats.save_found(stem, data)))
+            _run("git", "commit", "-m", f"poll {company}'s {noun}")
+            _run("git", "push", "-f", "origin", branch)
+            pushed = True
+            url = _run("gh", "pr", "create", "--base", base, "--head", branch,
+                       "--title", f"Poll {company}'s {noun}", "--body-file", "-",
+                       stdin=_pr_body(company, new[key], links))
+        except RuntimeError as e:
+            print(f"  WARN: no pull request for {company}: {e}", file=sys.stderr)
+        finally:
+            subprocess.run(["git", "switch", "-f", base], capture_output=True)
+            subprocess.run(["git", "branch", "-D", branch], capture_output=True)
+            if pushed and not url:
+                subprocess.run(["git", "push", "origin", "--delete", branch],
+                               capture_output=True)
+        if url:
+            opened += 1
+            for kind, slug, _ in new[key]:
+                notes["proposed"][f"{kind}/{slug}"] = {
+                    "company": company, "pr": url, "proposed": today.isoformat()}
+            print(f"    opened  {company}: {url}")
+    notes["proposed"] = dict(sorted(notes["proposed"].items()))
+    print(f"  {opened} pull request(s) opened")
+    return len(new) - opened
 
 
 # ---------------------------------------------------------------------------
@@ -825,17 +947,20 @@ def main():
                     help="write docs/jobs.json for the site and exit; "
                          "posts nothing, leaves seen.json alone")
     ap.add_argument("--suggest-boards", action="store_true",
-                    help="add boards.json entries for feed companies that "
-                         "aren't polled directly yet, then exit (with "
-                         "--dry-run, print them without writing)")
+                    help="add boards/ files for feed companies that aren't "
+                         "polled directly yet, then exit (with --dry-run, "
+                         "print them without writing)")
+    ap.add_argument("--open-prs", action="store_true",
+                    help="with --suggest-boards: open a pull request per "
+                         "company instead of writing boards/ (needs gh)")
     args = ap.parse_args()
 
     if args.check_ats:
         sys.exit(0 if ats.check_ats(SSL_CTX) else 1)
     if args.suggest_boards:
         print(f"[{datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}] looking for new boards...")
-        suggest_boards(dry_run=args.dry_run)
-        return
+        mode = "dry-run" if args.dry_run else "prs" if args.open_prs else "write"
+        sys.exit(1 if suggest_boards(mode) else 0)   # a PR that didn't open
 
     print(f"[{datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}] polling...")
     all_jobs = fetch_all()

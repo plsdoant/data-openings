@@ -1,0 +1,45 @@
+name: find boards
+
+on:
+  schedule:
+    - cron: "0 16 * * 5"     # Fridays 16:00 UTC, 8am Pacific in winter
+  workflow_dispatch:          # lets you trigger a run manually from the UI
+
+permissions:
+  contents: write             # push the PR branches and board_notes.json
+  pull-requests: write        # open the PRs
+
+concurrency:
+  group: boards               # not jobwatch: a queued run there would cancel this one
+  cancel-in-progress: false
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Open a pull request per new company board
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name  "job-bot"
+          git config user.email "job-bot@users.noreply.github.com"
+          python job_bot.py --suggest-boards --open-prs
+
+      - name: Save notes
+        if: always()              # keep failed/unsupported notes even if a PR didn't open
+        run: |
+          git add board_notes.json
+          git diff --staged --quiet && exit 0
+          git commit -m "board notes: $(date -u +%F)"
+          # The poller pushes to main every 30 minutes, so retry on a race.
+          for i in 1 2 3; do
+            git pull --rebase --autostash && git push && exit 0
+            sleep 10
+          done
+          exit 1

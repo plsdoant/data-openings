@@ -1,0 +1,2407 @@
+{
+ "proposed": {},
+ "failed": {
+  "ashby/mtesting.ai": {
+   "company": "Mistral AI",
+   "error": "HTTPError: HTTP Error 404: Not Found",
+   "checked": "2026-11-03"
+  },
+  "greenhouse/breezeairways": {
+   "company": "Breeze Airways",
+   "error": "HTTPError: HTTP Error 404: Not Found",
+   "checked": "2026-11-03"
+  },
+  "greenhouse/capitalrx": {
+   "company": "Judi Health",
+   "error": "HTTPError: HTTP Error 404: Not Found",
+   "checked": "2026-11-03"
+  },
+  "greenhouse/ibkr": {
+   "company": "Interactive Brokers",
+   "error": "HTTPError: HTTP Error 404: Not Found",
+   "checked": "2026-11-03"
+  },
+  "greenhouse/rdccareers": {
+   "company": "Realtor.com",
+   "error": "HTTPError: HTTP Error 404: Not Found",
+   "checked": "2026-11-03"
+  },
+  "lever/aofl": {
+   "company": "Age of Learning",
+   "error": "HTTPError: HTTP Error 404: Not Found",
+   "checked": "2026-11-03"
+  },
+  "lever/calstart": {
+   "company": "CALSTART",
+   "error": "HTTPError: HTTP Error 404: Not Found",
+   "checked": "2026-11-03"
+  },
+  "lever/mbrdna": {
+   "company": "Mercedes-Benz",
+   "error": "HTTPError: HTTP Error 404: Not Found",
+   "checked": "2026-11-03"
+  },
+  "lever/simberobotics": {
+   "company": "Simbe Robotics",
+   "error": "HTTPError: HTTP Error 404: Not Found",
+   "checked": "2026-11-03"
+  },
+  "workday/comcast.wd5/Comcast_Careers": {
+   "company": "Comcast",
+   "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
+   "checked": "2026-11-03"
+  },
+  "workday/idexx.wd1/IDEXX": {
+   "company": "IDEXX",
+   "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
+   "checked": "2026-11-03"
+  },
+  "workday/liveramp.wd5/LiveRampCareers": {
+   "company": "LiveRamp",
+   "error": "HTTPError: HTTP Error 403: Forbidden",
+   "checked": "2026-11-03"
+  },
+  "workday/netflix.wd1/Netflix": {
+   "company": "Netflix",
+   "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
+   "checked": "2026-11-03"
+  },
+  "workday/nio.wd3/NIO_Careers": {
+   "company": "Nio",
+   "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
+   "checked": "2026-11-03"
+  },
+  "workday/osv-cci.wd1/CCICareers": {
+   "company": "Castleton Commodities International",
+   "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
+   "checked": "2026-11-03"
+  },
+  "workday/osv-edf.wd5/Confidential": {
+   "company": "Environmental Defense Fund",
+   "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
+   "checked": "2026-11-03"
+  },
+  "workday/osv-rubicon.wd5/MagniteCareers": {
+   "company": "Magnite",
+   "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
+   "checked": "2026-11-03"
+  },
+  "workday/sallie-mae.wd5/Careers": {
+   "company": "Sallie Mae",
+   "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
+   "checked": "2026-11-03"
+  },
+  "workday/vhr-epri.wd1/epricareers": {
+   "company": "EPRI",
+   "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
+   "checked": "2026-11-03"
+  },
+  "workday/vhr-genband.wd1/ribboncareers": {
+   "company": "Ribbon",
+   "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
+   "checked": "2026-11-03"
+  }
+ },
+ "unsupported": {
+  "AArete": {
+   "via": [
+    "Jobvite"
+   ],
+   "noted": "2026-11-03"
+  },
+  "AARP": {
+   "via": [
+    "careers.aarp.org"
+   ],
+   "noted": "2026-11-03"
+  },
+  "AcreTrader": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Acuity": {
+   "via": [
+    "careers.acuityinc.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Acuity Insurance": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Adtheorant": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "AGCO": {
+   "via": [
+    "careers.agcocorp.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Alaska Airlines": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "AlixPartners": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Allegheny County": {
+   "via": [
+    "BambooHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Alliance Laundry Systems": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Altice USA": {
+   "via": [
+    "optimumcareers.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Altman Solon": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Amazon": {
+   "via": [
+    "amazon.jobs"
+   ],
+   "noted": "2026-11-03"
+  },
+  "AMD": {
+   "via": [
+    "careers.amd.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "American Association of People With Disabilities": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "American Enterprise Institute": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "American Equity": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "American Express": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "American Heart Association": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Ampersand": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Amwins": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Analysis Group": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Anduril Industries": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Aon": {
+   "via": [
+    "Jobright",
+    "jobs.aon.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "APEX Analytix": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Apogee Engineering": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Apple": {
+   "via": [
+    "jobs.apple.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "AQR Capital Management": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Aramark": {
+   "via": [
+    "aramarkcareers.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Arch Insurance Group Inc.": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Arconic": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Arena Investors I Quaestor Advisors": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Arkema Global": {
+   "via": [
+    "jobs.arkema.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Arlington County VA": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Arthur J. Gallagher & Co.": {
+   "via": [
+    "jobs.ajg.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Artisan Partners": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Ascendis Pharma": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Ascension": {
+   "via": [
+    "jobs.ascension.org"
+   ],
+   "noted": "2026-11-03"
+  },
+  "ASSA ABLOY": {
+   "via": [
+    "assaabloy.jobs2web.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Astrion": {
+   "via": [
+    "careers.astrion.us"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Atlassian": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Aura Frames": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "AutoZone": {
+   "via": [
+    "Jobright",
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "AXA": {
+   "via": [
+    "careers.axa.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Axway": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Bank of America": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Bank of China USA": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Barrios": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "BBVA": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Bee Sweet Citrus": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Benjamin Moore": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Berkshire Hathaway Energy": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Bernhard": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "BerryDunn": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Bio-Rad Laboratories": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "bioMérieux": {
+   "via": [
+    "Jobvite"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Blue Bird Corporation": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Blue Cross Blue Shield of Michigan": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Blue Shield of California": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "BNP Paribas": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "BNY": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Boston Properties": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Boston Scientific": {
+   "via": [
+    "Eightfold"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Brio Water Technology": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "BSE Global": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Bunge": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Business Insider": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "ByteDance": {
+   "via": [
+    "jobs.bytedance.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Cadence": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Cadent": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Canon": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "CelLink Technologies": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "CenturyLink": {
+   "via": [
+    "internaljobs.centurylink.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Charles River Laboratories": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Charles Schwab": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "CHS": {
+   "via": [
+    "careers.chsinc.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Chubb": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Cincinnati Financial": {
+   "via": [
+    "Taleo"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Cirrus Logic": {
+   "via": [
+    "Lever EU"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Citadel": {
+   "via": [
+    "citadel.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Citadel Securities": {
+   "via": [
+    "citadelsecurities.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Citco": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Citizens Financial Group": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "City of Greeley": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Citylogix Inc.": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Clyde Companies": {
+   "via": [
+    "careers.clydeinc.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "CMS Energy": {
+   "via": [
+    "careers.consumersenergy.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Coherent": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Commence": {
+   "via": [
+    "Paylocity"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Commonwealth of Massachusetts": {
+   "via": [
+    "Taleo"
+   ],
+   "noted": "2026-11-03"
+  },
+  "CommScope": {
+   "via": [
+    "jobs.commscope.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "ConnectPrep": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Consensus Cloud Solutions": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Constellation Energy": {
+   "via": [
+    "jobs.constellationenergy.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Cook Group": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Cooper Companies": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Cooper University Health Care": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "CooperSurgical": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Coretek Services": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "CoreWeave": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Corning": {
+   "via": [
+    "corningjobs.corning.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Costco": {
+   "via": [
+    "Taleo"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Cotiviti": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Crum & Forster Insurance": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "CSX": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Cummings Electrical": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Cummins": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Daktronics": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Dayton Freight Lines": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Dell Technologies": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Deloitte": {
+   "via": [
+    "apply.deloitte.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Delta Dental of Iowa": {
+   "via": [
+    "Paylocity"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Deutsche Bank": {
+   "via": [
+    "db.recsolu.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Digital Realty": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "DISA Technologies": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "DNV": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Dominion Energy": {
+   "via": [
+    "careers.dominionenergy.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Donaldson": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "DP World": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "DTCC": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Duke University": {
+   "via": [
+    "careers.duke.edu"
+   ],
+   "noted": "2026-11-03"
+  },
+  "East Penn Manufacturing Company": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "EastRise Credit Union": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Eaton": {
+   "via": [
+    "Eightfold"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Edison International": {
+   "via": [
+    "apply.edisoncareers.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Electronic Arts": {
+   "via": [
+    "jobs.ea.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Elire": {
+   "via": [
+    "Jobvite"
+   ],
+   "noted": "2026-11-03"
+  },
+  "EMC Insurance Companies": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Emerging Tech": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Emerson Electric": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Emory University": {
+   "via": [
+    "emory.jibeapply.com",
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Energy Transfer Partners": {
+   "via": [
+    "Taleo"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Ensono": {
+   "via": [
+    "Greenhouse on its own site",
+    "ensono.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Entergy": {
+   "via": [
+    "jobs.entergy.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Enterprise Holdings": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "EOS IT Solutions": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Epiroc": {
+   "via": [
+    "careerprofile.epiroc.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "EquipmentShare": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Ericsson": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Erie Insurance Group": {
+   "via": [
+    "jobs.erieinsurance.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Ernst & Young": {
+   "via": [
+    "eyglobal.yello.co"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Evercore": {
+   "via": [
+    "evercore.tal.net"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Exelon": {
+   "via": [
+    "careers.comed.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "EXL": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "EXP": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "EyeSouth Partners": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "F&G": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Fanatics": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Farmers Insurance": {
+   "via": [
+    "jobs.farmersinsurance.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "FC Industries": {
+   "via": [
+    "Paylocity"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Fervo Energy": {
+   "via": [
+    "Paylocity"
+   ],
+   "noted": "2026-11-03"
+  },
+  "First Citizens BancShares": {
+   "via": [
+    "firstcitizens.jibeapply.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "First Citizens Bank": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "First Citizens Wealth": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "FM": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Formlabs": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Fortive": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Foxconn Industrial Internet": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "FreshCut Paper": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "GAINS": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Garmin": {
+   "via": [
+    "Jobright",
+    "careers.garmin.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "GCI": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Geosyntec Consultants": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "GitHub": {
+   "via": [
+    "githubinc.jibeapply.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "GM financial": {
+   "via": [
+    "Jobright",
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Goldman Sachs": {
+   "via": [
+    "higher.gs.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Google": {
+   "via": [
+    "google.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Grant Thornton": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Greater New York Insurance Companies": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Greenwood Village South": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Grow Financial Federal Credit Union": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Guardian Industries": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "GuideWell Mutual": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Gulfstream": {
+   "via": [
+    "careers.gulfstream.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "H&R Block": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Hays Electrical Services": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Hearst": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Hello Fresh": {
+   "via": [
+    "Greenhouse on its own site",
+    "careers.hellofresh.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "HERE Technologies": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "HEXAWARE": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "HF Sinclair": {
+   "via": [
+    "careers.hfsinclair.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Highgate": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Hoffman Construction": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Honeywell": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Horizon Air": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Hormel Foods": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Housecall Pro": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Howmet Aerospace": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Hudson River Trading": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Hyundai Motor Company": {
+   "via": [
+    "careers-americas.hyundai.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "IDeaS": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "IES Holdings": {
+   "via": [
+    "joinus.ies-co.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Impulse Space": {
+   "via": [
+    "Pinpoint"
+   ],
+   "noted": "2026-11-03"
+  },
+  "InComm Payments": {
+   "via": [
+    "jobs.incommpayments.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Inogen": {
+   "via": [
+    "Jobvite"
+   ],
+   "noted": "2026-11-03"
+  },
+  "IntelliGenesis": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Intercontinental Exchange": {
+   "via": [
+    "iCIMS",
+    "ice.jibeapply.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Interstates": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Intuit": {
+   "via": [
+    "jobs.intuit.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Intuitive": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "ITT": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "JK Moving Services": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "John Deere": {
+   "via": [
+    "Eightfold"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Johns Hopkins Applied Physics Laboratory": {
+   "via": [
+    "careers.jhuapl.edu"
+   ],
+   "noted": "2026-11-03"
+  },
+  "JP Morgan Chase": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Jump Trading": {
+   "via": [
+    "Greenhouse"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Kaiser Permanente": {
+   "via": [
+    "Taleo"
+   ],
+   "noted": "2026-11-03"
+  },
+  "KEEN Footwear": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Kentro": {
+   "via": [
+    "careers.kentro.us"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Kentucky Science & Technology Corporation (KSTC)": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Keysight Technologies": {
+   "via": [
+    "jobs.keysight.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Keystone AI": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "KKR": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Koch Engineered Solutions": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Koch Industries": {
+   "via": [
+    "Avature"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Kodak": {
+   "via": [
+    "careers.kodak.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "L3Harris Technologies": {
+   "via": [
+    "jobs.l3harris.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Lawrence Berkeley National Laboratory": {
+   "via": [
+    "Taleo"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Lazard": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Legrand North America": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Lennox International": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Lewoint": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Lex Products": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Liberty Mutual": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "LMI": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Luminate": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Macy's": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "MAG Aerospace": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Magnera": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Mayo Clinic": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Medpace, Inc.": {
+   "via": [
+    "careers.medpace.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Mercury Insurance": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Meta": {
+   "via": [
+    "metacareers.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "MetLife": {
+   "via": [
+    "Avature"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Metropolitan Transportation Authority": {
+   "via": [
+    "Jobvite"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Microsoft": {
+   "via": [
+    "apply.careers.microsoft.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Mission Pet Health": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Molina Healthcare": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Montenson": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Moon": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Nasuni": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Navy Federal": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Nerdio": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Newell Brands": {
+   "via": [
+    "jobs.newellbrands.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Nextiva": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Noblis": {
+   "via": [
+    "Jobright",
+    "careers.noblis.org"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Nokia": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Norfolk Southern": {
+   "via": [
+    "jobs.nscorp.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Northwell Health": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "NOV": {
+   "via": [
+    "Jobright",
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Novelis": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Nucor": {
+   "via": [
+    "jobs.nucor.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Nuro": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Nutanix": {
+   "via": [
+    "Jobvite"
+   ],
+   "noted": "2026-11-03"
+  },
+  "NV5 Global": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "onsemi": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Open Road Integrated Media": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Oracle": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Paccar": {
+   "via": [
+    "jobs.paccar.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Pacific Northwest National Laboratory": {
+   "via": [
+    "Jobright",
+    "careers.pnnl.gov"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Panasonic Holdings": {
+   "via": [
+    "careers.na.panasonic.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Paramount Global": {
+   "via": [
+    "careers.paramount.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Pella": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Peraton": {
+   "via": [
+    "iCIMS",
+    "peraton.jibeapply.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Perry Homes": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "PG&E": {
+   "via": [
+    "careers.pge.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Phillips 66": {
+   "via": [
+    "careers.phillips66.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Point Blue Conservation Science": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Post Holdings": {
+   "via": [
+    "jobs.postholdings.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Praytell": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Premium Merchant Funding": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Primetals Technologies": {
+   "via": [
+    "mhicareers.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Princeton University": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Principal Financial Group": {
+   "via": [
+    "careers.principal.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "PrizePicks": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Propopia": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "PT Indorama Petrochemical": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "QinetiQ": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Qorvo": {
+   "via": [
+    "careers.qorvo.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Quadric": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Quantbot Technologies": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Ragle Inc": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Red Ventures": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Reinsurance Group of America, Incorporated": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Resideo": {
+   "via": [
+    "Jobright",
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Revance": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Reyes Beverage Group": {
+   "via": [
+    "jobportal.reyesbeveragegroup.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Ripple": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Riverside Research": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Rivian": {
+   "via": [
+    "careers.rivian.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Rockefeller Capital Management": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Rockland Trust": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Rolls-Royce Motorcars": {
+   "via": [
+    "jobs.bmwgroup.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Rystad Energy": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "SageSure": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Salt Lake County": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Samsonite": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "SAP": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Sargent & Lundy": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Savannah River Mission Completion": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "ScentAir": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "SCOR": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "ScottMadden, Inc.": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Scout Clean Energy": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Securitas": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Sherwin-Williams": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Shorr Packaging Corp.": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Shure": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Southern Company": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Southern Star Central Gas Pipeline": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Specter Aerospace": {
+   "via": [
+    "BambooHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Spirit AeroSystems": {
+   "via": [
+    "careers.spiritaero.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Spot & Tango": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Springs Window Fashions": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "STAG": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Standard Aero": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Stantec": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Staples": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "State Farm": {
+   "via": [
+    "jobs.statefarm.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "State of Montana": {
+   "via": [
+    "Taleo"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Steel Dynamics": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "StepStone Group": {
+   "via": [
+    "Greenhouse"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Stifel": {
+   "via": [
+    "iCIMS",
+    "stifel.jibeapply.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Susquehanna International Group (SIG)": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Systems Planning and Analysis": {
+   "via": [
+    "spa.jibeapply.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "T1D Exchange": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Talkspace": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "TDS": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Tesla": {
+   "via": [
+    "tesla.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Texas Instruments": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Textron": {
+   "via": [
+    "Taleo"
+   ],
+   "noted": "2026-11-03"
+  },
+  "The Friedkin Group": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "The New York Times": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "The US Oncology Network": {
+   "via": [
+    "careers.usoncology.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "TikTok": {
+   "via": [
+    "lifeattiktok.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Tradeweb": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "TripleRing": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "TWG Global": {
+   "via": [
+    "Workable"
+   ],
+   "noted": "2026-11-03"
+  },
+  "UL Solutions": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Ulta Beauty": {
+   "via": [
+    "careers.ulta.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "United Airlines": {
+   "via": [
+    "careers.united.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "United Wholesale Mortgage": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Universal Health Services": {
+   "via": [
+    "jobs.uhsinc.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "University of Pikeville": {
+   "via": [
+    "BambooHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Urban Science": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "URBN": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Vanasse Hangen Brustlin (VHB)": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "VaynerMedia": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Veeam Software": {
+   "via": [
+    "Greenhouse EU"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Veracyte": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "VersaDesk": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Vertiv": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Viking Global Investors": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "W.R. Berkley": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "W.W. Grainger": {
+   "via": [
+    "jobs.grainger.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Walgreens": {
+   "via": [
+    "BrassRing"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Waters Corporation": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Wave Life Sciences USA": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Waymo": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "WebMD": {
+   "via": [
+    "Jobvite"
+   ],
+   "noted": "2026-11-03"
+  },
+  "WEC Energy Group": {
+   "via": [
+    "careers.wecenergygroup.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Werfen": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "West Bend Insurance": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "West Monroe": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Western & Southern Financial Group": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Western National Insurance": {
+   "via": [
+    "Paylocity"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Westinghouse Electric Company": {
+   "via": [
+    "careers.westinghousenuclear.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "William Blair": {
+   "via": [
+    "Greenhouse on its own site"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Willkie Farr & Gallagher": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Windstar Cruises": {
+   "via": [
+    "xanterra.jibeapply.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Wipfli": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-03"
+  },
+  "WoodmenLife": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-03"
+  },
+  "WSP": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "WTW": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-03"
+  },
+  "XPO": {
+   "via": [
+    "jobs.xpo.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Zimmer Biomet Holdings": {
+   "via": [
+    "careers.zimmerbiomet.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Zions Bank": {
+   "via": [
+    "Taleo"
+   ],
+   "noted": "2026-11-03"
+  },
+  "ZS": {
+   "via": [
+    "jobs.zs.com"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Zuckerman Investment Group": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-03"
+  },
+  "Zurich Insurance": {
+   "via": [
+    "careers.zurich.com"
+   ],
+   "noted": "2026-11-03"
+  }
+ }
+}

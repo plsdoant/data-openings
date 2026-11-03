@@ -14,13 +14,13 @@ Three sources are polled on each run:
 |---|---|---|
 | Simplify | The [Summer 2027 internships](https://github.com/SimplifyJobs/Summer2027-Internships) JSON feed, ~16,000 listings | Hours to days, since it's curated by hand |
 | Jobright | The [data analysis internships](https://github.com/jobright-ai/2026-Data-Analysis-Internship) README table, parsed directly because the repo publishes no JSON | About an hour |
-| Company boards | 289 hand-kept job boards in `ats.py`, plus every board found from the feeds' links in `boards.json`, hit through their public APIs: Greenhouse, Lever, Ashby, Workday, SmartRecruiters | One poll |
+| Company boards | 289 hand-kept job boards in `ats.py`, plus the boards found from the feeds' links in `boards/`, hit through their public APIs: Greenhouse, Lever, Ashby, Workday, SmartRecruiters | One poll |
 
 The hand-kept boards are a tech starter list and most of the Fortune 500,
-whichever members expose a board through one of those five APIs. Before each
-poll, `--suggest-boards` adds the board of every company that has posted an
-analyst internship to the feeds and isn't polled yet (see
-[Found boards](#found-boards)). A good
+whichever members expose a board through one of those five APIs. Every
+Friday, a second workflow finds the board of each company that has posted an
+analyst internship to the feeds and isn't polled yet, and opens a pull
+request for it (see [Found boards](#found-boards)). A good
 part of the Fortune 500 can't be reached: Amazon, Apple, UnitedHealth,
 JPMorgan, American Express and many others run their careers pages on Taleo,
 iCIMS, SuccessFactors, Oracle, Phenom, Eightfold, or something they built
@@ -135,7 +135,9 @@ bottom-left corner that the cursor can push around. Click it to blow it out.
 2. Add repository secrets under Settings, Secrets and variables, Actions:
    `WEBHOOK_URL` for the main channel and, optionally, `WEBHOOK_URL_ATS`.
 3. Under Settings, Actions, General, set workflow permissions to **Read and
-   write** so the workflow can commit state.
+   write** so the workflow can commit state, and tick **Allow GitHub Actions
+   to create and approve pull requests** so the Friday workflow can propose
+   boards.
 4. Under Settings, Pages, set the source to **Deploy from a branch**, branch
    `main`, folder `/docs`.
 5. Seed locally so the first run doesn't post every open role:
@@ -157,8 +159,9 @@ python3 job_bot.py               # normal run: post new roles, update state and 
 python3 job_bot.py --dry-run     # print matches, post nothing, change nothing
 python3 job_bot.py --export      # rebuild docs/jobs.json only
 python3 job_bot.py --check-ats   # confirm every configured board still responds
-python3 job_bot.py --suggest-boards            # add boards for feed companies not polled yet
-python3 job_bot.py --suggest-boards --dry-run  # list them without writing boards.json
+python3 job_bot.py --suggest-boards             # add boards for feed companies not polled yet
+python3 job_bot.py --suggest-boards --dry-run   # list them, write nothing
+python3 job_bot.py --suggest-boards --open-prs  # open a pull request per company (what Friday runs)
 python3 job_bot.py --test 3      # post the 3 newest matches to check formatting, state untouched
 python3 job_bot.py --seed        # mark everything currently open as seen, post nothing
 ```
@@ -229,19 +232,33 @@ SmartRecruiters boards are paged up to 600 postings.
 Simplify links straight to each company's posting, so the link names its
 board. `--suggest-boards` reads every Simplify and Jobright listing that
 passes the title and location filters, open or closed, since a company that
-posted an analyst internship this season is worth watching for its next one.
-The workflow runs it before every poll. Results go in `boards.json`, in three
-sections:
+posted an analyst internship this season is worth watching for its next one,
+and fetches each board it hasn't seen once to check it responds.
+
+The **find boards** workflow (`.github/workflows/boards.yml`) runs it every
+Friday at 16:00 UTC with `--open-prs`, which opens one pull request per
+company. Each adds that company's file to `boards/`, and its description
+lists the board, how many open roles it has, which of them pass your filters
+now, and the feed listings that pointed to it. Merge it and the board is
+polled from the next run. Close it to decline. Run the workflow from the
+Actions tab to check sooner.
+
+Found boards live one company to a file, `boards/bank-of-montreal.json` and
+so on, so pull requests never conflict with each other. `ats.py` polls them
+alongside `COMPANIES`, under the company name the feed uses so they dedupe
+against the feed's copies. A board also in `COMPANIES` is skipped. Delete a
+company's file to stop polling it.
+
+`board_notes.json` holds the rest, committed straight to `main`:
 
 | Section | What's in it |
 |---|---|
-| `boards` | Boards that responded when first fetched. `ats.py` polls them alongside `COMPANIES`, under the company name the feed uses, so they dedupe against the feed's copies |
+| `proposed` | Every board offered in a pull request, with its link. Kept after the pull request is merged or closed, so a declined or deleted board isn't offered again. Remove an entry to have it offered again |
 | `failed` | Boards that didn't respond, with the error. Each is tried again after `RETRY_FAILED_DAYS` (a week) |
 | `unsupported` | Companies with no link to one of the five APIs, and where their links go instead: iCIMS, Taleo, Oracle Cloud, a careers site of their own, or Jobright, which never links to the posting. Nothing is done with these; the feeds still fetch their listings |
 
-To stop polling a found board, set `"skip": true` on its entry. Deleting it
-doesn't work, because the next run finds it again. A board added to
-`COMPANIES` by hand is skipped in `boards.json` automatically.
+Without `--open-prs`, `--suggest-boards` writes new boards to `boards/`
+directly, for running by hand.
 
 Feeds are `FEEDS` in `job_bot.py` and `REPOS` in `jobright.py`. Any repo
 using the same JSON schema or README table works.
@@ -265,8 +282,12 @@ that Pages is set to deploy from `/docs`.
 
 **One board warns on every run.** The slug moved, or the company blocks
 datacenter IPs. Confirm with `--check-ats` and delete the line if it stays
-broken, or set `"skip": true` on it if it's in `boards.json`. A 410 from a
-Workday board means the site name changed.
+broken, or delete its file if it's in `boards/`. A 410 from a Workday board
+means the site name changed.
+
+**The Friday run fails with "not permitted to create or approve pull
+requests."** Tick the pull request box in setup step 3. Nothing is recorded
+for a pull request that didn't open, so the next run tries again.
 
 **Zero matches.** The filters are too narrow, or it's the off-season.
 Postings ramp up from August through October.
@@ -288,9 +309,9 @@ late.
 A run takes about seven minutes, nearly all of it the company boards: about
 950 of them once the found boards are added, the Workday ones paged eight at
 a time, twenty requests each. That's inside the cron interval, but it's the
-number to watch as `boards.json` grows. Finding boards takes a few seconds on
-a normal run, since only links it hasn't seen are checked. Its first pass,
-which checked about 690 boards, took under five minutes.
+number to watch as `boards/` grows. The Friday run takes seconds when nothing
+is new, since only boards it hasn't seen are fetched. Its first pass, which
+checked about 690 boards, took under five minutes.
 
 `seen.json` stores up to three keys per listing (the source id, the dedupe
 key, and the posting id from its link), plus those of any duplicates merged
