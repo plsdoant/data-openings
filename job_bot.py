@@ -8,6 +8,7 @@ directly), filters for roles you care about, and posts new ones to Discord/Slack
 First run:   python job_bot.py --seed     (marks everything as seen, no spam)
 Every run:   python job_bot.py
 Dry run:     python job_bot.py --dry-run  (prints instead of posting)
+New boards:  python job_bot.py --suggest-boards  (adds feed companies' boards)
 """
 
 import argparse
@@ -19,7 +20,7 @@ import sys
 import time
 import urllib.request
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from itertools import combinations
 from pathlib import Path
 
@@ -179,7 +180,8 @@ def get_json(url, timeout=60):
         return json.loads(r.read().decode())
 
 
-def fetch_all():
+def fetch_feeds():
+    """Simplify and Jobright listings, without the ATS boards."""
     jobs = []
     for url in FEEDS:
         try:
@@ -189,8 +191,11 @@ def fetch_all():
         except Exception as e:
             print(f"  WARN: {url} failed: {e}", file=sys.stderr)
     jobs.extend(jobright.fetch_jobright(SSL_CTX))
-    jobs.extend(ats.fetch_ats(SSL_CTX))
     return jobs
+
+
+def fetch_all():
+    return fetch_feeds() + ats.fetch_ats(SSL_CTX)
 
 
 # Whole words only, so "International" and "Internal" don't count as intern.
@@ -200,7 +205,17 @@ _INTERN_RE = re.compile(r"\b(intern(ship)?s?|co-?ops?)\b")
 def matches(job):
     if not (job.get("active") and job.get("is_visible", True)):
         return False
+    if not relevant(job):
+        return False
+    posted = job.get("date_posted") or 0
+    if posted and (time.time() - posted) > MAX_AGE_DAYS * 86400:
+        return False
+    return True
 
+
+def relevant(job):
+    """The title, term, and location filters, whether or not the listing is
+    still open or recent."""
     title = (job.get("title") or "").lower()
     if str(job.get("source", "")).startswith("ats:") and not _INTERN_RE.search(title):
         return False
@@ -220,10 +235,6 @@ def matches(job):
         locs = " ".join(job.get("locations") or []).lower()
         if not any(l.lower() in locs for l in LOCATIONS):
             return False
-
-    posted = job.get("date_posted") or 0
-    if posted and (time.time() - posted) > MAX_AGE_DAYS * 86400:
-        return False
 
     return True
 
@@ -585,6 +596,118 @@ def export_site(hits, all_jobs):
 
 
 # ---------------------------------------------------------------------------
+# BOARD DISCOVERY
+# ---------------------------------------------------------------------------
+
+# A board that didn't respond when checked is tried again after this long.
+RETRY_FAILED_DAYS = 7
+
+
+def _company_key(name):
+    """'Expedia Group, Inc.' -> 'expedia': dedupe_key's company half."""
+    return _norm(name, lambda s: _CO_SUFFIXES.sub(" ", s)).replace(" ", "")
+
+
+def suggest_boards(dry_run=False):
+    """Add the job boards of feed companies that aren't polled directly yet.
+
+    Every visible feed listing that passes the title and location filters
+    counts, open or closed: a company that posted an analyst internship this
+    season is worth watching for its next one. Simplify links straight to the
+    company's posting, so the link names the board. Each new board is fetched
+    once before it goes in boards.json. One that fails goes under "failed" and
+    is tried again after RETRY_FAILED_DAYS. A company whose links all point
+    somewhere ats.py can't poll (iCIMS, Taleo, its own careers site, or
+    Jobright, which never links out) is noted under "unsupported" and left to
+    the feeds, which keep fetching its listings either way."""
+    found = ats.load_found()
+    today = date.today()
+    polled = {(kind, slug.lower()) for kind, slug in ats.COMPANIES}
+    polled |= {(b.get("kind"), (b.get("slug") or "").lower())   # skipped ones too
+               for b in found["boards"]}
+    polled_names = {_company_key(n) for n in ats.company_names()}
+
+    boards, elsewhere, names = defaultdict(set), defaultdict(set), {}
+    for j in fetch_feeds():
+        if not (j.get("is_visible", True) and relevant(j)):
+            continue
+        key = _company_key(j.get("company_name"))
+        if not key:
+            continue
+        names.setdefault(key, j["company_name"].strip())
+        kind, where = ats.board_for_link(j.get("url"))
+        if kind:
+            boards[key].add((kind, where))
+        else:
+            elsewhere[key].add(where)
+
+    def due(kind, slug):
+        failed = found["failed"].get(f"{kind}/{slug}")
+        return not failed or (today - date.fromisoformat(failed["checked"])).days \
+            >= RETRY_FAILED_DAYS
+
+    # Links spell some slugs in more than one case ("BoschGroup", "boschgroup"),
+    # and one board can be linked from two companies' listings: check it once.
+    todo, queued = [], set()
+    for key in sorted(boards):
+        for kind, slug in sorted(boards[key]):
+            board = (kind, slug.lower())
+            if board in polled or board in queued or not due(kind, slug):
+                continue
+            queued.add(board)
+            todo.append((key, kind, slug))
+    print(f"  {len(boards)} feed companies have a board link; "
+          f"{len(todo)} new board(s) to check")
+    results = ats.probe_boards(SSL_CTX, [(kind, slug) for _, kind, slug in todo])
+
+    added = failed = 0
+    for (key, kind, slug), (roles, err) in zip(todo, results):
+        tag = f"{kind}/{slug}"
+        if err:
+            failed += 1
+            found["failed"][tag] = {"company": names[key], "error": err[:200],
+                                    "checked": today.isoformat()}
+            print(f"    failed  {names[key]}: {tag} ({err[:120]})")
+            continue
+        added += 1
+        found["failed"].pop(tag, None)
+        found["boards"].append({"kind": kind, "slug": slug,
+                                "company": names[key], "added": today.isoformat()})
+        print(f"    added   {names[key]}: {tag} ({roles} open roles)")
+
+    # Unsupported: no board link at all, and not already polled under its name.
+    # A company that gets a board later comes off the list.
+    has_board = set(boards) | polled_names
+    unsupported = {name: v for name, v in found["unsupported"].items()
+                   if _company_key(name) not in has_board}
+    listed = {_company_key(name): name for name in unsupported}
+    noted = 0
+    for key in sorted(elsewhere.keys() - has_board):
+        name = listed.get(key, names[key])
+        entry = unsupported.get(name)
+        if entry is None:
+            noted += 1
+            entry = unsupported[name] = {"via": [], "noted": today.isoformat()}
+        entry["via"] = sorted(set(entry.get("via") or []) | elsewhere[key])
+    found["unsupported"] = dict(sorted(unsupported.items(), key=lambda kv: kv[0].lower()))
+    found["failed"] = {tag: v for tag, v in sorted(found["failed"].items())
+                       if (tag.split("/", 1)[0], tag.split("/", 1)[1].lower())
+                       not in polled}
+    unique = {}
+    for b in found["boards"]:
+        unique.setdefault((b.get("kind"), str(b.get("slug", "")).lower()), b)
+    found["boards"] = sorted(unique.values(), key=lambda b: (
+        str(b.get("company", "")).lower(), str(b.get("kind")), str(b.get("slug"))))
+
+    print(f"  {added} board(s) added, {failed} failed; {len(unsupported)} companies"
+          f" can't be polled directly ({noted} new), left to the feeds")
+    if dry_run:
+        print("  dry run: boards.json not written")
+        return
+    ats.FOUND_FILE.write_text(json.dumps(found, indent=1, ensure_ascii=False) + "\n")
+
+
+# ---------------------------------------------------------------------------
 # MAIN
 # ---------------------------------------------------------------------------
 
@@ -701,10 +824,18 @@ def main():
     ap.add_argument("--export", action="store_true",
                     help="write docs/jobs.json for the site and exit; "
                          "posts nothing, leaves seen.json alone")
+    ap.add_argument("--suggest-boards", action="store_true",
+                    help="add boards.json entries for feed companies that "
+                         "aren't polled directly yet, then exit (with "
+                         "--dry-run, print them without writing)")
     args = ap.parse_args()
 
     if args.check_ats:
         sys.exit(0 if ats.check_ats(SSL_CTX) else 1)
+    if args.suggest_boards:
+        print(f"[{datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}] looking for new boards...")
+        suggest_boards(dry_run=args.dry_run)
+        return
 
     print(f"[{datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}] polling...")
     all_jobs = fetch_all()

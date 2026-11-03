@@ -22,13 +22,19 @@ the tenant lives on that wdN, 422 means it doesn't — then read the real site
 names out of https://<tenant>.<wdN>.myworkdayjobs.com/robots.txt.
 
 Verify a list with:  python3 job_bot.py --check-ats
+
+Boards found automatically from the links in the Simplify feed are kept in
+boards.json, not here. See job_bot.py --suggest-boards.
 """
 
 import concurrent.futures as cf
 import json
+import re
 import sys
 import time
 import urllib.request
+from pathlib import Path
+from urllib.parse import parse_qs, urlparse
 
 # ---------------------------------------------------------------------------
 # YOUR TARGET COMPANIES  ("ats_kind", "slug")
@@ -447,9 +453,14 @@ _NAMES = {
 }
 
 
+def _name_key(slug):
+    """'hcmportal.wd5/Search' -> 'hcmportal', the key into _NAMES."""
+    return slug.split("/", 1)[0].split(".")[0].lower()
+
+
 def display_name(slug):
     """'hcmportal.wd5/Search' -> 'UPS'. Used for embeds and cross-source dedupe."""
-    key = slug.split("/", 1)[0].split(".")[0].lower()
+    key = _name_key(slug)
     return _NAMES.get(key, key.title())
 
 
@@ -457,6 +468,105 @@ def company_names(companies=None):
     """Human-readable names for every configured board, alphabetical."""
     names = {display_name(slug) for _kind, slug in (companies or COMPANIES)}
     return sorted(names, key=lambda n: n.lower())
+
+
+# ---------------------------------------------------------------------------
+# FOUND BOARDS
+# boards.json is written by `job_bot.py --suggest-boards`: boards read off the
+# feed's links ("boards"), boards that didn't respond when checked ("failed"),
+# and companies whose links point somewhere this module can't poll
+# ("unsupported"). Only "boards" is polled. Each carries the company name the
+# feed uses, so its listings dedupe against the feed's copies. A board that's
+# also in COMPANIES above is skipped here, and so is one marked "skip": true,
+# which is how to stop polling a found board without it being found again.
+# ---------------------------------------------------------------------------
+FOUND_FILE = Path(__file__).parent / "boards.json"
+
+
+def load_found():
+    """boards.json as a dict, empty sections if it's missing or unreadable."""
+    try:
+        data = json.loads(FOUND_FILE.read_text())
+    except (OSError, ValueError):
+        data = {}
+    for section, empty in (("boards", []), ("failed", {}), ("unsupported", {})):
+        if not isinstance(data.get(section), type(empty)):
+            data[section] = empty
+    return data
+
+
+def _add_found(found):
+    have = {(kind, slug.lower()) for kind, slug in COMPANIES}
+    for b in found["boards"]:
+        if b.get("kind") not in _FETCHERS or not b.get("slug") or b.get("skip"):
+            continue
+        if (b["kind"], b["slug"].lower()) in have:
+            continue
+        have.add((b["kind"], b["slug"].lower()))
+        COMPANIES.append((b["kind"], b["slug"]))
+        if b.get("company"):
+            _NAMES.setdefault(_name_key(b["slug"]), b["company"])
+
+
+# Hosts a feed link can point at that this module can't poll, with the name
+# boards.json gives them. EU Greenhouse and Lever boards answer on separate
+# APIs, so they're listed before the plain hosts below would match them.
+_OTHER_BOARDS = [
+    ("eu.greenhouse.io", "Greenhouse EU"), ("eu.lever.co", "Lever EU"),
+    ("icims.com", "iCIMS"), ("taleo.net", "Taleo"),
+    ("oraclecloud.com", "Oracle Cloud"), ("successfactors.com", "SuccessFactors"),
+    ("successfactors.eu", "SuccessFactors"), ("jobs.sap.com", "SuccessFactors"),
+    ("eightfold.ai", "Eightfold"), ("jobvite.com", "Jobvite"),
+    ("workable.com", "Workable"), ("rippling.com", "Rippling"),
+    ("paylocity.com", "Paylocity"), ("avature.net", "Avature"),
+    ("bamboohr.com", "BambooHR"), ("ultipro.com", "UKG"), ("ukg.net", "UKG"),
+    ("adp.com", "ADP"), ("dayforcehcm.com", "Dayforce"), ("breezy.hr", "Breezy"),
+    ("applytojob.com", "JazzHR"), ("recruitee.com", "Recruitee"),
+    ("teamtailor.com", "Teamtailor"), ("pinpointhq.com", "Pinpoint"),
+    ("phenompeople.com", "Phenom"), ("brassring.com", "BrassRing"),
+    ("csod.com", "Cornerstone"), ("linkedin.com", "LinkedIn"),
+    ("simplify.jobs", "Simplify"), ("jobright.ai", "Jobright"),
+]
+
+# {tenant}.wdN.myworkdayjobs.com/[locale/]{site}/... or
+# wdN.myworkdaysite.com/[locale/]recruiting/{tenant}/{site}/...
+_WORKDAY_LINK = re.compile(
+    r"//(?:([a-z0-9-]+)\.(wd\d+)\.myworkdayjobs\.com|(wd\d+)\.myworkdaysite\.com)"
+    r"/(?:[a-z]{2}-[a-z]{2}/)?(?:recruiting/([^/?#]+)/)?([^/?#]+)", re.I)
+
+
+def board_for_link(url):
+    """Which board a posting link comes from. ('workday', 'hyvee.wd1/HyVeeCareers')
+    for one fetch_ats can poll; (None, 'iCIMS') or (None, 'amazon.jobs') for
+    one it can't."""
+    p = urlparse(url or "")
+    host = p.netloc.lower().removeprefix("www.")
+    if not host:
+        return None, "no link"
+    for domain, label in _OTHER_BOARDS:
+        if host == domain or host.endswith("." + domain):
+            return None, label
+    parts = [x for x in p.path.split("/") if x]
+    if m := _WORKDAY_LINK.search(url):
+        tenant, site = (m[1] or m[4] or "").lower(), m[5]
+        if tenant and site.lower() not in ("job", "details", "apply", "login"):
+            return "workday", f"{tenant}.{(m[2] or m[3]).lower()}/{site}"
+        return None, "Workday"
+    if host.endswith("greenhouse.io"):
+        if token := parse_qs(p.query).get("for"):
+            return "greenhouse", token[0].lower()
+        if parts and parts[0] != "embed":
+            return "greenhouse", parts[0].lower()
+        return None, "Greenhouse"
+    if host == "jobs.lever.co" and parts:
+        return "lever", parts[0].lower()
+    if host == "jobs.ashbyhq.com" and parts:
+        return "ashby", parts[0]
+    if host.endswith("smartrecruiters.com") and parts:
+        return "smartrecruiters", parts[0]
+    if "gh_jid=" in p.query:
+        return None, "Greenhouse on its own site"
+    return None, host
 
 
 # Server-side search terms for Workday boards (they're too big to pull whole).
@@ -668,6 +778,8 @@ def _workday(slug, ctx):
 _FETCHERS = {"greenhouse": _greenhouse, "lever": _lever, "ashby": _ashby,
              "workday": _workday, "smartrecruiters": _smartrecruiters}
 
+_add_found(load_found())
+
 
 # --- public API -------------------------------------------------------------
 
@@ -694,6 +806,20 @@ def fetch_ats(ssl_ctx, companies=None):
     print(f"  fetched {len(jobs):,} from {len(companies)} ATS boards"
           f" ({len(failures)} failed)")
     return jobs
+
+
+def probe_boards(ssl_ctx, boards):
+    """[(kind, slug)] -> [(open roles, None) or (None, error)], in order, for
+    deciding whether a board is worth adding."""
+    def one(item):
+        kind, slug = item
+        try:
+            return len(_FETCHERS[kind](slug, ssl_ctx)), None
+        except Exception as e:
+            return None, f"{type(e).__name__}: {e}"
+
+    with cf.ThreadPoolExecutor(min(8, max(1, len(boards)))) as ex:
+        return list(ex.map(one, boards))
 
 
 def check_ats(ssl_ctx, companies=None):

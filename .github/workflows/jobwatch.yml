@@ -22,6 +22,10 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Find new company boards
+        continue-on-error: true   # a failed lookup shouldn't stop the alerts
+        run: python job_bot.py --suggest-boards
+
       - name: Poll for new listings
         env:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
@@ -34,6 +38,7 @@ jobs:
           git config user.name  "job-bot"
           git config user.email "job-bot@users.noreply.github.com"
           git add seen.json docs/jobs.json
+          if [ -f boards.json ]; then git add boards.json; fi
           git diff --staged --quiet || git commit -m "state: $(date -u +%FT%TZ)"
           git pull --rebase --autostash
           git push

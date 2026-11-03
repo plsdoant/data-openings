@@ -14,11 +14,13 @@ Three sources are polled on each run:
 |---|---|---|
 | Simplify | The [Summer 2027 internships](https://github.com/SimplifyJobs/Summer2027-Internships) JSON feed, ~16,000 listings | Hours to days, since it's curated by hand |
 | Jobright | The [data analysis internships](https://github.com/jobright-ai/2026-Data-Analysis-Internship) README table, parsed directly because the repo publishes no JSON | About an hour |
-| Company boards | 289 job boards at 278 companies, hit through their public APIs: Greenhouse, Lever, Ashby, Workday, SmartRecruiters | One poll |
+| Company boards | 289 hand-kept job boards in `ats.py`, plus every board found from the feeds' links in `boards.json`, hit through their public APIs: Greenhouse, Lever, Ashby, Workday, SmartRecruiters | One poll |
 
-The company boards are a tech starter list, most of the Fortune 500 —
-whichever members expose a board through one of those five APIs — and the
-companies that have posted analyst internships to the Simplify feed. A good
+The hand-kept boards are a tech starter list and most of the Fortune 500,
+whichever members expose a board through one of those five APIs. Before each
+poll, `--suggest-boards` adds the board of every company that has posted an
+analyst internship to the feeds and isn't polled yet (see
+[Found boards](#found-boards)). A good
 part of the Fortune 500 can't be reached: Amazon, Apple, UnitedHealth,
 JPMorgan, American Express and many others run their careers pages on Taleo,
 iCIMS, SuccessFactors, Oracle, Phenom, Eightfold, or something they built
@@ -155,6 +157,8 @@ python3 job_bot.py               # normal run: post new roles, update state and 
 python3 job_bot.py --dry-run     # print matches, post nothing, change nothing
 python3 job_bot.py --export      # rebuild docs/jobs.json only
 python3 job_bot.py --check-ats   # confirm every configured board still responds
+python3 job_bot.py --suggest-boards            # add boards for feed companies not polled yet
+python3 job_bot.py --suggest-boards --dry-run  # list them without writing boards.json
 python3 job_bot.py --test 3      # post the 3 newest matches to check formatting, state untouched
 python3 job_bot.py --seed        # mark everything currently open as seen, post nothing
 ```
@@ -206,8 +210,6 @@ Coca-Cola, `cat` is Caterpillar, `ngc` is Northrop Grumman.
 Many companies post internships on a separate campus site that the main
 board doesn't show, and `robots.txt` names it too: `University`, `Campus`,
 `early_careers`, and so on. Add it as a second entry under the same tenant.
-Simplify links straight to each company's posting, so the URLs in its feed
-are the quickest way to find boards worth adding.
 
 Check what a board actually returns before keeping it. Several plausible
 slugs belong to someone else entirely — `greenhouse/fox` is a veterinary
@@ -221,6 +223,25 @@ dedupe, so spell it the way the feeds do. Run `--check-ats` after editing.
 Workday boards are too large to pull whole, so each is searched server-side
 for the terms in `WORKDAY_SEARCHES`, capped at 200 results per term.
 SmartRecruiters boards are paged up to 600 postings.
+
+### Found boards
+
+Simplify links straight to each company's posting, so the link names its
+board. `--suggest-boards` reads every Simplify and Jobright listing that
+passes the title and location filters, open or closed, since a company that
+posted an analyst internship this season is worth watching for its next one.
+The workflow runs it before every poll. Results go in `boards.json`, in three
+sections:
+
+| Section | What's in it |
+|---|---|
+| `boards` | Boards that responded when first fetched. `ats.py` polls them alongside `COMPANIES`, under the company name the feed uses, so they dedupe against the feed's copies |
+| `failed` | Boards that didn't respond, with the error. Each is tried again after `RETRY_FAILED_DAYS` (a week) |
+| `unsupported` | Companies with no link to one of the five APIs, and where their links go instead: iCIMS, Taleo, Oracle Cloud, a careers site of their own, or Jobright, which never links to the posting. Nothing is done with these; the feeds still fetch their listings |
+
+To stop polling a found board, set `"skip": true` on its entry. Deleting it
+doesn't work, because the next run finds it again. A board added to
+`COMPANIES` by hand is skipped in `boards.json` automatically.
 
 Feeds are `FEEDS` in `job_bot.py` and `REPOS` in `jobright.py`. Any repo
 using the same JSON schema or README table works.
@@ -244,7 +265,8 @@ that Pages is set to deploy from `/docs`.
 
 **One board warns on every run.** The slug moved, or the company blocks
 datacenter IPs. Confirm with `--check-ats` and delete the line if it stays
-broken. A 410 from a Workday board means the site name changed.
+broken, or set `"skip": true` on it if it's in `boards.json`. A 410 from a
+Workday board means the site name changed.
 
 **Zero matches.** The filters are too narrow, or it's the off-season.
 Postings ramp up from August through October.
@@ -263,9 +285,12 @@ lists are rebuilt on their own schedule. Direct board polling has no such
 floor and is limited only by the 30-minute cron, which GitHub often runs
 late.
 
-A run takes two to three minutes, nearly all of it the company boards: the
-Workday ones are paged eight at a time, twenty requests each. That's well
-inside the cron interval, but it's the number to watch when adding boards.
+A run takes about seven minutes, nearly all of it the company boards: about
+950 of them once the found boards are added, the Workday ones paged eight at
+a time, twenty requests each. That's inside the cron interval, but it's the
+number to watch as `boards.json` grows. Finding boards takes a few seconds on
+a normal run, since only links it hasn't seen are checked. Its first pass,
+which checked about 690 boards, took under five minutes.
 
 `seen.json` stores up to three keys per listing (the source id, the dedupe
 key, and the posting id from its link), plus those of any duplicates merged
