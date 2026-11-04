@@ -1,5 +1,31 @@
 {
- "proposed": {},
+ "proposed": {
+  "ashby/regent": {
+   "company": "REGENT",
+   "pr": "https://github.com/plsdoant/data-openings/pull/5",
+   "proposed": "2026-11-04"
+  },
+  "greenhouse/eulerity": {
+   "company": "Eulerity",
+   "pr": "https://github.com/plsdoant/data-openings/pull/2",
+   "proposed": "2026-11-04"
+  },
+  "greenhouse/jomboymedia": {
+   "company": "Jomboy Media",
+   "pr": "https://github.com/plsdoant/data-openings/pull/3",
+   "proposed": "2026-11-04"
+  },
+  "greenhouse/thenewyorktimes": {
+   "company": "The New York Times",
+   "pr": "https://github.com/plsdoant/data-openings/pull/4",
+   "proposed": "2026-11-04"
+  },
+  "workday/caresource.wd1/caresource": {
+   "company": "CareSource",
+   "pr": "https://github.com/plsdoant/data-openings/pull/1",
+   "proposed": "2026-11-04"
+  }
+ },
  "failed": {
   "ashby/mtesting.ai": {
    "company": "Mistral AI",
