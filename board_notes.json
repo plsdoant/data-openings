@@ -1,5 +1,15 @@
 {
  "proposed": {
+  "ashby/drivewealth": {
+   "company": "DriveWealth",
+   "pr": "https://github.com/plsdoant/data-openings/pull/32",
+   "proposed": "2026-11-20"
+  },
+  "ashby/nexus-cognitive": {
+   "company": "Nexus Cognitive Technologies",
+   "pr": "https://github.com/plsdoant/data-openings/pull/36",
+   "proposed": "2026-11-20"
+  },
   "ashby/regent": {
    "company": "REGENT",
    "pr": "https://github.com/plsdoant/data-openings/pull/5",
@@ -15,6 +25,11 @@
    "pr": "https://github.com/plsdoant/data-openings/pull/11",
    "proposed": "2026-11-13"
   },
+  "greenhouse/attainpartners": {
+   "company": "Attain Partners",
+   "pr": "https://github.com/plsdoant/data-openings/pull/31",
+   "proposed": "2026-11-20"
+  },
   "greenhouse/enova": {
    "company": "Enova",
    "pr": "https://github.com/plsdoant/data-openings/pull/16",
@@ -24,6 +39,11 @@
    "company": "Eulerity",
    "pr": "https://github.com/plsdoant/data-openings/pull/2",
    "proposed": "2026-11-04"
+  },
+  "greenhouse/icapitalnetwork": {
+   "company": "iCapital Network",
+   "pr": "https://github.com/plsdoant/data-openings/pull/34",
+   "proposed": "2026-11-20"
   },
   "greenhouse/jomboymedia": {
    "company": "Jomboy Media",
@@ -35,10 +55,20 @@
    "pr": "https://github.com/plsdoant/data-openings/pull/19",
    "proposed": "2026-11-13"
   },
+  "greenhouse/octaura": {
+   "company": "Octaura",
+   "pr": "https://github.com/plsdoant/data-openings/pull/37",
+   "proposed": "2026-11-20"
+  },
   "greenhouse/thenewyorktimes": {
    "company": "The New York Times",
    "pr": "https://github.com/plsdoant/data-openings/pull/4",
    "proposed": "2026-11-04"
+  },
+  "lever/duetti": {
+   "company": "Duetti",
+   "pr": "https://github.com/plsdoant/data-openings/pull/33",
+   "proposed": "2026-11-20"
   },
   "lever/palantir": {
    "company": "Palantir",
@@ -100,6 +130,11 @@
    "pr": "https://github.com/plsdoant/data-openings/pull/20",
    "proposed": "2026-11-13"
   },
+  "workday/martinmarietta.wd5/Martin_Marietta_Careers": {
+   "company": "Martin Marietta",
+   "pr": "https://github.com/plsdoant/data-openings/pull/35",
+   "proposed": "2026-11-20"
+  },
   "workday/omya.wd3/Omya": {
    "company": "Omya",
    "pr": "https://github.com/plsdoant/data-openings/pull/21",
@@ -109,6 +144,11 @@
    "company": "Panera Bread",
    "pr": "https://github.com/plsdoant/data-openings/pull/23",
    "proposed": "2026-11-13"
+  },
+  "workday/pipersandler.wd501/Piper_Sandler_Careers": {
+   "company": "Piper Sandler",
+   "pr": "https://github.com/plsdoant/data-openings/pull/38",
+   "proposed": "2026-11-20"
   },
   "workday/sec.wd3/Samsung_Careers": {
    "company": "Samsung",
@@ -145,6 +185,11 @@
    "pr": "https://github.com/plsdoant/data-openings/pull/29",
    "proposed": "2026-11-13"
   },
+  "workday/vrtx.wd501/vertex_intern": {
+   "company": "Vertex Pharmaceuticals",
+   "pr": "https://github.com/plsdoant/data-openings/pull/39",
+   "proposed": "2026-11-20"
+  },
   "workday/whitecap.wd1/careers": {
    "company": "White Cap Supply Holdings",
    "pr": "https://github.com/plsdoant/data-openings/pull/30",
@@ -155,12 +200,12 @@
   "ashby/mtesting.ai": {
    "company": "Mistral AI",
    "error": "HTTPError: HTTP Error 404: Not Found",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "greenhouse/breezeairways": {
    "company": "Breeze Airways",
    "error": "HTTPError: HTTP Error 404: Not Found",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "greenhouse/capitalrx": {
    "company": "Judi Health",
@@ -175,32 +220,32 @@
   "greenhouse/rdccareers": {
    "company": "Realtor.com",
    "error": "HTTPError: HTTP Error 404: Not Found",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "lever/aofl": {
    "company": "Age of Learning",
    "error": "HTTPError: HTTP Error 404: Not Found",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "lever/calstart": {
    "company": "CALSTART",
    "error": "HTTPError: HTTP Error 404: Not Found",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "lever/mbrdna": {
    "company": "Mercedes-Benz",
    "error": "HTTPError: HTTP Error 404: Not Found",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "lever/simberobotics": {
    "company": "Simbe Robotics",
    "error": "HTTPError: HTTP Error 404: Not Found",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "workday/comcast.wd5/Comcast_Careers": {
    "company": "Comcast",
    "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "workday/idexx.wd1/IDEXX": {
    "company": "IDEXX",
@@ -210,7 +255,7 @@
   "workday/liveramp.wd5/LiveRampCareers": {
    "company": "LiveRamp",
    "error": "HTTPError: HTTP Error 403: Forbidden",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "workday/netflix.wd1/Netflix": {
    "company": "Netflix",
@@ -220,32 +265,32 @@
   "workday/nio.wd3/NIO_Careers": {
    "company": "Nio",
    "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "workday/osv-cci.wd1/CCICareers": {
    "company": "Castleton Commodities International",
    "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "workday/osv-edf.wd5/Confidential": {
    "company": "Environmental Defense Fund",
    "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "workday/osv-rubicon.wd5/MagniteCareers": {
    "company": "Magnite",
    "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "workday/sallie-mae.wd5/Careers": {
    "company": "Sallie Mae",
    "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "workday/vhr-epri.wd1/epricareers": {
    "company": "EPRI",
    "error": "HTTPError: HTTP Error 422: Unprocessable Entity",
-   "checked": "2026-11-13"
+   "checked": "2026-11-20"
   },
   "workday/vhr-genband.wd1/ribboncareers": {
    "company": "Ribbon",
@@ -254,11 +299,23 @@
   }
  },
  "unsupported": {
+  "12th Man Foundation": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "84 Lumber": {
    "via": [
     "careers.84lumber.com"
    ],
    "noted": "2026-11-06"
+  },
+  "A.P. Moller - Maersk": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "AArete": {
    "via": [
@@ -352,6 +409,7 @@
   },
   "Amazon": {
    "via": [
+    "Jobright",
     "amazon.jobs"
    ],
    "noted": "2026-11-03"
@@ -361,6 +419,12 @@
     "careers.amd.com"
    ],
    "noted": "2026-11-03"
+  },
+  "Amer Sports": {
+   "via": [
+    "iCIMS"
+   ],
+   "noted": "2026-11-20"
   },
   "American Association of People With Disabilities": {
    "via": [
@@ -425,6 +489,7 @@
   },
   "APEX Analytix": {
    "via": [
+    "Jobright",
     "Rippling"
    ],
    "noted": "2026-11-03"
@@ -483,6 +548,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Arrow Senior Living Management": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "Art of Problem Solving": {
    "via": [
     "Greenhouse on its own site"
@@ -513,6 +584,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Aspen Technology": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "ASSA ABLOY": {
    "via": [
     "assaabloy.jobs2web.com"
@@ -524,6 +601,18 @@
     "careers.astrion.us"
    ],
    "noted": "2026-11-03"
+  },
+  "Atlantic Health": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
+  "Atlantic Health System": {
+   "via": [
+    "Oracle Cloud"
+   ],
+   "noted": "2026-11-20"
   },
   "Atlas Copco Group": {
    "via": [
@@ -594,6 +683,13 @@
    ],
    "noted": "2026-11-03"
   },
+  "Barry's": {
+   "via": [
+    "Jobright",
+    "Rippling"
+   ],
+   "noted": "2026-11-20"
+  },
   "BBVA": {
    "via": [
     "Jobright"
@@ -630,6 +726,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "BGE": {
+   "via": [
+    "careers.bge.com"
+   ],
+   "noted": "2026-11-20"
+  },
   "Bio-Rad Laboratories": {
    "via": [
     "iCIMS"
@@ -647,6 +749,12 @@
     "Jobvite"
    ],
    "noted": "2026-11-03"
+  },
+  "Blount Fine Foods": {
+   "via": [
+    "Jobvite"
+   ],
+   "noted": "2026-11-20"
   },
   "Blue Bird Corporation": {
    "via": [
@@ -733,6 +841,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "BWXT": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "ByteDance": {
    "via": [
     "jobs.bytedance.com"
@@ -751,11 +865,29 @@
    ],
    "noted": "2026-11-03"
   },
+  "Calamos Investments": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "Canon": {
    "via": [
     "iCIMS"
    ],
    "noted": "2026-11-03"
+  },
+  "Carnival Corporation": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
+  "CAS": {
+   "via": [
+    "UKG"
+   ],
+   "noted": "2026-11-20"
   },
   "Catholic Charities of Kansas City-St. Joseph": {
    "via": [
@@ -774,6 +906,12 @@
     "Greenhouse on its own site"
    ],
    "noted": "2026-11-03"
+  },
+  "Centralized Supply Chain Services": {
+   "via": [
+    "UKG"
+   ],
+   "noted": "2026-11-20"
   },
   "CenturyLink": {
    "via": [
@@ -801,6 +939,7 @@
   },
   "Chubb": {
    "via": [
+    "Jobright",
     "Oracle Cloud"
    ],
    "noted": "2026-11-03"
@@ -859,6 +998,12 @@
     "Oracle Cloud"
    ],
    "noted": "2026-11-03"
+  },
+  "City of New York": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "Citylogix Inc.": {
    "via": [
@@ -1046,6 +1191,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Dassault Systèmes": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "Data Robotics": {
    "via": [
     "Jobright"
@@ -1105,6 +1256,12 @@
     "Oracle Cloud"
    ],
    "noted": "2026-11-03"
+  },
+  "Docusign": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "Dominion Energy": {
    "via": [
@@ -1402,6 +1559,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "FPWA": {
+   "via": [
+    "BambooHR"
+   ],
+   "noted": "2026-11-20"
+  },
   "FreshCut Paper": {
    "via": [
     "Workable"
@@ -1413,6 +1576,12 @@
     "JazzHR"
    ],
    "noted": "2026-11-03"
+  },
+  "Gallagher": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "GALLO": {
    "via": [
@@ -1507,6 +1676,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "GTI Energy": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "Guardian Industries": {
    "via": [
     "Jobright"
@@ -1557,6 +1732,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Herc Rentals": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "HERE Technologies": {
    "via": [
     "iCIMS"
@@ -1587,6 +1768,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Holland America Line": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "Honeywell": {
    "via": [
     "Oracle Cloud"
@@ -1595,7 +1782,8 @@
   },
   "Honeywell Aerospace": {
    "via": [
-    "Jobright"
+    "Jobright",
+    "Oracle Cloud"
    ],
    "noted": "2026-11-06"
   },
@@ -1635,6 +1823,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "iA": {
+   "via": [
+    "ADP"
+   ],
+   "noted": "2026-11-20"
+  },
   "IBM": {
    "via": [
     "Jobright"
@@ -1646,6 +1840,12 @@
     "Jobright"
    ],
    "noted": "2026-11-13"
+  },
+  "Idaho National Laboratory": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "IDeaS": {
    "via": [
@@ -1709,7 +1909,8 @@
   },
   "IntelliGenesis": {
    "via": [
-    "JazzHR"
+    "JazzHR",
+    "Jobright"
    ],
    "noted": "2026-11-03"
   },
@@ -1980,6 +2181,7 @@
   },
   "Meta": {
    "via": [
+    "Jobright",
     "metacareers.com"
    ],
    "noted": "2026-11-03"
@@ -2007,6 +2209,12 @@
     "iCIMS"
    ],
    "noted": "2026-11-06"
+  },
+  "Minitab": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "Mission Pet Health": {
    "via": [
@@ -2056,6 +2264,12 @@
     "Jobright"
    ],
    "noted": "2026-11-06"
+  },
+  "MUM Industries Inc.": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "Nasuni": {
    "via": [
@@ -2229,6 +2443,13 @@
    ],
    "noted": "2026-11-03"
   },
+  "Park National Bank": {
+   "via": [
+    "Jobright",
+    "UKG"
+   ],
+   "noted": "2026-11-20"
+  },
   "Pella": {
    "via": [
     "Oracle Cloud"
@@ -2302,6 +2523,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Princess Cruises": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "Princeton University": {
    "via": [
     "iCIMS"
@@ -2331,6 +2558,19 @@
     "Jobright"
    ],
    "noted": "2026-11-03"
+  },
+  "Publicis Groupe": {
+   "via": [
+    "careers.publicisgroupe.com",
+    "publicisgroupe.jibeapply.com"
+   ],
+   "noted": "2026-11-20"
+  },
+  "Publicis Sapient": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "QinetiQ": {
    "via": [
@@ -2459,6 +2699,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Sagitec Solutions": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "Salt Lake County": {
    "via": [
     "iCIMS"
@@ -2470,6 +2716,18 @@
     "Oracle Cloud"
    ],
    "noted": "2026-11-03"
+  },
+  "Samsung Electronics America": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
+  "Sandhills Global": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "SAP": {
    "via": [
@@ -2501,6 +2759,13 @@
    ],
    "noted": "2026-11-03"
   },
+  "Scheels": {
+   "via": [
+    "Jobright",
+    "UKG"
+   ],
+   "noted": "2026-11-20"
+  },
   "SCOR": {
    "via": [
     "Oracle Cloud"
@@ -2525,6 +2790,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Seagate Technology": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "Securitas": {
    "via": [
     "Oracle Cloud"
@@ -2537,11 +2808,23 @@
    ],
    "noted": "2026-11-13"
   },
+  "Sequoia": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "SharkNinja France": {
    "via": [
     "Jobright"
    ],
    "noted": "2026-11-13"
+  },
+  "Sheetz": {
+   "via": [
+    "jobs.sheetz.com"
+   ],
+   "noted": "2026-11-20"
   },
   "Sherwin-Williams": {
    "via": [
@@ -2568,6 +2851,12 @@
    ],
    "noted": "2026-11-13"
   },
+  "Smarty": {
+   "via": [
+    "Rippling"
+   ],
+   "noted": "2026-11-20"
+  },
   "Southern Company": {
    "via": [
     "Oracle Cloud"
@@ -2579,6 +2868,12 @@
     "Jobright"
    ],
    "noted": "2026-11-13"
+  },
+  "Southern Mississippi Trading": {
+   "via": [
+    "JazzHR"
+   ],
+   "noted": "2026-11-20"
   },
   "Southern Star Central Gas Pipeline": {
    "via": [
@@ -2624,6 +2919,7 @@
   },
   "Standard Aero": {
    "via": [
+    "Jobright",
     "Oracle Cloud"
    ],
    "noted": "2026-11-03"
@@ -2639,6 +2935,12 @@
     "Oracle Cloud"
    ],
    "noted": "2026-11-03"
+  },
+  "Starwood Capital Group": {
+   "via": [
+    "Jobvite"
+   ],
+   "noted": "2026-11-20"
   },
   "State Farm": {
    "via": [
@@ -2692,6 +2994,7 @@
   },
   "Systems Planning and Analysis": {
    "via": [
+    "Jobright",
     "spa.jibeapply.com"
    ],
    "noted": "2026-11-03"
@@ -2701,6 +3004,18 @@
     "Rippling"
    ],
    "noted": "2026-11-03"
+  },
+  "TAB Bank": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
+  "Takeda": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "Talkspace": {
    "via": [
@@ -2789,6 +3104,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Trimble Inc.": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "TripleRing": {
    "via": [
     "Greenhouse on its own site"
@@ -2800,6 +3121,12 @@
     "Workable"
    ],
    "noted": "2026-11-03"
+  },
+  "UHS": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "UL Solutions": {
    "via": [
@@ -2855,6 +3182,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Vatic Outsourcing": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "VaynerMedia": {
    "via": [
     "Greenhouse on its own site"
@@ -2891,6 +3224,12 @@
     "Oracle Cloud"
    ],
    "noted": "2026-11-03"
+  },
+  "Vibrantz Technologies Inc.": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "Viking Global Investors": {
    "via": [
@@ -2970,6 +3309,12 @@
    ],
    "noted": "2026-11-03"
   },
+  "Western Governors University": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
+  },
   "Western National Insurance": {
    "via": [
     "Paylocity"
@@ -2987,6 +3332,12 @@
     "Jobright"
    ],
    "noted": "2026-11-06"
+  },
+  "WhiteWater": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "William Blair": {
    "via": [
@@ -3018,6 +3369,12 @@
     "Jobright"
    ],
    "noted": "2026-11-03"
+  },
+  "Worthington Steel": {
+   "via": [
+    "Jobright"
+   ],
+   "noted": "2026-11-20"
   },
   "WSP": {
    "via": [
